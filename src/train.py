@@ -25,10 +25,19 @@ def train_model(
     # 1. Dataset & Tokenizer Setup
     tokenizer = Tokenizer()
     num_classes = len(tokenizer)
-    full_dataset = OCRDataset(data_dir=data_dir, tokenizer=tokenizer)
 
-    if len(full_dataset) == 0:
-        print(f"[!] No dataset samples found in '{data_dir}'. Generating synthetic dataset first...")
+    dataset_dirs = [data_dir, "d:\\Major Project\\data\\expanded", "d:\\Major Project\\data\\kaggle_dataset"]
+    datasets = []
+    for d in dataset_dirs:
+        if os.path.exists(d):
+            ds = OCRDataset(data_dir=d, tokenizer=tokenizer)
+            if len(ds) > 0:
+                datasets.append(ds)
+
+    if datasets:
+        from torch.utils.data import ConcatDataset
+        full_dataset = ConcatDataset(datasets) if len(datasets) > 1 else datasets[0]
+    else:
         from data.generate_synthetic import generate_synthetic_dataset
         generate_synthetic_dataset(output_dir=data_dir)
         full_dataset = OCRDataset(data_dir=data_dir, tokenizer=tokenizer)

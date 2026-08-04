@@ -60,17 +60,21 @@ class UnlabeledSSLDataset(Dataset):
     Does not require text label annotations.
     """
     def __init__(self, data_dir: str, transform: SimCLRTransform = None):
-        self.data_dir = data_dir
         self.transform = transform or SimCLRTransform()
         self.image_paths = []
 
-        # Find all images recursively or in images subfolder
-        images_dir = os.path.join(data_dir, "images")
-        search_dir = images_dir if os.path.exists(images_dir) else data_dir
-        
-        for fname in os.listdir(search_dir):
-            if fname.lower().endswith((".png", ".jpg", ".jpeg")):
-                self.image_paths.append(os.path.join(search_dir, fname))
+        dirs_to_search = [
+            data_dir,
+            "d:\\Major Project\\data\\expanded",
+            "d:\\Major Project\\data\\kaggle_dataset"
+        ]
+
+        for d in dirs_to_search:
+            if os.path.exists(d):
+                for root, _, files in os.walk(d):
+                    for fname in files:
+                        if fname.lower().endswith((".png", ".jpg", ".jpeg")):
+                            self.image_paths.append(os.path.join(root, fname))
 
     def __len__(self):
         return len(self.image_paths)

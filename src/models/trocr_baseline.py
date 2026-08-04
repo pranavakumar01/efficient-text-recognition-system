@@ -17,7 +17,11 @@ class TrOCRBaseline:
         self._load_model()
 
     def _load_model(self):
+        import warnings
+        warnings.filterwarnings("ignore", category=UserWarning)
         try:
+            import transformers
+            transformers.logging.set_verbosity_error()
             from transformers import TrOCRProcessor, VisionEncoderDecoderModel, ViTImageProcessor, RobertaTokenizer
             img_p = ViTImageProcessor.from_pretrained(self.model_name)
             tok = RobertaTokenizer.from_pretrained(self.model_name)

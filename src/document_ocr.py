@@ -73,8 +73,8 @@ class DocumentOCREngine:
     End-to-End Full Page Document & Multi-Line OCR Processing Engine.
     Supports separate execution of CNN-based model and Transformer-based model.
     """
-    def __init__(self):
-        self.inference_engine = OCRInferenceEngine()
+    def __init__(self, inference_engine: OCRInferenceEngine = None):
+        self.inference_engine = inference_engine if inference_engine is not None else OCRInferenceEngine()
         self.segmenter = LineSegmenter()
 
     def process_document(self, img_np: np.ndarray, model_type: str = "both") -> dict:

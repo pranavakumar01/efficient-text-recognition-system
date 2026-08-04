@@ -18,3 +18,8 @@ Thumbs.db
 # Large Temporary / Scratch Files
 scratch/
 *.log
+
+# Extracted Raw Kaggle Images (Keep annotations.csv tracked)
+data/kaggle_dataset/handwritten/
+data/kaggle_dataset/historical/
+data/kaggle_dataset/math/

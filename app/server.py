@@ -26,13 +26,17 @@ app.add_middleware(
 )
 
 engine = OCRInferenceEngine()
-doc_engine = DocumentOCREngine()
+doc_engine = DocumentOCREngine(inference_engine=engine)
 samples_dir = "d:\\Major Project\\data\\samples"
 generate_sample_images(samples_dir)
 
 def encode_img_to_b64(img_np: np.ndarray) -> str:
     _, buffer = cv2.imencode('.png', img_np)
     return base64.b64encode(buffer).decode('utf-8')
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon():
+    return Response(status_code=204)
 
 @app.get("/api/samples")
 def list_samples():
