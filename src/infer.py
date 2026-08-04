@@ -15,7 +15,7 @@ class OCRInferenceEngine:
     Unified Inference Engine supporting separated & dual-model OCR evaluation:
     1. Primary CNN + BiLSTM + Attention Model
     2. Vision Transformer Baseline (TrOCR) Model
-    Includes real-text extraction & post-processing text refining.
+    Includes real-text extraction & auto-correct post-processing.
     """
     def __init__(self):
         self.preprocessor = ImagePreprocessor()
@@ -45,7 +45,7 @@ class OCRInferenceEngine:
 
         self.cnn_bilstm_model.eval()
 
-    def decode_predictions(self, logits, image_np: np.ndarray = None) -> str:
+    def decode_predictions(self, logits, image_np: np.ndarray = None, enable_autocorrect: bool = True) -> str:
         # Greedily decode sequence predictions from CNN-BiLSTM logits
         preds = logits.argmax(dim=-1).squeeze(0).cpu().numpy()
         decoded = []
@@ -56,7 +56,7 @@ class OCRInferenceEngine:
                     decoded.append(char)
         raw_text = "".join(decoded).strip()
 
-        # If CNN model outputs empty or uninformative prediction on complex unseen photo, fallback to pre-trained feature decoder
+        # If CNN model outputs empty or uninformative prediction on complex unseen photo, use pre-trained OCR engine
         if (not raw_text or raw_text == "Recognized Sample Text") and image_np is not None and self.easy_reader:
             try:
                 res = self.easy_reader.readtext(image_np)
@@ -68,9 +68,9 @@ class OCRInferenceEngine:
         if not raw_text:
             raw_text = "Recognized Sample Text"
 
-        return OCRPostProcessor.process(raw_text)
+        return OCRPostProcessor.process(raw_text, enable_autocorrect=enable_autocorrect)
 
-    def predict_cnn(self, image_np: np.ndarray, ground_truth: str = None) -> tuple:
+    def predict_cnn(self, image_np: np.ndarray, ground_truth: str = None, enable_autocorrect: bool = True) -> tuple:
         """
         Run inference using ONLY the CNN + BiLSTM + Attention model.
         Returns: (model_results_dict, prep_results_dict)
@@ -83,7 +83,7 @@ class OCRInferenceEngine:
         img_tensor = torch.from_numpy(final_img).float().unsqueeze(0).unsqueeze(0) / 255.0
         with torch.no_grad():
             logits, att = self.cnn_bilstm_model(img_tensor)
-            cnn_text = self.decode_predictions(logits, image_np=image_np)
+            cnn_text = self.decode_predictions(logits, image_np=image_np, enable_autocorrect=enable_autocorrect)
         cnn_time_ms = round((time.perf_counter() - start_t) * 1000.0, 2)
 
         cer_cnn = OCRMetrics.calculate_cer(ground_truth, cnn_text) if ground_truth else None
@@ -98,7 +98,7 @@ class OCRInferenceEngine:
         }
         return info, prep_results
 
-    def predict_transformer(self, image_np: np.ndarray, ground_truth: str = None) -> tuple:
+    def predict_transformer(self, image_np: np.ndarray, ground_truth: str = None, enable_autocorrect: bool = True) -> tuple:
         """
         Run inference using ONLY the Vision Transformer (TrOCR) model.
         Returns: (model_results_dict, prep_results_dict)
@@ -110,7 +110,7 @@ class OCRInferenceEngine:
         trocr_time_ms = round((time.perf_counter() - start_t) * 1000.0, 2)
 
         raw_trocr_text = trocr_res.get("predicted_text", "Sample Transformer Text")
-        trocr_text = OCRPostProcessor.process(raw_trocr_text)
+        trocr_text = OCRPostProcessor.process(raw_trocr_text, enable_autocorrect=enable_autocorrect)
 
         cer_trocr = OCRMetrics.calculate_cer(ground_truth, trocr_text) if ground_truth else None
 
@@ -124,14 +124,14 @@ class OCRInferenceEngine:
         }
         return info, prep_results
 
-    def run_pipeline(self, image_np: np.ndarray, model_type: str = "both", ground_truth: str = None) -> dict:
+    def run_pipeline(self, image_np: np.ndarray, model_type: str = "both", ground_truth: str = None, enable_autocorrect: bool = True) -> dict:
         """
         Runs model pipeline based on model_type: 'cnn', 'transformer', or 'both'.
         Returns JSON-serializable dictionary with raw prep_results separated.
         """
         model_type = model_type.lower()
         if model_type == "cnn":
-            cnn_info, prep_results = self.predict_cnn(image_np, ground_truth)
+            cnn_info, prep_results = self.predict_cnn(image_np, ground_truth, enable_autocorrect=enable_autocorrect)
             return {
                 "preprocessing": prep_results,
                 "cnn_bilstm_attention": cnn_info,
@@ -139,7 +139,7 @@ class OCRInferenceEngine:
                 "active_model": "cnn"
             }
         elif model_type == "transformer":
-            trans_info, prep_results = self.predict_transformer(image_np, ground_truth)
+            trans_info, prep_results = self.predict_transformer(image_np, ground_truth, enable_autocorrect=enable_autocorrect)
             return {
                 "preprocessing": prep_results,
                 "cnn_bilstm_attention": None,
@@ -147,8 +147,8 @@ class OCRInferenceEngine:
                 "active_model": "transformer"
             }
         else:
-            cnn_info, prep_results = self.predict_cnn(image_np, ground_truth)
-            trans_info, _ = self.predict_transformer(image_np, ground_truth)
+            cnn_info, prep_results = self.predict_cnn(image_np, ground_truth, enable_autocorrect=enable_autocorrect)
+            trans_info, _ = self.predict_transformer(image_np, ground_truth, enable_autocorrect=enable_autocorrect)
             return {
                 "preprocessing": prep_results,
                 "cnn_bilstm_attention": cnn_info,
@@ -158,20 +158,11 @@ class OCRInferenceEngine:
 
 
 if __name__ == "__main__":
-    # Self-test separate model inference engine
     engine = OCRInferenceEngine()
     test_img = cv2.imread("d:\\Major Project\\data\\samples\\printed_sample.png")
     if test_img is None:
         test_img = np.ones((32, 256, 3), dtype=np.uint8) * 200
 
-    print("[*] Testing CNN-only inference...")
-    cnn_out = engine.run_pipeline(test_img, model_type="cnn")
-    print("    CNN Result:", cnn_out["cnn_bilstm_attention"]["predicted_text"])
-
-    print("[*] Testing Transformer-only inference...")
-    trans_out = engine.run_pipeline(test_img, model_type="transformer")
-    print("    Transformer Result:", trans_out["transformer_baseline"]["predicted_text"])
-
-    print("[*] Testing Dual-model inference...")
-    both_out = engine.run_pipeline(test_img, model_type="both")
-    print("    Both Models Tested Successfully!")
+    cnn_out = engine.run_pipeline(test_img, model_type="both", enable_autocorrect=True)
+    print("CNN Result:", cnn_out["cnn_bilstm_attention"]["predicted_text"])
+    print("Transformer Result:", cnn_out["transformer_baseline"]["predicted_text"])

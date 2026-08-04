@@ -177,6 +177,17 @@
     }
     .btn-export:hover { background: rgba(0, 242, 254, 0.2); border-color: var(--accent-cyan); }
 
+    .toggle-autocorrect {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.8rem; font-weight: 600; color: var(--accent-cyan);
+      background: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.3);
+      padding: 0.3rem 0.7rem; border-radius: 20px; cursor: pointer;
+      transition: all 0.2s; user-select: none;
+    }
+    .toggle-autocorrect.off {
+      color: var(--text-muted); background: rgba(255, 255, 255, 0.05); border-color: var(--panel-border);
+    }
+
     .prep-grid {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin-top: 1rem;
     }
@@ -238,7 +249,12 @@
       <div class="card">
         <div class="card-title">
           <span>1. Select OCR Architecture & Input</span>
-          <span style="font-size: 0.8rem; color: var(--accent-cyan);" id="activeModeLabel">Mode: CNN Model</span>
+          <div style="display: flex; gap: 0.8rem; align-items: center;">
+            <div class="toggle-autocorrect" id="toggleAutoCorrect" onclick="toggleAutoCorrect()">
+              <span>✨ Auto-Correct: ON</span>
+            </div>
+            <span style="font-size: 0.8rem; color: var(--accent-cyan);" id="activeModeLabel">Mode: CNN Model</span>
+          </div>
         </div>
 
         <!-- Model Selection Segmented Control -->
@@ -354,6 +370,19 @@
   <script>
     let currentFile = null;
     let selectedModelMode = "cnn";
+    let autoCorrectEnabled = true;
+
+    function toggleAutoCorrect() {
+      autoCorrectEnabled = !autoCorrectEnabled;
+      const elem = document.getElementById('toggleAutoCorrect');
+      if (autoCorrectEnabled) {
+        elem.classList.remove('off');
+        elem.innerHTML = '<span>✨ Auto-Correct: ON</span>';
+      } else {
+        elem.classList.add('off');
+        elem.innerHTML = '<span>✨ Auto-Correct: OFF</span>';
+      }
+    }
 
     function setMode(mode) {
       selectedModelMode = mode;
@@ -451,6 +480,7 @@
       const formData = new FormData();
       formData.append("file", currentFile);
       formData.append("model_type", selectedModelMode);
+      formData.append("enable_autocorrect", autoCorrectEnabled);
 
       try {
         const res = await fetch('/api/predict', { method: 'POST', body: formData });
@@ -515,6 +545,7 @@
       const formData = new FormData();
       formData.append("file", currentFile);
       formData.append("model_type", selectedModelMode);
+      formData.append("enable_autocorrect", autoCorrectEnabled);
 
       try {
         const res = await fetch('/api/document_ocr', { method: 'POST', body: formData });

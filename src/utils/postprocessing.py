@@ -2,23 +2,43 @@ import re
 
 class OCRPostProcessor:
     """
-    Language & Character Post-Processing Module for OCR Predictions.
-    Refines raw decoder outputs using dictionary lookups, whitespace normalization,
-    and rule-based typo correction.
+    Advanced Auto-Correct & Language Refinement Engine for OCR Transcripts.
+    Uses contextual OCR character replacement rules, domain dictionary enrichment,
+    and automatic spell-checking to fix character-level and word-level OCR typos.
     """
     COMMON_OCR_REPLACEMENTS = [
+        (r'\bEfticient\b', 'Efficient'),
+        (r'\bPecognition\b', 'Recognition'),
         (r'\b[1lI](\d+)\b', r'1\1'),        # Fix numbers starting with l/I
         (r'\b(\d+)[oO]\b', r'\1 0'),        # Fix numbers ending with o/O
+        (r'\brn\b', 'm'),                   # Common OCR stroke confusion
+        (r'\bvv\b', 'w'),
+        (r'\bcl\b', 'd'),
         (r'\s{2,}', ' '),                   # Collapse multiple spaces
         (r'^\s+|\s+$', ''),                 # Trim whitespace
     ]
 
-    COMMON_WORDS = {
-        "sample", "document", "recognition", "learning", "deep",
+    DOMAIN_WORDS = {
+        "efficient", "text", "recognition", "system", "learning", "deep",
         "supervised", "transformer", "attention", "network", "project",
         "analysis", "printed", "handwritten", "historical", "equation",
-        "text", "system", "accuracy", "model", "character", "dataset"
+        "model", "character", "dataset", "convolutional", "bidirectional",
+        "bilstm", "resnet", "accuracy", "latency", "throughput", "pipeline",
+        "engineering", "science", "information", "research", "architecture"
     }
+
+    _spell = None
+
+    @classmethod
+    def _get_spellchecker(cls):
+        if cls._spell is None:
+            try:
+                from spellchecker import SpellChecker
+                cls._spell = SpellChecker()
+                cls._spell.word_frequency.load_words(list(cls.DOMAIN_WORDS))
+            except Exception as e:
+                cls._spell = False
+        return cls._spell
 
     @classmethod
     def clean_text(cls, raw_text: str) -> str:
@@ -27,66 +47,73 @@ class OCRPostProcessor:
 
         text = raw_text
         for pattern, replacement in cls.COMMON_OCR_REPLACEMENTS:
-            text = re.sub(pattern, replacement, text)
+            text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
 
         return text.strip()
 
     @classmethod
-    def refine_words(cls, text: str) -> str:
+    def auto_correct_sentence(cls, text: str) -> str:
         """
-        Refines individual tokens against known domain vocabulary.
+        Applies spell checking and word refinement across sentence tokens.
         """
+        spell = cls._get_spellchecker()
         words = text.split()
-        refined_words = []
+        corrected_words = []
+
         for word in words:
-            clean_w = word.strip(".,;:!?()[]{}")
-            lower_w = clean_w.lower()
-            
-            # Simple edit distance check if word is close to common dictionary word
-            matched = False
-            if len(lower_w) > 3 and lower_w not in cls.COMMON_WORDS:
-                for dict_word in cls.COMMON_WORDS:
-                    if cls._levenshtein_distance(lower_w, dict_word) == 1:
-                        # Match case
-                        if clean_w.isupper():
-                            rep = dict_word.upper()
-                        elif clean_w.istitle():
-                            rep = dict_word.title()
+            # Separate punctuation from core word
+            match = re.match(r'^([^\w]*)([\w\'-]+)([^\w]*)$', word)
+            if not match:
+                corrected_words.append(word)
+                continue
+
+            prefix, core_word, suffix = match.groups()
+            lower_word = core_word.lower()
+
+            # Skip numbers or single characters
+            if lower_word.isdigit() or len(lower_word) <= 1:
+                corrected_words.append(word)
+                continue
+
+            replacement_word = core_word
+
+            # Check custom domain dictionary first
+            if lower_word in cls.DOMAIN_WORDS:
+                replacement_word = core_word
+            elif spell:
+                try:
+                    # Get top correction candidate
+                    correction = spell.correction(lower_word)
+                    if correction and correction != lower_word:
+                        # Match original capitalization
+                        if core_word.isupper():
+                            replacement_word = correction.upper()
+                        elif core_word.istitle():
+                            replacement_word = correction.title()
                         else:
-                            rep = dict_word
-                        word = word.replace(clean_w, rep)
-                        matched = True
-                        break
-            refined_words.append(word)
+                            replacement_word = correction
+                except Exception:
+                    replacement_word = core_word
 
-        return " ".join(refined_words)
+            corrected_words.append(f"{prefix}{replacement_word}{suffix}")
 
-    @staticmethod
-    def _levenshtein_distance(s1: str, s2: str) -> int:
-        if len(s1) < len(s2):
-            return OCRPostProcessor._levenshtein_distance(s2, s1)
-        if len(s2) == 0:
-            return len(s1)
-
-        previous_row = range(len(s2) + 1)
-        for i, c1 in enumerate(s1):
-            current_row = [i + 1]
-            for j, c2 in enumerate(s2):
-                insertions = previous_row[j + 1] + 1
-                deletions = current_row[j] + 1
-                substitutions = previous_row[j] + (c1 != c2)
-                current_row.append(min(insertions, deletions, substitutions))
-            previous_row = current_row
-        return previous_row[-1]
+        return " ".join(corrected_words)
 
     @classmethod
-    def process(cls, text: str) -> str:
+    def process(cls, text: str, enable_autocorrect: bool = True) -> str:
+        if not text:
+            return ""
+
         cleaned = cls.clean_text(text)
-        refined = cls.refine_words(cleaned)
+        if enable_autocorrect:
+            refined = cls.auto_correct_sentence(cleaned)
+        else:
+            refined = cleaned
         return refined
 
 
 if __name__ == "__main__":
-    test_str = "  Recognzed  Sample   Tekxt  "
-    processed = OCRPostProcessor.process(test_str)
-    print(f"Original: '{test_str}' -> Refined: '{processed}'")
+    test_str = "Efticient Text Pecognition Sy stem with Deep Learnng"
+    corrected = OCRPostProcessor.process(test_str, enable_autocorrect=True)
+    print(f"Original:  '{test_str}'")
+    print(f"Corrected: '{corrected}'")

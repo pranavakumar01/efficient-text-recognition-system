@@ -59,6 +59,7 @@ def get_sample_image(filename: str):
 async def predict(
     file: UploadFile = File(...),
     model_type: str = Form("both"),
+    enable_autocorrect: bool = Form(True),
     ground_truth: str = Form(None)
 ):
     try:
@@ -69,9 +70,13 @@ async def predict(
         if image_np is None:
             return JSONResponse({"error": "Invalid image file"}, status_code=400)
 
-        results = engine.run_pipeline(image_np, model_type=model_type, ground_truth=ground_truth)
+        results = engine.run_pipeline(
+            image_np,
+            model_type=model_type,
+            ground_truth=ground_truth,
+            enable_autocorrect=enable_autocorrect
+        )
 
-        # Convert preprocessing images to Base64 for visual demo UI
         b64_preprocessing = {}
         if results.get("preprocessing"):
             for stage_name, stage_img in results["preprocessing"].items():
@@ -82,6 +87,7 @@ async def predict(
         return JSONResponse({
             "status": "success",
             "active_model": results.get("active_model", model_type),
+            "autocorrect_enabled": enable_autocorrect,
             "preprocessing_stages": b64_preprocessing,
             "primary_model": results.get("cnn_bilstm_attention"),
             "baseline_model": results.get("transformer_baseline")
@@ -94,7 +100,8 @@ async def predict(
 @app.post("/api/document_ocr")
 async def process_document(
     file: UploadFile = File(...),
-    model_type: str = Form("both")
+    model_type: str = Form("both"),
+    enable_autocorrect: bool = Form(True)
 ):
     try:
         contents = await file.read()
@@ -108,6 +115,7 @@ async def process_document(
         return JSONResponse({
             "status": "success",
             "model_type": out["model_type"],
+            "autocorrect_enabled": enable_autocorrect,
             "total_lines_detected": out["total_lines_detected"],
             "cnn_transcript": out["cnn_transcript"],
             "trocr_transcript": out["trocr_transcript"],
