@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efficient Text Recognition (DL + SSL) - Major Project Code 42</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0e17;
+      --panel-bg: rgba(22, 28, 45, 0.7);
+      --panel-border: rgba(255, 255, 255, 0.08);
+      --accent-cyan: #00f2fe;
+      --accent-blue: #4facfe;
+      --accent-purple: #7f00ff;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --card-glow: 0 8px 32px 0 rgba(0, 242, 254, 0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(79, 172, 254, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(127, 0, 255, 0.08) 0%, transparent 40%);
+    }
+
+    header {
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--panel-border);
+      backdrop-filter: blur(12px);
+      background: rgba(10, 14, 23, 0.8);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand { display: flex; align-items: center; gap: 1rem; }
+    .brand-logo {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.2rem; color: #fff;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+    }
+    .brand-info h1 { font-size: 1.2rem; font-weight: 600; letter-spacing: -0.5px; }
+    .brand-info p { font-size: 0.8rem; color: var(--text-muted); }
+
+    .tag-code {
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      color: var(--accent-cyan);
+      padding: 0.3rem 0.8rem; border-radius: 20px;
+      font-size: 0.85rem; font-family: 'JetBrains Mono', monospace;
+    }
+
+    main {
+      flex: 1; padding: 2rem 3rem;
+      max-width: 1400px; margin: 0 auto; width: 100%;
+      display: flex; flex-direction: column; gap: 2rem;
+    }
+
+    .grid-container {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    }
+
+    .card {
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 20px; padding: 1.5rem;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .card-title {
+      font-size: 1.05rem; font-weight: 600; margin-bottom: 1rem;
+      display: flex; align-items: center; justify-content: space-between;
+      color: var(--text-main);
+    }
+
+    .selector-box {
+      margin-bottom: 1rem;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--panel-border);
+      border-radius: 14px;
+      padding: 0.5rem;
+      display: flex; gap: 0.5rem;
+    }
+
+    .model-option-btn {
+      flex: 1;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 0.6rem 0.8rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: center;
+    }
+    .model-option-btn.active {
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(79, 172, 254, 0.2));
+      border-color: var(--accent-cyan);
+      color: #fff;
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+    }
+
+    .dropzone {
+      border: 2px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 16px; padding: 2rem 1.5rem;
+      text-align: center; cursor: pointer;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .dropzone:hover {
+      border-color: var(--accent-cyan);
+      background: rgba(0, 242, 254, 0.03);
+    }
+
+    .dropzone-icon {
+      font-size: 2.2rem; margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+
+    .preset-chips {
+      display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;
+    }
+    .chip {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--panel-border);
+      padding: 0.4rem 0.9rem; border-radius: 12px;
+      font-size: 0.8rem; cursor: pointer; transition: all 0.2s;
+    }
+    .chip:hover {
+      background: rgba(0, 242, 254, 0.15); border-color: var(--accent-cyan);
+    }
+
+    .img-preview-box {
+      margin-top: 1rem; max-height: 180px; width: 100%;
+      border-radius: 12px; overflow: hidden; display: none;
+      border: 1px solid var(--panel-border); background: #000;
+      align-items: center; justify-content: center;
+    }
+    .img-preview-box img { max-width: 100%; max-height: 180px; object-fit: contain; }
+
+    .btn-run {
+      width: 100%; margin-top: 1.2rem;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+      color: #000; font-weight: 700; font-size: 0.95rem;
+      padding: 0.85rem; border: none; border-radius: 14px;
+      cursor: pointer; transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(0, 242, 254, 0.3);
+    }
+    .btn-run:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0, 242, 254, 0.5); }
+
+    .btn-export {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--panel-border);
+      color: var(--text-main); font-size: 0.75rem; font-weight: 600;
+      padding: 0.3rem 0.7rem; border-radius: 8px; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-export:hover { background: rgba(0, 242, 254, 0.2); border-color: var(--accent-cyan); }
+
+    .prep-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin-top: 1rem;
+    }
+    .prep-card {
+      background: rgba(0, 0, 0, 0.3); border-radius: 10px; padding: 0.5rem;
+      border: 1px solid var(--panel-border); text-align: center;
+    }
+    .prep-card img { width: 100%; height: 60px; object-fit: contain; border-radius: 6px; }
+    .prep-card span { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.3rem; display: block; }
+
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
+    .comparison-grid.single-mode { grid-template-columns: 1fr; }
+    .model-card {
+      background: rgba(0, 0, 0, 0.4); border-radius: 16px; padding: 1.2rem;
+      border: 1px solid var(--panel-border); display: flex; flex-direction: column; gap: 0.8rem;
+    }
+    .model-card.primary { border-color: rgba(0, 242, 254, 0.4); box-shadow: var(--card-glow); }
+    .model-card.transformer-mode { border-color: rgba(127, 0, 255, 0.4); box-shadow: 0 8px 32px 0 rgba(127, 0, 255, 0.2); }
+    .model-badge {
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;
+      font-weight: 700; color: var(--accent-cyan);
+    }
+    .result-text {
+      font-family: 'JetBrains Mono', monospace; font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.04); padding: 0.8rem; border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.05); color: #fff; white-space: pre-wrap;
+    }
+
+    .metric-row { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); }
+    .metric-val { font-weight: 600; color: var(--text-main); }
+
+    .charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
+    .chart-card { background: rgba(0, 0, 0, 0.3); border-radius: 14px; padding: 0.8rem; border: 1px solid var(--panel-border); text-align: center; }
+    .chart-card img { width: 100%; border-radius: 10px; object-fit: contain; }
+
+    footer {
+      padding: 1.5rem 3rem; text-align: center; font-size: 0.8rem;
+      color: var(--text-muted); border-top: 1px solid var(--panel-border);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-logo">42</div>
+      <div class="brand-info">
+        <h1>Efficient Text Recognition System</h1>
+        <p>Deep Learning & Self-Supervised Learning Framework</p>
+      </div>
+    </div>
+    <div class="tag-code">7th Sem Phase-I Major Project</div>
+  </header>
+
+  <main>
+    <div class="grid-container">
+      
+      <!-- Input Panel & Model Selector -->
+      <div class="card">
+        <div class="card-title">
+          <span>1. Select OCR Architecture & Input</span>
+          <span style="font-size: 0.8rem; color: var(--accent-cyan);" id="activeModeLabel">Mode: CNN Model</span>
+        </div>
+
+        <!-- Model Selection Segmented Control -->
+        <div class="selector-box">
+          <button class="model-option-btn active" id="btnModeCNN" onclick="setMode('cnn')">🧠 CNN + BiLSTM</button>
+          <button class="model-option-btn" id="btnModeTransformer" onclick="setMode('transformer')">🤖 Vision Transformer</button>
+          <button class="model-option-btn" id="btnModeBoth" onclick="setMode('both')">⚡ Dual Comparison</button>
+        </div>
+        
+        <div class="dropzone" id="dropzone" onclick="document.getElementById('fileInput').click();">
+          <div class="dropzone-icon">📷</div>
+          <p style="font-weight: 500;">Click or drag image to upload</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem;">Supports Handwritten, Printed, Math, and Historical Docs</p>
+        </div>
+        <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFile(this.files[0])">
+
+        <div class="preset-chips" id="presetChips">
+          <span style="font-size: 0.8rem; color: var(--text-muted); align-self: center;">Presets:</span>
+        </div>
+
+        <div class="img-preview-box" id="previewBox">
+          <img id="previewImg" src="" alt="Preview">
+        </div>
+
+        <div style="display: flex; gap: 1rem;">
+          <button class="btn-run" id="btnRun" style="flex: 1;" onclick="runInference()">⚡ Execute Selected Model</button>
+          <button class="btn-run" id="btnDocRun" style="flex: 1; background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));" onclick="runDocumentOCR()">📄 Document Page OCR</button>
+        </div>
+      </div>
+
+      <!-- Preprocessing Stage Panel -->
+      <div class="card">
+        <div class="card-title">
+          <span>2. Visual Preprocessing Pipeline</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Stage Inspection</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Adaptive contrast enhancement, deskewing, noise reduction, & ROI normalization.</p>
+        
+        <div class="prep-grid" id="prepGrid">
+          <div class="prep-card"><span>Original / Gray</span></div>
+          <div class="prep-card"><span>Denoised</span></div>
+          <div class="prep-card"><span>CLAHE Enhanced</span></div>
+          <div class="prep-card"><span>Adaptive Threshold</span></div>
+          <div class="prep-card"><span>Deskewed</span></div>
+          <div class="prep-card"><span>Normalized ROI</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Model Results Panel -->
+    <div class="card">
+      <div class="card-title">
+        <span id="resultsSectionTitle">Recognized Text Output & Performance Metrics</span>
+        <span style="font-size: 0.8rem; color: var(--accent-cyan);" id="modelStatusTag">Selected Model Active</span>
+      </div>
+
+      <div class="comparison-grid" id="comparisonGrid">
+        
+        <!-- CNN Model Card -->
+        <div class="model-card primary" id="cardCNN">
+          <div class="model-badge" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Primary Architecture (Guide Recommended)</span>
+            <div>
+              <button class="btn-export" onclick="exportTranscript('cnn', 'txt')">📥 Export TXT</button>
+              <button class="btn-export" onclick="exportTranscript('cnn', 'json')">📥 JSON</button>
+            </div>
+          </div>
+          <h3 style="font-size: 1.1rem; font-weight: 600;">CNN + BiLSTM + Attention</h3>
+          <div class="result-text" id="cnnResult">Awaiting Inference...</div>
+          <div class="metric-row"><span>Inference Latency:</span> <span class="metric-val" id="cnnLatency">-- ms</span></div>
+          <div class="metric-row"><span>Model Parameters:</span> <span class="metric-val" id="cnnParams">-- M</span></div>
+          <div class="metric-row"><span>Deployment Suitability:</span> <span class="metric-val" style="color: var(--accent-cyan);">High (Low Resource)</span></div>
+        </div>
+
+        <!-- Vision Transformer Model Card -->
+        <div class="model-card transformer-mode" id="cardTransformer">
+          <div class="model-badge" style="display: flex; justify-content: space-between; align-items: center; color: var(--accent-purple);">
+            <span>Baseline Transformer Architecture</span>
+            <div>
+              <button class="btn-export" onclick="exportTranscript('trocr', 'txt')">📥 Export TXT</button>
+              <button class="btn-export" onclick="exportTranscript('trocr', 'json')">📥 JSON</button>
+            </div>
+          </div>
+          <h3 style="font-size: 1.1rem; font-weight: 600;">Vision Transformer (TrOCR)</h3>
+          <div class="result-text" id="trocrResult">Awaiting Inference...</div>
+          <div class="metric-row"><span>Inference Latency:</span> <span class="metric-val" id="trocrLatency">-- ms</span></div>
+          <div class="metric-row"><span>Model Parameters:</span> <span class="metric-val" id="trocrParams">~62.0 M</span></div>
+          <div class="metric-row"><span>Deployment Suitability:</span> <span class="metric-val" style="color: var(--text-muted);">Requires High Compute</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Analytics & Figures Panel -->
+    <div class="card">
+      <div class="card-title">
+        <span>3. Training Convergence & Empirical Benchmark Analytics</span>
+        <span style="font-size: 0.8rem; color: var(--accent-cyan);">Project Report Figures</span>
+      </div>
+      <div class="charts-grid" id="chartsGrid">
+        <div class="chart-card"><img id="figCurves" src="" alt="Training Curves Loading..."><span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; display: block;">Training & Validation Convergence</span></div>
+        <div class="chart-card"><img id="figBenchmark" src="" alt="Benchmark Chart Loading..."><span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; display: block;">Architectural Latency & Parameter Comparison</span></div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    Major Project Phase-I (2025-2026) • Team 42 • Dept. of Information Science & Engineering, NMAM Institute of Technology, Nitte
+  </footer>
+
+  <script>
+    let currentFile = null;
+    let selectedModelMode = "cnn";
+
+    function setMode(mode) {
+      selectedModelMode = mode;
+      document.getElementById('btnModeCNN').classList.toggle('active', mode === 'cnn');
+      document.getElementById('btnModeTransformer').classList.toggle('active', mode === 'transformer');
+      document.getElementById('btnModeBoth').classList.toggle('active', mode === 'both');
+
+      const cardCNN = document.getElementById('cardCNN');
+      const cardTransformer = document.getElementById('cardTransformer');
+      const compGrid = document.getElementById('comparisonGrid');
+      const activeLabel = document.getElementById('activeModeLabel');
+      const btnRun = document.getElementById('btnRun');
+
+      if (mode === 'cnn') {
+        activeLabel.innerText = "Mode: CNN Model";
+        btnRun.innerText = "🧠 Run CNN-BiLSTM OCR";
+        cardCNN.style.display = 'flex';
+        cardTransformer.style.display = 'none';
+        compGrid.classList.add('single-mode');
+      } else if (mode === 'transformer') {
+        activeLabel.innerText = "Mode: Vision Transformer";
+        btnRun.innerText = "🤖 Run TrOCR Transformer";
+        cardCNN.style.display = 'none';
+        cardTransformer.style.display = 'flex';
+        compGrid.classList.add('single-mode');
+      } else {
+        activeLabel.innerText = "Mode: Dual Comparison";
+        btnRun.innerText = "⚡ Run Dual-Model Comparison";
+        cardCNN.style.display = 'flex';
+        cardTransformer.style.display = 'flex';
+        compGrid.classList.remove('single-mode');
+      }
+    }
+
+    async function loadPresets() {
+      try {
+        const res = await fetch('/api/samples');
+        const data = await res.json();
+        const container = document.getElementById('presetChips');
+        data.samples.forEach(s => {
+          const chip = document.createElement('div');
+          chip.className = 'chip';
+          chip.innerText = s.name;
+          chip.onclick = () => selectPreset(s.filename);
+          container.appendChild(chip);
+        });
+      } catch (err) { console.log(err); }
+    }
+
+    async function loadAnalytics() {
+      try {
+        const res = await fetch('/api/analytics');
+        const data = await res.json();
+        if (data.figures) {
+          if (data.figures.training_curves) document.getElementById('figCurves').src = data.figures.training_curves;
+          if (data.figures.benchmark_comparison) document.getElementById('figBenchmark').src = data.figures.benchmark_comparison;
+        }
+      } catch (err) { console.log(err); }
+    }
+
+    async function selectPreset(filename) {
+      try {
+        const res = await fetch(`/api/samples/${filename}`);
+        const data = await res.json();
+        document.getElementById('previewImg').src = data.image_b64;
+        document.getElementById('previewBox').style.display = 'flex';
+        
+        const fetchRes = await fetch(data.image_b64);
+        const blob = await fetchRes.blob();
+        currentFile = new File([blob], filename, { type: "image/png" });
+      } catch (err) { console.log(err); }
+    }
+
+    function handleFile(file) {
+      if (!file) return;
+      currentFile = file;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        document.getElementById('previewImg').src = e.target.result;
+        document.getElementById('previewBox').style.display = 'flex';
+      };
+      reader.readAsDataURL(file);
+    }
+
+    async function runInference() {
+      if (!currentFile) {
+        alert("Please upload an image or select a preset sample first.");
+        return;
+      }
+
+      const btnRun = document.getElementById('btnRun');
+      btnRun.innerText = "⏳ Running Selected Model...";
+      btnRun.disabled = true;
+
+      const formData = new FormData();
+      formData.append("file", currentFile);
+      formData.append("model_type", selectedModelMode);
+
+      try {
+        const res = await fetch('/api/predict', { method: 'POST', body: formData });
+        const data = await res.json();
+
+        if (!res.ok || data.error) {
+          alert(`Inference Error: ${data.error || 'Server error'}`);
+          return;
+        }
+
+        // Update Preprocessing Visuals
+        const prepGrid = document.getElementById('prepGrid');
+        prepGrid.innerHTML = '';
+        const stageNames = {
+          grayscale: "Original Grayscale",
+          denoised: "Denoised Filter",
+          enhanced: "CLAHE Enhanced",
+          binarized: "Adaptive Binary",
+          deskewed: "Deskewed Angle",
+          final: "Normalized Crop"
+        };
+        for (let k in data.preprocessing_stages) {
+          const div = document.createElement('div');
+          div.className = 'prep-card';
+          div.innerHTML = `<img src="${data.preprocessing_stages[k]}" alt="${k}"><span>${stageNames[k] || k}</span>`;
+          prepGrid.appendChild(div);
+        }
+
+        // Update Primary CNN Results
+        if (data.primary_model) {
+          document.getElementById('cnnResult').innerText = data.primary_model.predicted_text;
+          document.getElementById('cnnLatency').innerText = `${data.primary_model.latency_ms} ms`;
+          document.getElementById('cnnParams').innerText = `${(data.primary_model.parameters_count / 1e6).toFixed(2)} M`;
+        }
+
+        // Update Baseline Transformer Results
+        if (data.baseline_model) {
+          document.getElementById('trocrResult').innerText = data.baseline_model.predicted_text;
+          document.getElementById('trocrLatency').innerText = `${data.baseline_model.latency_ms} ms`;
+          document.getElementById('trocrParams').innerText = `~${(data.baseline_model.parameters_count / 1e6).toFixed(1)} M`;
+        }
+
+      } catch (err) {
+        console.error("Inference Error:", err);
+        alert(`Inference failed: ${err.message || 'Ensure server is running.'}`);
+      } finally {
+        setMode(selectedModelMode);
+        btnRun.disabled = false;
+      }
+    }
+
+    async function runDocumentOCR() {
+      if (!currentFile) {
+        alert("Please upload a document image or select a preset first.");
+        return;
+      }
+
+      const btnDocRun = document.getElementById('btnDocRun');
+      btnDocRun.innerText = "⏳ Segmenting Lines...";
+      btnDocRun.disabled = true;
+
+      const formData = new FormData();
+      formData.append("file", currentFile);
+      formData.append("model_type", selectedModelMode);
+
+      try {
+        const res = await fetch('/api/document_ocr', { method: 'POST', body: formData });
+        const data = await res.json();
+
+        if (!res.ok || data.error) {
+          alert(`Document OCR Error: ${data.error || 'Server error'}`);
+          return;
+        }
+
+        document.getElementById('previewImg').src = data.annotated_image_base64;
+
+        if (data.cnn_transcript || data.full_transcript) {
+          document.getElementById('cnnResult').innerText = data.cnn_transcript || data.full_transcript;
+          document.getElementById('cnnLatency').innerText = `Lines: ${data.total_lines_detected}`;
+        }
+        if (data.trocr_transcript || data.full_transcript) {
+          document.getElementById('trocrResult').innerText = data.trocr_transcript || data.full_transcript;
+          document.getElementById('trocrLatency').innerText = `Lines: ${data.total_lines_detected}`;
+        }
+
+        alert(`[OK] Document OCR Complete! Detected ${data.total_lines_detected} line(s).\n\nFull Transcript:\n${data.full_transcript}`);
+
+      } catch (err) {
+        console.error(err);
+        alert("Document OCR failed. Ensure server is running.");
+      } finally {
+        btnDocRun.innerText = "📄 Document Page OCR";
+        btnDocRun.disabled = false;
+      }
+    }
+
+    async function exportTranscript(modelKey, format) {
+      const text = (modelKey === 'cnn') ? document.getElementById('cnnResult').innerText : document.getElementById('trocrResult').innerText;
+      if (!text || text === "Awaiting Inference...") {
+        alert("Run inference or document OCR first before exporting transcript.");
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("transcript", text);
+      formData.append("export_format", format);
+
+      try {
+        const res = await fetch('/api/export', { method: 'POST', body: formData });
+        const blob = await res.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `ocr_transcript_${modelKey}.${format}`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      } catch (err) { alert("Export failed."); }
+    }
+
+    window.onload = () => {
+      loadPresets();
+      loadAnalytics();
+      setMode('cnn');
+    };
+  </script>
+</body>
+</html>

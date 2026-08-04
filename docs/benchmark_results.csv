@@ -1,0 +1,2 @@
+Model Architecture,Parameters Count,Avg Latency (ms),Throughput (FPS),CER,WER
+Vision Transformer (TrOCR),62000000,0.14,7142.9,0.9003,0.9858

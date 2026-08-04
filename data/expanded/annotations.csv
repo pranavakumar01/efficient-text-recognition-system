@@ -1,0 +1,501 @@
+image_path,label,category
+images\sample_0000.png,NMAMIT Nitte Campus Research
+images\sample_0001.png,Bahdanau Sequence Attention Mechanism
+images\sample_0002.png,Archival Manuscript Digitization Project
+images\sample_0003.png,a^2 + b^2 = c^2
+images\sample_0004.png,Curved Text Line Sequence Recognition
+images\sample_0005.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0006.png,lim_{x->0} (sin x / x) = 1
+images\sample_0007.png,Faded Ink and Paper Background Noise
+images\sample_0008.png,Self Supervised Representation Learning
+images\sample_0009.png,Character and Word Error Rate Metrics
+images\sample_0010.png,Deep Neural Nets for Sequence Modeling
+images\sample_0011.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0012.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0013.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0014.png,Information Science and Engineering
+images\sample_0015.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0016.png,x^2 + y^2 = z^2
+images\sample_0017.png,Connectionist Temporal Classification Loss
+images\sample_0018.png,Character and Word Error Rate Metrics
+images\sample_0019.png,Feature Map Extraction ResNet Backbone
+images\sample_0020.png,Optical Character Recognition Engine
+images\sample_0021.png,d/dx (e^x) = e^x
+images\sample_0022.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0023.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0024.png,Low Resource Domain Adaptation Test
+images\sample_0025.png,Curved Text Line Sequence Recognition
+images\sample_0026.png,Bidirectional Long Short Term Memory
+images\sample_0027.png,Binarization and Deskewing Enhancement
+images\sample_0028.png,Information Science and Engineering
+images\sample_0029.png,E = m * c ^ 2
+images\sample_0030.png,Information Science and Engineering
+images\sample_0031.png,Information Science and Engineering
+images\sample_0032.png,Binarization and Deskewing Enhancement
+images\sample_0033.png,Computer Vision Image Processing Task
+images\sample_0034.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0035.png,Historical Document Machine Translation
+images\sample_0036.png,Edge Device Deployment Optimization
+images\sample_0037.png,lim_{x->0} (sin x / x) = 1
+images\sample_0038.png,d/dx (e^x) = e^x
+images\sample_0039.png,Binarization and Deskewing Enhancement
+images\sample_0040.png,Connectionist Temporal Classification Loss
+images\sample_0041.png,lim_{x->0} (sin x / x) = 1
+images\sample_0042.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0043.png,Handwritten Note Extraction Sample
+images\sample_0044.png,Bahdanau Sequence Attention Mechanism
+images\sample_0045.png,det(A - lambda * I) = 0
+images\sample_0046.png,Lab Notebook Experiment Records 2026
+images\sample_0047.png,Ancient Text Restoration and OCR
+images\sample_0048.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0049.png,det(A - lambda * I) = 0
+images\sample_0050.png,Information Science and Engineering
+images\sample_0051.png,Ancient Text Restoration and OCR
+images\sample_0052.png,E = m * c ^ 2
+images\sample_0053.png,Ancient Text Restoration and OCR
+images\sample_0054.png,a^2 + b^2 = c^2
+images\sample_0055.png,a^2 + b^2 = c^2
+images\sample_0056.png,Ancient Text Restoration and OCR
+images\sample_0057.png,Connectionist Temporal Classification Loss
+images\sample_0058.png,Archival Manuscript Digitization Project
+images\sample_0059.png,Handwritten Note Extraction Sample
+images\sample_0060.png,Computer Vision Image Processing Task
+images\sample_0061.png,A . B = A & B + C^2
+images\sample_0062.png,Edge Device Deployment Optimization
+images\sample_0063.png,Archival Manuscript Digitization Project
+images\sample_0064.png,Historical Document Machine Translation
+images\sample_0065.png,Optical Character Recognition Engine
+images\sample_0066.png,Edge Device Deployment Optimization
+images\sample_0067.png,Curved Text Line Sequence Recognition
+images\sample_0068.png,Deep Neural Nets for Sequence Modeling
+images\sample_0069.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0070.png,Feature Map Extraction ResNet Backbone
+images\sample_0071.png,Self Supervised Representation Learning
+images\sample_0072.png,Lab Notebook Experiment Records 2026
+images\sample_0073.png,Computer Vision Image Processing Task
+images\sample_0074.png,Feature Map Extraction ResNet Backbone
+images\sample_0075.png,Feature Map Extraction ResNet Backbone
+images\sample_0076.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0077.png,Ancient Text Restoration and OCR
+images\sample_0078.png,Binarization and Deskewing Enhancement
+images\sample_0079.png,Self Supervised Representation Learning
+images\sample_0080.png,Optical Character Recognition Engine
+images\sample_0081.png,Self Supervised Representation Learning
+images\sample_0082.png,Deep Neural Nets for Sequence Modeling
+images\sample_0083.png,Computer Vision Image Processing Task
+images\sample_0084.png,Feature Map Extraction ResNet Backbone
+images\sample_0085.png,Ancient Text Restoration and OCR
+images\sample_0086.png,Edge Device Deployment Optimization
+images\sample_0087.png,Historical Document Machine Translation
+images\sample_0088.png,a^2 + b^2 = c^2
+images\sample_0089.png,Information Science and Engineering
+images\sample_0090.png,Information Science and Engineering
+images\sample_0091.png,SimCLR Contrastive Pretraining Framework
+images\sample_0092.png,Handwritten Note Extraction Sample
+images\sample_0093.png,Deep Learning Pattern Recognition
+images\sample_0094.png,Information Science and Engineering
+images\sample_0095.png,SimCLR Contrastive Pretraining Framework
+images\sample_0096.png,Optical Character Recognition Engine
+images\sample_0097.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0098.png,Deep Learning Pattern Recognition
+images\sample_0099.png,Faded Ink and Paper Background Noise
+images\sample_0100.png,Deep Neural Nets for Sequence Modeling
+images\sample_0101.png,NMAMIT Nitte Campus Research
+images\sample_0102.png,Faded Ink and Paper Background Noise
+images\sample_0103.png,Archival Manuscript Digitization Project
+images\sample_0104.png,NMAMIT Nitte Campus Research
+images\sample_0105.png,SimCLR Contrastive Pretraining Framework
+images\sample_0106.png,Computer Vision Image Processing Task
+images\sample_0107.png,Faded Ink and Paper Background Noise
+images\sample_0108.png,Binarization and Deskewing Enhancement
+images\sample_0109.png,Feature Map Extraction ResNet Backbone
+images\sample_0110.png,Archival Manuscript Digitization Project
+images\sample_0111.png,Historical Document Machine Translation
+images\sample_0112.png,Connectionist Temporal Classification Loss
+images\sample_0113.png,Self Supervised Representation Learning
+images\sample_0114.png,Bahdanau Sequence Attention Mechanism
+images\sample_0115.png,lim_{x->0} (sin x / x) = 1
+images\sample_0116.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0117.png,a^2 + b^2 = c^2
+images\sample_0118.png,Deep Learning Pattern Recognition
+images\sample_0119.png,Curved Text Line Sequence Recognition
+images\sample_0120.png,Deep Neural Nets for Sequence Modeling
+images\sample_0121.png,d/dx (e^x) = e^x
+images\sample_0122.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0123.png,x^2 + y^2 = z^2
+images\sample_0124.png,Binarization and Deskewing Enhancement
+images\sample_0125.png,A . B = A & B + C^2
+images\sample_0126.png,Deep Learning Pattern Recognition
+images\sample_0127.png,SimCLR Contrastive Pretraining Framework
+images\sample_0128.png,A . B = A & B + C^2
+images\sample_0129.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0130.png,x^2 + y^2 = z^2
+images\sample_0131.png,Faded Ink and Paper Background Noise
+images\sample_0132.png,Bidirectional Long Short Term Memory
+images\sample_0133.png,Edge Device Deployment Optimization
+images\sample_0134.png,Convolutional Neural Network Architecture
+images\sample_0135.png,Historical Document Machine Translation
+images\sample_0136.png,SimCLR Contrastive Pretraining Framework
+images\sample_0137.png,Deep Neural Nets for Sequence Modeling
+images\sample_0138.png,NMAMIT Nitte Campus Research
+images\sample_0139.png,Bidirectional Long Short Term Memory
+images\sample_0140.png,Historical Document Machine Translation
+images\sample_0141.png,d/dx (e^x) = e^x
+images\sample_0142.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0143.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0144.png,Handwritten Note Extraction Sample
+images\sample_0145.png,Handwritten Note Extraction Sample
+images\sample_0146.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0147.png,Archival Manuscript Digitization Project
+images\sample_0148.png,Binarization and Deskewing Enhancement
+images\sample_0149.png,Faded Ink and Paper Background Noise
+images\sample_0150.png,Optical Character Recognition Engine
+images\sample_0151.png,d/dx (e^x) = e^x
+images\sample_0152.png,Information Science and Engineering
+images\sample_0153.png,det(A - lambda * I) = 0
+images\sample_0154.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0155.png,Computer Vision Image Processing Task
+images\sample_0156.png,Low Resource Domain Adaptation Test
+images\sample_0157.png,E = m * c ^ 2
+images\sample_0158.png,Computer Vision Image Processing Task
+images\sample_0159.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0160.png,Curved Text Line Sequence Recognition
+images\sample_0161.png,Edge Device Deployment Optimization
+images\sample_0162.png,Character and Word Error Rate Metrics
+images\sample_0163.png,Handwritten Note Extraction Sample
+images\sample_0164.png,A . B = A & B + C^2
+images\sample_0165.png,a^2 + b^2 = c^2
+images\sample_0166.png,Deep Neural Nets for Sequence Modeling
+images\sample_0167.png,Curved Text Line Sequence Recognition
+images\sample_0168.png,lim_{x->0} (sin x / x) = 1
+images\sample_0169.png,Handwritten Note Extraction Sample
+images\sample_0170.png,Edge Device Deployment Optimization
+images\sample_0171.png,det(A - lambda * I) = 0
+images\sample_0172.png,Bahdanau Sequence Attention Mechanism
+images\sample_0173.png,SimCLR Contrastive Pretraining Framework
+images\sample_0174.png,SimCLR Contrastive Pretraining Framework
+images\sample_0175.png,d/dx (e^x) = e^x
+images\sample_0176.png,a^2 + b^2 = c^2
+images\sample_0177.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0178.png,Archival Manuscript Digitization Project
+images\sample_0179.png,Archival Manuscript Digitization Project
+images\sample_0180.png,NMAMIT Nitte Campus Research
+images\sample_0181.png,Handwritten Note Extraction Sample
+images\sample_0182.png,Historical Document Machine Translation
+images\sample_0183.png,Handwritten Note Extraction Sample
+images\sample_0184.png,Curved Text Line Sequence Recognition
+images\sample_0185.png,NMAMIT Nitte Campus Research
+images\sample_0186.png,Edge Device Deployment Optimization
+images\sample_0187.png,Bahdanau Sequence Attention Mechanism
+images\sample_0188.png,Historical Document Machine Translation
+images\sample_0189.png,Historical Document Machine Translation
+images\sample_0190.png,Self Supervised Representation Learning
+images\sample_0191.png,Feature Map Extraction ResNet Backbone
+images\sample_0192.png,Ancient Text Restoration and OCR
+images\sample_0193.png,Curved Text Line Sequence Recognition
+images\sample_0194.png,Self Supervised Representation Learning
+images\sample_0195.png,Handwritten Note Extraction Sample
+images\sample_0196.png,Character and Word Error Rate Metrics
+images\sample_0197.png,Historical Document Machine Translation
+images\sample_0198.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0199.png,Bahdanau Sequence Attention Mechanism
+images\sample_0200.png,Character and Word Error Rate Metrics
+images\sample_0201.png,det(A - lambda * I) = 0
+images\sample_0202.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0203.png,NMAMIT Nitte Campus Research
+images\sample_0204.png,Lab Notebook Experiment Records 2026
+images\sample_0205.png,Edge Device Deployment Optimization
+images\sample_0206.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0207.png,SimCLR Contrastive Pretraining Framework
+images\sample_0208.png,Curved Text Line Sequence Recognition
+images\sample_0209.png,Computer Vision Image Processing Task
+images\sample_0210.png,Faded Ink and Paper Background Noise
+images\sample_0211.png,Historical Document Machine Translation
+images\sample_0212.png,Computer Vision Image Processing Task
+images\sample_0213.png,Curved Text Line Sequence Recognition
+images\sample_0214.png,Binarization and Deskewing Enhancement
+images\sample_0215.png,Binarization and Deskewing Enhancement
+images\sample_0216.png,x^2 + y^2 = z^2
+images\sample_0217.png,Ancient Text Restoration and OCR
+images\sample_0218.png,Edge Device Deployment Optimization
+images\sample_0219.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0220.png,SimCLR Contrastive Pretraining Framework
+images\sample_0221.png,NMAMIT Nitte Campus Research
+images\sample_0222.png,Convolutional Neural Network Architecture
+images\sample_0223.png,Handwritten Note Extraction Sample
+images\sample_0224.png,Handwritten Note Extraction Sample
+images\sample_0225.png,Deep Learning Pattern Recognition
+images\sample_0226.png,Ancient Text Restoration and OCR
+images\sample_0227.png,Self Supervised Representation Learning
+images\sample_0228.png,Faded Ink and Paper Background Noise
+images\sample_0229.png,Self Supervised Representation Learning
+images\sample_0230.png,Faded Ink and Paper Background Noise
+images\sample_0231.png,Faded Ink and Paper Background Noise
+images\sample_0232.png,Archival Manuscript Digitization Project
+images\sample_0233.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0234.png,Historical Document Machine Translation
+images\sample_0235.png,Optical Character Recognition Engine
+images\sample_0236.png,Deep Neural Nets for Sequence Modeling
+images\sample_0237.png,Archival Manuscript Digitization Project
+images\sample_0238.png,lim_{x->0} (sin x / x) = 1
+images\sample_0239.png,Convolutional Neural Network Architecture
+images\sample_0240.png,Lab Notebook Experiment Records 2026
+images\sample_0241.png,Computer Vision Image Processing Task
+images\sample_0242.png,Self Supervised Representation Learning
+images\sample_0243.png,NMAMIT Nitte Campus Research
+images\sample_0244.png,Faded Ink and Paper Background Noise
+images\sample_0245.png,Bahdanau Sequence Attention Mechanism
+images\sample_0246.png,Connectionist Temporal Classification Loss
+images\sample_0247.png,Optical Character Recognition Engine
+images\sample_0248.png,Convolutional Neural Network Architecture
+images\sample_0249.png,Curved Text Line Sequence Recognition
+images\sample_0250.png,det(A - lambda * I) = 0
+images\sample_0251.png,Edge Device Deployment Optimization
+images\sample_0252.png,Efficient Text Recognition System
+images\sample_0253.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0254.png,Archival Manuscript Digitization Project
+images\sample_0255.png,Handwritten Note Extraction Sample
+images\sample_0256.png,d/dx (e^x) = e^x
+images\sample_0257.png,Low Resource Domain Adaptation Test
+images\sample_0258.png,Deep Neural Nets for Sequence Modeling
+images\sample_0259.png,Computer Vision Image Processing Task
+images\sample_0260.png,Binarization and Deskewing Enhancement
+images\sample_0261.png,Binarization and Deskewing Enhancement
+images\sample_0262.png,det(A - lambda * I) = 0
+images\sample_0263.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0264.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0265.png,Bahdanau Sequence Attention Mechanism
+images\sample_0266.png,Character and Word Error Rate Metrics
+images\sample_0267.png,det(A - lambda * I) = 0
+images\sample_0268.png,Ancient Text Restoration and OCR
+images\sample_0269.png,SimCLR Contrastive Pretraining Framework
+images\sample_0270.png,Bidirectional Long Short Term Memory
+images\sample_0271.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0272.png,NMAMIT Nitte Campus Research
+images\sample_0273.png,Feature Map Extraction ResNet Backbone
+images\sample_0274.png,Connectionist Temporal Classification Loss
+images\sample_0275.png,Deep Learning Pattern Recognition
+images\sample_0276.png,A . B = A & B + C^2
+images\sample_0277.png,Character and Word Error Rate Metrics
+images\sample_0278.png,Feature Map Extraction ResNet Backbone
+images\sample_0279.png,a^2 + b^2 = c^2
+images\sample_0280.png,d/dx (e^x) = e^x
+images\sample_0281.png,Computer Vision Image Processing Task
+images\sample_0282.png,Computer Vision Image Processing Task
+images\sample_0283.png,x^2 + y^2 = z^2
+images\sample_0284.png,SimCLR Contrastive Pretraining Framework
+images\sample_0285.png,Ancient Text Restoration and OCR
+images\sample_0286.png,Curved Text Line Sequence Recognition
+images\sample_0287.png,Faded Ink and Paper Background Noise
+images\sample_0288.png,Curved Text Line Sequence Recognition
+images\sample_0289.png,Edge Device Deployment Optimization
+images\sample_0290.png,Archival Manuscript Digitization Project
+images\sample_0291.png,Efficient Text Recognition System
+images\sample_0292.png,Low Resource Domain Adaptation Test
+images\sample_0293.png,Low Resource Domain Adaptation Test
+images\sample_0294.png,Handwritten Note Extraction Sample
+images\sample_0295.png,NMAMIT Nitte Campus Research
+images\sample_0296.png,Low Resource Domain Adaptation Test
+images\sample_0297.png,Faded Ink and Paper Background Noise
+images\sample_0298.png,Historical Document Machine Translation
+images\sample_0299.png,Binarization and Deskewing Enhancement
+images\sample_0300.png,Archival Manuscript Digitization Project
+images\sample_0301.png,Faded Ink and Paper Background Noise
+images\sample_0302.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0303.png,Binarization and Deskewing Enhancement
+images\sample_0304.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0305.png,Self Supervised Representation Learning
+images\sample_0306.png,Information Science and Engineering
+images\sample_0307.png,lim_{x->0} (sin x / x) = 1
+images\sample_0308.png,Faded Ink and Paper Background Noise
+images\sample_0309.png,Deep Neural Nets for Sequence Modeling
+images\sample_0310.png,Feature Map Extraction ResNet Backbone
+images\sample_0311.png,Binarization and Deskewing Enhancement
+images\sample_0312.png,Bahdanau Sequence Attention Mechanism
+images\sample_0313.png,Character and Word Error Rate Metrics
+images\sample_0314.png,Curved Text Line Sequence Recognition
+images\sample_0315.png,Curved Text Line Sequence Recognition
+images\sample_0316.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0317.png,x^2 + y^2 = z^2
+images\sample_0318.png,Handwritten Note Extraction Sample
+images\sample_0319.png,Handwritten Note Extraction Sample
+images\sample_0320.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0321.png,Edge Device Deployment Optimization
+images\sample_0322.png,Lab Notebook Experiment Records 2026
+images\sample_0323.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0324.png,Deep Neural Nets for Sequence Modeling
+images\sample_0325.png,Faded Ink and Paper Background Noise
+images\sample_0326.png,x^2 + y^2 = z^2
+images\sample_0327.png,Lab Notebook Experiment Records 2026
+images\sample_0328.png,Feature Map Extraction ResNet Backbone
+images\sample_0329.png,Ancient Text Restoration and OCR
+images\sample_0330.png,E = m * c ^ 2
+images\sample_0331.png,Binarization and Deskewing Enhancement
+images\sample_0332.png,Handwritten Note Extraction Sample
+images\sample_0333.png,Curved Text Line Sequence Recognition
+images\sample_0334.png,Lab Notebook Experiment Records 2026
+images\sample_0335.png,Archival Manuscript Digitization Project
+images\sample_0336.png,Optical Character Recognition Engine
+images\sample_0337.png,Ancient Text Restoration and OCR
+images\sample_0338.png,Deep Neural Nets for Sequence Modeling
+images\sample_0339.png,lim_{x->0} (sin x / x) = 1
+images\sample_0340.png,Curved Text Line Sequence Recognition
+images\sample_0341.png,Archival Manuscript Digitization Project
+images\sample_0342.png,Lab Notebook Experiment Records 2026
+images\sample_0343.png,det(A - lambda * I) = 0
+images\sample_0344.png,Deep Neural Nets for Sequence Modeling
+images\sample_0345.png,Faded Ink and Paper Background Noise
+images\sample_0346.png,A . B = A & B + C^2
+images\sample_0347.png,Binarization and Deskewing Enhancement
+images\sample_0348.png,Edge Device Deployment Optimization
+images\sample_0349.png,NMAMIT Nitte Campus Research
+images\sample_0350.png,a^2 + b^2 = c^2
+images\sample_0351.png,Edge Device Deployment Optimization
+images\sample_0352.png,lim_{x->0} (sin x / x) = 1
+images\sample_0353.png,Efficient Text Recognition System
+images\sample_0354.png,NMAMIT Nitte Campus Research
+images\sample_0355.png,Archival Manuscript Digitization Project
+images\sample_0356.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0357.png,Deep Neural Nets for Sequence Modeling
+images\sample_0358.png,SimCLR Contrastive Pretraining Framework
+images\sample_0359.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0360.png,Deep Learning Pattern Recognition
+images\sample_0361.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0362.png,Optical Character Recognition Engine
+images\sample_0363.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0364.png,A . B = A & B + C^2
+images\sample_0365.png,SimCLR Contrastive Pretraining Framework
+images\sample_0366.png,Convolutional Neural Network Architecture
+images\sample_0367.png,Efficient Text Recognition System
+images\sample_0368.png,Low Resource Domain Adaptation Test
+images\sample_0369.png,Ancient Text Restoration and OCR
+images\sample_0370.png,det(A - lambda * I) = 0
+images\sample_0371.png,SimCLR Contrastive Pretraining Framework
+images\sample_0372.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0373.png,Deep Neural Nets for Sequence Modeling
+images\sample_0374.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0375.png,Self Supervised Representation Learning
+images\sample_0376.png,NMAMIT Nitte Campus Research
+images\sample_0377.png,Feature Map Extraction ResNet Backbone
+images\sample_0378.png,Bidirectional Long Short Term Memory
+images\sample_0379.png,Historical Document Machine Translation
+images\sample_0380.png,Ancient Text Restoration and OCR
+images\sample_0381.png,Optical Character Recognition Engine
+images\sample_0382.png,Information Science and Engineering
+images\sample_0383.png,det(A - lambda * I) = 0
+images\sample_0384.png,Bidirectional Long Short Term Memory
+images\sample_0385.png,lim_{x->0} (sin x / x) = 1
+images\sample_0386.png,a^2 + b^2 = c^2
+images\sample_0387.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0388.png,Self Supervised Representation Learning
+images\sample_0389.png,Faded Ink and Paper Background Noise
+images\sample_0390.png,Convolutional Neural Network Architecture
+images\sample_0391.png,Self Supervised Representation Learning
+images\sample_0392.png,Lab Notebook Experiment Records 2026
+images\sample_0393.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0394.png,Ancient Text Restoration and OCR
+images\sample_0395.png,Archival Manuscript Digitization Project
+images\sample_0396.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0397.png,a^2 + b^2 = c^2
+images\sample_0398.png,Self Supervised Representation Learning
+images\sample_0399.png,Deep Neural Nets for Sequence Modeling
+images\sample_0400.png,Feature Map Extraction ResNet Backbone
+images\sample_0401.png,A . B = A & B + C^2
+images\sample_0402.png,Efficient Text Recognition System
+images\sample_0403.png,Low Resource Domain Adaptation Test
+images\sample_0404.png,lim_{x->0} (sin x / x) = 1
+images\sample_0405.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0406.png,Bahdanau Sequence Attention Mechanism
+images\sample_0407.png,NMAMIT Nitte Campus Research
+images\sample_0408.png,det(A - lambda * I) = 0
+images\sample_0409.png,Low Resource Domain Adaptation Test
+images\sample_0410.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0411.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0412.png,Faded Ink and Paper Background Noise
+images\sample_0413.png,Historical Document Machine Translation
+images\sample_0414.png,Character and Word Error Rate Metrics
+images\sample_0415.png,Connectionist Temporal Classification Loss
+images\sample_0416.png,Convolutional Neural Network Architecture
+images\sample_0417.png,Convolutional Neural Network Architecture
+images\sample_0418.png,Edge Device Deployment Optimization
+images\sample_0419.png,Optical Character Recognition Engine
+images\sample_0420.png,Curved Text Line Sequence Recognition
+images\sample_0421.png,Self Supervised Representation Learning
+images\sample_0422.png,Archival Manuscript Digitization Project
+images\sample_0423.png,Connectionist Temporal Classification Loss
+images\sample_0424.png,E = m * c ^ 2
+images\sample_0425.png,x^2 + y^2 = z^2
+images\sample_0426.png,NMAMIT Nitte Campus Research
+images\sample_0427.png,Deep Learning Pattern Recognition
+images\sample_0428.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0429.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0430.png,NMAMIT Nitte Campus Research
+images\sample_0431.png,Historical Document Machine Translation
+images\sample_0432.png,Handwritten Note Extraction Sample
+images\sample_0433.png,Binarization and Deskewing Enhancement
+images\sample_0434.png,Efficient Text Recognition System
+images\sample_0435.png,SimCLR Contrastive Pretraining Framework
+images\sample_0436.png,Deep Neural Nets for Sequence Modeling
+images\sample_0437.png,Historical Document Machine Translation
+images\sample_0438.png,Bahdanau Sequence Attention Mechanism
+images\sample_0439.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0440.png,Edge Device Deployment Optimization
+images\sample_0441.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0442.png,Efficient Text Recognition System
+images\sample_0443.png,Lab Notebook Experiment Records 2026
+images\sample_0444.png,Historical Document Machine Translation
+images\sample_0445.png,Bahdanau Sequence Attention Mechanism
+images\sample_0446.png,Low Resource Domain Adaptation Test
+images\sample_0447.png,Ancient Text Restoration and OCR
+images\sample_0448.png,Bahdanau Sequence Attention Mechanism
+images\sample_0449.png,Deep Learning Pattern Recognition
+images\sample_0450.png,Curved Text Line Sequence Recognition
+images\sample_0451.png,Computer Vision Image Processing Task
+images\sample_0452.png,E = m * c ^ 2
+images\sample_0453.png,Character and Word Error Rate Metrics
+images\sample_0454.png,Binarization and Deskewing Enhancement
+images\sample_0455.png,A . B = A & B + C^2
+images\sample_0456.png,E = m * c ^ 2
+images\sample_0457.png,Historical Document Machine Translation
+images\sample_0458.png,Curved Text Line Sequence Recognition
+images\sample_0459.png,Faded Ink and Paper Background Noise
+images\sample_0460.png,Ancient Text Restoration and OCR
+images\sample_0461.png,Deep Neural Nets for Sequence Modeling
+images\sample_0462.png,Faded Ink and Paper Background Noise
+images\sample_0463.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0464.png,Historical Document Machine Translation
+images\sample_0465.png,Computer Vision Image Processing Task
+images\sample_0466.png,A . B = A & B + C^2
+images\sample_0467.png,f(x) = int_0^inf e^(-x^2) dx
+images\sample_0468.png,Deep Neural Nets for Sequence Modeling
+images\sample_0469.png,Deep Learning Pattern Recognition
+images\sample_0470.png,Faded Ink and Paper Background Noise
+images\sample_0471.png,Deep Learning Pattern Recognition
+images\sample_0472.png,Curved Text Line Sequence Recognition
+images\sample_0473.png,Information Science and Engineering
+images\sample_0474.png,Self Supervised Representation Learning
+images\sample_0475.png,Optical Character Recognition Engine
+images\sample_0476.png,Character and Word Error Rate Metrics
+images\sample_0477.png,E = m * c ^ 2
+images\sample_0478.png,A . B = A & B + C^2
+images\sample_0479.png,Faded Ink and Paper Background Noise
+images\sample_0480.png,det(A - lambda * I) = 0
+images\sample_0481.png,Information Science and Engineering
+images\sample_0482.png,a^2 + b^2 = c^2
+images\sample_0483.png,Deep Neural Nets for Sequence Modeling
+images\sample_0484.png,Binarization and Deskewing Enhancement
+images\sample_0485.png,Deep Learning Pattern Recognition
+images\sample_0486.png,Edge Device Deployment Optimization
+images\sample_0487.png,Low Resource Domain Adaptation Test
+images\sample_0488.png,Quick Brown Fox Jumps Over Lazy Dog
+images\sample_0489.png,Edge Device Deployment Optimization
+images\sample_0490.png,lim_{x->0} (sin x / x) = 1
+images\sample_0491.png,Faded Ink and Paper Background Noise
+images\sample_0492.png,Character and Word Error Rate Metrics
+images\sample_0493.png,lim_{x->0} (sin x / x) = 1
+images\sample_0494.png,P(A|B) = P(B|A)P(A) / P(B)
+images\sample_0495.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0496.png,Faded Ink and Paper Background Noise
+images\sample_0497.png,x^2 + y^2 = z^2
+images\sample_0498.png,A . B = A & B + C^2
+images\sample_0499.png,Binarization and Deskewing Enhancement
