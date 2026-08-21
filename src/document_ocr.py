@@ -8,24 +8,28 @@ from src.infer import OCRInferenceEngine
 
 class LineSegmenter:
     """
-    Line Segmentation Engine using Horizontal Projection Profiles and Morphological Operations.
-    Splits full-page documents into individual text line crops with bounding boxes.
+    Advanced Line Segmentation Engine combining Horizontal Projection Profiles
+    and Morphological Text Line Analysis.
+    Cleanly extracts individual text line crops with tight bounding boxes from full-page documents.
     """
     @staticmethod
-    def segment_lines(img_np: np.ndarray, min_line_height: int = 12) -> list:
+    def segment_lines(img_np: np.ndarray, min_line_height: int = 10) -> list:
         """
         Returns list of dicts: [{'crop': np.ndarray, 'bbox': (x, y, w, h)}, ...]
         """
+        if img_np is None:
+            return []
+
         gray = cv2.cvtColor(img_np, cv2.COLOR_BGR2GRAY) if len(img_np.shape) == 3 else img_np.copy()
         h, w = gray.shape
 
-        # Adaptive thresholding to isolate text strokes
-        binary = cv2.adaptiveThreshold(
-            gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 15, 9
-        )
+        # Inverted binarization so text strokes are 255 (white on black background)
+        blur = cv2.GaussianBlur(gray, (3, 3), 0)
+        _, binary = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
-        # Horizontal dilation to connect adjacent characters into line strips
-        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (25, 3))
+        # Dynamic kernel width based on image dimensions
+        kernel_w = max(20, int(w * 0.04))
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (kernel_w, 3))
         dilated = cv2.dilate(binary, kernel, iterations=2)
 
         # Find line contours
@@ -34,18 +38,39 @@ class LineSegmenter:
         line_boxes = []
         for cnt in contours:
             x, y, bw, bh = cv2.boundingRect(cnt)
-            # Filter small noise artifacts
-            if bh >= min_line_height and bw > 30 and (bw * bh) > 400:
+            # Filter tiny noise artifacts
+            if bh >= min_line_height and bw >= 20 and (bw * bh) > 300:
                 line_boxes.append((x, y, bw, bh))
 
-        # Sort line boxes top-to-bottom (by y coordinate)
+        # Sort line boxes strictly top-to-bottom (by y coordinate)
         line_boxes = sorted(line_boxes, key=lambda b: b[1])
 
+        # Merge boxes that heavily overlap vertically
+        merged_boxes = []
+        for box in line_boxes:
+            if not merged_boxes:
+                merged_boxes.append(box)
+                continue
+            prev_x, prev_y, prev_w, prev_h = merged_boxes[-1]
+            curr_x, curr_y, curr_w, curr_h = box
+
+            # Check if boxes are on the same vertical line band
+            v_overlap = min(prev_y + prev_h, curr_y + curr_h) - max(prev_y, curr_y)
+            if v_overlap > (0.6 * min(prev_h, curr_h)):
+                # Merge into single wider line
+                new_x = min(prev_x, curr_x)
+                new_y = min(prev_y, curr_y)
+                new_w = max(prev_x + prev_w, curr_x + curr_w) - new_x
+                new_h = max(prev_y + prev_h, curr_y + curr_h) - new_y
+                merged_boxes[-1] = (new_x, new_y, new_w, new_h)
+            else:
+                merged_boxes.append(box)
+
         results = []
-        for (x, y, bw, bh) in line_boxes:
-            # Add small padding
-            pad_y = max(0, int(bh * 0.1))
-            pad_x = max(0, int(bw * 0.05))
+        for (x, y, bw, bh) in merged_boxes:
+            # Add safe margin padding
+            pad_y = max(2, int(bh * 0.12))
+            pad_x = max(2, int(bw * 0.03))
 
             y1 = max(0, y - pad_y)
             y2 = min(h, y + bh + pad_y)
@@ -53,12 +78,13 @@ class LineSegmenter:
             x2 = min(w, x + bw + pad_x)
 
             line_crop = img_np[y1:y2, x1:x2]
-            results.append({
-                "crop": line_crop,
-                "bbox": (x1, y1, x2 - x1, y2 - y1)
-            })
+            if line_crop.size > 0:
+                results.append({
+                    "crop": line_crop,
+                    "bbox": (x1, y1, x2 - x1, y2 - y1)
+                })
 
-        # Fallback if no contours found (treat whole image as single crop)
+        # Fallback if no contours found (treat entire image as single crop)
         if not results:
             results.append({
                 "crop": img_np,
@@ -77,7 +103,7 @@ class DocumentOCREngine:
         self.inference_engine = inference_engine if inference_engine is not None else OCRInferenceEngine()
         self.segmenter = LineSegmenter()
 
-    def process_document(self, img_np: np.ndarray, model_type: str = "both") -> dict:
+    def process_document(self, img_np: np.ndarray, model_type: str = "both", enable_autocorrect: bool = True) -> dict:
         line_segments = self.segmenter.segment_lines(img_np)
         
         annotated_img = img_np.copy()
@@ -92,7 +118,7 @@ class DocumentOCREngine:
             crop = seg["crop"]
             x, y, bw, bh = seg["bbox"]
 
-            res = self.inference_engine.run_pipeline(crop, model_type=model_type)
+            res = self.inference_engine.run_pipeline(crop, model_type=model_type, enable_autocorrect=enable_autocorrect)
 
             cnn_text = res["cnn_bilstm_attention"]["predicted_text"] if res.get("cnn_bilstm_attention") else ""
             trocr_text = res["transformer_baseline"]["predicted_text"] if res.get("transformer_baseline") else ""
@@ -140,7 +166,6 @@ class DocumentOCREngine:
 
 
 if __name__ == "__main__":
-    # Self-test document OCR engine
     doc_engine = DocumentOCREngine()
     sample_path = "d:\\Major Project\\data\\samples\\printed_sample.png"
     if os.path.exists(sample_path):
@@ -149,3 +174,4 @@ if __name__ == "__main__":
         print(f"[OK] Document OCR Test passed! Detected {out['total_lines_detected']} line(s).")
         print(f"CNN Transcript:\n{out['cnn_transcript']}")
         print(f"TrOCR Transcript:\n{out['trocr_transcript']}")
+

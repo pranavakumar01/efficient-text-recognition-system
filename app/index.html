@@ -7,6 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <!-- KaTeX for live mathematical formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <style>
     :root {
       --bg-dark: #0a0e17;
@@ -18,6 +21,16 @@
       --text-main: #f1f5f9;
       --text-muted: #94a3b8;
       --card-glow: 0 8px 32px 0 rgba(0, 242, 254, 0.15);
+    }
+
+    .math-render-box {
+      margin-top: 0.8rem;
+      padding: 0.8rem 1rem;
+      background: rgba(0, 242, 254, 0.05);
+      border: 1px dashed rgba(0, 242, 254, 0.3);
+      border-radius: 12px;
+      overflow-x: auto;
+      text-align: center;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -325,6 +338,10 @@
           </div>
           <h3 style="font-size: 1.1rem; font-weight: 600;">CNN + BiLSTM + Attention</h3>
           <div class="result-text" id="cnnResult">Awaiting Inference...</div>
+          <div class="math-render-box" id="cnnMathBox" style="display: none;">
+            <div style="font-size: 0.75rem; color: var(--accent-cyan); margin-bottom: 0.3rem;">📐 Rendered LaTeX Formula:</div>
+            <div id="cnnMathFormula" style="font-size: 1.1rem;"></div>
+          </div>
           <div class="metric-row"><span>Inference Latency:</span> <span class="metric-val" id="cnnLatency">-- ms</span></div>
           <div class="metric-row"><span>Model Parameters:</span> <span class="metric-val" id="cnnParams">-- M</span></div>
           <div class="metric-row"><span>Deployment Suitability:</span> <span class="metric-val" style="color: var(--accent-cyan);">High (Low Resource)</span></div>
@@ -341,6 +358,10 @@
           </div>
           <h3 style="font-size: 1.1rem; font-weight: 600;">Vision Transformer (TrOCR)</h3>
           <div class="result-text" id="trocrResult">Awaiting Inference...</div>
+          <div class="math-render-box" id="trocrMathBox" style="display: none;">
+            <div style="font-size: 0.75rem; color: var(--accent-purple); margin-bottom: 0.3rem;">📐 Rendered LaTeX Formula:</div>
+            <div id="trocrMathFormula" style="font-size: 1.1rem;"></div>
+          </div>
           <div class="metric-row"><span>Inference Latency:</span> <span class="metric-val" id="trocrLatency">-- ms</span></div>
           <div class="metric-row"><span>Model Parameters:</span> <span class="metric-val" id="trocrParams">~62.0 M</span></div>
           <div class="metric-row"><span>Deployment Suitability:</span> <span class="metric-val" style="color: var(--text-muted);">Requires High Compute</span></div>
@@ -509,11 +530,32 @@
           prepGrid.appendChild(div);
         }
 
+        function renderMathIfPresent(text, boxId, formulaId) {
+          const box = document.getElementById(boxId);
+          const formulaElem = document.getElementById(formulaId);
+          if (!box || !formulaElem) return;
+
+          const isMath = text && (text.includes('\\') || text.includes('^') || text.includes('_') || (text.includes('{') && text.includes('}')) || text.includes('='));
+          if (isMath && window.katex) {
+            try {
+              katex.render(text, formulaElem, { displayMode: true, throwOnError: false });
+              box.style.display = 'block';
+              return;
+            } catch (e) {
+              console.warn("KaTeX render error:", e);
+            }
+          }
+          box.style.display = 'none';
+        }
+
         // Update Primary CNN Results
         if (data.primary_model) {
           document.getElementById('cnnResult').innerText = data.primary_model.predicted_text;
           document.getElementById('cnnLatency').innerText = `${data.primary_model.latency_ms} ms`;
           document.getElementById('cnnParams').innerText = `${(data.primary_model.parameters_count / 1e6).toFixed(2)} M`;
+          renderMathIfPresent(data.primary_model.predicted_text, 'cnnMathBox', 'cnnMathFormula');
+        } else {
+          document.getElementById('cnnMathBox').style.display = 'none';
         }
 
         // Update Baseline Transformer Results
@@ -521,6 +563,9 @@
           document.getElementById('trocrResult').innerText = data.baseline_model.predicted_text;
           document.getElementById('trocrLatency').innerText = `${data.baseline_model.latency_ms} ms`;
           document.getElementById('trocrParams').innerText = `~${(data.baseline_model.parameters_count / 1e6).toFixed(1)} M`;
+          renderMathIfPresent(data.baseline_model.predicted_text, 'trocrMathBox', 'trocrMathFormula');
+        } else {
+          document.getElementById('trocrMathBox').style.display = 'none';
         }
 
       } catch (err) {

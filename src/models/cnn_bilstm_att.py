@@ -119,12 +119,19 @@ class CNN_BiLSTM_Attention(nn.Module):
             print(f"[!] Error transferring SSL weights: {e}")
             return False
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
+    def forward(self, x: torch.Tensor) -> tuple:
+        # Dynamic height guard: ensure height is 32 for CNN pooling layers
+        if x.size(2) != 32:
+            x = F.interpolate(x, size=(32, max(16, int(x.size(3) * (32.0 / x.size(2))))), mode='bilinear', align_corners=False)
+
         features = self.feature_extractor(x)  # [B, Seq_Len, Hidden_Dim]
         lstm_out, _ = self.bilstm(features)   # [B, Seq_Len, Hidden_Dim * 2]
         
-        # Aggregate sequence via attention
+        # Compute Bahdanau sequence attention
         query = torch.mean(lstm_out, dim=1)
         context, att_weights = self.attention(query, lstm_out)
-        logits = self.classifier(lstm_out)   # [B, Seq_Len, Num_Classes]
+
+        # Attentive feature modulation: modulate sequence with temporal attention weights
+        attended_seq = lstm_out * (1.0 + att_weights)
+        logits = self.classifier(attended_seq)   # [B, Seq_Len, Num_Classes]
         return logits, att_weights

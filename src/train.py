@@ -26,7 +26,13 @@ def train_model(
     tokenizer = Tokenizer()
     num_classes = len(tokenizer)
 
-    dataset_dirs = [data_dir, "d:\\Major Project\\data\\expanded", "d:\\Major Project\\data\\kaggle_dataset"]
+    raw_dirs = [
+        data_dir,
+        "d:\\Major Project\\data\\mathwriting",
+        "d:\\Major Project\\data\\expanded",
+        "d:\\Major Project\\data\\kaggle_dataset"
+    ]
+    dataset_dirs = list(dict.fromkeys(raw_dirs))
     datasets = []
     for d in dataset_dirs:
         if os.path.exists(d):
@@ -77,8 +83,9 @@ def train_model(
         start_time = time.time()
         model.train()
         running_train_loss = 0.0
+        total_batches = len(train_loader)
 
-        for images, targets, target_lengths, _ in train_loader:
+        for batch_idx, (images, targets, target_lengths, _) in enumerate(train_loader, 1):
             images = images.to(device)
             targets = targets.to(device)
             target_lengths = target_lengths.to(device)
@@ -97,6 +104,10 @@ def train_model(
                 torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=5.0)
                 optimizer.step()
                 running_train_loss += loss.item() * b_size
+
+            if batch_idx % 25 == 0 or batch_idx == total_batches:
+                current_loss = running_train_loss / max(1, batch_idx * batch_size)
+                print(f" [*] Epoch [{epoch}/{epochs}] Batch [{batch_idx}/{total_batches}] - Train Loss: {current_loss:.4f}", flush=True)
 
         train_loss = running_train_loss / max(1, train_size)
 

@@ -6,7 +6,8 @@ import cv2
 import numpy as np
 from PIL import Image
 
-DEFAULT_VOCAB = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-*/=()., "
+# Extended vocabulary with full printable ASCII characters for Math/LaTeX formulas & text
+DEFAULT_VOCAB = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 
 class Tokenizer:
     """
@@ -43,13 +44,16 @@ class Tokenizer:
 
 class OCRDataset(Dataset):
     """
-    PyTorch Dataset for text image OCR loading.
-    Supports CSV annotations (image_path, label) or simple directory listing.
+    PyTorch Dataset for text & math equation image OCR loading.
+    Supports CSV annotations (image_path, label) or simple directory listing, with optional split filter
+    and data augmentation for training robustness.
     """
-    def __init__(self, data_dir: str, csv_filename: str = "annotations.csv", target_h: int = 32, tokenizer: Tokenizer = None):
+    def __init__(self, data_dir: str, csv_filename: str = "annotations.csv", target_h: int = 32, tokenizer: Tokenizer = None, split: str = None, augment: bool = False):
         self.data_dir = data_dir
         self.target_h = target_h
         self.tokenizer = tokenizer or Tokenizer()
+        self.split = split
+        self.augment = augment
         self.samples = []
 
         csv_path = os.path.join(data_dir, csv_filename)
@@ -57,6 +61,8 @@ class OCRDataset(Dataset):
             with open(csv_path, "r", encoding="utf-8") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
+                    if self.split and "split" in row and row["split"] and row["split"].lower() != self.split.lower():
+                        continue
                     img_p = os.path.join(data_dir, row["image_path"])
                     if os.path.exists(img_p):
                         self.samples.append((img_p, row["label"]))
@@ -71,14 +77,33 @@ class OCRDataset(Dataset):
     def __len__(self):
         return len(self.samples)
 
+    def augment_image(self, img: np.ndarray) -> np.ndarray:
+        # Slight random tilt
+        if np.random.rand() > 0.5:
+            angle = np.random.uniform(-3.0, 3.0)
+            h, w = img.shape[:2]
+            M = cv2.getRotationMatrix2D((w // 2, h // 2), angle, 1.0)
+            img = cv2.warpAffine(img, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+        # Random slight Gaussian blur
+        if np.random.rand() > 0.7:
+            img = cv2.GaussianBlur(img, (3, 3), 0.5)
+        # Random brightness jitter
+        if np.random.rand() > 0.5:
+            alpha = np.random.uniform(0.9, 1.1)
+            beta = np.random.uniform(-10, 10)
+            img = np.clip(alpha * img + beta, 0, 255).astype(np.uint8)
+        return img
+
     def preprocess_image(self, img_path: str) -> torch.Tensor:
         img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
         if img is None:
-            # Create blank dummy image if read fails
             img = np.ones((self.target_h, 128), dtype=np.uint8) * 255
 
+        if self.augment:
+            img = self.augment_image(img)
+
         h, w = img.shape
-        aspect_ratio = w / float(h)
+        aspect_ratio = w / float(max(1, h))
         new_w = max(16, int(self.target_h * aspect_ratio))
         resized = cv2.resize(img, (new_w, self.target_h), interpolation=cv2.INTER_AREA)
 

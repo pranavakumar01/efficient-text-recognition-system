@@ -1,0 +1,2001 @@
+image_path,label,split,category
+images\train_00001d1472a8709f.png,\dot{y}=\frac{dy}{dt},train,mathwriting
+images\train_00002504391b73b5.png,\phi^{*}(T^{*}N)\rightarrow T^{*}M,train,mathwriting
+images\train_00003037d3a6d0ba.png,"(s,i)\ne(t,j)",train,mathwriting
+images\train_0000fe986018f92a.png,(\begin{matrix}9\\ 4\end{matrix}),train,mathwriting
+images\train_00011d9f03970147.png,{10^{218}}^{10}-\frac{\frac{4}{\sqrt{375}}}{179},train,mathwriting
+images\train_000133cb0c856e06.png,A=\prod_{i=1}^{n}A_{i},train,mathwriting
+images\train_00016221aae38d32.png,\frac{2GM}{z^{3}}\times10^{9},train,mathwriting
+images\train_00020b16c6745940.png,x^{2}\equiv a,train,mathwriting
+images\train_00024ca14bb2c441.png,B^{0}\rightarrow\pi^{+}\pi^{-},train,mathwriting
+images\train_00024d55f9740042.png,\kappa_{t}exp(\lambda_{t}x)c_{t},train,mathwriting
+images\train_0002a7f56b53a819.png,\hat{p}^{k},train,mathwriting
+images\train_0002b4a256978422.png,C_{n}=\int_{0}^{4}x^{n}\rho(x)dx,train,mathwriting
+images\train_0002c3b3d3ef4be0.png,V(r)=\frac{1}{2}\mu\omega^{2}r^{2},train,mathwriting
+images\train_0002d658ee84ef08.png,236^{236^{236^{236^{236^{230}}}}},train,mathwriting
+images\train_00039d451aa95d8d.png,\frac{d^{2}y}{dx^{2}},train,mathwriting
+images\train_00049b2182fa9dc4.png,R_{ix}(t)=M_{i}A_{ix}(t)-,train,mathwriting
+images\train_0004d30424e8ceb2.png,\frac{1}{\sqrt{N-3}},train,mathwriting
+images\train_0004fcd8d46e5e85.png,\frac{Du}{Dt}=\frac{1}{\rho}\nabla\cdot\sigma+g,train,mathwriting
+images\train_00050ff7a6a14205.png,-\frac{dy}{dx}=\frac{MU_{x}}{MU_{y}},train,mathwriting
+images\train_0005375a475c49c9.png,q=(\begin{matrix}a&b\\ c&d\end{matrix}),train,mathwriting
+images\train_00054c27e3d85aad.png,\frac{1/288}{(\sqrt{157}-10)},train,mathwriting
+images\train_0005cd98bb3e2d89.png,\frac{\partial f}{\partial x_{j}}(x),train,mathwriting
+images\train_000608f192ceb411.png,\frac{\frac{1}{5}}{2+5},train,mathwriting
+images\train_000623c29c09dd53.png,\frac{dS}{dz}=0,train,mathwriting
+images\train_00066b09b7c377c4.png,\hat{f_{j}},train,mathwriting
+images\train_0006a2adabf109ce.png,s+3^{t}>s,train,mathwriting
+images\train_00074f16d99c2767.png,g(x),train,mathwriting
+images\train_0007829ef326150a.png,R(\lambda)=\frac{1}{I-\lambda K},train,mathwriting
+images\train_0007f0faaa9212a6.png,1-\int_{t-r}^{t}E(t^{\prime})dt^{\prime},train,mathwriting
+images\train_0008c9c4b9825660.png,(\begin{matrix}1\\ -1\\ 0\\ 0\end{matrix}),train,mathwriting
+images\train_0008ec126355603e.png,2\pi a<C<2\sqrt{3}\pi a,train,mathwriting
+images\train_00093d23ee46a8f2.png,A=\underline{m},train,mathwriting
+images\train_0009f5d8c7671582.png,G=\prod_{i\in I}H_{i},train,mathwriting
+images\train_000a4eb1002bb21d.png,v=\sqrt{\frac{ke^{2}}{mr}},train,mathwriting
+images\train_000aa4c444cba3f2.png,\vartheta=-\frac{log\frac{\phi_{\varsigma_{1}}}{\phi_{\varsigma_{2}}}}{log\frac{\varsigma_{1}}{\varsigma_{2}}},train,mathwriting
+images\train_000aa97a08c4ebc0.png,e^{(\frac{\Upsilon}{\phi})[1-\sqrt{1-\frac{5\phi^{5}m}{\Upsilon}}]},train,mathwriting
+images\train_000aaf6c5f7aa08f.png,\phi(p)=\frac{e^{-\frac{p^{5}}{5}}}{\sqrt{5\epsilon}},train,mathwriting
+images\train_000b0b9eab603b8e.png,\frac{e^{+\frac{m^{2}}{2\Phi^{2}}}}{\sqrt{2\pi}\Phi},train,mathwriting
+images\train_000b441015418074.png,-\frac{d[A]}{dt}=k[A],train,mathwriting
+images\train_000b81338e4af5c6.png,\hat{\alpha}<\hat{\beta},train,mathwriting
+images\train_000bb64516a3f3ac.png,\beta_{i}=\frac{u_{i}}{c}=tanhw_{i},train,mathwriting
+images\train_000bbfdd14ba3813.png,\int_{L}^{*},train,mathwriting
+images\train_000c731674bb23b7.png,8.4\times10^{-17}seconds,train,mathwriting
+images\train_000c9122cc825b30.png,A_{0}\cap A_{1}=\emptyset,train,mathwriting
+images\train_000cd7b1d11083ff.png,c=-\frac{1}{6}\cdot\frac{1}{2!}=-\frac{1}{12},train,mathwriting
+images\train_000cedb5d6cad7be.png,\frac{470^{10}}{7+9^{5}},train,mathwriting
+images\train_000cffc280515218.png,\hat{n}_{b},train,mathwriting
+images\train_000d04a77455b682.png,184+414+408^{163},train,mathwriting
+images\train_000e454d52c4f910.png,2\sqrt{\frac{2}{3\pi}},train,mathwriting
+images\train_000e4bf55c62b9fd.png,\int_{0}^{1}e(t)dt,train,mathwriting
+images\train_000f0995e2ff36b1.png,[\begin{matrix}4&6\end{matrix}],train,mathwriting
+images\train_0010034cd203e7a3.png,3N=\frac{1}{3}\nu_{m}^{3}VF,train,mathwriting
+images\train_001018ef1fa64bac.png,(56+\sqrt{3})\cdot\frac{443}{156},train,mathwriting
+images\train_00104621e047b624.png,t=\frac{|r|}{\sqrt{\frac{8-r^{0}}{p-0}}},train,mathwriting
+images\train_0010566f69932acb.png,\frac{9}{\sqrt{9-\frac{9}{\epsilon^{2}}}},train,mathwriting
+images\train_001098c88ff4b6a3.png,0.75\overline{0},train,mathwriting
+images\train_0011774694ee987d.png,365-34/194^{473-5^{323}},train,mathwriting
+images\train_00122275b91e7268.png,N=(\begin{matrix}n\\ 2\end{matrix}),train,mathwriting
+images\train_001246fdff4accda.png,(\begin{matrix}k\\ 2\end{matrix})-m,train,mathwriting
+images\train_001252704eb46b3d.png,\hat{u},train,mathwriting
+images\train_0012531edd807df4.png,\overline{x}\in X,train,mathwriting
+images\train_00125e64cb8dc94d.png,\tau=2\cdot(z-z_{0})/c,train,mathwriting
+images\train_0012ce3c56c1c1a7.png,O(\sqrt{logn}),train,mathwriting
+images\train_00133356f895f681.png,"Y^{\prime}:=\Delta([a^{\prime},b^{\prime}])",train,mathwriting
+images\train_0013efcdef4457f8.png,f=\frac{g}{x^{n}}=\frac{h}{y^{m}},train,mathwriting
+images\train_00142612449001b5.png,(138+406)^{\frac{2}{10}},train,mathwriting
+images\train_00148cdf5ee93317.png,k=\frac{ln10}{1},train,mathwriting
+images\train_00148ce643ef4c8c.png,\overline{A}=\{x|x\notin A\},train,mathwriting
+images\train_0014ab1a02dbc233.png,(\begin{matrix}1&-1\\ 1&-1\end{matrix}),train,mathwriting
+images\train_00151ef02b28f1a2.png,(\begin{matrix}0&-1\\ 1&0\end{matrix}),train,mathwriting
+images\train_001540691746d440.png,T_{r}/T_{c},train,mathwriting
+images\train_00154114d98e3ac6.png,((\frac{7}{\sqrt{3}}+8)/197+87),train,mathwriting
+images\train_0015d6bd631a88db.png,\frac{234+419\cdot7}{(215+479)},train,mathwriting
+images\train_0015fc5ea0f1ba26.png,-\sqrt{E_{b}}\phi(t),train,mathwriting
+images\train_001654a4f04b8938.png,-r^{2}f(r),train,mathwriting
+images\train_0016c43128ca12ae.png,[\begin{matrix}-1\\ 1\end{matrix}],train,mathwriting
+images\train_0016e50cac6c71da.png,(\begin{matrix}n\\ 2\end{matrix})p,train,mathwriting
+images\train_0016e75661823f89.png,c_{1}=\frac{\hat{X}[1]-c_{0}}{1-z_{0}z_{1}^{-1}},train,mathwriting
+images\train_0016feeda06f2bd2.png,\int sin(x)e^{x}dx,train,mathwriting
+images\train_00176fbbdb57b68a.png,m=\frac{ln(F/K)}{\sigma\sqrt{\tau}},train,mathwriting
+images\train_00179390bfb7714e.png,(\begin{matrix}n\\ n\end{matrix}),train,mathwriting
+images\train_00179c3a8790683f.png,"\sigma_{n}^{2}=\frac{M_{2,n}}{n}",train,mathwriting
+images\train_0017f2505e2a8ce9.png,"max_{a\in R^{d},||a||=1}\langle a,Va\rangle",train,mathwriting
+images\train_00181075e895916b.png,1-1\sqrt{2}=-0.41421...,train,mathwriting
+images\train_00182b6dab9da7a9.png,v_{0}-\frac{p}{m_{1}},train,mathwriting
+images\train_00184ef14748a8d6.png,-\frac{\pi}{T}<\omega<+\frac{\pi}{T},train,mathwriting
+images\train_00189476f651172a.png,(228-346-3)+(\frac{406}{8}-2),train,mathwriting
+images\train_0018c52961c51623.png,\int_{X}dxf(x),train,mathwriting
+images\train_0018f24943dc3a6d.png,\frac{\frac{64}{252}}{(\frac{3}{\sqrt{10}})^{476}},train,mathwriting
+images\train_001968b41d7a2a5e.png,\tilde{G}_{2},train,mathwriting
+images\train_00199521551168b4.png,Y_{i2}^{2}=Y^{2}+\frac{Y}{Z},train,mathwriting
+images\train_0019e071c44ec6db.png,S_{g}S_{h}=S_{gh},train,mathwriting
+images\train_001a10b7020f1648.png,\hat{v},train,mathwriting
+images\train_001ade3fc20c6023.png,1+2\lceil2logn\rceil,train,mathwriting
+images\train_001b24d7961c0250.png,\lambda\sqrt{p}>(p^{1/4}+1)^{2},train,mathwriting
+images\train_001b7f33a2bc97cf.png,P^{\alpha\dot{\beta}}=T^{\alpha\dot{\beta}},train,mathwriting
+images\train_001bd3c0fcc3e969.png,x^{2}+\sqrt{x}-14=0,train,mathwriting
+images\train_001c75031d2f1b4e.png,v=\frac{E_{i}}{\omega}(1+\frac{2}{\gamma^{2}}),train,mathwriting
+images\train_001cd3e5d48795f8.png,\frac{\frac{\frac{\sqrt{352}}{\sqrt{111}}}{7}}{{4^{336}}^{294}},train,mathwriting
+images\train_001d283588dfa718.png,"k=1,2",train,mathwriting
+images\train_001d4a58ade080ad.png,[\begin{matrix}1&2\\ 1&1\end{matrix}],train,mathwriting
+images\train_001daaef0125176b.png,80^{80^{80^{80^{...}}}},train,mathwriting
+images\train_001df2cb90f05776.png,{k^{l}}^{f},train,mathwriting
+images\train_001e24c5e9f2d1d6.png,P_{cr}=\alpha\frac{\lambda^{2}}{4\pi n_{0}n_{2}},train,mathwriting
+images\train_001e284c1c22fd3d.png,rN(1-\frac{N}{K})=H,train,mathwriting
+images\train_001e28a505c83359.png,\frac{16}{5}\sqrt{\frac{2}{7\pi}},train,mathwriting
+images\train_001e35e5192e71b8.png,\int_{-r}^{r}|y-s|dx,train,mathwriting
+images\train_001ea39cc64103db.png,a^{a^{-^{-^{a^{a}}}}},train,mathwriting
+images\train_001ec4c3972734f5.png,H_{(1-X)}=\frac{\beta-1}{2\beta-1},train,mathwriting
+images\train_001ec8217428b573.png,Re_{p},train,mathwriting
+images\train_001edc715205b281.png,<<<,train,mathwriting
+images\train_001fbf6705912a65.png,\tilde{\gamma}(0)=p,train,mathwriting
+images\train_00201d421de15e75.png,x\leftarrow x+0,train,mathwriting
+images\train_0020214d39489a06.png,E=\frac{sc^{9}}{\sqrt{1+\frac{d^{9}}{c^{9}}}},train,mathwriting
+images\train_002028badcc0a910.png,w_{1}^{i}=\frac{1}{N},train,mathwriting
+images\train_00206363645d51b8.png,"(t,y)\in[0,T]\times R^{m}",train,mathwriting
+images\train_0020f62a652b7ade.png,V=\frac{E*G*U}{O*R},train,mathwriting
+images\train_002115ea86c132d5.png,\partial^{2}f/\partial x^{2},train,mathwriting
+images\train_002135d6f617f487.png,\int_{c(r)}R(z)dz=0,train,mathwriting
+images\train_00215a57ddbfeb55.png,H=kA\frac{T_{H}-T_{L}}{L},train,mathwriting
+images\train_0021846124835296.png,(\begin{matrix}4\\ 2\end{matrix})=6,train,mathwriting
+images\train_00218b2789863031.png,"\nu,\mu",train,mathwriting
+images\train_00219f9279a29e24.png,\overline{O_{L}P},train,mathwriting
+images\train_0021af3efdeb11f9.png,{{3^{\sqrt{9}}}^{468}}^{(\frac{431}{38})^{7}},train,mathwriting
+images\train_002230bb31dc5728.png,\frac{\frac{7}{167}}{(454^{7}+6)},train,mathwriting
+images\train_002377a6dd2c3f2d.png,n\cdot sin(\frac{1}{n}),train,mathwriting
+images\train_00243a7f6ce804e6.png,"\beta<min(R,2\sqrt{R})",train,mathwriting
+images\train_00247d853ee3e7f4.png,t=\frac{e}{s_{e}},train,mathwriting
+images\train_0024a3c3355c974e.png,\nabla B_{z}=\frac{dB_{z}}{dA}\nabla A,train,mathwriting
+images\train_0025980adb4f0ea4.png,M=(\begin{matrix}0&0\\ 1&0\end{matrix}),train,mathwriting
+images\train_00269f2f43a4f7a8.png,J=-M(\frac{d}{dx})\frac{df}{dc},train,mathwriting
+images\train_002708879bc6168f.png,\frac{b-a}{2}(f_{0}+f_{1}),train,mathwriting
+images\train_00277f25659d617b.png,\mu(\tilde{X}\cap\tilde{Y})=0,train,mathwriting
+images\train_00278a7c09f0fa84.png,\frac{dV_{r}}{dt},train,mathwriting
+images\train_0027a65fd5f29943.png,"exp(m,n)=m^{n}",train,mathwriting
+images\train_0028445e8b8d9c9d.png,-2x+5<x+3,train,mathwriting
+images\train_002874c6284541c5.png,i_{1}^{\prime}=\frac{i_{1}\cdot vt_{1}}{\sqrt{1\cdot\frac{v^{8}}{n^{8}}}},train,mathwriting
+images\train_002911cf7c0e8fcb.png,"\underline{x}=(x_{1},...,x_{d})",train,mathwriting
+images\train_002946bfef94228f.png,\psi\rightarrow\varphi,train,mathwriting
+images\train_002a7e32a88eba46.png,(\begin{matrix}m+n\\ m\end{matrix}),train,mathwriting
+images\train_002abe421dcea4a4.png,{7^{112}}^{\frac{\sqrt{5}}{\sqrt{10}}},train,mathwriting
+images\train_002aebbe15848f08.png,\sqrt{g/l},train,mathwriting
+images\train_002b03f369cbf37a.png,(\begin{matrix}x\\ k\end{matrix}),train,mathwriting
+images\train_002b556b492dc0f9.png,K/BB=\frac{K}{BB},train,mathwriting
+images\train_002b81122bbd555b.png,\sqrt{m},train,mathwriting
+images\train_002b8eed3f910b14.png,[\begin{matrix}3&4&4\\ 4&5\\ 6&7\end{matrix}],train,mathwriting
+images\train_002b948f1376592f.png,q=K\sqrt{p},train,mathwriting
+images\train_002bead60b5e1e8f.png,x^{n-m}=\frac{x^{n}}{x^{m}},train,mathwriting
+images\train_002cf3be58f4b524.png,[\begin{matrix}ac\\ bd\\ 0\end{matrix}],train,mathwriting
+images\train_002d65feee6d6ea0.png,\hat{q}_{o},train,mathwriting
+images\train_002d76a8701a7536.png,|x[n]|,train,mathwriting
+images\train_002dc6ca867cebc1.png,O(\sqrt{logn_{i-1}}),train,mathwriting
+images\train_002dc95aa246d6d3.png,1-\frac{2}{\sqrt{5}},train,mathwriting
+images\train_002e043b378fcd74.png,{238^{412}}^{\frac{132^{246}}{293}},train,mathwriting
+images\train_002e3654ccc00e43.png,a\cdot\frac{m}{s}:=\frac{am}{s},train,mathwriting
+images\train_002e43a297cdf063.png,(x)O(\underline{x}:G),train,mathwriting
+images\train_002e5dffa0a6b7ad.png,\theta=\theta_{o},train,mathwriting
+images\train_002e60ace3dcf5ae.png,\tilde{X}=f(Y),train,mathwriting
+images\train_002e6c42ee8a3032.png,\frac{dS}{dt}=N\cdot v,train,mathwriting
+images\train_002f166b9799d984.png,II_{\infty},train,mathwriting
+images\train_002f2501b6237d46.png,\sqrt{\frac{5}{126}},train,mathwriting
+images\train_002f5ad07f82d0f5.png,(\begin{matrix}k-1\\ D-1\end{matrix}),train,mathwriting
+images\train_00304cc925245853.png,\int_{S}FdS,train,mathwriting
+images\train_0030c91cb9f0f166.png,\frac{\partial logB_{\nu}(T)}{\partial log\nu}\simeq2,train,mathwriting
+images\train_0030e3da579f9ae8.png,e^{j\omega t},train,mathwriting
+images\train_00312a6b81d6e64b.png,z=\frac{h}{\sqrt[8]{\cdot\frac{u_{1}}{5}}},train,mathwriting
+images\train_00314906c1c993d2.png,{\prod_{i}}^{\prime}G_{i},train,mathwriting
+images\train_0031acba6857269f.png,s\{\begin{matrix}3\\ 3\end{matrix}\},train,mathwriting
+images\train_0031b4d1b0febf74.png,A_{0}=aA^{*},train,mathwriting
+images\train_003216f5859e3d6e.png,(\frac{\frac{3}{492}}{149})^{{6^{202}}^{8}},train,mathwriting
+images\train_0032522af22a45a5.png,368+8-\frac{483}{\sqrt{206}},train,mathwriting
+images\train_0032b37cbd8fbbef.png,p=\frac{RT}{\underline{V}},train,mathwriting
+images\train_0032f911c76cf848.png,\frac{m}{\sqrt{5-\frac{y^{8}}{c^{8}}}},train,mathwriting
+images\train_00330410630018f4.png,3\sqrt{2},train,mathwriting
+images\train_00333fa03cc27707.png,\frac{\frac{\frac{3}{\sqrt{1}}}{447}}{4^{7}},train,mathwriting
+images\train_0033c785a741d901.png,g(x)=5\sqrt{x},train,mathwriting
+images\train_0034431789887edb.png,{\sqrt{6}+333^{10}}^{{9^{140}}^{10}},train,mathwriting
+images\train_0034597d549e13cb.png,\Rightarrow b=\frac{n}{2n-1},train,mathwriting
+images\train_0034ae2b4ced0aae.png,\frac{D_{\odot}^{2}}{2\mu_{0}r_{c}^{6}}=nmv^{2},train,mathwriting
+images\train_0034eedc982f65cb.png,g=(\begin{matrix}A&B\\ C&D\end{matrix}),train,mathwriting
+images\train_0034f8a0f7d74d02.png,\hat{\nu}_{i},train,mathwriting
+images\train_00353d603817fbb8.png,2(\begin{matrix}n\\ j\end{matrix}),train,mathwriting
+images\train_003550f3003f38f7.png,r_{N}^{k}(m)<cn^{\frac{N}{k}-1},train,mathwriting
+images\train_00355b186a50a2f2.png,\frac{\partial X_{i}}{\partial P_{Y}}>0,train,mathwriting
+images\train_0035f266d1df31e1.png,1-C^{2},train,mathwriting
+images\train_0035f8f41dcb71e5.png,\hat{\beta}=(\overline{y/x}),train,mathwriting
+images\train_00364219afad1b29.png,C/D\ge20,train,mathwriting
+images\train_00367759ae90c0ad.png,(\begin{matrix}4\\ 2\end{matrix}),train,mathwriting
+images\train_0036d8c0b91358c2.png,\frac{du}{dy},train,mathwriting
+images\train_00373fdac871c875.png,\frac{mn(n+1)}{mn(n+1)+2np},train,mathwriting
+images\train_00374250ed130982.png,2^{2^{2^{2^{74}}}},train,mathwriting
+images\train_00378ff3af63af33.png,\frac{3}{2}\frac{F}{V_{0}},train,mathwriting
+images\train_003848a170f3b943.png,"L(s,E)=\prod_{p}L_{p}(s,E)^{-1}",train,mathwriting
+images\train_003853a58e3d5a91.png,y=\sqrt[3]{x},train,mathwriting
+images\train_0038a2e3644b182c.png,"\sigma(t)=(\frac{1}{1-t},0)",train,mathwriting
+images\train_003907ea0d4ff5df.png,\frac{(\frac{9}{6}+309)}{\frac{10}{10}},train,mathwriting
+images\train_003939fb3699dd95.png,\frac{6(90-\pi^{4})}{5(\pi^{2}-6)^{2}},train,mathwriting
+images\train_003945936248f448.png,"X\sim Benini(\alpha,0,\sigma)",train,mathwriting
+images\train_00399e1081f27f06.png,M=(\begin{matrix}1&-1\\ 0&0\end{matrix}),train,mathwriting
+images\train_0039a6b904d24a6d.png,D=\frac{k_{B}T}{f},train,mathwriting
+images\train_003a89aeb01a2843.png,f^{*}=min_{x\in R^{n}}\{f(x)\},train,mathwriting
+images\train_003aa982ee78b0e5.png,"[x,x+\sqrt{2x}],x\ge2",train,mathwriting
+images\train_003b6135448cb579.png,\sqrt{n_{1}n_{2}/(n_{1}+n_{2})}g,train,mathwriting
+images\train_003bacc76ae4e64b.png,"\{0,9\}^{7^{7^{\aleph_{0}}}}",train,mathwriting
+images\train_003d13dc78e8434c.png,l_{4}^{l_{2}^{l_{3}^{-^{-^{-}}}}},train,mathwriting
+images\train_003d71d72ab7273e.png,"f,g\in\pi_{n}(X,x_{0})",train,mathwriting
+images\train_003e6fa5f4387282.png,n^{\underline{k}},train,mathwriting
+images\train_003ebf3ba7f5e81b.png,"cov(X,Y)=\frac{1}{2}+\frac{1}{\pi}",train,mathwriting
+images\train_003ee4a2b278b706.png,\eta_{mean}=\frac{\sum_{i}p_{i}t_{i}\eta_{i}}{\sum_{i}p_{i}t_{i}},train,mathwriting
+images\train_003f260c4e9e26e0.png,0\le\underline{d}(\vec{X})\le\overline{d}(\vec{X})\le n,train,mathwriting
+images\train_003f776fa12094ca.png,V=f(t)=V_{0}e^{-\frac{t}{\tau}},train,mathwriting
+images\train_003ff3afd3719f1f.png,(\frac{N-1}{N}),train,mathwriting
+images\train_004099078f90b1dd.png,41-164^{{3^{300}}^{6}},train,mathwriting
+images\train_00412b9cea8d9a57.png,a=\frac{\sqrt{3}}{3},train,mathwriting
+images\train_00414326e8d45016.png,distance=\frac{c\delta t}{2},train,mathwriting
+images\train_0041b78521987ea3.png,\beta(g)=\lambda\frac{\partial g}{\partial\lambda},train,mathwriting
+images\train_0042427d52f66cce.png,c_{\epsilon}^{\rho},train,mathwriting
+images\train_0042adc7422e4c17.png,2y\frac{dy}{dx}=3x^{2}-1,train,mathwriting
+images\train_0042efb08dc66a78.png,\tilde{Y},train,mathwriting
+images\train_00430200ea47c6be.png,(\begin{matrix}k\\ 2\end{matrix})=\frac{k(k-1)}{2},train,mathwriting
+images\train_004378528ac8aab5.png,\int_{0}^{x}f(t)dt,train,mathwriting
+images\train_0044e78f94f1e0af.png,"[F^{[l]},F^{[l^{\prime}]}]=0",train,mathwriting
+images\train_0044ff3105c5bf2c.png,\hat{u},train,mathwriting
+images\train_00457e3beef52191.png,"||p_{\sigma}||\in[0,\alpha\sqrt{n}]",train,mathwriting
+images\train_004583f3918b5baf.png,b=a\sqrt{1-\epsilon^{2}},train,mathwriting
+images\train_0045b615e639841f.png,"R=(0,w)\times(0,h)",train,mathwriting
+images\train_0045b7dcdcc10ebd.png,\overline{V^{\prime}L},train,mathwriting
+images\train_0045edc2a00696a2.png,(1-\frac{1}{e}),train,mathwriting
+images\train_00461d23d9e36c43.png,(\frac{96}{387})^{\frac{10}{2}},train,mathwriting
+images\train_00467c27c74f0a31.png,n\hat{F}_{n}(t),train,mathwriting
+images\train_00469d1e38330631.png,\frac{48}{2(9+3)},train,mathwriting
+images\train_00469e688b4629ee.png,"(\begin{matrix}50\\ 3\end{matrix})=19,600",train,mathwriting
+images\train_0046a5c8a8ebe12b.png,dS=\frac{dQ}{T},train,mathwriting
+images\train_004726b917d6cb40.png,\hat{w}_{2},train,mathwriting
+images\train_00476afe1911003e.png,OB,train,mathwriting
+images\train_00480e58878a96f0.png,A_{p}(\kappa)=\frac{I_{p/2}(\kappa)}{I_{p/2-1}(\kappa)},train,mathwriting
+images\train_004843a12bab7db2.png,P=-(\frac{\partial F}{\partial V})_{T},train,mathwriting
+images\train_00486d2b7696b3ac.png,"q(x,t)=\delta(\underline{x},t)-r(\underline{x},t)",train,mathwriting
+images\train_0048b101712f9477.png,N=m_{w}g+T,train,mathwriting
+images\train_0048ef34f29a00a6.png,\frac{df}{dz}=f,train,mathwriting
+images\train_004910aaf0c407b0.png,p(0)=\sqrt{2\hbar\rho},train,mathwriting
+images\train_004926cda5247a44.png,"\iint f(x,y)dxdy",train,mathwriting
+images\train_004970a2ad0fcb27.png,\Phi=\int E(\hat{e}_{\angle}\cdot dA),train,mathwriting
+images\train_0049ac848a65b314.png,||,train,mathwriting
+images\train_004a6b5c90fb637f.png,"g(x)=min(\frac{x}{\alpha},1)",train,mathwriting
+images\train_004b768b53440655.png,"\frac{1}{1},\frac{4}{2},\frac{10}{3},\frac{20}{4},...",train,mathwriting
+images\train_004ba924d34ee721.png,\hat{D}=D,train,mathwriting
+images\train_004bd224818016b6.png,\lambda_{0}=\frac{h}{m_{0}c}-,train,mathwriting
+images\train_004bfc81e4a676d3.png,|\psi^{\prime}\rangle=U_{\alpha}|\psi\rangle,train,mathwriting
+images\train_004ca82a54a7b8b1.png,[\begin{matrix}x^{\prime}\\ y^{\prime}\end{matrix}],train,mathwriting
+images\train_004ce6572e83fc05.png,|\Omega\rangle,train,mathwriting
+images\train_004d67c88d5bc561.png,\tilde{\omega},train,mathwriting
+images\train_004dc447285c6f09.png,\frac{1}{\sqrt{1-x^{2}}},train,mathwriting
+images\train_004ddc4953b158a0.png,\frac{dy}{dx},train,mathwriting
+images\train_004e009b3853b987.png,J=[\begin{matrix}0&I\\ -I&0\end{matrix}],train,mathwriting
+images\train_004e74b6cceed2dc.png,[\begin{matrix}-1\\ 1\end{matrix}],train,mathwriting
+images\train_004ecb0368429a6b.png,x^{\frac{n+1}{2}}\notin Z/nZ,train,mathwriting
+images\train_004fcf98a58c60c6.png,K_{\lambda g}=\frac{1}{\lambda}K_{g},train,mathwriting
+images\train_0050385ff54765b8.png,\frac{1}{4n}p^{2}\cdot cot(\pi/n),train,mathwriting
+images\train_0050464363a7d02d.png,q=\frac{1}{\sqrt{1\cdot\frac{v^{5}}{c^{5}}}}\xi,train,mathwriting
+images\train_00509c3f4df2ae81.png,\frac{log_{e}(x)-log_{e}(a)}{log_{e}(b)-log_{e}(a)},train,mathwriting
+images\train_0050e5d65fe4c6c8.png,\int\frac{1}{u}du,train,mathwriting
+images\train_0051050d3ae21062.png,(\begin{matrix}u&&-v\\ v&&u\end{matrix}),train,mathwriting
+images\train_00517d95d9be27b6.png,V=x^{2}+y^{2}+z^{2},train,mathwriting
+images\train_005183848fbb4582.png,C,train,mathwriting
+images\train_005240dff224e503.png,\varphi=\frac{3}{2}\eta,train,mathwriting
+images\train_005280507bf77a14.png,u_{12}=\frac{z_{1}-z_{2}}{\sqrt{2}},train,mathwriting
+images\train_0052ae19ccd26655.png,"S_{ab}=(\psi_{a}^{-},\psi_{b}^{+})",train,mathwriting
+images\train_00531f3417af201d.png,e=\sqrt{1-(b/a)^{2}},train,mathwriting
+images\train_0053236c2c93ca7a.png,x_{min},train,mathwriting
+images\train_00533e51d1318659.png,s\{\begin{matrix}5\\ 4\end{matrix}\},train,mathwriting
+images\train_00535d357b40d674.png,f(x)=\int_{a}^{x}g(t)dt,train,mathwriting
+images\train_0053d2e7fe7f1b19.png,\forall\epsilon_{1}>0\exists k_{1},train,mathwriting
+images\train_0053f4751a1d9065.png,[\frac{2n\pi}{3};\frac{2(n+1)\pi}{3}],train,mathwriting
+images\train_0054984b97f4db67.png,"\{1,2,6,12\}",train,mathwriting
+images\train_0054bca374360260.png,x^{-}=\frac{t-x}{\sqrt{2}},train,mathwriting
+images\train_0055071e7d92c6d3.png,\overline{(\frac{\alpha}{\pi})_{3}}=(\frac{\overline{\alpha}}{\overline{\pi}})_{3},train,mathwriting
+images\train_005552b6f3c2532b.png,W^{\mathbb{C}}\cong W\oplus\overline{W},train,mathwriting
+images\train_005577a3adb560d1.png,S_{22}=\frac{-T_{21}}{T_{22}},train,mathwriting
+images\train_0056232ec140f267.png,\hat{g},train,mathwriting
+images\train_00562b4e0fffdf9b.png,\tilde{y}=\tilde{w}=h(\tilde{X})-\tilde{Y},train,mathwriting
+images\train_005645eee0313ff8.png,\hat{x}_{1},train,mathwriting
+images\train_0056be10bc3d4215.png,E^{g}[X|F_{t}]:=Y_{t},train,mathwriting
+images\train_0056d10feb24b22a.png,S^{+}=T^{+},train,mathwriting
+images\train_0058a2803ec98084.png,\frac{d^{2}y}{dt^{2}},train,mathwriting
+images\train_00592b6249eb667d.png,\tilde{T}_{i}:G/G^{\prime}\rightarrow H_{i}/H_{i}^{\prime},train,mathwriting
+images\train_0059490f718283b0.png,\sigma_{\overline{x}}=\frac{\sigma}{\sqrt{n}}\sqrt{\gamma_{2}},train,mathwriting
+images\train_005981442638300b.png,\frac{\partial p}{\partial z}+\rho g=0,train,mathwriting
+images\train_0059d5230b4c7d83.png,\sqrt{p}=\frac{b}{\sqrt{a}},train,mathwriting
+images\train_005a00e263515939.png,\mathbb{Q},train,mathwriting
+images\train_005a8007883b90e4.png,\frac{dB}{dG},train,mathwriting
+images\train_005b3a9cefef9eef.png,\frac{\partial\rho}{\partial t}+\nabla\cdot(\rho\vec{v})=0,train,mathwriting
+images\train_005b556b1c8a48b5.png,x+1\notin J,train,mathwriting
+images\train_005b73671359b925.png,P_{L}=I_{R}^{2}\cdot ESR,train,mathwriting
+images\train_005bbeae5efe2873.png,m\ge(\begin{matrix}k\\ 2\end{matrix}),train,mathwriting
+images\train_005c6f61e95345c7.png,y_{t}=y_{t-1}+c+e_{t},train,mathwriting
+images\train_005d2166215b337b.png,\hat{w}(f),train,mathwriting
+images\train_005d23c0847389f5.png,\prod_{i=1}^{n},train,mathwriting
+images\train_005d5085ee80004b.png,r<m<n,train,mathwriting
+images\train_005de4342bcd05b6.png,\frac{df}{d\tau}=\frac{1}{2\pi i}f^{\prime}(\tau),train,mathwriting
+images\train_005e9956a4332687.png,"alg^{\prime}(A^{\prime},B)",train,mathwriting
+images\train_005ef9b6db61252a.png,(2m-1),train,mathwriting
+images\train_005f0a6b379cc5db.png,\tilde{g}_{lk}\overline{n}=g_{kl},train,mathwriting
+images\train_005fc954bf9fd016.png,(\begin{matrix}4\\ 3\end{matrix})=4,train,mathwriting
+images\train_006000ffa45f0610.png,D=\pm\prod_{j<k}(a_{j}-a_{k}),train,mathwriting
+images\train_00601c967f4caea9.png,\Delta s^{\prime}=\frac{\Delta s}{\sqrt{1+\frac{v^{5}}{u^{5}}}},train,mathwriting
+images\train_00612b4673bbe702.png,\frac{2^{7}}{\frac{404}{9}-83},train,mathwriting
+images\train_006155c9097a3e1f.png,2=1/2=-1,train,mathwriting
+images\train_006171a03aecada0.png,x_{k}[m]=\delta[m-k],train,mathwriting
+images\train_00617e2dab532fd1.png,"A_{1},A_{2}\in H_{n}",train,mathwriting
+images\train_0061f9757e18ea67.png,\sqrt{a^{2}+b^{2}}=c,train,mathwriting
+images\train_00622f161790cebf.png,L=\int_{S_{o}}^{S}nds,train,mathwriting
+images\train_00623d6df3d7b8a1.png,\frac{322-13\sqrt{70}}{900},train,mathwriting
+images\train_0062fcce4675ef23.png,(\begin{matrix}0&1\\ -1&-1\end{matrix}),train,mathwriting
+images\train_006363996f84403b.png,\eta=1-\frac{T_{L}}{T_{H}},train,mathwriting
+images\train_006367f1a2397a84.png,b_{y}^{\mu},train,mathwriting
+images\train_00639c517e054dd7.png,\hat{\nu}_{i},train,mathwriting
+images\train_006409db8adfcb1e.png,\int\frac{dy}{dx}dx,train,mathwriting
+images\train_00647fafc2b506fc.png,"i_{k}^{2}\in\{-1,0,+1\}",train,mathwriting
+images\train_0064a14f3f1ac93a.png,\overline{Q}=0,train,mathwriting
+images\train_0064d6be74138f22.png,1/\sqrt{n},train,mathwriting
+images\train_0065045151f917cb.png,\frac{469\cdot5}{\frac{6}{4}},train,mathwriting
+images\train_0065651083557d67.png,A\rightarrow B/C\_D,train,mathwriting
+images\train_0065792f55e4004f.png,v=\int\frac{dv}{dx}dx,train,mathwriting
+images\train_0065eae40f7ae179.png,-E_{a}/R,train,mathwriting
+images\train_006616dade279bda.png,\sum_{i=0}^{2}(\begin{matrix}4\\ 2i\end{matrix})(\begin{matrix}6\\ 4-i\end{matrix}),train,mathwriting
+images\train_006662d9f339f015.png,\frac{b}{a}=2h,train,mathwriting
+images\train_00668731f5e1e45a.png,\kappa=\frac{1}{r}\frac{dp}{dr},train,mathwriting
+images\train_0066adf30bf53a84.png,\Omega_{u}^{\phi},train,mathwriting
+images\train_0066d1b9780d7fd9.png,\delta(y)=\frac{e^{-\frac{y^{7}}{7}}}{\sqrt{7\pi}},train,mathwriting
+images\train_0067019a32686e70.png,y_{1}=\frac{y^{3}-a\cdot x^{3}}{a\cdot y\cdot x^{3}-y},train,mathwriting
+images\train_006715410f8ab012.png,|2\rangle=(\begin{matrix}0\\ 1\end{matrix}),train,mathwriting
+images\train_0067dd540b34e4b5.png,"O_{3}^{\pm,\mp}(3)=2^{3}",train,mathwriting
+images\train_0067ea70756c7cb4.png,f^{\prime}(x)>0,train,mathwriting
+images\train_006806930c4206ed.png,\frac{dE_{r}}{dx},train,mathwriting
+images\train_00688a6c47c2dfa2.png,t-1+t^{-1},train,mathwriting
+images\train_0068ab686db8bcbf.png,\tilde{A}_{9},train,mathwriting
+images\train_0069b68809429e6b.png,"\{7,1\}^{5^{5^{\aleph_{7}}}}",train,mathwriting
+images\train_0069ed4fd37ad219.png,\delta=\frac{4\pi}{\lambda}ntcos\theta_{t},train,mathwriting
+images\train_0069f439e0b37a3c.png,W=\int Fdx,train,mathwriting
+images\train_006a15764aca7382.png,m\ge(\begin{matrix}k\\ 2\end{matrix}),train,mathwriting
+images\train_006a2a00f0629194.png,(\begin{matrix}p\\ n\end{matrix}),train,mathwriting
+images\train_006a381e4a6cc1f7.png,{\omega^{1}}_{3}=-\frac{sin\theta d\phi}{g},train,mathwriting
+images\train_006a5f6412436ee9.png,[x^{\prime}:y^{\prime}:z^{\prime}],train,mathwriting
+images\train_006abd695c03da0d.png,\overline{E}=\frac{3}{2}k_{B}T_{k},train,mathwriting
+images\train_006afe4c30bf698c.png,V^{*}=9k_{B}T\frac{\partial ln\dot{\epsilon}}{\partial H},train,mathwriting
+images\train_006b70e0a1647f06.png,(\begin{matrix}n\\ a\end{matrix})<e^{at},train,mathwriting
+images\train_006cd0a8a2122bfc.png,\pi/\sqrt{6}\approx1.2825,train,mathwriting
+images\train_006ce2c5faadb51e.png,N_{b}^{r},train,mathwriting
+images\train_006d2b7ee8010e08.png,x=y=\frac{i}{\sqrt{2}},train,mathwriting
+images\train_006e0736d83ec947.png,U\mapsto C_{*}(U;A),train,mathwriting
+images\train_006e32fbd127ee1f.png,exp_{a}^{p}(b)=a^{a^{\cdot^{\cdot^{a^{b}}}}},train,mathwriting
+images\train_006e3a47a067af11.png,\dot{x}=Ax+Bu,train,mathwriting
+images\train_006f9a342992f0c8.png,(\frac{1}{249}+10)^{(2\cdot103)^{305}},train,mathwriting
+images\train_0070397fbc55c6c7.png,"P=\{p_{1},\cdot\cdot\cdot,p_{n}\}",train,mathwriting
+images\train_007081acc51ba382.png,f(\xi)\leftarrow\hat{f},train,mathwriting
+images\train_00710ebe91045921.png,A\cdot A=|A|^{2},train,mathwriting
+images\train_00711fb14af5f0d6.png,(\frac{386}{\sqrt{307}})^{6}\cdot363^{9}+404,train,mathwriting
+images\train_0071b3a0f553660c.png,P_{1}=1-R/d,train,mathwriting
+images\train_00726d5274061da3.png,P(W_{i})=\frac{K}{N},train,mathwriting
+images\train_00727264eedfeb56.png,\sqrt{\Omega},train,mathwriting
+images\train_0072ba822ea9ddf6.png,\overline{F}=-\frac{GM}{R^{2}}\hat{r},train,mathwriting
+images\train_0072ea3e0aea5540.png,A=[\begin{matrix}a&b\\ c&d\end{matrix}],train,mathwriting
+images\train_0072efc68da297bd.png,e^{e^{e^{\cdot^{\cdot^{\cdot}}}}},train,mathwriting
+images\train_007308d0e05258fd.png,5^{5^{5^{5^{5^{5}}}}}-7,train,mathwriting
+images\train_0073697742b7a934.png,AA^{+}b=b,train,mathwriting
+images\train_0073c5b6c331e65d.png,V_{d}=\frac{\pi^{d/2}}{\Gamma(\frac{d}{2}+1)},train,mathwriting
+images\train_007460ba0c513ec7.png,"\tilde{Q}(1,N_{f})_{-1/(N_{f}-N_{c}),N_{c}/N_{f}}",train,mathwriting
+images\train_00751a097ee27ca8.png,\frac{32\pi^{4}}{945}R^{9},train,mathwriting
+images\train_007585af6cd70e41.png,\sum_{i=0}^{\infty}n_{i}=dN(\nu),train,mathwriting
+images\train_007593797c5540b3.png,(\frac{6^{10}}{133})^{\frac{411}{9}},train,mathwriting
+images\train_007595a9275bad76.png,(6^{224}\cdot383^{5}),train,mathwriting
+images\train_0075b409b33adced.png,\frac{\frac{\sqrt{235}+17}{6}}{(109\cdot6)},train,mathwriting
+images\train_0075be3978eaaada.png,\tilde{H}_{n},train,mathwriting
+images\train_007640c90806eed8.png,3^{3^{\cdot^{\cdot^{\cdot^{w}}}}},train,mathwriting
+images\train_007685c80898bc92.png,\frac{dy}{dx}=\frac{1}{1+x^{2}},train,mathwriting
+images\train_00769dfc9b460285.png,\xi(m)\Delta m,train,mathwriting
+images\train_0076b6a9ad4cf961.png,\frac{dk}{dt},train,mathwriting
+images\train_0076cbb76cd6d44e.png,"D\varphi_{x},(\varphi_{*})_{x},\varphi^{\prime}(x)",train,mathwriting
+images\train_0076e8e8e026cd2f.png,e^{\pm\sqrt[n]{x}},train,mathwriting
+images\train_007707aba9b8b41a.png,[\begin{matrix}0&1\\ 1&-n\end{matrix}],train,mathwriting
+images\train_0077283d095a71c3.png,\frac{dp_{o}}{p_{o}},train,mathwriting
+images\train_00772f40c22e67f2.png,\frac{210\cdot196}{218+13},train,mathwriting
+images\train_0077594096d6dafe.png,t=1+1+\cdot\cdot\cdot+1,train,mathwriting
+images\train_007767a356b22004.png,E=mc^{2}\oplus pc,train,mathwriting
+images\train_007774ffbb04136c.png,(\frac{248}{10}/372-43),train,mathwriting
+images\train_00787d624486cbee.png,B=\frac{i_{0}e}{\sqrt{1-\frac{e^{3}}{c^{3}}}},train,mathwriting
+images\train_00789d9fe32a4e4e.png,p(\theta)\propto\sqrt{I(\theta)},train,mathwriting
+images\train_0078ba0454a29c55.png,\frac{m}{\sqrt{\frac{e^{2}}{n^{2}}-1}},train,mathwriting
+images\train_0078fd643945cd4e.png,W_{\alpha}\equiv\overline{D}^{2}D_{\alpha}V,train,mathwriting
+images\train_00794694910ddd66.png,\tilde{g}_{lk},train,mathwriting
+images\train_00799b38d865bc29.png,\tilde{\phi}\circ\omega_{G}=\omega_{H}\circ\phi,train,mathwriting
+images\train_007a02c41b809e06.png,[M+Na]^{+},train,mathwriting
+images\train_007a2bd20dd09f18.png,J,train,mathwriting
+images\train_007a4360ff6cc126.png,(\begin{matrix}1&1\\ -a&-c\end{matrix}),train,mathwriting
+images\train_007aeee6a3568cc9.png,T=\sum_{i=1}^{N}\frac{|p_{i}|^{2}}{2m_{i}},train,mathwriting
+images\train_007b0236f2139ef2.png,"X_{\tau(X^{*},X^{**})}^{*}",train,mathwriting
+images\train_007b1810525535c0.png,r.Ann(S),train,mathwriting
+images\train_007bc5a18bc37b0e.png,d_{m}=\frac{d_{ip}+d_{ia}}{2},train,mathwriting
+images\train_007bdb5efb9af6d9.png,\frac{\frac{10}{7}}{\frac{\sqrt{450}}{2}},train,mathwriting
+images\train_007bfdb7f615095b.png,R^{*}=\frac{4}{\rho f^{2}}|\frac{\partial p}{\partial n}|,train,mathwriting
+images\train_007c073b0b579271.png,\tilde{H_{i}}=\varphi(H_{i}),train,mathwriting
+images\train_007c7ace47ebd5b7.png,\sqrt{m}\cdot logm,train,mathwriting
+images\train_007c9536828c95e5.png,\tilde{B},train,mathwriting
+images\train_007caecf6eb02e06.png,\tilde{\Phi}=\sqrt{3}ln\Phi,train,mathwriting
+images\train_007cca8252fc8869.png,[\begin{matrix}0\\ \frac{\pi}{2}\end{matrix}],train,mathwriting
+images\train_007ce34f0224c6ab.png,b_{n}=-\sum_{d|n}\frac{1}{d}=,train,mathwriting
+images\train_007ce8e44a2848c2.png,E=E_{0}-\int PdV,train,mathwriting
+images\train_007d2994eba5a354.png,SNR=\frac{|y_{s}|^{2}}{E\{|y_{v}|^{2}\}},train,mathwriting
+images\train_007ddf0657ab8296.png,tan\varphi=\frac{y}{x},train,mathwriting
+images\train_007deebd5f94045b.png,a=\sqrt[2]{\frac{P}{2mt}},train,mathwriting
+images\train_007e054a9236b6e6.png,F_{(\lambda_{p})},train,mathwriting
+images\train_007eeb68f657ba03.png,\int_{|z|=r}f(z)dz,train,mathwriting
+images\train_007f0a0a4fe8bee7.png,\frac{\frac{10}{7}}{\frac{\sqrt{450}}{2}},train,mathwriting
+images\train_007fa225a05fff9e.png,m=\frac{m_{9}}{({1\cdot\frac{v^{5}}{c^{5}})}^{4/5}},train,mathwriting
+images\train_007fc7ec5896d01e.png,\sqrt{\pi},train,mathwriting
+images\train_008091f694abcdea.png,m=\frac{d}{p},train,mathwriting
+images\train_0080a1d418593c7d.png,i=C\frac{du}{dt},train,mathwriting
+images\train_0080ae2ec5f55db8.png,(\begin{matrix}n\\ 5\end{matrix}),train,mathwriting
+images\train_0080c5bbc6dc5578.png,\vec{r}=[\begin{matrix}1\\ 1\end{matrix}],train,mathwriting
+images\train_0080c78ccf052739.png,v=\sqrt{\frac{T}{\rho}},train,mathwriting
+images\train_008115b0fcfe3858.png,\sqrt[12]{2^{6}},train,mathwriting
+images\train_00812f5a54be8b3a.png,A\frac{\partial v}{\partial t}+B\frac{\partial v}{\partial x}=0,train,mathwriting
+images\train_0082097f2e7ff4a7.png,\int_{C}x^{2}dy,train,mathwriting
+images\train_00820e452d23f662.png,"k(\tau)=\frac{\vartheta_{10}(0,\tau)^{2}}{\vartheta_{00}(0,\tau)^{2}}",train,mathwriting
+images\train_0083362417976dee.png,[\begin{matrix}0&-1\\ 1&0\end{matrix}],train,mathwriting
+images\train_00834d1959cecb48.png,"(y_{1},...,y_{n})\in F_{n}",train,mathwriting
+images\train_00836ff2c7d0c6e3.png,2p_{0}q_{0}-f(2p_{0}q_{0}),train,mathwriting
+images\train_0083d69f45c078f8.png,\overline{\frac{\partial(\overline{r_{h}}\cdot r_{h}^{\prime})}{\partial x_{h}}}=0,train,mathwriting
+images\train_0084344ce0df556c.png,P(5),train,mathwriting
+images\train_0085b7b2ef604fb5.png,K_{a}>K_{b}>0,train,mathwriting
+images\train_0085cc5a099ecadb.png,[\begin{matrix}a&b\\ b&a\end{matrix}],train,mathwriting
+images\train_0085ce0a5305fe45.png,\gamma=\frac{3}{\sqrt{3-\frac{e^{2}}{g^{2}}}},train,mathwriting
+images\train_008604cb7af45191.png,\int_{A}(g-f)d\mu=0,train,mathwriting
+images\train_0086715cef39a61d.png,c\sqrt{2},train,mathwriting
+images\train_0086839749dfc4c4.png,G(r)\approx\frac{e^{-\sqrt{t}r}}{r^{d-2}},train,mathwriting
+images\train_0086844ab072f069.png,\hat{y}_{i},train,mathwriting
+images\train_0086b40d8e8421de.png,\delta(A)=\prod_{p}p^{t_{p}},train,mathwriting
+images\train_00874649f83c08b3.png,\underline{P}X=\emptyset,train,mathwriting
+images\train_0087c7d13e2275f3.png,E=E\psi^{\dagger}\psi,train,mathwriting
+images\train_00882b4a50783c46.png,10^{2}-92(1^{2})=8,train,mathwriting
+images\train_0088494be6c98805.png,"[1-\lambda R(\underline{k},\omega)]^{n}u(n)",train,mathwriting
+images\train_00886064bfa33e94.png,r^{\beta_{\epsilon}},train,mathwriting
+images\train_0088717218f00504.png,\frac{\partial\psi}{\partial t}=P\psi,train,mathwriting
+images\train_0088aba89a0edc22.png,\frac{25+\sqrt{621}}{2},train,mathwriting
+images\train_0088e58575074e21.png,e^{ijkl}e_{ijkl}=4!,train,mathwriting
+images\train_0088f6694783e0f5.png,\int_{X}\int_{Y}\int_{Z},train,mathwriting
+images\train_008928ac8c512ef2.png,\int_{L}f(z)dz,train,mathwriting
+images\train_00893c96c4d361f4.png,\frac{4\pi m}{\sqrt{5\cdot\frac{3m}{ro^{3}}}},train,mathwriting
+images\train_008943b038d84a32.png,(\frac{9^{7}}{6}+\frac{92+\sqrt{3}}{1}),train,mathwriting
+images\train_00895deb5a227920.png,\mathbb{C}P^{1},train,mathwriting
+images\train_0089926aebbd8ec0.png,y=\frac{y_{0}}{({1-\frac{v^{4}}{q^{4}})}^{6/4}},train,mathwriting
+images\train_0089940023f664df.png,"(M,d)",train,mathwriting
+images\train_0089955a9124b870.png,\underline{x},train,mathwriting
+images\train_0089e0ebb6612675.png,(\begin{matrix}c_{i}\\ i\end{matrix}),train,mathwriting
+images\train_008a578cd4df01fe.png,\tilde{C}_{7},train,mathwriting
+images\train_008a8a7b57df44c0.png,\tilde{G_{0}},train,mathwriting
+images\train_008ad2c4344e95bd.png,(144\cdot185-\frac{\sqrt{200}+9}{2}),train,mathwriting
+images\train_008b6839d58ea408.png,\pi:g\rightarrow gl_{V},train,mathwriting
+images\train_008bbcdde2e2c189.png,0\le\frac{T}{C}\le1,train,mathwriting
+images\train_008bdc6858590d8b.png,"f_{s+2},f_{s+3},...",train,mathwriting
+images\train_008d33de8e3e0c51.png,a^{+\frac{(B+K)^{2}}{2{(s_{B})}^{2}}},train,mathwriting
+images\train_008d61f40f66d7ce.png,s=s_{1}|s_{2},train,mathwriting
+images\train_008d898076e5aef2.png,5^{\sqrt{189}}-381\cdot(\frac{197}{10})^{5},train,mathwriting
+images\train_008db8163f7fcb27.png,(\frac{a\psi+b}{c\psi+d}),train,mathwriting
+images\train_008e2f9a3f22a1cc.png,\frac{x^{2}}{2}\alpha-y,train,mathwriting
+images\train_008e8e7d9214bc24.png,\frac{\sqrt{157}}{394}\cdot(90\cdot1),train,mathwriting
+images\train_008ee4a2875eb6cb.png,a\notin\mathbb{Q},train,mathwriting
+images\train_008f0d976c8bb96b.png,\tilde{E}_{7},train,mathwriting
+images\train_008f76c7bc3c7c0f.png,\overline{C}(8),train,mathwriting
+images\train_008f76cff2e606e5.png,\tilde{U},train,mathwriting
+images\train_008f7a6707458606.png,(\frac{4}{\sqrt{4}}+\frac{405}{\sqrt{201}}),train,mathwriting
+images\train_008fe8a18a2af931.png,y_{j}=\frac{\sum_{i\in s_{j}}A_{i}B_{i}}{\sum_{i\in s_{j}}B_{i}},train,mathwriting
+images\train_00901bc5c5e6e973.png,O_{L}/(7)O_{L},train,mathwriting
+images\train_00902f6199bf368b.png,\frac{2}{4}=0.5,train,mathwriting
+images\train_0090ba04f692ca4f.png,=,train,mathwriting
+images\train_00910b35a339b892.png,Mm(x),train,mathwriting
+images\train_009135119991fd3e.png,(\begin{matrix}0&0\\ 0&e\end{matrix}),train,mathwriting
+images\train_0091b953e0dfec8d.png,E[\frac{R(n)}{S(n)}],train,mathwriting
+images\train_0092357f6b7bd0ca.png,(A[1])^{n}=A^{n+1},train,mathwriting
+images\train_0092745d743b856b.png,"A_{t,r}=\frac{1-\frac{1}{(1+r)^{t}}}{r}",train,mathwriting
+images\train_0092ab654ad8201d.png,\langle\frac{1}{r}\rangle=\frac{1}{a_{0}n^{2}},train,mathwriting
+images\train_0092b449d454587f.png,R=\mu_{1}+\sqrt{S_{1}}X,train,mathwriting
+images\train_00930eed142c0e75.png,(4x-2)/(x^{2}+1),train,mathwriting
+images\train_009385c1e10abadc.png,Z=[\begin{matrix}X_{i}&Y_{-i}\end{matrix}],train,mathwriting
+images\train_0093d46f4d2e5a2f.png,\frac{dX}{dt}=AX,train,mathwriting
+images\train_0093f78124411eba.png,\alpha,train,mathwriting
+images\train_0094071c4c49cc62.png,"\frac{\sqrt{\frac{(d_{1}n)^{d_{1}}d_{7}^{d_{7}}}{(d_{1}n+d_{7})^{d_{1}+d_{7}}}}}{nU(\frac{d_{1}}{7},\frac{d_{7}}{7})}",train,mathwriting
+images\train_0094d3218f7f5c4a.png,\sqrt[\infty]{\infty!},train,mathwriting
+images\train_0094f7e71d39ef86.png,\overline{d},train,mathwriting
+images\train_0094fc821025a419.png,\frac{\partial(R^{2}\Omega)}{\partial R}>0,train,mathwriting
+images\train_00959e41998fb766.png,\underline{P}(Cl_{t}^{\le}),train,mathwriting
+images\train_00959f0db5b698a3.png,\frac{(491+8)^{382}}{6^{2}},train,mathwriting
+images\train_00961a978865068f.png,F\underline{A},train,mathwriting
+images\train_009662edbf2bb279.png,"\prod_{i=1}^{s}[0,u_{i})",train,mathwriting
+images\train_0096cc05bc8880d8.png,rec=\frac{m_{c}W_{c}}{m_{f}W_{f}},train,mathwriting
+images\train_0096dd7e41af59cf.png,T=\frac{mc^{2}}{\sqrt{6+\frac{b^{2}}{c^{2}}}},train,mathwriting
+images\train_0097c6d9b735c2c3.png,\omega_{m}=\frac{1}{\sqrt{LC}},train,mathwriting
+images\train_0098188db63be09d.png,(1-\beta\lambda)^{\gamma},train,mathwriting
+images\train_0098249c5c115f0f.png,expr=expr_{i},train,mathwriting
+images\train_00982508cd6e75e8.png,s,train,mathwriting
+images\train_00984334800ef01b.png,\int\frac{da}{dt}d\frac{db}{dt},train,mathwriting
+images\train_00987d2a5397cd4a.png,"D_{1},D_{2}\in Div^{0}(E)",train,mathwriting
+images\train_009944dc130501aa.png,\sqrt{\frac{\sum{A_{f}}^{2}}{n}},train,mathwriting
+images\train_009a729b2176d05a.png,Q=\frac{\dot{m}}{\rho},train,mathwriting
+images\train_009a9dad3b07751f.png,\int u^{1/2}du,train,mathwriting
+images\train_009ae1557afcf27d.png,\frac{\frac{5}{365}}{\frac{448^{119}}{3}},train,mathwriting
+images\train_009b099e532cd327.png,v\rightarrow v^{\prime}=-v,train,mathwriting
+images\train_009b297ab1a4ed8e.png,4\sqrt{3},train,mathwriting
+images\train_009b66b16761f32a.png,C_{nm},train,mathwriting
+images\train_009be8203328b3e9.png,exp(i\theta H)=,train,mathwriting
+images\train_009c1d909144f55d.png,(\begin{matrix}0&0\\ 0&e\end{matrix}),train,mathwriting
+images\train_009cb71ea7620db5.png,-\gamma^{-1}<\delta<\alpha/\gamma,train,mathwriting
+images\train_009cffd946708af1.png,z_{\epsilon}=\frac{U}{Q}=\frac{U_{m}}{Q_{m}},train,mathwriting
+images\train_009e452a0401a90b.png,A(x)>x^{\sqrt{2}-1-o(1)},train,mathwriting
+images\train_009f7e90d8cf9d09.png,f^{\prime}(x)=\frac{(x-1)}{2x\sqrt{x}},train,mathwriting
+images\train_009ff513f86d514a.png,H\Psi_{k}=E(k)\Psi_{k},train,mathwriting
+images\train_00a0279201efbaef.png,(\begin{matrix}m\\ 2\end{matrix}),train,mathwriting
+images\train_00a070d1f570ac4e.png,"\{(n-2k)^{(\begin{matrix}n\\ k\end{matrix})};k=0,...,n\}",train,mathwriting
+images\train_00a08980046cf637.png,\underline{k}-\omega,train,mathwriting
+images\train_00a0f64e81de0c6a.png,\tilde{h}[n],train,mathwriting
+images\train_00a0fbd63ee9d87a.png,D\overline{D},train,mathwriting
+images\train_00a11e59c6a93e75.png,\hat{\pi},train,mathwriting
+images\train_00a127061dd9a5d0.png,t^{\prime}=t/\sqrt{1-v^{2}/c^{2}},train,mathwriting
+images\train_00a1c8887def5e51.png,"t=t_{1},t_{2}",train,mathwriting
+images\train_00a1d8bc18566aaa.png,W^{\mathbb{C}}\cong W\oplus\overline{W},train,mathwriting
+images\train_00a1f3b08451e583.png,[\begin{matrix}3&7&2\end{matrix}],train,mathwriting
+images\train_00a27fd5961ef1a2.png,\frac{\partial}{\partial\rho},train,mathwriting
+images\train_00a31c04a9daabc4.png,\frac{df}{du},train,mathwriting
+images\train_00a3734718d1d219.png,V_{TS}=\frac{\rho_{p}d^{2}gC_{c}}{18\eta},train,mathwriting
+images\train_00a3cbdea545ee24.png,e=\sqrt{g(2-g)},train,mathwriting
+images\train_00a4073e4ca26c5c.png,\sqrt{\frac{1}{70}},train,mathwriting
+images\train_00a43188c4990c17.png,\tilde{A}_{9},train,mathwriting
+images\train_00a43e570b6a70d1.png,\overline{M}=0,train,mathwriting
+images\train_00a4d2f8b18cbe9e.png,\frac{d}{dx}ln|x|=\frac{1}{x},train,mathwriting
+images\train_00a530331fa07a1a.png,h(\underline{n})=h^{*}(-\underline{n}),train,mathwriting
+images\train_00a54ac66a96d9a8.png,"\frac{C(4,2)}{C(7,2)}=\frac{6}{21}=\frac{2}{7}?",train,mathwriting
+images\train_00a581ed7911e374.png,\frac{dy}{dx}=x+y,train,mathwriting
+images\train_00a6944fd09e6a85.png,1-5/3+4^{466},train,mathwriting
+images\train_00a6ec760404a9f3.png,\frac{(3-\sqrt{2})}{\frac{1^{6}}{7}},train,mathwriting
+images\train_00a750e8f1ea0d5b.png,\tilde{e}_{i}\tilde{f}_{i},train,mathwriting
+images\train_00a75a52a6609fb0.png,[b]\in[R]^{n},train,mathwriting
+images\train_00a76c567b378bf5.png,((9+178)\cdot(\frac{1}{8}\cdot8)),train,mathwriting
+images\train_00a782af4a1270ca.png,1\notin A\Rightarrow\sigma A=0,train,mathwriting
+images\train_00a790716754d05f.png,P_{1}=\frac{1-(\frac{q}{p})^{n_{1}}}{1-(\frac{q}{p})^{n_{1}+n_{2}}},train,mathwriting
+images\train_00a7d69be338657e.png,(\begin{matrix}0&0\\ 0&1\end{matrix}),train,mathwriting
+images\train_00a89ebc5a5dad4d.png,\sqrt{(n^{2}-1)/12},train,mathwriting
+images\train_00a9021fbba5d4fd.png,\hat{d},train,mathwriting
+images\train_00a916b58052f76e.png,||x||=\sqrt{x\cdot x},train,mathwriting
+images\train_00a9358757bdeb19.png,\int_{b}^{a},train,mathwriting
+images\train_00a98d608775a223.png,\int x^{k}d\mu(x)=m_{k},train,mathwriting
+images\train_00aaa0ddb2dbdcb8.png,b^{(k_{4})},train,mathwriting
+images\train_00ab3add554249b6.png,\frac{PV\beta}{N}=-\frac{\Omega}{N},train,mathwriting
+images\train_00ab5344cf9e11b7.png,\hat{M},train,mathwriting
+images\train_00ab572826c36c62.png,k_{x}=\frac{l\pi}{L},train,mathwriting
+images\train_00ab8c0416f8c4c7.png,P=-\frac{dE}{dt},train,mathwriting
+images\train_00abd4f31060c102.png,(\frac{a-1}{2}),train,mathwriting
+images\train_00abea33b7ce5287.png,2y\frac{dy}{dx}=3x^{2}-1,train,mathwriting
+images\train_00ac21d66653a2ba.png,f^{-1}(c),train,mathwriting
+images\train_00ac69d7ea480c58.png,v=0(r=a),train,mathwriting
+images\train_00ac95e61587a25c.png,\frac{27-74}{4}\cdot\frac{8}{298},train,mathwriting
+images\train_00acfc2e5262d9e6.png,\pi_{x}=\prod_{j=1}^{t}\zeta_{j},train,mathwriting
+images\train_00acfd20849b75ac.png,\tilde{n}=n+z^{2},train,mathwriting
+images\train_00ad057cf4c3ae7b.png,v=\frac{dr}{dt},train,mathwriting
+images\train_00ad5d4bceff76c6.png,\tilde{C}_{n},train,mathwriting
+images\train_00ad5e8a5622af70.png,(\begin{matrix}p\\ r\end{matrix}),train,mathwriting
+images\train_00add3dbc0f9318b.png,K=\frac{3\mu_{0}^{2}}{160\pi^{2}}\frac{\hbar^{2}\gamma^{4}}{r^{6}},train,mathwriting
+images\train_00adde1c98e1d258.png,-\frac{dz}{z},train,mathwriting
+images\train_00adebaaef290fa5.png,[\begin{matrix}a&b\\ b&a\end{matrix}],train,mathwriting
+images\train_00ae2eaf8dbe6ebe.png,-\frac{\pi}{2}<\theta<+\frac{\pi}{2},train,mathwriting
+images\train_00ae4cfab9794099.png,Fr=\frac{v}{\sqrt{gy}},train,mathwriting
+images\train_00ae86ae6d69cf04.png,\Lambda<c,train,mathwriting
+images\train_00ae978fa63a0c1f.png,-\sqrt{\frac{8}{35}},train,mathwriting
+images\train_00aed0e1843aee43.png,\Rightarrow\frac{2A\sqrt{h}}{a\sqrt{2g}}=t,train,mathwriting
+images\train_00aed30364599afd.png,f(\epsilon)=e^{-\beta(\epsilon-\mu)},train,mathwriting
+images\train_00aef10bfa17bb3e.png,(\frac{7}{328})^{8^{153}},train,mathwriting
+images\train_00aef330bd5daa24.png,\hat{\beta}\pm2.5se_{\beta},train,mathwriting
+images\train_00aef8673c5e26d7.png,xD(1)=x*\frac{d}{dx}(1)=0,train,mathwriting
+images\train_00af028b4cd32ddd.png,\sum_{n\ge1}n|b_{n}|^{2}\le1,train,mathwriting
+images\train_00af263f7e07a680.png,\tilde{A}_{5},train,mathwriting
+images\train_00af3122dfa16b26.png,B_{0}=(\mu_{0}/2)*M,train,mathwriting
+images\train_00af6b291e881775.png,\frac{10}{340}/(460+\sqrt{492}),train,mathwriting
+images\train_00af879508db0abc.png,\int_{\partial\Omega},train,mathwriting
+images\train_00afb09b073fca43.png,a^{2}+b^{2}+c^{2}>\frac{d^{2}}{3},train,mathwriting
+images\train_00b04b8ded304a16.png,[\begin{matrix}4&4\\ 6\end{matrix}],train,mathwriting
+images\train_00b0d30a0577c009.png,P(A|X=2/3),train,mathwriting
+images\train_00b0e5df5fa8410f.png,(\frac{374}{2}/406)^{7^{2}\cdot2},train,mathwriting
+images\train_00b0e5f17c8c4e3c.png,\overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_{i},train,mathwriting
+images\train_00b0eda1ace208c2.png,63^{63^{63^{63^{63^{4.827}}}}},train,mathwriting
+images\train_00b10d4ceb3831b3.png,"Cl_{0,3}(R)=H\oplus H",train,mathwriting
+images\train_00b1475d0b80e313.png,(6-228\cdot{232^{193}}^{10}),train,mathwriting
+images\train_00b1cc35760d6708.png,\int_{a}^{b}\pi f(x)^{2}dx,train,mathwriting
+images\train_00b24a668cff1d3e.png,\frac{\sqrt{70}}{469}+(\frac{4}{10})^{304},train,mathwriting
+images\train_00b292ea0ef6080b.png,\langle r^{k}\rangle=a^{k}\Gamma(1+\frac{k}{3}),train,mathwriting
+images\train_00b2dc9d7d918be8.png,n/exp(\Omega(\sqrt{logn})),train,mathwriting
+images\train_00b359e14d8df710.png,\int\frac{dy}{dx}dx,train,mathwriting
+images\train_00b373c6aa64df71.png,E=\sqrt{\sum P(n-X)^{2}},train,mathwriting
+images\train_00b40e39938d6e59.png,F=\frac{1}{2}\sum_{i=1}^{n}A_{i}^{2}+A_{0},train,mathwriting
+images\train_00b4df3f958e1c63.png,"R^{d}\times\{1,2\}",train,mathwriting
+images\train_00b52438784e9fc7.png,\overline{Q},train,mathwriting
+images\train_00b54f47bf212e18.png,2+\sqrt{2}+\sqrt{6},train,mathwriting
+images\train_00b5920814f23b8a.png,a\sqrt{\frac{2+b^{2}}{2}},train,mathwriting
+images\train_00b5adc74e5a496c.png,"x,y\notin H_{3},H_{4}",train,mathwriting
+images\train_00b675083b11d16f.png,\frac{\frac{2}{10}}{8^{366}},train,mathwriting
+images\train_00b67adc261acc0c.png,m=\frac{NIA}{L},train,mathwriting
+images\train_00b681c5b5f6a973.png,\hat{c},train,mathwriting
+images\train_00b6825ba90b32a2.png,\mathbb{L},train,mathwriting
+images\train_00b68e5aa25c35bf.png,\overline{x}=\frac{1}{n}\sum_{i=1}^{n}x_{i},train,mathwriting
+images\train_00b6b56e9c4eec10.png,\hat{p}=0,train,mathwriting
+images\train_00b7fa6140e7b9dc.png,7^{7^{7^{7^{7}}}}-5,train,mathwriting
+images\train_00b8c2cace0d7734.png,a_{2}=a-\frac{a\cdot b}{b\cdot b}b,train,mathwriting
+images\train_00b90ad1dbbcf8f7.png,1-5/3+4^{466},train,mathwriting
+images\train_00b91b26bcef7d8a.png,\frac{dB}{dG}=0,train,mathwriting
+images\train_00b935a28293e803.png,"E_{l,m}^{(E)}=\frac{i}{k}\nabla\times B_{l,m}^{(E)}",train,mathwriting
+images\train_00b93a581def91aa.png,E=\frac{wc^{0}}{\sqrt{1+\frac{d^{0}}{c^{0}}}},train,mathwriting
+images\train_00b970134010a9c1.png,//x=x,train,mathwriting
+images\train_00b9769835a5f00c.png,(b-c)),train,mathwriting
+images\train_00b9e530b6f53e71.png,(\begin{matrix}9\\ 6\end{matrix}),train,mathwriting
+images\train_00ba1a5b7f001b3e.png,(n+1)p-1\notin\mathbb{Z},train,mathwriting
+images\train_00ba20a8862f8792.png,A=sup_{|z|\le R}Ref(z),train,mathwriting
+images\train_00ba7ee21c2baf66.png,\tilde{X}:=f\circ X,train,mathwriting
+images\train_00ba8e884a905a01.png,Z_{i}=\frac{\hat{p}_{i}\cdot\overline{p}}{\sqrt{\frac{\overline{p}(5\cdot\overline{p})}{r_{i}}}},train,mathwriting
+images\train_00baea457863b547.png,-g=g_{00}\gamma,train,mathwriting
+images\train_00bb33db7e42514a.png,J|_{U}:U\rightarrow V,train,mathwriting
+images\train_00bb60cbdc9c84d7.png,\hat{4},train,mathwriting
+images\train_00bbb81c8215c6e5.png,\mathbb{F},train,mathwriting
+images\train_00bc18b360fac443.png,\tilde{N}(s)=L\{N(t)\},train,mathwriting
+images\train_00bc1c89dff0672e.png,k=\lceil log_{2}n+1\rceil,train,mathwriting
+images\train_00bc4b23a23691f4.png,N=\frac{ln(1-P)}{ln(1-f)},train,mathwriting
+images\train_00bd288f8b44cea8.png,v_{g}=\frac{2\pi\Delta f}{\Delta k}=\frac{\Delta\omega}{\Delta k},train,mathwriting
+images\train_00bdb0ffec13f280.png,\sqrt{-1},train,mathwriting
+images\train_00bdd037b2fcd359.png,\sqrt{6}\times\sqrt{6},train,mathwriting
+images\train_00bddacfb3de33ce.png,O(nlogn),train,mathwriting
+images\train_00be2d3d96ac04bc.png,\int a(x)d\mu,train,mathwriting
+images\train_00bedf1c34083cb6.png,a=\frac{3t}{\sqrt{10}}+3k,train,mathwriting
+images\train_00bf0bd28d985e4c.png,\frac{\partial u}{\partial n}|_{\Gamma_{2}}=g,train,mathwriting
+images\train_00bf9bfafcaa6110.png,F_{y}-\frac{d}{dt}F_{y^{\prime}}=0,train,mathwriting
+images\train_00bfba782c3cfe9b.png,\sqrt{Z}e^{T}|\phi\rangle,train,mathwriting
+images\train_00c05fbe1090a7a1.png,x\rightarrow\frac{x-\xi}{\omega},train,mathwriting
+images\train_00c0887ae33bede6.png,k=\frac{\partial^{2}V}{\partial Q^{2}},train,mathwriting
+images\train_00c0cefd35f09179.png,\int d^{3}xJ^{0},train,mathwriting
+images\train_00c17438ed1f04bb.png,\mu=\overline{x},train,mathwriting
+images\train_00c1d565778071cf.png,P=\frac{m_{8}v}{\sqrt{7-\frac{v^{5}}{u^{5}}}},train,mathwriting
+images\train_00c1dd055b2b1fb3.png,\int_{a}^{b}f(x)dv(x),train,mathwriting
+images\train_00c2112a1e84ff2d.png,1^{433}\cdot111+\sqrt{5}^{381},train,mathwriting
+images\train_00c234fc9635fbee.png,\tilde{f}:X\rightarrow M_{f},train,mathwriting
+images\train_00c24b2620b921b5.png,W\ge\sum_{i=1}^{n}(p_{i}\cdot x_{i}),train,mathwriting
+images\train_00c29ee449700f42.png,e^{\cdot\frac{(F\cdot M)^{0}}{0{(s_{F})}^{0}}},train,mathwriting
+images\train_00c2e3861f03e33b.png,\frac{dZ(t)}{dt},train,mathwriting
+images\train_00c313b62c30229d.png,\frac{dF}{dL},train,mathwriting
+images\train_00c3423d7e0c6dbd.png,7^{7^{7^{7^{7^{7}}}}}+3,train,mathwriting
+images\train_00c353ce98a83689.png,\frac{dy}{dx}=\frac{x}{y},train,mathwriting
+images\train_00c381eb2fdfd417.png,\prod C,train,mathwriting
+images\train_00c4b74844ec1b08.png,\prod_{i=n-r+1}^{n}i,train,mathwriting
+images\train_00c5d50c7889f91d.png,n=\prod_{i}{p_{i}}^{e_{i}},train,mathwriting
+images\train_00c6902b462d0844.png,(\begin{matrix}a&b\\ b&c\end{matrix}),train,mathwriting
+images\train_00c6c37443162cd5.png,v(t)=L\frac{di(t)}{dt},train,mathwriting
+images\train_00c79eea1cc83609.png,\hat{\nu},train,mathwriting
+images\train_00c83e99cddc9070.png,f:\mathbb{R}\rightarrow\mathbb{R}_{0}^{+},train,mathwriting
+images\train_00c85ff69f8355e7.png,\hat{T}_{f},train,mathwriting
+images\train_00c87e5d89862f0e.png,c=2rsin(\frac{\theta}{2}),train,mathwriting
+images\train_00c89ae7b5b35b55.png,(\begin{matrix}n+2\\ 2\end{matrix})-2n-1,train,mathwriting
+images\train_00c8c06ef415b770.png,2^{\frac{1}{2}}=\sqrt{2},train,mathwriting
+images\train_00c8ff7a6e959462.png,\{\begin{matrix}3\\ 5\end{matrix}\},train,mathwriting
+images\train_00c902e1d5b8c5b1.png,c_{i}=a+i\Delta x=\frac{2i}{n},train,mathwriting
+images\train_00c99ba6c91094cd.png,\int_{0}^{\infty}f(x)dx\approx-\frac{\pi}{2},train,mathwriting
+images\train_00ca9e9a6ebf58c4.png,r=\frac{ed}{1+esin\theta},train,mathwriting
+images\train_00cac12a4671c258.png,"L_{\omega_{1},\omega}(Q)",train,mathwriting
+images\train_00cac1e8f92bed61.png,W=N!/\prod_{i}N_{i}!,train,mathwriting
+images\train_00cadadd591e2e02.png,ss\{\begin{matrix}2\\ 2\end{matrix}\},train,mathwriting
+images\train_00cb09a8168b816e.png,\frac{d\psi}{dt}=\frac{T_{x}}{C\omega sin\epsilon},train,mathwriting
+images\train_00cb1b9ba794cee8.png,1/\sqrt{\epsilon_{0}\mu_{0}},train,mathwriting
+images\train_00cb66c8c56cd71a.png,(Im(\Gamma(\omega))<0),train,mathwriting
+images\train_00cbaf59a21e2090.png,\sum_{n=1}^{\infty}\frac{sin\frac{x}{n}}{n},train,mathwriting
+images\train_00ccac2e976d4083.png,\frac{d_{1}}{a}\le2,train,mathwriting
+images\train_00cd23458e186264.png,I=\int xcos(x)dx,train,mathwriting
+images\train_00cd43d154db7091.png,y_{4}^{\prime}=\frac{y_{4}-\frac{z}{c^{2}}k_{4}}{\sqrt{4-\frac{z^{2}}{c^{2}}}},train,mathwriting
+images\train_00cddc27dd5740ec.png,(\begin{matrix}11\\ 5\end{matrix}),train,mathwriting
+images\train_00ce75830353a63b.png,3\cdot10^{{6^{1}}^{1}},train,mathwriting
+images\train_00cf55670b25c352.png,lim_{n\rightarrow\infty}(2^{n})^{\frac{1}{n}}=2,train,mathwriting
+images\train_00cf5a81dcf04cd1.png,V=\frac{q_{1}q_{2}}{4\pi\epsilon_{0}|r|},train,mathwriting
+images\train_00cf9829f705c143.png,\xi_{1}(s)=s\zeta(s+1),train,mathwriting
+images\train_00cfe78ca472cf5c.png,mv\approx\frac{E}{c},train,mathwriting
+images\train_00cff8c5b6cc7e29.png,\int_{V_{1}}^{V_{2}}PdV,train,mathwriting
+images\train_00d03d830fff516f.png,r=\{x|x\notin x\},train,mathwriting
+images\train_00d067b3c951ecea.png,{7^{398}}^{\frac{(4-2)}{10}},train,mathwriting
+images\train_00d120ccd52d8949.png,0.5\sqrt{N},train,mathwriting
+images\train_00d13dd42d77a7c5.png,"V:=L(\underline{a}_{1},...,\underline{a}_{r})",train,mathwriting
+images\train_00d1f9b787cc3b54.png,A=\frac{1}{2}absinC,train,mathwriting
+images\train_00d217b15900f1a8.png,x^{4}+3125=125x^{2},train,mathwriting
+images\train_00d2270f0898e3ae.png,\tilde{g},train,mathwriting
+images\train_00d26fd4bfe1b017.png,\frac{dE}{dx}=0,train,mathwriting
+images\train_00d2a927d8619523.png,-T(\frac{\partial P}{\partial V})_{S},train,mathwriting
+images\train_00d2b5b415bc127d.png,e^{-\frac{1}{2}\nu^{T}\sigma\sigma^{T}\nu},train,mathwriting
+images\train_00d2d24345eb203c.png,(\frac{7^{258}}{270})^{\frac{6}{50}},train,mathwriting
+images\train_00d2ff37f9ee154a.png,k^{\theta_{\eta}},train,mathwriting
+images\train_00d31a8b766af999.png,((4+357)+\frac{6}{26}),train,mathwriting
+images\train_00d3378276ea1b07.png,g(n)=\prod_{k=1}^{n}f(k),train,mathwriting
+images\train_00d352360b3a7331.png,(\frac{\cdot}{n}),train,mathwriting
+images\train_00d3d1d962fd23c2.png,\alpha_{2}=\frac{1}{2}+m,train,mathwriting
+images\train_00d3ef1b5e2a5f23.png,f=\frac{vd}{\pi}\sqrt{\frac{3}{8L_{eq}D^{3}}},train,mathwriting
+images\train_00d3fde9d2abc88b.png,IV=\int_{0}^{t}\sigma_{s}^{2}ds,train,mathwriting
+images\train_00d40aba3e2c1a56.png,V=\frac{Mp}{Mb}0.2018D,train,mathwriting
+images\train_00d4166313a830ad.png,B=(\begin{matrix}1&1\\ 3&1\\ 0&2\end{matrix}),train,mathwriting
+images\train_00d42e11df91ff61.png,e_{z}=,train,mathwriting
+images\train_00d45277f923188c.png,\sqrt{rs},train,mathwriting
+images\train_00d463ac5048544f.png,s=\frac{1}{2}(a+b+c),train,mathwriting
+images\train_00d4c401d2be0344.png,G(t)=\int_{0}^{t}g(s)ds,train,mathwriting
+images\train_00d4fba1bc0e2766.png,7^{7^{7^{7^{7}}}}-5,train,mathwriting
+images\train_00d50f82651d221d.png,l^{l^{\cdot^{\cdot^{l^{b}}}}},train,mathwriting
+images\train_00d626c5dfe2faaa.png,w_{2}^{\prime}=\frac{w_{2}-rt_{2}}{\sqrt{7-\frac{r^{2}}{d^{2}}}},train,mathwriting
+images\train_00d6a95cc03b7d37.png,Mod:Sign^{op}\rightarrow,train,mathwriting
+images\train_00d6c7270d46d08c.png,\sqrt{\Delta},train,mathwriting
+images\train_00d7dbaaebc93c25.png,x_{0}\in R^{n},train,mathwriting
+images\train_00d7ff8ed057ae07.png,\Phi_{j}^{\chi},train,mathwriting
+images\train_00d835109a2019f9.png,(\begin{matrix}k\\ r\end{matrix})=0,train,mathwriting
+images\train_00d8af471fc0b6c9.png,z\rightarrow e^{i\theta}\frac{a+z}{1+a\overline{z}},train,mathwriting
+images\train_00d97108b6f1edf9.png,(2n+1)^{-1},train,mathwriting
+images\train_00d9e1779ff1518e.png,(0\le\epsilon\le\epsilon_{1}),train,mathwriting
+images\train_00d9ff613c2ffabb.png,\beta=\frac{4}{\sqrt{4-\frac{d^{9}}{c^{9}}}},train,mathwriting
+images\train_00da4c6454c7f1ff.png,t_{4}^{\prime}=\frac{t_{4}\cdot\frac{v}{h^{4}}r_{4}}{\sqrt{1\cdot\frac{v^{4}}{h^{4}}}},train,mathwriting
+images\train_00da627474e4b72b.png,[\begin{matrix}2&2&4\\ 3\end{matrix}],train,mathwriting
+images\train_00da701f2393767b.png,3*\frac{sin(\pi)-2}{e},train,mathwriting
+images\train_00dace3b4fbf7110.png,N=(\begin{matrix}n\\ 2\end{matrix}),train,mathwriting
+images\train_00db66da52f52017.png,\frac{\pi}{3\sqrt{3}},train,mathwriting
+images\train_00db6804e82fc920.png,"X=A,\overline{A},A\overline{A}A,",train,mathwriting
+images\train_00db9809f1e9db1a.png,b(\frac{\frac{1}{8}n_{1}^{2}}{n_{0}+n_{1}}),train,mathwriting
+images\train_00dbb0801af98db2.png,O(\sqrt{n}),train,mathwriting
+images\train_00dbc84271b0f570.png,\frac{d^{2}y}{dx^{2}},train,mathwriting
+images\train_00dbf450d17b069d.png,p_{(t_{1})},train,mathwriting
+images\train_00dcf1cc5396af63.png,-\frac{\partial\phi}{\partial x},train,mathwriting
+images\train_00dd4aabd2702d63.png,u=x\sqrt{b^{2}-a^{2}},train,mathwriting
+images\train_00dd6f4acf040aca.png,(\begin{matrix}v&0\cdot\cdot\cdot0\end{matrix}),train,mathwriting
+images\train_00ddbd2b164e9c13.png,\sqrt{53}^{\sqrt{9}}-\frac{494}{\sqrt{8}},train,mathwriting
+images\train_00dde8062a930b50.png,\frac{dQ_{T}}{dQ_{*}},train,mathwriting
+images\train_00de25fd51e6b988.png,\frac{0}{0}=x,train,mathwriting
+images\train_00de9ac4fbbd00ba.png,\frac{\frac{2}{401}}{8-490},train,mathwriting
+images\train_00def091f7dc12ce.png,"\tilde{u}=[u,u^{\prime},u^{\prime\prime},...]^{T}",train,mathwriting
+images\train_00defb5f20ced468.png,f=g\prod_{1}^{k}u^{a_{j}},train,mathwriting
+images\train_00df340606b1b276.png,(\begin{matrix}K\\ k\end{matrix})(\begin{matrix}7-K\\ 3-k\end{matrix})=(\begin{matrix}K\\ 3\end{matrix}),train,mathwriting
+images\train_00df9608efc8ad37.png,\beta=\sqrt{\frac{m}{r}},train,mathwriting
+images\train_00e009773ef96b4f.png,\tilde{\theta},train,mathwriting
+images\train_00e024507d30b2d2.png,\hat{\phi},train,mathwriting
+images\train_00e048f1f4386f2b.png,\frac{8\pi g}{\sqrt{9-\frac{2g}{rh^{2}}}},train,mathwriting
+images\train_00e06b79319bef49.png,n^{n^{n^{\cdot^{\cdot^{\cdot}}}}},train,mathwriting
+images\train_00e07b0aebc600f1.png,\tau^{2}=\frac{4\pi^{2}\mu}{kZe^{2}}a^{3},train,mathwriting
+images\train_00e09da7de773de6.png,\tilde{s},train,mathwriting
+images\train_00e0d7a38ce25ce0.png,\delta(y)=\frac{e^{-\frac{y^{7}}{7}}}{\sqrt{7\pi}},train,mathwriting
+images\train_00e0d855438b35c2.png,F=\frac{\sqrt{n+1}-1}{n},train,mathwriting
+images\train_00e0f71a81285ffc.png,"(t_{0},t_{1},t_{2})",train,mathwriting
+images\train_00e10232adc1ddee.png,\frac{\partial F_{k_{1}}}{\partial\phi},train,mathwriting
+images\train_00e16843dc83d7c2.png,\frac{z}{z-1},train,mathwriting
+images\train_00e17543ce1faccd.png,1:\sqrt{\varphi}:\varphi,train,mathwriting
+images\train_00e17a5de2fcdd91.png,\sqrt{\frac{16}{35}},train,mathwriting
+images\train_00e1963c4c31f118.png,W=\int Fdr,train,mathwriting
+images\train_00e19f4b7b5be54a.png,MV^{2}\approx mv_{*}^{2},train,mathwriting
+images\train_00e201360ae2e2a3.png,p=\frac{vd}{|v|^{2}},train,mathwriting
+images\train_00e206f3a5cdc7fb.png,w_{1}\cdot\cdot\cdot w_{p},train,mathwriting
+images\train_00e23fa7d1501c6b.png,"x*y=[x,e,y]",train,mathwriting
+images\train_00e2814cb0319eb7.png,\frac{(4^{5}/1)}{98^{122}},train,mathwriting
+images\train_00e2e06562a05b70.png,\sum_{i=0}^{n}y_{i}^{2},train,mathwriting
+images\train_00e3175aab850dba.png,\overline{u^{\prime}v^{\prime}},train,mathwriting
+images\train_00e32dd74292af46.png,\overline{A}=\frac{\Delta V}{\Delta t},train,mathwriting
+images\train_00e3eeddd6f17645.png,U_{1}=[\begin{matrix}1&0\\ 0&1\end{matrix}],train,mathwriting
+images\train_00e3f97070399fca.png,(132/10+9)\cdot6^{209}-232,train,mathwriting
+images\train_00e43ff422af73ff.png,\chi=\frac{m_{vapour}}{m_{total}},train,mathwriting
+images\train_00e44f038cd1aa47.png,A=\frac{\sqrt{3}}{4}a^{2},train,mathwriting
+images\train_00e4cee6a44f7210.png,t\le\frac{n}{2},train,mathwriting
+images\train_00e51fb89016010a.png,Y=(\begin{matrix}-y&0\\ 0&y\end{matrix}),train,mathwriting
+images\train_00e535b636253418.png,\frac{7v^{-\frac{1}{x^{7}}}}{x^{4}},train,mathwriting
+images\train_00e53ede8b43ffc1.png,\frac{3^{1}2^{0}+3^{0}2^{1}}{2^{4}-3^{2}}=\frac{5}{7},train,mathwriting
+images\train_00e58bcfcd750c08.png,\frac{1}{\sqrt{2}}(\begin{matrix}1\\ -1\end{matrix}),train,mathwriting
+images\train_00e5aaf566b43630.png,\frac{\partial u}{\partial t}=0,train,mathwriting
+images\train_00e5dfc50eed578f.png,\tau=\sqrt{t^{2}-x^{2}},train,mathwriting
+images\train_00e5e51dc362a59a.png,cos\theta=\frac{d}{k},train,mathwriting
+images\train_00e6443dfefe507d.png,\dot{u}(t)=X_{u(t)},train,mathwriting
+images\train_00e6fd65079fbe76.png,N\rightarrow M\rightarrow M^{\prime\prime},train,mathwriting
+images\train_00e751cba08f4642.png,(\begin{matrix}6\\ 4\end{matrix}),train,mathwriting
+images\train_00e76e96128e715c.png,-\frac{s^{2}}{10}+o(1),train,mathwriting
+images\train_00e7c6af0facea1b.png,a_{max}=\frac{\hbar k\gamma}{2M},train,mathwriting
+images\train_00e7efcc8ea5dc87.png,\tilde{\nu},train,mathwriting
+images\train_00e8347b56063a92.png,i^{G}=(n+d)k^{G},train,mathwriting
+images\train_00e85740d47a43c9.png,\frac{d}{dx}7,train,mathwriting
+images\train_00e86b773b9d2f37.png,r=k_{1}[A]+k_{2}[A]^{2},train,mathwriting
+images\train_00e8a248724f0cc6.png,2(\begin{matrix}n\\ j\end{matrix}),train,mathwriting
+images\train_00e922adfa2756fc.png,\frac{\partial Q}{\partial t},train,mathwriting
+images\train_00e95ecb6b053984.png,\hat{Tf}(\xi):=m(\xi)\hat{f}(\xi),train,mathwriting
+images\train_00e9836bcee23775.png,\tilde{d}=\frac{top}{\sqrt{\frac{t_{0}t_{2}}{t_{0}\cdot t_{2}}}},train,mathwriting
+images\train_00e9bc2d25a000dc.png,\frac{\partial B}{\partial z},train,mathwriting
+images\train_00ea45de0964be9d.png,\overline{A}D,train,mathwriting
+images\train_00eaa6c52615f111.png,\rho^{\prime}:\overline{V}\otimes V\rightarrow L,train,mathwriting
+images\train_00eb054b083c84a0.png,A_{a}|||Bb,train,mathwriting
+images\train_00eb749f93e352e4.png,H(2^{1})=[\begin{matrix}1&1\\ 1&-1\end{matrix}],train,mathwriting
+images\train_00eb905c8f1926e4.png,sin\theta=\frac{H}{L},train,mathwriting
+images\train_00ec2894c92d4aa9.png,\tilde{\lambda},train,mathwriting
+images\train_00ec4ee77154cd8f.png,\Rightarrow r=\frac{1}{T}ln\frac{M_{a}T}{P_{0}},train,mathwriting
+images\train_00ec7dba0d40f34d.png,w-c+D_{k}=0,train,mathwriting
+images\train_00ecb97b5c7ec9ee.png,0\le t\le\frac{C_{2}}{\epsilon},train,mathwriting
+images\train_00ed3e3fc1e5068d.png,\dot{\phi}=\frac{b-acos\theta}{sin^{2}\theta},train,mathwriting
+images\train_00ed66f07dafdfc5.png,lim_{n\rightarrow\infty}\frac{t(n)}{b(n)}<\infty,train,mathwriting
+images\train_00eda5490ed88b44.png,\hat{C}_{I},train,mathwriting
+images\train_00ede45506fb9c52.png,P=2\pi r\sqrt{\frac{r}{\mu}},train,mathwriting
+images\train_00ee229a098eeb61.png,\frac{m_{1}}{\sigma_{1}}=\frac{m_{2}}{\sigma_{2}},train,mathwriting
+images\train_00ee987758b15d2d.png,[\begin{matrix}1&1\\ 0&1\end{matrix}],train,mathwriting
+images\train_00ef425960bd0299.png,\sigma_{j}^{\eta},train,mathwriting
+images\train_00ef6086302cdd95.png,"V:=L(\underline{a}_{1},...,\underline{a}_{r})",train,mathwriting
+images\train_00efe48f6ed3b735.png,c=\sqrt[3]{\frac{2\pi^{2}}{3}}\approx1.874,train,mathwriting
+images\train_00f0148fbf425c1c.png,D\{J\}\subseteq\tilde{D},train,mathwriting
+images\train_00f036d0c23549a7.png,[\begin{matrix}0&1\\ -1&0\end{matrix}],train,mathwriting
+images\train_00f0509fd5cfd63c.png,d=\sqrt{2R^{\prime}h},train,mathwriting
+images\train_00f0bb94c7947140.png,\frac{dE}{dx}=0,train,mathwriting
+images\train_00f0debe50f52c26.png,tan^{2}\alpha_{1}=-\frac{tan\beta_{1}}{tan\beta_{2}},train,mathwriting
+images\train_00f0e305279a954e.png,"d\theta+\frac{1}{2}[\theta,\theta]=0",train,mathwriting
+images\train_00f1ee348b861d22.png,B=A^{T}A=[\begin{matrix}9&0\\ 0&4\end{matrix}],train,mathwriting
+images\train_00f21d6d1c0afa03.png,S=\int_{0}^{T}E[s(t)^{2}]dt,train,mathwriting
+images\train_00f21f81ebb86f39.png,\sqrt{2n},train,mathwriting
+images\train_00f2839763d2b654.png,c=\sum_{j=1}^{\infty}10^{-j!},train,mathwriting
+images\train_00f2c19eff45a2a5.png,W=\lambda(-ln(U))^{1/k},train,mathwriting
+images\train_00f2d801c40b9d00.png,"(M,g_{ab})",train,mathwriting
+images\train_00f38f00eae63a99.png,377^{2}-\frac{\sqrt{356}^{499}}{59},train,mathwriting
+images\train_00f3d27d71914f42.png,\tilde{S_{n}^{m}}=-\frac{S_{n}^{m}}{\mu R^{n}},train,mathwriting
+images\train_00f3d70ec86eba31.png,\omega_{\hat{M}\hat{N}P},train,mathwriting
+images\train_00f495694f60ac17.png,\int_{b}^{a},train,mathwriting
+images\train_00f5a0be4a07f1f9.png,\frac{\frac{263}{4}}{409/9},train,mathwriting
+images\train_00f5ca297edf2e26.png,J_{ij}\sim|i-j|^{-\alpha},train,mathwriting
+images\train_00f5e6f5d2cb11d1.png,{k^{l}}^{f},train,mathwriting
+images\train_00f61d0f12dfd4db.png,cos\theta=1/(n\beta),train,mathwriting
+images\train_00f6721e80645ece.png,(\frac{8}{322}/2\cdot\frac{\frac{332}{6}}{380}),train,mathwriting
+images\train_00f689117caf8f60.png,e^{-q\tau}\frac{\phi(d_{1})}{S\sigma\sqrt{\tau}},train,mathwriting
+images\train_00f6f7ef428a0397.png,(\begin{matrix}n\\ 2\end{matrix}),train,mathwriting
+images\train_00f71dd1e856a63c.png,\overline{15},train,mathwriting
+images\train_00f7444bfe97f611.png,a_{0}x^{0}+\cdot\cdot\cdot+a_{n}x^{n},train,mathwriting
+images\train_00f854c0483bcd9f.png,[\begin{matrix}0&1\\ 1&0\end{matrix}],train,mathwriting
+images\train_00f872dcdcf9a6d9.png,t_{0}=t_{f}\sqrt{1-\frac{3}{2}\cdot\frac{r_{s}}{r}},train,mathwriting
+images\train_00f8fa0c18fff0cc.png,1+\sqrt{2},train,mathwriting
+images\train_00f90b582abdc20d.png,TK_{R}^{\prime\prime},train,mathwriting
+images\train_00f974e8cfd33e28.png,\frac{e^{+\frac{0}{x^{8}}}}{x},train,mathwriting
+images\train_00f9af2258d3615d.png,\epsilon(\begin{matrix}n\\ 2\end{matrix}),train,mathwriting
+images\train_00f9d7470b1b1ed1.png,M=K[\begin{matrix}R&t\end{matrix}],train,mathwriting
+images\train_00fa254ce55ba501.png,\frac{\partial C}{\partial\sigma},train,mathwriting
+images\train_00fa6dbc3688b022.png,\int(1/lnx)dx,train,mathwriting
+images\train_00fa8a194fbd6274.png,\sqrt{2E},train,mathwriting
+images\train_00fb86544c5f7f56.png,\tilde{q},train,mathwriting
+images\train_00fbefac9ed70a7e.png,\rho^{\prime}=\frac{\rho V+MV^{\prime}\mu}{V^{\prime}},train,mathwriting
+images\train_00fc387bebab1c0f.png,\frac{\frac{4+463}{82}}{\frac{48}{142}},train,mathwriting
+images\train_00fc765788191c35.png,\prod_{i\in I},train,mathwriting
+images\train_00fca7fac02dd52c.png,{{3^{\sqrt{9}}}^{468}}^{(\frac{431}{38})^{7}},train,mathwriting
+images\train_00fd543e9c4794ae.png,R=\frac{Z_{2}-Z_{1}}{Z_{2}+Z_{1}},train,mathwriting
+images\train_00fd9b0cba0999e4.png,"B=\prod_{i=1}^{n}[a_{i},b_{i}]",train,mathwriting
+images\train_00fe42623f898794.png,\varphi\vdash\neg\psi,train,mathwriting
+images\train_00fe47838badc893.png,\perp=I^{*},train,mathwriting
+images\train_00fec7bd66106b84.png,y=\frac{x}{ln(x)},train,mathwriting
+images\train_00fecf740958aacb.png,(\begin{matrix}n\\ b\end{matrix}),train,mathwriting
+images\train_00feeb81a1390563.png,|z|\ne\sqrt{z^{2}},train,mathwriting
+images\train_00ff1acb4b0e83ae.png,l_{P}=\lambda_{e}\frac{\sqrt{\alpha_{G}}}{2\pi},train,mathwriting
+images\train_00ff811a6eac7962.png,K_{SP}=\prod_{k}{a_{k}}^{m_{k}},train,mathwriting
+images\train_00ff8a98ab8f96da.png,\frac{dx}{dt}=3,train,mathwriting
+images\train_00ffa4b917b3a97c.png,cot^{2}\theta=csc^{2}\theta-1,train,mathwriting
+images\train_010031dcbafa9f5c.png,E[Y_{n}|F_{n-1}]=Y_{n-1},train,mathwriting
+images\train_010054e8df06606d.png,\int_{0}^{1}e(t)dt,train,mathwriting
+images\train_0100ce299ae17902.png,\tilde{4},train,mathwriting
+images\train_010122f20bfa687a.png,\delta L=-\frac{(\partial_{\mu}A^{\mu})^{2}}{2\xi},train,mathwriting
+images\train_01012b599fc9a385.png,d\theta=\frac{-dv}{vtan\alpha},train,mathwriting
+images\train_010161eb5139c6cc.png,\frac{dN(x)}{dx},train,mathwriting
+images\train_010247b97c92b5c7.png,p=\frac{iv}{\sqrt{6-\frac{v^{7}}{f^{7}}}},train,mathwriting
+images\train_01027535a57c05e9.png,\frac{x(2x+1)}{(x-1)^{4}},train,mathwriting
+images\train_01030bbe7959180c.png,R\sim M^{-1/3},train,mathwriting
+images\train_010369d56d8eaf58.png,s_{uy}=\frac{\overline{uy}}{\sqrt{\overline{u^{2}}\overline{y^{2}}}},train,mathwriting
+images\train_01038bedef331a81.png,g(r)=\frac{n(r)}{\rho4\pi r^{2}\Delta r},train,mathwriting
+images\train_01041cdbe8dd7c57.png,\sum_{k=1}^{n}\frac{1}{k},train,mathwriting
+images\train_0105713e6253405f.png,G(R)=\sigma_{R}^{+}-\sigma_{R},train,mathwriting
+images\train_0105b09d4bd9ea86.png,x^{2}\equiv a,train,mathwriting
+images\train_0105d10045ce5e5e.png,\int vds,train,mathwriting
+images\train_0105e579aa43b67e.png,\frac{\pi^{3}}{6}R^{6},train,mathwriting
+images\train_0105f8cd4bea2763.png,\sqrt{h},train,mathwriting
+images\train_01062143887d3eb4.png,y_{t}=y_{t-1}+c+e_{t},train,mathwriting
+images\train_01069a0d0e32044c.png,(\begin{matrix}f_{xx}&f_{xy}\\ f_{xy}&f_{yy}\end{matrix}),train,mathwriting
+images\train_0107315133308218.png,\frac{\frac{268+7}{236}}{88^{\sqrt{347}}},train,mathwriting
+images\train_01083bb4d3fc2cf7.png,\varphi(\beta/\alpha),train,mathwriting
+images\train_01089f8c338e4b0f.png,(\begin{matrix}p\\ n\end{matrix}),train,mathwriting
+images\train_0108b185afb36dc8.png,t_{4}^{\prime}=\frac{t_{4}\cdot\frac{v}{h^{4}}r_{4}}{\sqrt{1\cdot\frac{v^{4}}{h^{4}}}},train,mathwriting
+images\train_0108c6b2a7c4b34b.png,R(r)=CJ_{0}(\frac{k}{v}r),train,mathwriting
+images\train_0109b649fb966418.png,i(t=0)=I_{0}cos(\phi),train,mathwriting
+images\train_0109bd79405b8040.png,"\frac{\partial(x^{i_{1}},...,x^{i_{k}})}{\partial(u^{1},...,u^{k})}",train,mathwriting
+images\train_0109d674d56bd08b.png,\frac{\frac{\sqrt{235}+17}{6}}{(109\cdot6)},train,mathwriting
+images\train_0109fffecab3f15c.png,\frac{j}{i+j}<\rho,train,mathwriting
+images\train_010a0741ac9515d9.png,\sum_{i=0}^{k}(\begin{matrix}n\\ i\end{matrix})=O(n^{k}),train,mathwriting
+images\train_010a8ba5a7289478.png,F=\frac{T_{0}+T_{sys}}{T_{0}},train,mathwriting
+images\train_010ad1e508626348.png,\tilde{M},train,mathwriting
+images\train_010b4fd83188bb2b.png,(x+y)/sqrt(2),train,mathwriting
+images\train_010b50aa4ae225c6.png,10^{\sqrt{7}}+\frac{\sqrt{8}}{91},train,mathwriting
+images\train_010b67e0c65d9b2c.png,|\partial_{\mu}n\rangle,train,mathwriting
+images\train_010b9450eb79ccd4.png,x_{\pm}=-\frac{5}{4}\pm\frac{3}{4}\sqrt{\frac{35}{3}},train,mathwriting
+images\train_010ba11ddbc4103a.png,\sum_{i=-\infty}^{\infty}f(i)10^{-i},train,mathwriting
+images\train_010beed3fb2e6085.png,1:\sqrt{\varphi}:\varphi,train,mathwriting
+images\train_010bf6e0b2abfd08.png,(\frac{3}{4})^{1}/(\frac{347}{455})^{8},train,mathwriting
+images\train_010c10f3de11b462.png,3/\tilde{4},train,mathwriting
+images\train_010c36dedf9fcef4.png,a_{1}b_{1}+a_{2}b_{2}=a_{3}b_{3},train,mathwriting
+images\train_010c427bf30599d3.png,\Delta S=\oint\frac{\delta Q}{T},train,mathwriting
+images\train_010c78bf15c58186.png,"\{\underline{y}_{1},\underline{y}_{2},\underline{y}_{3}\}",train,mathwriting
+images\train_010d348f10648bf4.png,(\begin{matrix}e&0\\ 0&e\end{matrix}),train,mathwriting
+images\train_010d5260a766ac37.png,\hat{s}=S(S+N)^{-1}d,train,mathwriting
+images\train_010e42964543ade7.png,\frac{1}{2}LI^{2},train,mathwriting
+images\train_010e697fdb10e102.png,9\cdot5^{\frac{\frac{7}{399}}{324}},train,mathwriting
+images\train_010ea353d6938d9b.png,\sum_{k=1}^{\infty}(\begin{matrix}\alpha\\ k\end{matrix})kx^{k-1},train,mathwriting
+images\train_010ed8522963497a.png,y_{0}=x_{0}^{T}\beta,train,mathwriting
+images\train_010f05cd33196ca0.png,[\begin{matrix}a&0\\ 0&b\end{matrix}],train,mathwriting
+images\train_010f932ecec38ee0.png,A_{33}=[\begin{matrix}A&B/2\\ B/2&C\end{matrix}],train,mathwriting
+images\train_010fb5ef51d877bb.png,d_{00}=0.,train,mathwriting
+images\train_011019207e161036.png,\pm\sqrt{-1},train,mathwriting
+images\train_0110de84b55bf8ad.png,\alpha_{s}\approx\frac{C_{s}\cdot R^{3}}{f^{4}},train,mathwriting
+images\train_01114abe03d536ed.png,{2^{492}\cdot438}^{\frac{2}{8}},train,mathwriting
+images\train_0111d91c140c9c69.png,\frac{\Delta r}{i}=\frac{R^{\frac{2r_{l}}{i}}-1}{R^{\frac{2r_{l}}{i}}\cdot1},train,mathwriting
+images\train_0111f93f6117cb39.png,\frac{\partial p}{\partial z}=0,train,mathwriting
+images\train_0112074a000acff4.png,\Omega=\frac{\Delta PE}{\Delta t},train,mathwriting
+images\train_0112100f536aad99.png,(11\cdot\cdot\cdot1)v^{T}=0,train,mathwriting
+images\train_0112266301d65659.png,\frac{n}{d}\mapsto exp(\frac{n}{d}\cdot2\pi i),train,mathwriting
+images\train_0112370cdad9f7cb.png,\hat{y}_{t},train,mathwriting
+images\train_01124e853a0bb3d2.png,"\phi(-\theta,\tau)\phi(\theta,\tau)=1",train,mathwriting
+images\train_01126cba4998132d.png,2^{3*4}=2^{12}=4096,train,mathwriting
+images\train_01138adc37c32b37.png,s=log_{3}2=\frac{log2}{log3},train,mathwriting
+images\train_0113b40beb5489d1.png,ss\{\begin{matrix}2\\ 5\end{matrix}\},train,mathwriting
+images\train_0113c90d9b5638d8.png,A\overline{B},train,mathwriting
+images\train_0114014ebc39c4d0.png,f=\prod_{i=1}^{deg(f)}f_{i}^{i},train,mathwriting
+images\train_0114295ec9d97a80.png,\frac{dI}{ds}=j-\alpha I,train,mathwriting
+images\train_011461a5f752cd10.png,(\begin{matrix}1&0\\ 1&-1\end{matrix}),train,mathwriting
+images\train_0114ab1b686da3e4.png,\gamma_{u^{x}},train,mathwriting
+images\train_0114b606917ca592.png,\{e^{inx}|n\in\mathbb{R}\},train,mathwriting
+images\train_0114beebe1be94c0.png,{448\cdot246^{452}}^{\frac{2}{148}},train,mathwriting
+images\train_0115138aba7e7fb5.png,(\begin{matrix}n\\ 2\end{matrix}),train,mathwriting
+images\train_01156d10b9d1c7e5.png,(\begin{matrix}n\\ k\end{matrix})_{q},train,mathwriting
+images\train_01162a84b0f5144f.png,\frac{\frac{\sqrt{6}}{10}-456}{\frac{\sqrt{6}}{61}/7},train,mathwriting
+images\train_01166cab452b3767.png,q_{e}=\frac{q_{b}}{\sqrt{\frac{q_{b}}{q_{m}}}},train,mathwriting
+images\train_0116bc45c5def2c5.png,\int_{a}^{\infty},train,mathwriting
+images\train_01172788ab14a68f.png,P=\frac{dy}{dx},train,mathwriting
+images\train_01177aa6d6c2cc9e.png,[\begin{matrix}1&3&2\\ 4&1&0\end{matrix}],train,mathwriting
+images\train_01182369a3997062.png,v_{1}\otimes v_{2}=\epsilon\eta,train,mathwriting
+images\train_0118f774e1e0cd20.png,=7.4,train,mathwriting
+images\train_011909ba0dd9f64b.png,\overline{n}_{m},train,mathwriting
+images\train_01192d43d9eeb456.png,x=-\frac{\partial g}{\partial p},train,mathwriting
+images\train_0119f1654ddde369.png,-\int f(x)dx,train,mathwriting
+images\train_011a22342de0c306.png,\frac{\partial T}{\partial q_{k}},train,mathwriting
+images\train_011a39a565882ecf.png,"c_{L}(s^{\prime},x)\ge c_{L}(s,x)",train,mathwriting
+images\train_011a4cd74a1dba40.png,[\begin{matrix}1&-R\\ 0&1\end{matrix}],train,mathwriting
+images\train_011a4f2d923dbe9f.png,\frac{270-87}{78}+(\frac{9}{6})^{17},train,mathwriting
+images\train_011b8f41e47d587f.png,({3^{10}}^{368}\cdot\sqrt{5}^{9}),train,mathwriting
+images\train_011c0fb59c6fc36b.png,B_{i}=(S_{i}+1)/2,train,mathwriting
+images\train_011c55679e4ccf51.png,(\frac{\frac{3}{18}}{210})^{\frac{\frac{\sqrt{312}}{10}}{400}},train,mathwriting
+images\train_011cc364450a0f0d.png,K=\frac{eB\lambda_{u}}{2\pi m_{e}c},train,mathwriting
+images\train_011cfcfc27ac03b5.png,\hat{u},train,mathwriting
+images\train_011d1a69af32e731.png,F=2\pi\int_{-1}^{+1}I\mu d\mu,train,mathwriting
+images\train_011d2e7c3143d828.png,M_{earth}=\frac{gR_{earth}^{2}}{G},train,mathwriting
+images\train_011d618f8f51ad21.png,||x||=\sqrt{x\cdot x},train,mathwriting
+images\train_011dbdb85633eac9.png,\frac{1}{\sqrt{x^{2}+1}},train,mathwriting
+images\train_011e0737f42966fd.png,\frac{1}{a}F(\frac{s}{a}),train,mathwriting
+images\train_011e6e17bb76f51e.png,P_{i}=\dot{m}\Delta h_{o},train,mathwriting
+images\train_011ea8feb000108e.png,\tilde{e}_{i}\tilde{f}_{i},train,mathwriting
+images\train_011fa680928d8357.png,A=[\begin{matrix}a&b\\ c&d\end{matrix}],train,mathwriting
+images\train_01208ec4159f1efb.png,\underline{AB},train,mathwriting
+images\train_0120aba47141b776.png,y_{4}^{\prime}=\frac{y_{4}-\frac{z}{c^{2}}k_{4}}{\sqrt{4-\frac{z^{2}}{c^{2}}}},train,mathwriting
+images\train_012165bb41cb5066.png,\frac{m}{\sqrt{\frac{l^{2}}{u^{2}}+0}},train,mathwriting
+images\train_0121a2bc8fcca9cd.png,\frac{x}{2}+\frac{sin(2x)}{4}+C,train,mathwriting
+images\train_0121c3c1fea2600b.png,(\begin{matrix}a&b\\ c&1-a\end{matrix}),train,mathwriting
+images\train_0121f0928e4ebfe0.png,c^{2}=\frac{\partial p}{\partial\rho},train,mathwriting
+images\train_01221ca3a246af2a.png,\sqrt{\frac{Z_{I2}}{Z_{I1}}},train,mathwriting
+images\train_01231b3bc499c837.png,\frac{V^{+}}{I^{+}}=Z_{0}=-\frac{V^{-}}{I^{-}},train,mathwriting
+images\train_0123513f53a11b51.png,\hat{Y}^{A},train,mathwriting
+images\train_0123e0c32385b30a.png,"I=\{1,...,I\}",train,mathwriting
+images\train_01241893b9c456f5.png,L=gl_{n},train,mathwriting
+images\train_01242cd091e1291b.png,\Phi^{a}=\Phi_{+}^{a}\cup-\Phi_{+}^{a},train,mathwriting
+images\train_012490d77d1a6fb1.png,[\frac{n+1}{n}]^{n}>n,train,mathwriting
+images\train_0124a0b1ed16f073.png,\frac{\partial\rho}{\partial t}=D\cdot\frac{\partial^{2}\rho}{\partial x^{2}},train,mathwriting
+images\train_0124bb10cbd41a24.png,p=(\begin{matrix}1&-1\\ 0&1\end{matrix}),train,mathwriting
+images\train_012560abb4c27bb4.png,\rho(x)=\frac{1}{2\pi}\sqrt{\frac{4-x}{x}},train,mathwriting
+images\train_012573b9da2f307c.png,\frac{(7\cdot3)^{301}}{{10^{6}}^{3}},train,mathwriting
+images\train_01259d620ab7982f.png,(\begin{matrix}1&1\\ 0&1\\ \end{matrix}),train,mathwriting
+images\train_01259d8d58b951df.png,\chi_{(h)}^{2},train,mathwriting
+images\train_0125d61ddd1acddd.png,(\frac{t-1}{t+1}),train,mathwriting
+images\train_01261f172eba404d.png,\frac{2\pi}{\lambda}=k,train,mathwriting
+images\train_012637689fd76058.png,S=-mc\int ds,train,mathwriting
+images\train_0126bb8a36b96ec4.png,X_{(t_{i+1}+t_{i})/2},train,mathwriting
+images\train_0126eeb883658a59.png,\sum_{i=0}^{\infty}(|G_{i}|-1),train,mathwriting
+images\train_0127861c4d1b3842.png,k_{g}=\frac{\sqrt{1-r^{2}}}{r},train,mathwriting
+images\train_0127e78d68a0040b.png,1^{433}\cdot111+\sqrt{5}^{381},train,mathwriting
+images\train_0128248485471f9f.png,\Gamma,train,mathwriting
+images\train_01282a22bb3f75f0.png,g=(\begin{matrix}A&B\\ C&D\end{matrix}),train,mathwriting
+images\train_012865541506898a.png,v\approx\frac{L^{2}}{2r},train,mathwriting
+images\train_01286e95872f8d10.png,t=\frac{|b|}{\sqrt{\frac{1\cdot b^{5}}{n\cdot5}}},train,mathwriting
+images\train_0128d6a8c338b7f1.png,\sqrt{3},train,mathwriting
+images\train_0129583fe2116356.png,264-175-365-4+5,train,mathwriting
+images\train_0129cc9acd5b89e0.png,\frac{\alpha^{2}}{2},train,mathwriting
+images\train_0129d83f0d5b50bb.png,\frac{d^{2}P}{dt^{2}},train,mathwriting
+images\train_0129db51b1bc6f88.png,t=J\dot{\omega}+\omega\times J\omega,train,mathwriting
+images\train_012a4d53878ad97a.png,\frac{x}{\sigma^{2}}e^{-x^{2}/2\sigma^{2}},train,mathwriting
+images\train_012a9c5465402d75.png,h=c_{p}T=\frac{\gamma}{\gamma-1}\frac{T}{m},train,mathwriting
+images\train_012ac51b99037b52.png,f(\epsilon)=\frac{\epsilon-1}{\epsilon+x},train,mathwriting
+images\train_012ae5ce4cf7400f.png,E_{p}=\frac{1}{2}\rho g\sigma^{2},train,mathwriting
+images\train_012b42a83e019def.png,(\begin{matrix}n\\ 0.51n\end{matrix}),train,mathwriting
+images\train_012b512e6bc94f39.png,d_{jk}=\frac{A+B-2J}{A+B},train,mathwriting
+images\train_012bb35371767a18.png,|\frac{a}{b}|=\frac{|a|}{|b|},train,mathwriting
+images\train_012bd668415bd5c0.png,6\sqrt{2}\approx8.49,train,mathwriting
+images\train_012c20e9eebb2a10.png,(6\cdot361)^{8^{474}},train,mathwriting
+images\train_012c2a3590ef5f18.png,w_{t}=(1-\eta x_{t})/x_{t},train,mathwriting
+images\train_012c93a761821314.png,e(k)=\hat{x}(k)-x(k),train,mathwriting
+images\train_012cbd8e47495921.png,\frac{\frac{5}{365}}{\frac{448^{119}}{3}},train,mathwriting
+images\train_012cc4888638b16e.png,\int_{-N}^{N}f(x)dx,train,mathwriting
+images\train_012d1a31315540b2.png,s\ne\frac{\pi}{2k},train,mathwriting
+images\train_012d8bd30e50122d.png,S^{*}(\theta)=\sqrt{S(\theta)},train,mathwriting
+images\train_012d95e2f11aeb4c.png,K_{c}=\frac{\prod_{j=1}^{p}[Y_{j}]^{\eta_{j}}}{\prod_{i=1}^{r}[X_{i}]^{\nu_{i}}},train,mathwriting
+images\train_012dc64088e261f2.png,F_{4}^{(1)},train,mathwriting
+images\train_012defcd2813c58a.png,\Gamma_{i}\equiv\frac{1}{\sqrt{1+\frac{v_{i}\cdot v_{i}}{t^{0}}}},train,mathwriting
+images\train_012e1eb40ee21b0e.png,p=\frac{kT}{v-b}-\frac{a}{v^{2}},train,mathwriting
+images\train_012ec54d224f4b84.png,(\begin{matrix}4\\ 3\end{matrix})=4,train,mathwriting
+images\train_012f06d56b0d1c9a.png,2b=\sqrt{(p+q)^{2}-f^{2}},train,mathwriting
+images\train_012f4f735c89651e.png,{{7^{5}}^{4}}^{(\frac{6}{101})^{6}},train,mathwriting
+images\train_012f86017ff6e2d5.png,\int_{0}^{1}f(x)dx=1,train,mathwriting
+images\train_012fd3aee559ac80.png,\frac{1}{\sqrt{\frac{1}{v^{7}}-1}},train,mathwriting
+images\train_012fdf61edf79f99.png,log(-\frac{7}{3}-2),train,mathwriting
+images\train_0130605a6664a83a.png,\frac{e^{itb}-e^{ita}}{it(b-a)},train,mathwriting
+images\train_01318379652e4a51.png,\sqrt{R},train,mathwriting
+images\train_0131aa2e385256f7.png,v=\sqrt[2]{\frac{2Pt}{m}},train,mathwriting
+images\train_0131bcb63eb49cfb.png,[\begin{matrix}lnx\\ (lnx)^{2}\end{matrix}],train,mathwriting
+images\train_0131edaca4f87478.png,\frac{db}{dt}=\frac{1}{3},train,mathwriting
+images\train_01321625925d7bb2.png,\int\sigma_{x}dA=0,train,mathwriting
+images\train_01323ef681bdb59d.png,3\frac{1}{2},train,mathwriting
+images\train_01329fba933c6b0f.png,"\phi:(x,y)\mapsto(x^{q},y^{q})",train,mathwriting
+images\train_0132c4379781256b.png,V=\sqrt{r_{1}^{2}+r_{2}^{2}},train,mathwriting
+images\train_0132dca222fcfe36.png,\frac{1}{2}r^{2}\theta,train,mathwriting
+images\train_0132e48b84197d06.png,\frac{dm}{dt}v_{e},train,mathwriting
+images\train_0132f6e7cc11ac1e.png,E(Af)(W)=0,train,mathwriting
+images\train_0133331f88eaa579.png,13\cdot(\begin{matrix}12\\ 2\end{matrix})\cdot4^{2},train,mathwriting
+images\train_0133e83c90d354dd.png,\int_{a}^{b}f(x)dx,train,mathwriting
+images\train_01347e681d169862.png,\frac{\partial x}{\partial\theta},train,mathwriting
+images\train_0136554440e309e5.png,1-\int_{t-r}^{t}E(t^{\prime})dt^{\prime},train,mathwriting
+images\train_0136c453aded0b0c.png,\frac{d}{dx}(2x)=2,train,mathwriting
+images\train_0136e36ce4b2c289.png,\frac{pe^{it}}{1-(1-p)e^{it}},train,mathwriting
+images\train_013704961f6fb290.png,"[r_{n},r_{n-1},...,r_{2},r_{1}]",train,mathwriting
+images\train_013732d4f82ab632.png,s_{x}^{\epsilon},train,mathwriting
+images\train_01376d57b4e3c318.png,n=\frac{2}{ab}\frac{dA}{dt},train,mathwriting
+images\train_013771c54c14fb55.png,(\frac{5\cdot6}{8})^{247+149+7},train,mathwriting
+images\train_01377877dc47e30a.png,(\begin{matrix}A&B\\ C&D\end{matrix}),train,mathwriting
+images\train_01378a659c574bc2.png,\frac{dv}{dt},train,mathwriting
+images\train_0137afad806b1b23.png,\dot{x}(t)=-u(t),train,mathwriting
+images\train_0137b4b6eac39fbc.png,\frac{g}{t\sqrt{p}\sqrt{1+\mu}},train,mathwriting
+images\train_0137e4d9803aa2b0.png,\sqrt{\theta},train,mathwriting
+images\train_01383fa17abdd641.png,\frac{\frac{162}{10}}{\frac{3}{370}},train,mathwriting
+images\train_0138492efda66d02.png,"[t,t+\tau)",train,mathwriting
+images\train_0138ba9911d177d4.png,\Delta T=l\frac{dT}{dz},train,mathwriting
+images\train_01394915a0436edd.png,2y=-\frac{x^{2}}{\tau^{2}}+\tau^{2},train,mathwriting
+images\train_0139d312c5f96092.png,(\begin{matrix}-1\\ 0\end{matrix})=1,train,mathwriting
+images\train_013a49c2403fed55.png,p=\frac{5ac-2b^{2}}{5a^{2}},train,mathwriting
+images\train_013a5824feee730c.png,\frac{Gm^{2}}{r},train,mathwriting
+images\train_013a894cfef74360.png,L=\frac{q^{2}}{9K},train,mathwriting
+images\train_013af9e16ddc99bf.png,Z:=(\begin{matrix}x&dy\\ y&x\end{matrix}),train,mathwriting
+images\train_013b109149c824e7.png,[1+\frac{x-\mu}{\sigma}]^{-\alpha},train,mathwriting
+images\train_013b25733da7d697.png,"B(z)=\prod_{n}B(a_{n},z)",train,mathwriting
+images\train_013b7152d09a3be0.png,\sqrt{4}^{\sqrt{4}^{\sqrt{4}^{\cdot^{\cdot^{\cdot}}}}},train,mathwriting
+images\train_013bdb157edca6a9.png,x^{\underline{n}}=x(x-1)\cdot\cdot\cdot(x-n+1),train,mathwriting
+images\train_013be33f4b33ed4d.png,B=[\begin{matrix}1&0\\ 0&0.6\\ 0&0.8\end{matrix}],train,mathwriting
+images\train_013beb31b04a966c.png,(\begin{matrix}0&-i\\ i&0\end{matrix}),train,mathwriting
+images\train_013c004848ed2ef2.png,\frac{\partial\rho}{\partial t},train,mathwriting
+images\train_013c2c8f26c0662b.png,\frac{1}{\sqrt{12}}LSB\approx0.289LSB,train,mathwriting
+images\train_013c66185f4da42f.png,\gamma_{u^{x}},train,mathwriting
+images\train_013cb8af6331cea5.png,y^{\prime}-\frac{2y}{x}=0,train,mathwriting
+images\train_013cda504dae2be3.png,N\overline{x},train,mathwriting
+images\train_013cec3eb6d8396b.png,\theta_{i}=\frac{x_{i}}{x_{max}}2\pi,train,mathwriting
+images\train_013d9026b9ce9974.png,G=\int_{1}^{\infty}\frac{lnt}{1+t^{2}}dt,train,mathwriting
+images\train_013dfcc70caae296.png,\frac{\frac{237}{445}-431}{\frac{10}{164}},train,mathwriting
+images\train_013ecc66bb27128e.png,Dw_{1}(M)=[G],train,mathwriting
+images\train_013ef5bb1c9b872b.png,(\begin{matrix}a\\ r\end{matrix}),train,mathwriting
+images\train_013f93360ef7ab62.png,\prod_{p}f(p),train,mathwriting
+images\train_01403b294180727a.png,\mu_{c}=kTln\frac{[Red]}{[Ox]},train,mathwriting
+images\train_01406e7b9c69930a.png,e^{78^{78^{78^{722}}}},train,mathwriting
+images\train_014073353be040e1.png,\frac{d^{2}y}{dt^{2}},train,mathwriting
+images\train_01407e4667aa62e5.png,\frac{dv}{dt}=Mv,train,mathwriting
+images\train_0140aacf53f5b943.png,\sigma_{t}=\frac{8\pi}{3}(\frac{\alpha\lambda_{c}}{2\pi})^{2},train,mathwriting
+images\train_0140b99492abde9a.png,\tilde{\epsilon}_{ij},train,mathwriting
+images\train_0140d9a733c5d727.png,q\overline{q}=-a^{2}+b^{2}+c^{2}+d^{2},train,mathwriting
+images\train_0140dc9f45b90b9d.png,\int Fdl,train,mathwriting
+images\train_0140dd6f7bf99d8d.png,e^{2}=\frac{4n}{(1+n)^{2}},train,mathwriting
+images\train_01420647e45d5abd.png,(A-B)\sqrt{g}=1.,train,mathwriting
+images\train_0142269e80e9bfa1.png,[\begin{matrix}x\\ y\end{matrix}],train,mathwriting
+images\train_01422ba7cd50da7f.png,\frac{dmv}{dt},train,mathwriting
+images\train_014255ab14aa8a07.png,\frac{d^{2}y}{dt^{2}}+y+\epsilon y^{3}=0,train,mathwriting
+images\train_01427540bf7a6216.png,\frac{3M-E+S}{6},train,mathwriting
+images\train_0143003a32e7547b.png,R_{1}(x)=\frac{x-1}{x+1},train,mathwriting
+images\train_01431b4175499117.png,"f(x,y)=\frac{xy}{x^{2}+y^{2}}",train,mathwriting
+images\train_014386b397f3bb76.png,(\begin{matrix}2\\ 4\end{matrix}),train,mathwriting
+images\train_0143c2787a736989.png,E_{i}=\int E(t)dt,train,mathwriting
+images\train_0143cfc59edf24a8.png,\frac{{10^{199}}^{294}}{\frac{5}{2}},train,mathwriting
+images\train_01440b38d37933ff.png,2_{-}^{1+4},train,mathwriting
+images\train_01441832c10b87b8.png,S=\frac{mu^{0}}{\sqrt{6-\frac{v^{0}}{u^{0}}}},train,mathwriting
+images\train_014485efe44c486e.png,\hat{q}_{o},train,mathwriting
+images\train_0144b4d6c99ecef8.png,f=\frac{1}{2*t*n},train,mathwriting
+images\train_0144d6d365335a4f.png,\frac{\Delta k}{t}=\frac{R^{\frac{4k_{e}}{t}}\cdot1}{R^{\frac{4k_{e}}{t}}+1},train,mathwriting
+images\train_014611be259da565.png,\frac{318^{41}}{1}+(9^{213}+10),train,mathwriting
+images\train_0146142fd3851fdd.png,\overline{S}_{i},train,mathwriting
+images\train_01461487f74d6e6f.png,\tilde{C}_{2},train,mathwriting
+images\train_014627a2cf8e3e1b.png,\frac{8^{8}}{76^{480}},train,mathwriting
+images\train_0146385ab04074d7.png,\overline{lim}(loga_{n})/2^{n}<+\infty,train,mathwriting
+images\train_0146590f0b53351b.png,399+166-\frac{2}{62},train,mathwriting
+images\train_014679e0130f99c8.png,1-0\sqrt{2}=1.0,train,mathwriting
+images\train_014732e62845c204.png,p_{0}=\frac{1}{2},train,mathwriting
+images\train_0147826728ce220b.png,\vec{c}=\frac{d^{5}\vec{r}}{dt^{5}},train,mathwriting
+images\train_014791e45e1936f5.png,\frac{d^{2}\psi_{1}}{dx^{2}}=-k^{\prime2}\psi_{1},train,mathwriting
+images\train_0147a285826e42ee.png,"max\{1,\sum_{i=0}^{n-1}|\frac{a_{i}}{a_{n}}|\}",train,mathwriting
+images\train_0147c7e8e5401265.png,f_{xx}=\frac{d^{2}f}{dx^{2}},train,mathwriting
+images\train_0147dcffbbf73d29.png,cf(\prod A/D)<\lambda,train,mathwriting
+images\train_0148327e08655241.png,"(L_{0},R_{0})=(L_{0}^{\prime},R_{0}^{\prime})",train,mathwriting
+images\train_01486a391009a3e7.png,V_{h^{\beta}},train,mathwriting
+images\train_014941acc8b5f3a2.png,\hat{p}=1,train,mathwriting
+images\train_01495d3fd4302fd9.png,I_{T}(\theta)\le I_{X}(\theta),train,mathwriting
+images\train_0149933e2bd2241f.png,\frac{\frac{1}{176}}{\frac{469}{10}},train,mathwriting
+images\train_0149a8a4753f82b1.png,\frac{1/288}{(\sqrt{157}-10)},train,mathwriting
+images\train_0149b253164ebf86.png,\frac{q_{H}}{T_{H}}-\frac{q_{C}}{T_{C}}=0,train,mathwriting
+images\train_0149e544e3e2c96e.png,\tilde{E}_{i}^{a}\mapsto\tilde{E}_{i}^{a}/\beta,train,mathwriting
+images\train_014ad52984dffc06.png,(\omega_{0}+\omega_{1}-\omega),train,mathwriting
+images\train_014b28d8ea7b0d15.png,\frac{1}{e}=0.37,train,mathwriting
+images\train_014b6ae21f88e0bb.png,c=-ax_{1}-by_{1},train,mathwriting
+images\train_014bf7165d820f04.png,\frac{dy}{dt},train,mathwriting
+images\train_014c3613fe326ec4.png,t\{\begin{matrix}2\\ n\end{matrix}\},train,mathwriting
+images\train_014cbdc2ffa1f330.png,\frac{0.0016286*P_{kPa}}{\lambda_{v}},train,mathwriting
+images\train_014ce08b7fcf6354.png,A=[\begin{matrix}2&1\\ 1&1\end{matrix}],train,mathwriting
+images\train_014cf9817da02820.png,1-5/3+4^{466},train,mathwriting
+images\train_014d8838b7c5cd35.png,(\frac{4}{7}-9)^{204\cdot\sqrt{5}},train,mathwriting
+images\train_014dd50f98ec24ae.png,f_{c}=\frac{1}{2\pi\tau}=\frac{1}{2\pi RC},train,mathwriting
+images\train_014e7fe2e46d8da5.png,(1-\frac{1}{2^{k}}-\epsilon),train,mathwriting
+images\train_014ec53c1a7dad26.png,\mathbb{Y},train,mathwriting
+images\train_014ee7dfb7b899fe.png,n,train,mathwriting
+images\train_014eff68d72932c5.png,R_{\mu\nu}=\frac{n-1}{\alpha^{2}}g_{\mu\nu},train,mathwriting
+images\train_014f5d7baa22d105.png,s=-\frac{ln\xi}{\mu_{t}},train,mathwriting
+images\train_014fbf1f983b03c3.png,p(k)=\tau_{0}^{-1},train,mathwriting
+images\train_014fdcf2526a7cdf.png,W=\int_{a}^{b}PdV,train,mathwriting
+images\train_01505fb71400af6d.png,\frac{dN}{dt}\frac{1}{N}=r,train,mathwriting
+images\train_015067b0a61bfee7.png,\sqrt{\mu_{0}}H,train,mathwriting
+images\train_0150a8b6db12ac34.png,n=\frac{2}{ab}\frac{dA}{dt},train,mathwriting
+images\train_01510207468314f8.png,{448\cdot246^{452}}^{\frac{2}{148}},train,mathwriting
+images\train_015119066019ac1e.png,c_{xy}=\frac{s_{xy}}{m_{x}m_{y}},train,mathwriting
+images\train_01511e8d5d8a1a22.png,u\cdot u=|u|^{2}=1,train,mathwriting
+images\train_0151a79bb920804f.png,P_{i}^{a}P_{j}^{b}...P_{k}^{c}\rightarrow Q^{d},train,mathwriting
+images\train_0151c10767f5d84b.png,5+328^{\frac{4^{8}}{301}},train,mathwriting
+images\train_0151fc70b52f7e80.png,{94^{\sqrt{6}}-92}^{(229\cdot10)},train,mathwriting
+images\train_0152cfd6e33e7831.png,"L(y_{i},\hat{y})",train,mathwriting
+images\train_0152e3bbeec149bc.png,"r(\underline{x},t)",train,mathwriting
+images\train_015314d83ebeb4ce.png,{8^{\sqrt{5}}}^{\frac{\sqrt{17}}{390}},train,mathwriting
+images\train_0153883edeafd538.png,\omega_{Q}\sim\frac{e^{2}Qq}{\hbar}=C_{q},train,mathwriting
+images\train_0154648a51a98c94.png,\tilde{E}_{i}^{3},train,mathwriting
+images\train_01554fd2b3e5546e.png,\eta_{th}\equiv\frac{Q_{out}}{Q_{in}},train,mathwriting
+images\train_01557de2f7858d44.png,\hat{P}^{2},train,mathwriting
+images\train_015605281d9fb799.png,\frac{dy}{dx},train,mathwriting
+images\train_01560ba04a669b48.png,[D(d)\wedge\neg D(f(d))],train,mathwriting
+images\train_01565435b916f166.png,a=0.6+i0.37,train,mathwriting
+images\train_015659ebbe18ed5e.png,{410^{\sqrt{122}}/308}^{\frac{(70/10)}{3}},train,mathwriting
+images\train_0156832a55a8db6d.png,(\begin{matrix}n\\ 2\end{matrix})^{-1},train,mathwriting
+images\train_01569c10a560ad68.png,(\begin{matrix}a&b\\ c&1-a\end{matrix}),train,mathwriting
+images\train_0156b834aaa9c0f6.png,\hat{f}=e^{-\pi\xi^{2}},train,mathwriting
+images\train_01576a4e9416895f.png,\sqrt{4}/437^{395^{439}},train,mathwriting
+images\train_015773812c31ad04.png,[\begin{matrix}1&1.25\\ 0&1\end{matrix}],train,mathwriting
+images\train_0157a894c908114a.png,\alpha\frac{\sigma_{0}}{E},train,mathwriting
+images\train_0157fb8bb05b74ee.png,\tilde{b},train,mathwriting
+images\train_0158115312c5bc89.png,MA=\frac{T_{B}}{T_{A}}=R,train,mathwriting
+images\train_01581734a28e757a.png,D_{F}=\infty,train,mathwriting
+images\train_0158865a3d516850.png,y^{y^{-^{-^{y^{x}}}}},train,mathwriting
+images\train_01589740fb1e146e.png,m=\frac{m_{9}}{({1\cdot\frac{v^{5}}{c^{5}})}^{4/5}},train,mathwriting
+images\train_015907d1d23a94e6.png,\frac{dE_{r}}{dx},train,mathwriting
+images\train_01591d9fd6d97e30.png,e_{3}^{\prime}=\frac{e_{3}+\frac{v}{c^{3}}x_{3}}{\sqrt{0+\frac{v^{3}}{c^{3}}}},train,mathwriting
+images\train_0159c5dd444d86d9.png,f=\prod_{i=1}^{deg(f)}f_{i}^{i},train,mathwriting
+images\train_0159d37d53dfc478.png,"i=0,1,2,...",train,mathwriting
+images\train_015a486868c96022.png,e=N\sqrt{q},train,mathwriting
+images\train_015a68a408cc8282.png,\frac{1}{1\cdot r^{\frac{X\times(1\cdot X)}{7^{N+1}}}},train,mathwriting
+images\train_015a699f8362c93d.png,s=\sqrt{(4a)^{2}+p^{2}},train,mathwriting
+images\train_015a921124ef2c89.png,C_{GS},train,mathwriting
+images\train_015a92179e3f9230.png,\frac{m}{\sqrt{\frac{w^{2}}{l^{2}}-1}},train,mathwriting
+images\train_015b1a5ffae36b10.png,Z_{in}=\frac{v_{1}}{i_{1}},train,mathwriting
+images\train_015b7b615091fe1a.png,\frac{dV}{dt}=Q_{0},train,mathwriting
+images\train_015b82297f66bcf6.png,\frac{dx}{ds}=e^{x},train,mathwriting
+images\train_015c213e3b42b838.png,\epsilon_{i}=AP_{i}-\lambda_{i}P_{i},train,mathwriting
+images\train_015caa904699de3f.png,\{T^{-1}w_{j}\},train,mathwriting
+images\train_015d4c869ed70884.png,(0)=0,train,mathwriting
+images\train_015d6731dedcf606.png,((\frac{495}{9})^{131}+\frac{183^{6}}{3}),train,mathwriting
+images\train_015d7fece3e5f0fc.png,"[x,x+\sqrt{2x}],x\ge2",train,mathwriting
+images\train_015d83110e70d8be.png,\tau=\frac{1}{n\omega}\frac{A_{n}}{B_{n}},train,mathwriting
+images\train_015d9a76b7969c5e.png,C_{D}=\sigma_{D}^{2}I,train,mathwriting
+images\train_015dae7102fd0a4c.png,\frac{dE_{2}}{dE_{1}}=-1,train,mathwriting
+images\train_015e80966826e0a2.png,\sqrt{DC^{2}+a^{2}},train,mathwriting
+images\train_015ebab835660013.png,\tilde{B}_{8},train,mathwriting
+images\train_015ef333aa1f0c86.png,"G=G(\theta,\phi)=sin\theta",train,mathwriting
+images\train_015f28ae8cbb17cf.png,k=2^{a}5^{b}n,train,mathwriting
+images\train_015f56ed47fcf0d3.png,"f(T_{2},T_{3})=\frac{g(T_{3})}{g(T_{2})}",train,mathwriting
+images\train_015f5c3196e1e1e9.png,"(\frac{7}{\sqrt{10}},\sqrt{\frac{3}{2}},0,\pm2)",train,mathwriting
+images\train_015fc0cedc705816.png,(\begin{matrix}X\\ k\end{matrix}),train,mathwriting
+images\train_015fdc123402b427.png,X=[\begin{matrix}w+ix\\ y+iz\end{matrix}],train,mathwriting
+images\train_0160662c44fc81bf.png,"\{i,j\}\notin E",train,mathwriting
+images\train_016138e5063f6105.png,H(z)=\frac{z^{-1}}{1-az^{-1}},train,mathwriting
+images\train_0161ab2d0386b735.png,\frac{d\rho}{dt}+\rho\nabla\cdot v=0,train,mathwriting
+images\train_0161d197874840fe.png,(\begin{matrix}x\\ y\\ 1\end{matrix}),train,mathwriting
+images\train_0161d8badadbe6ad.png,\frac{f_{p}}{f_{y}}=\frac{9}{\sqrt{9\cdot\frac{v^{0}}{c^{0}}}},train,mathwriting
+images\train_01624dc8882ac4ae.png,\frac{d^{3}}{dx^{3}}[x^{4}]=24x,train,mathwriting
+images\train_016261a178473488.png,\{\begin{matrix}p\\ 2\end{matrix}\},train,mathwriting
+images\train_01626ae7118ec6c5.png,\frac{\sqrt{a^{2}-b^{2}}}{\sqrt{a^{2}+b^{2}}},train,mathwriting
+images\train_01627e4eb83dfd18.png,\tau=\mu\frac{du}{dx},train,mathwriting
+images\train_0162a74ceca44403.png,u(t)=\frac{ds(t)}{dt},train,mathwriting
+images\train_0162ed740cf4a5f8.png,\hat{H}_{s}=-|e|Ez,train,mathwriting
+images\train_01641c72bb112ca0.png,\tilde{h}(E),train,mathwriting
+images\train_016484c86051cbc3.png,(\sqrt{2\pi x})^{1-6}6^{6/2},train,mathwriting
+images\train_01649da9a71e57fe.png,F[y]=\int_{E}ytdt,train,mathwriting
+images\train_0164a2d281aceb95.png,\sqrt[12]{2^{5}},train,mathwriting
+images\train_0164c153e0eadd58.png,R=\frac{\rho}{t}\frac{L}{W}=R_{s}\frac{L}{W},train,mathwriting
+images\train_0164eebbe9545509.png,J=\sqrt{\frac{kT}{2hcB}}-1/2,train,mathwriting
+images\train_01650d074915628e.png,i_{Q}:Q\hookrightarrow E,train,mathwriting
+images\train_01656c339ebb0391.png,\sigma(u)=\frac{0}{\sqrt{0\cdot\frac{u^{2}}{c^{2}}}},train,mathwriting
+images\train_01656de72c028bad.png,\frac{(8+\sqrt{326})}{(470^{5}-\sqrt{5})},train,mathwriting
+images\train_0165ed646165823b.png,10^{6}/\frac{\frac{180}{6}}{194},train,mathwriting
+images\train_01666e57f08d88c7.png,\tilde{O}(m^{2}n),train,mathwriting
+images\train_0166efe2bc0d2702.png,\hat{v}^{*},train,mathwriting
+images\train_01674a19c6aae881.png,s=\sqrt{\frac{5-\sqrt{5}}{2}},train,mathwriting
+images\train_01676f9091e5bd03.png,\frac{n}{2ln^{2}n},train,mathwriting
+images\train_0167852424493cbb.png,\Delta E_{mol}=N_{A}h\nu,train,mathwriting
+images\train_0167d14531671162.png,\sigma_{E}\frac{\sigma_{B}}{|\frac{d\langle\hat{B}\rangle}{dt}|}\ge\frac{\hbar}{2},train,mathwriting
+images\train_0167eb52a4a466a1.png,(\begin{matrix}n\\ 2\end{matrix})p,train,mathwriting
+images\train_01682181210e241d.png,p=\frac{2}{\lambda}\frac{\partial W}{\partial I_{1}},train,mathwriting
+images\train_0168e0136b563f74.png,\frac{\Delta\hat{H}}{\Delta\hat{P}},train,mathwriting
+images\train_01691d506fd587a1.png,v=\frac{q}{\sqrt{1-\frac{p-H}{2H_{m}}}},train,mathwriting
+images\train_016940d6f53f18b0.png,\overline{D}f=0,train,mathwriting
+images\train_01698124c96eae50.png,f=PU,train,mathwriting
+images\train_016a125eea12798c.png,"U_{1}=\prod_{P|p}U_{1,P}",train,mathwriting
+images\train_016a683997c1235c.png,y\notin H_{2},train,mathwriting
+images\train_016aba8c64e26a53.png,w_{i}=\frac{\partial R}{\partial a_{i}},train,mathwriting
+images\train_016ac2736d6135fe.png,\eta(x)\frac{\partial w}{\partial t},train,mathwriting
+images\train_016af980ea9b596c.png,\frac{e^{imt}}{(1+\frac{it\kappa}{\lambda})(1-\frac{it}{\kappa\lambda})},train,mathwriting
+images\train_016afdf9b9624f91.png,\frac{1}{2}(y_{1}+y_{2})/R,train,mathwriting
+images\train_016b288625f19348.png,\prod_{s\in S}(1+X_{s}),train,mathwriting
+images\train_016b8f177142f1fa.png,\int[(sinx)^{3}cosx]dx,train,mathwriting
+images\train_016ba3d1ed747940.png,\gamma=\frac{5}{\sqrt{5-\frac{q^{2}}{d^{2}}}},train,mathwriting
+images\train_016baa7570eb1cf9.png,(i\cdot n)\hat{f}(n),train,mathwriting
+images\train_016bdcbc5e172fc9.png,\xi=\sqrt{\frac{\hbar^{2}}{2m|\alpha|}},train,mathwriting
+images\train_016be14e8d3dd6e1.png,\int_{-3}^{0}(3)dx,train,mathwriting
+images\train_016ca5aee9d08cc6.png,\epsilon=\frac{1}{\sqrt{1-\frac{v^{5}}{w^{5}}}},train,mathwriting
+images\train_016cb62dd6b62720.png,sinC=\frac{sinhc}{sinhb},train,mathwriting
+images\train_016cc8ee0df6fe83.png,\frac{v^{\frac{(y-t)^{2}}{6}}}{i\sqrt{6\omega}},train,mathwriting
+images\train_016cfeafd13dc0e7.png,L_{0}...L_{i-1},train,mathwriting
+images\train_016d5e42217d923a.png,\frac{1}{2\pi}\frac{d(2\pi kt^{2})}{dt}=2kt,train,mathwriting
+images\train_016d8f7ec4ce58f0.png,(\frac{6}{194})^{\frac{\frac{397}{5}}{86}},train,mathwriting
+images\train_016daeefa01bce0e.png,|\beta_{1}\lambda_{1}+\beta_{2}\lambda_{2}|,train,mathwriting
+images\train_016db17801e8ea8d.png,p=\frac{\partial L}{\partial\dot{q}},train,mathwriting
+images\train_016dbd17f6f3514c.png,\frac{1}{2}(n-1),train,mathwriting
+images\train_016e1bae8ebf9a97.png,59^{\frac{5}{2\sqrt{f_{B}}}}\cdot\frac{2.8}{Rl\sqrt{f_{B}}},train,mathwriting
+images\train_016e1e29331024b5.png,",\frac{{F_{m}}^{\prime}-F}{{F_{m}}^{\prime}}",train,mathwriting
+images\train_016e727e0a218885.png,x=\hat{X},train,mathwriting
+images\train_016e815f4f4e66cd.png,\frac{\partial u}{\partial y},train,mathwriting
+images\train_016eab0ea61a13d0.png,N_{i}=(\begin{matrix}8\\ i\end{matrix})i^{12},train,mathwriting
+images\train_016f7b244aac30d6.png,exp(-\frac{1}{2}|\xi_{n}|^{p}),train,mathwriting
+images\train_016f85f5964707ab.png,\beta\approx\omega\sqrt{LC},train,mathwriting
+images\train_016fd6b1027aa011.png,\infty k\delta(s)\hat{z},train,mathwriting
+images\train_016febcae37fb5b3.png,\hat{S}_{M},train,mathwriting
+images\train_0170105b836f6f3a.png,M_{W}=\frac{v|g|}{2},train,mathwriting
+images\train_017066fa4f89faf4.png,\frac{2h\alpha}{ce^{2}},train,mathwriting
+images\train_0170699118f0deb5.png,\int_{0}^{x}cos(1/t)dt,train,mathwriting
+images\train_0170a01859e12653.png,\frac{d}{dx}x,train,mathwriting
+images\train_0170d8b9b350f55c.png,\alpha\in\tilde{P}_{i},train,mathwriting
+images\train_0171e134f8641e20.png,\int_{1}^{\infty}\frac{dx}{x},train,mathwriting
+images\train_01723ed16025a3e1.png,\frac{24/\sqrt{3}}{{\sqrt{169}^{98}}^{5}},train,mathwriting
+images\train_0172466150d50b6e.png,Z=[\begin{matrix}X_{i}&Y_{-i}\end{matrix}],train,mathwriting
+images\train_0173adeccb6c17ed.png,1>c>0,train,mathwriting
+images\train_0173be1a1eda0a35.png,\frac{dx}{dt},train,mathwriting
+images\train_017404edd77ac43d.png,806^{806^{806^{806^{806^{807}}}}},train,mathwriting
+images\train_01747b6e07c5d4e3.png,\sqrt{s}\cdot\sqrt{s}=s,train,mathwriting
+images\train_0174c76c39d3453f.png,(\begin{matrix}x\\ k\end{matrix}),train,mathwriting
+images\train_0174fa11eebaf35f.png,1-\frac{E(X)^{2}}{E(X^{2})},train,mathwriting
+images\train_0174fad74c8d524b.png,-j\frac{1}{\sqrt{2}},train,mathwriting
+images\train_01751ea13ceb1817.png,C(X)>X^{0.332},train,mathwriting
+images\train_01755d63acf6f234.png,\frac{df}{dz}=f,train,mathwriting
+images\train_0175a72f7617f571.png,"\sigma_{E}=\infty,\sigma_{t}=0",train,mathwriting
+images\train_0175e673ccbfe159.png,C_{m}=1+C_{a},train,mathwriting
+images\train_01766a25ba561394.png,\frac{4\zeta m}{\sqrt{1-\frac{0m}{vu^{0}}}},train,mathwriting
+images\train_01773f5053e4bd0b.png,+++,train,mathwriting
+images\train_01776cc2dd74c982.png,{(w^{j})}^{1},train,mathwriting
+images\train_0177870d7849bd14.png,b_{j}=\int fv_{j}dx,train,mathwriting
+images\train_0177d41a07910539.png,d_{r}=\frac{w}{h^{2}}\times110.8,train,mathwriting
+images\train_0177da2c8ecdd2b4.png,\hat{p}_{o},train,mathwriting
+images\train_0177f22d98f16235.png,"k_{1},...,k_{d}\in",train,mathwriting
+images\train_0177f8a58304a3d4.png,Z[J_{ij}]\sim e^{-\beta J_{ij}},train,mathwriting
+images\train_01785a0146102abc.png,\phi=u^{-1}\pi^{*}\overline{\phi},train,mathwriting
+images\train_01785c63bc25906f.png,f(r)=\frac{\partial\rho(r)}{\partial N},train,mathwriting
+images\train_01788d0cef5a5d69.png,\frac{K(t)}{Y(t)}=k(t)^{1-\alpha},train,mathwriting
+images\train_01790f6b5d35776e.png,(6^{224}\cdot383^{5}),train,mathwriting
+images\train_017968a3a9f8289d.png,{X^{u}}^{5},train,mathwriting
+images\train_017a1302b71c08e5.png,\nabla^{2}f(x)-mI,train,mathwriting
+images\train_017a34f728aee1bc.png,z=\frac{z_{A}}{\sqrt{8-\frac{8}{c^{2}}z_{A}^{2}}},train,mathwriting
+images\train_017ac7d284444030.png,(\begin{matrix}x&y\end{matrix}),train,mathwriting
+images\train_017b1655f985a343.png,[-P^{T}|I_{n-k}],train,mathwriting
+images\train_017b20e683a028ef.png,\frac{(419\cdot319)}{(278\cdot186)^{11}},train,mathwriting
+images\train_017c26b12d9eb8b9.png,\frac{\frac{10^{265}}{\sqrt{6}}}{1^{9}},train,mathwriting
+images\train_017c44914e72b126.png,7^{189}+3-8,train,mathwriting
+images\train_017c76302eb5a849.png,\int udu,train,mathwriting
+images\train_017dde2a2494077b.png,\mathbb{B},train,mathwriting
+images\train_017f2518ce39bae9.png,4-145^{\frac{\sqrt{335}}{1}},train,mathwriting
+images\train_017f4cedf345d7ce.png,r_{s}=(3/(4\pi n))^{1/3},train,mathwriting
+images\train_017fc7d88c19e6f7.png,\frac{z}{y}=kd,train,mathwriting
+images\train_017fc817c40d977b.png,2((\begin{matrix}n\\ 1\end{matrix})+(\begin{matrix}n\\ 2\end{matrix})+(\begin{matrix}n\\ 3\end{matrix})),train,mathwriting
+images\train_0180398826b27419.png,f_{m}=(\frac{v}{v+v_{s}})f_{s},train,mathwriting
+images\train_0180db79b21160fa.png,D(f)=[\begin{matrix}0\\ 0\end{matrix}],train,mathwriting
+images\train_01811450042a1c04.png,q=-kA\frac{dT}{dx},train,mathwriting
+images\train_018130fe11e6b89b.png,ord_{V_{i}}(s),train,mathwriting
+images\train_01813c372a152c1e.png,\alpha_{c}=\frac{1-\sqrt{1-4c}}{2},train,mathwriting
+images\train_01816a584c340e9f.png,((387+\sqrt{261})+\frac{\frac{8}{7}}{\sqrt{8}}),train,mathwriting
+images\train_0181b96065df89b6.png,"(\rho^{\prime},\theta^{\prime})",train,mathwriting
+images\train_018261aa16459dd0.png,a\notin w,train,mathwriting
+images\train_018269b3dcb02337.png,e_{2}=\sum_{i<j}X_{i}X_{j},train,mathwriting
+images\train_0182bef2840c6225.png,(\begin{matrix}n+1\\ k\end{matrix}),train,mathwriting
+images\train_0182f220fc2be451.png,\Omega_{u}^{\phi},train,mathwriting
+images\train_0183d42fe8da598f.png,\frac{r-t}{d},train,mathwriting
+images\train_0184526868aa528e.png,(\frac{4}{7}-9)^{204\cdot\sqrt{5}},train,mathwriting
+images\train_0184a45dec5dff19.png,f_{n}(x)=\frac{sin(n^{2}x)}{n},train,mathwriting
+images\train_0184ace435b3c663.png,\sigma=\frac{\sqrt{Ns_{2}-s_{1}^{2}}}{N},train,mathwriting
+images\train_018513197ad4e58d.png,"E(m)=(g^{r},m\cdot h^{r})",train,mathwriting
+images\train_01859a811f2541ff.png,\gamma_{m}^{j},train,mathwriting
+images\train_0185b4a4d17f6e4c.png,\rho(x)=\frac{e^{\cdot\frac{x^{9}}{9}}}{\sqrt{9\psi}},train,mathwriting
+images\train_0185be8d4a3cb00b.png,\int_{-2}^{6}\frac{dx}{x},train,mathwriting
+images\train_0186034a1ac90993.png,O(nH_{k}(T))+o(n),train,mathwriting
+images\train_018610765dd1eaf1.png,\hat{x}=i\hbar\frac{d}{dp},train,mathwriting
+images\train_0186365ae74ea744.png,k\equiv\frac{R}{2},train,mathwriting
+images\train_01863c8cef65467d.png,\int_{-N}^{N}e^{x}dx,train,mathwriting
+images\train_018732b7123d7f04.png,(\frac{4}{\sqrt{4}}+\frac{405}{\sqrt{201}}),train,mathwriting
+images\train_018795acea8a9c48.png,\int_{\theta=0}^{\frac{\pi}{2}}\int_{x=0}^{m(\theta)}\frac{4}{t\pi}dxd\theta,train,mathwriting
+images\train_0187b158e2038275.png,(\begin{matrix}I&M\\ 0&I\end{matrix}),train,mathwriting
+images\train_01883a953c133bac.png,\pi(n)\sim\frac{n}{logn},train,mathwriting
+images\train_0188b52357fbf216.png,g_{(x_{1})},train,mathwriting
+images\train_0188ce5258e5e922.png,\tilde{\Gamma},train,mathwriting
+images\train_0188cfa553abc2cb.png,v_{g}=\frac{1}{\frac{1}{v_{g_{9}}}+\frac{bt}{f}},train,mathwriting
+images\train_018900e121c3edc3.png,CR=\frac{V_{1}}{V_{2}},train,mathwriting
+images\train_0189ec541abf206b.png,\frac{x^{x}}{e^{x}},train,mathwriting
+images\train_018a814936b1812f.png,A=4A_{0}=\sqrt{3}a^{2},train,mathwriting
+images\train_018b5381861317c2.png,(\frac{1}{425})^{\frac{5}{2}},train,mathwriting
+images\train_018bf7c4fe8e851a.png,h=\frac{(f-4)(f-3)}{12},train,mathwriting
+images\train_018c80c3dc375eb3.png,\frac{(1\cdot\sqrt{5})}{280-9^{398}},train,mathwriting
+images\train_018cd199d9d982ad.png,\tilde{\nu}=\tilde{\nu}_{vib}\pm BJ(J+1),train,mathwriting
+images\train_018cd2d904174062.png,\frac{1+\frac{n}{c}cos\iota_{s}}{\sqrt{1\cdot\frac{n^{3}}{c^{3}}}},train,mathwriting
+images\train_018dc4cf9fddbb57.png,"M_{t}=p(W_{t},t)",train,mathwriting
+images\train_018dd1a6412614a7.png,b_{1}-d=(3/5)b_{1},train,mathwriting
+images\train_018e221a4a0deb1d.png,||f||_{1}=\int|f|d\mu,train,mathwriting
+images\train_018e54676e82f493.png,Y=-jB_{L}=\frac{-j}{\omega L},train,mathwriting
+images\train_018ec33e6a0b3d80.png,(\begin{matrix}0&i\\ i&0\end{matrix}),train,mathwriting
+images\train_018ec3ccdcbb6020.png,[n+t]=n+[t],train,mathwriting
+images\train_018ec7dad37994c2.png,\tilde{E}_{6},train,mathwriting
+images\train_018ec8698d6b3c0c.png,vt_{p-r}=\frac{v^{2}}{2\mu g},train,mathwriting
+images\train_018f1309362aad81.png,\frac{ssin(\phi)+\omega cos(\phi)}{s^{2}+\omega^{2}},train,mathwriting
+images\train_018f9d5e678ae9b1.png,\frac{\partial^{2}z}{\partial x\partial y},train,mathwriting
+images\train_018fa1271952217c.png,(\begin{matrix}1&d\\ 0&1\end{matrix}),train,mathwriting
+images\train_018fce9672714a5d.png,\xi=log(\sqrt{x^{2}+y^{2}}),train,mathwriting
+images\train_01904d45e0d5b606.png,z\notin S,train,mathwriting
+images\train_01907756e47834a0.png,\frac{dx}{dt}=\dot{x},train,mathwriting
+images\train_019141740c06bd92.png,\frac{1}{4g^{2}}\int Tr[*F\wedge F],train,mathwriting
+images\train_019158a9616470da.png,(\begin{matrix}d\\ k\end{matrix}),train,mathwriting
+images\train_0191ae3d6d20bec8.png,"(+,-)",train,mathwriting
+images\train_0191bf65bf809239.png,"\omega,\phi\rightarrow\pi^{0}e^{+}e^{-}",train,mathwriting
+images\train_019255fe9c291b0e.png,I=\int r^{2}dm,train,mathwriting
+images\train_0192c45b8fbb098f.png,t\{\begin{matrix}4\\ 3\end{matrix}\},train,mathwriting
+images\train_01938fb593bb0366.png,g(x)=-2x^{2}+5,train,mathwriting
+images\train_0193cd12476d72c7.png,\tilde{D}_{\eta},train,mathwriting
+images\train_019417652ce970e5.png,F=\frac{q_{1}q_{2}}{4\pi\epsilon_{0}\epsilon_{R}|r|^{2}}\hat{r},train,mathwriting
+images\train_019448af8366f1ef.png,H=\frac{\delta^{*}}{\theta},train,mathwriting
+images\train_01948a774262fea7.png,\langle\overline{z}\rangle=\frac{I_{1}(\kappa)}{I_{0}(\kappa)}e^{i\mu},train,mathwriting
+images\train_0194a06e79c049f1.png,e=[\begin{matrix}a_{1}e^{i\theta_{1}}\\ a_{2}e^{i\theta_{2}}\end{matrix}],train,mathwriting
+images\train_019540fbe5b7a5a7.png,"(M,F)",train,mathwriting
+images\train_0195449650fbeea0.png,2+15\sqrt{\frac{2}{17}},train,mathwriting
+images\train_01956cffcccd4510.png,"p(n,m,X;x)",train,mathwriting
+images\train_0195eb31003194a5.png,v^{*}=\frac{\lambda_{0}}{2}\overline{f},train,mathwriting
+images\train_01960fc279b2ba22.png,L(H)+L(F|H),train,mathwriting
+images\train_019644a93de4455e.png,\phi_{0}=[\begin{matrix}1\\ 0\end{matrix}],train,mathwriting
+images\train_019686d60d48920c.png,[\begin{matrix}0&1\\ -1&0\end{matrix}],train,mathwriting
+images\train_0196d5a84aebcd7c.png,f(x):=\int_{0}^{x}\omega,train,mathwriting
+images\train_01970884aa333fc3.png,k=\frac{\lambda}{1+\lambda},train,mathwriting
+images\train_01971fddffe9fe71.png,I_{2}=\int f(\theta)d^{3}x,train,mathwriting
+images\train_01974170abe286d0.png,\frac{\partial\xi}{\partial x}>0,train,mathwriting
+images\train_0197811e711a0dd9.png,Cut_{2},train,mathwriting
+images\train_01979ead5a85767c.png,p=h\tilde{\nu},train,mathwriting
+images\train_0197a877bc6b8a81.png,C_{*}(\tilde{X}),train,mathwriting
+images\train_0197c66fd53fda76.png,\frac{dC}{dt}=0,train,mathwriting
+images\train_0197dc3421636cb2.png,c(\theta)=c_{root}sin(\theta),train,mathwriting
+images\train_0197efe546229010.png,\overline{OC},train,mathwriting
+images\train_0198951296d5ce9d.png,t=\frac{0}{\sqrt{0+\frac{u^{2}}{c^{2}}}}\kappa,train,mathwriting
+images\train_0198a29e61ce059f.png,\int_{-N}^{N}f(x)dx,train,mathwriting
+images\train_0198c09aca2ab725.png,{{\sqrt{186}^{188}}^{10}}^{287-7},train,mathwriting
+images\train_0199136f8799e247.png,2gq^{1/2}=2g\sqrt{q},train,mathwriting
+images\train_019914eba5fce9f7.png,\tilde{A}_{1},train,mathwriting
+images\train_019959b577ee795d.png,\sqrt{10^{9}},train,mathwriting
+images\train_019960dd6facc4f0.png,T(n)=T(\sqrt{n}),train,mathwriting
+images\train_0199b9a7d6d625c3.png,(\begin{matrix}0\\ 1\end{matrix}),train,mathwriting
+images\train_0199e55e4177e012.png,P_{r}=\frac{e^{-\beta E_{r}}}{Z},train,mathwriting
+images\train_019a21966d92f25a.png,{(303/469)^{2}}^{\frac{9}{3}},train,mathwriting
+images\train_019a7849955f8140.png,\vartheta(n)=\frac{1}{\sqrt{1-\frac{n^{7}}{c^{7}}}},train,mathwriting
+images\train_019a80e179e51e4e.png,\Lambda(e^{\prime})=\{\epsilon\}\cap L(e^{\prime}),train,mathwriting
+images\train_019a8280693d73fe.png,p=\frac{\frac{n}{2}+1}{n+1}\approx1+\frac{1}{n},train,mathwriting
+images\train_019a90f922bc21da.png,\hat{x}^{o},train,mathwriting
+images\train_019ab4ca4bcdce60.png,\frac{5\cdot140}{4}-7^{357},train,mathwriting
+images\train_019ab79954621234.png,O(n!),train,mathwriting
+images\train_019aecfe292e161a.png,"(1,4,9,...,100)",train,mathwriting
+images\train_019afa45f8bcdf44.png,(\begin{matrix}1&0\\ 0&0\end{matrix}),train,mathwriting
+images\train_019b196c90795522.png,f^{-\frac{(A-K)^{2}}{2{(p_{A})}^{2}}},train,mathwriting
+images\train_019b21062ffbc608.png,\int f=1,train,mathwriting
+images\train_019b300115130686.png,q_{out}=\frac{A_{s}q_{in}+B_{s}}{C_{s}q_{in}+D_{s}},train,mathwriting
+images\train_019b6bb9165c0c70.png,r_{1}=\infty,train,mathwriting
+images\train_019bdbaf448f98c5.png,\frac{x}{r^{2}-z^{2}},train,mathwriting
+images\train_019be440703fd56f.png,B=\frac{3}{2}A,train,mathwriting
+images\train_019be75c435c62a5.png,a=\sqrt[3]{\mu(\frac{P}{2\pi})^{2}},train,mathwriting
+images\train_019c1ebe7df5e841.png,E||\theta-\hat{\theta}||^{2},train,mathwriting
+images\train_019c2954f6c1ea73.png,\hat{R_{j}f}(t)=\frac{it_{j}}{|t|}\hat{f}(t),train,mathwriting
+images\train_019cf28542898d37.png,F_{ST}=\frac{f_{0}-\overline{f}}{1-\overline{f}},train,mathwriting
+images\train_019d1d84491f8cdf.png,S_{2}=F\cdot(1+m),train,mathwriting
+images\train_019d7513d2c5930b.png,"(\frac{2n}{3},n)",train,mathwriting
+images\train_019df6cefa04427c.png,I(n):=\int_{0}^{\pi}sin^{n}(x)dx,train,mathwriting
+images\train_019eb6a1e316bd25.png,\prod B_{\lambda},train,mathwriting
+images\train_019ef489e6d47169.png,\psi(\omega),train,mathwriting
+images\train_019ef6af0e657e3a.png,\prod X_{i},train,mathwriting
+images\train_019fba1ef6ee8a88.png,E=pc=\frac{hc}{\lambda}=hf,train,mathwriting
+images\train_019fd6aa2134a3ae.png,\sum_{k=1}^{n}F_{k}=\frac{m}{R}\sum_{k=1}^{n}v_{k}^{2},train,mathwriting
+images\train_01a016bb87b3edff.png,(\frac{\frac{45}{4}}{101})^{320^{125}},train,mathwriting
+images\train_01a043f03146f76c.png,\lambda:A\longrightarrow A^{\vee},train,mathwriting
+images\train_01a04ad8afb518f2.png,y=\frac{Q}{w^{\int_{r_{1}}^{x}P(r)dr}},train,mathwriting
+images\train_01a0579c8e45c47d.png,\Omega(k)=k\sqrt{gh},train,mathwriting
+images\train_01a075b507452fe8.png,\frac{100}{\sqrt{5}},train,mathwriting
+images\train_01a09832533e73ab.png,max_{j\ne i}b_{j}>b_{i},train,mathwriting
+images\train_01a104697644c277.png,\hat{Y}^{A},train,mathwriting
+images\train_01a1487c1a46ed1e.png,(\frac{135}{294})^{9/\sqrt{359}},train,mathwriting
+images\train_01a1ee65134b9eb4.png,\tilde{A}_{3},train,mathwriting
+images\train_01a2febc7eca34d5.png,(y_{2}-y_{1}),train,mathwriting
+images\train_01a361ff24294181.png,F=\mathbb{Q}(\sqrt{3}),train,mathwriting
+images\train_01a41faa02a6592d.png,\frac{\sqrt{1-\frac{v^{2}}{c^{2}}}}{1+\frac{v}{c}cos\theta_{s}},train,mathwriting
+images\train_01a42d9bc6b3d733.png,t=N\tau,train,mathwriting
+images\train_01a43002383790c9.png,MPL=\frac{\partial F}{\partial L},train,mathwriting
+images\train_01a4fb613b92028f.png,g=\int Gdz,train,mathwriting
+images\train_01a4fbee0d016c46.png,m=\prod p_{i}^{\alpha_{i}},train,mathwriting
+images\train_01a50ea1699481d9.png,\Omega(x)=\frac{e^{-\frac{x^{1}}{1}}}{\sqrt{1\Lambda}},train,mathwriting
+images\train_01a52912e292095e.png,T(z)=z+c\int_{0}^{1}tdt,train,mathwriting
+images\train_01a56167b5a07cac.png,(\frac{\alpha}{\beta})_{m}=1,train,mathwriting
+images\train_01a5d05640c3cefd.png,\hat{G}(z),train,mathwriting
+images\train_01a61ac07767e1a1.png,[S\rightarrow aAbBcC],train,mathwriting
+images\train_01a6232029825241.png,\int_{b}^{a}|f(x)|dx,train,mathwriting
+images\train_01a637d2b59fa245.png,\omega_{c}=\frac{0}{\sqrt{V_{\frac{0}{2}}J_{\frac{0}{2}}}},train,mathwriting
+images\train_01a6592bc62c3f87.png,A=\int_{0}^{a}e^{x}dx,train,mathwriting
+images\train_01a6927b057ae75a.png,\frac{418^{163}}{(197^{4}\cdot10)},train,mathwriting
+images\train_01a75d69b1bb5f28.png,\mathbb{L},train,mathwriting
+images\train_01a7c781dccfb024.png,(\begin{matrix}p\\ 1\end{matrix}),train,mathwriting
+images\train_01a81b37b855ab84.png,|\varphi^{\prime}(-r)|=\frac{1}{2\sqrt{r}},train,mathwriting
+images\train_01a8239074a750a0.png,\delta\int2T(t)dt=0,train,mathwriting
+images\train_01a8723570bd6e2a.png,r(\theta)=\frac{p}{1+ecos\theta},train,mathwriting
+images\train_01a877d83ee2208b.png,\sqrt{\frac{\sum{R_{i}}^{5}}{n}},train,mathwriting
+images\train_01a89374ce6e6667.png,q=-K\frac{\partial h}{\partial z},train,mathwriting
+images\train_01a8a1776d8e03fe.png,\sqrt{6}+\sqrt{2},train,mathwriting
+images\train_01a9129e8a4a8cfd.png,\frac{dy}{dx},train,mathwriting
+images\train_01a93ab2bc92ee5b.png,\frac{(6/\sqrt{209})^{6}}{10^{169}},train,mathwriting
+images\train_01a9521c77c174ea.png,(142+277)^{(368+1)},train,mathwriting
+images\train_01a99761252796b5.png,\nabla_{\dot{\gamma}}\dot{\gamma}=\frac{\nabla\dot{\gamma}}{d\tau},train,mathwriting
+images\train_01a9a8b588c5407e.png,[\begin{matrix}p&t\\ q&u\end{matrix}],train,mathwriting
+images\train_01a9b3cdd970927c.png,(\begin{matrix}6\\ 3\end{matrix}),train,mathwriting
+images\train_01a9cea18b9ea565.png,\frac{\partial N}{\partial R},train,mathwriting
+images\train_01a9dc34a168ee2c.png,\sum_{j=0}^{d-1}(\begin{matrix}n\\ j\end{matrix})(q-1)^{j},train,mathwriting
+images\train_01aa319dbeec26c9.png,\hat{S}_{M},train,mathwriting
+images\train_01aad3828ca5a2e2.png,O(logn),train,mathwriting
+images\train_01aad5ac77ab7f3d.png,K\in L^{2}(X\times X),train,mathwriting
+images\train_01abb0001fc0ef5d.png,\int_{S}FdS,train,mathwriting
+images\train_01abb62a00d79f75.png,\sum_{N=n+K-k}^{\infty}\frac{(\begin{matrix}N-n\\ K-k\end{matrix})}{(\begin{matrix}N\\ K\end{matrix})},train,mathwriting
+images\train_01abcbb10f634385.png,A=C^{-1}JC,train,mathwriting
+images\train_01ac57e2ebeb0158.png,exp_{a}^{p}(b)=a^{a^{\cdot^{\cdot^{a^{b}}}}},train,mathwriting
+images\train_01ad7ed949aa15df.png,[\begin{matrix}s&t\\ u&v\end{matrix}],train,mathwriting
+images\train_01ad7fa5e6148434.png,\hat{x}_{4}=\sum_{i=1}^{3}w_{i}x_{i},train,mathwriting
+images\train_01adcf4cb6ceec52.png,\frac{1}{\sigma^{2}}\sum_{i=1}^{n}\sum_{j=1}^{n_{i}}\hat{\epsilon}_{ij}^{2},train,mathwriting
+images\train_01ae1bdd986aeee3.png,p=\frac{iv}{\sqrt{6-\frac{v^{7}}{f^{7}}}},train,mathwriting
+images\train_01ae3f2bf1d4d321.png,E=\frac{m+y^{7}}{\sqrt{1-\frac{|e|^{7}}{y^{7}}}},train,mathwriting
+images\train_01aeba27c32bd850.png,\rho_{Q_{7}...Q_{j}}^{T_{Q_{k_{7}}...Q_{k_{l}}}},train,mathwriting
+images\train_01af019352b5d73b.png,"\frac{\partial e(p,u)}{\partial p_{j}}=h_{j}(p,u)",train,mathwriting
+images\train_01afc9d3a97fe090.png,\equiv M=\frac{V}{a},train,mathwriting
+images\train_01b031ec4b6b5b16.png,y^{\prime}=\frac{dy}{dx}=2x,train,mathwriting
+images\train_01b050e6f8d884be.png,4^{4^{+^{+^{+^{n}}}}},train,mathwriting
+images\train_01b052ba4427f0c6.png,h_{n}=g_{n_{1}}g_{n_{2}}\cdot\cdot\cdot g_{n_{t}},train,mathwriting
+images\train_01b05773f0a2f4e1.png,\mu_{1}=arcsin(\frac{1}{M_{1}}),train,mathwriting
+images\train_01b074e70e1fe286.png,\tilde{X},train,mathwriting
+images\train_01b0b3383497bb9f.png,\begin{matrix}2&2\end{matrix},train,mathwriting
+images\train_01b0dff0d0f61776.png,\tilde{O}(log(n)^{7.5}),train,mathwriting
+images\train_01b0e66958e7c395.png,((\begin{matrix}2n-2\\ n-1\end{matrix})/n!)^{2},train,mathwriting
+images\train_01b13024115da056.png,(\begin{matrix}0&1\\ -1&0\\ \end{matrix}),train,mathwriting
+images\train_01b186c9178b3daa.png,H\ge T^{\frac{27}{82}+\epsilon},train,mathwriting
+images\train_01b2682cba4b07f4.png,\overline{x}_{w}=\sum_{h=1}^{H}W_{h}\overline{x}_{h},train,mathwriting
+images\train_01b2d3be900ea49e.png,x^{2}+y^{2}+z^{2}=R^{2},train,mathwriting
+images\train_01b3370c806d2ee9.png,\int_{a}^{b}...,train,mathwriting
+images\train_01b3c32861292ee7.png,\frac{du}{dx}=6,train,mathwriting
+images\train_01b433889996a464.png,z=\sqrt{2logx+C},train,mathwriting
+images\train_01b45edb64a46307.png,(\begin{matrix}p\\ r\end{matrix}),train,mathwriting
+images\train_01b469de35336655.png,(\begin{matrix}1&-1\\ 1&0\end{matrix}),train,mathwriting
+images\train_01b4caa591c37627.png,\overline{hv^{2}}+\frac{1}{2}k_{ap}g_{z}h^{2},train,mathwriting
+images\train_01b50e208fdceba7.png,\rho<\sigma\frac{\sigma+\beta+3}{\sigma-\beta-1},train,mathwriting
+images\train_01b54e7d7069573a.png,((107\cdot51)^{155}\cdot(1+8)),train,mathwriting
+images\train_01b5c22e8ecb9949.png,\frac{dy}{dx}=1/4,train,mathwriting
+images\train_01b5d428344d13c7.png,"\underline{Z},\underline{p}",train,mathwriting
+images\train_01b5e2b9cd47c157.png,\int_{-\infty}^{\infty},train,mathwriting
+images\train_01b68587f218cd28.png,[f]=::[\begin{matrix}a&b\\ c&d\end{matrix}],train,mathwriting
+images\train_01b7278a6cf7aad5.png,(429^{8}\cdot(\sqrt{417}-236)),train,mathwriting
+images\train_01b76bd9116f03cc.png,"2,3,2^{t},3^{t}",train,mathwriting
+images\train_01b78505f176f022.png,(\begin{matrix}7\\ 5\end{matrix}),train,mathwriting
+images\valid_00000b332dcd6fe5.png,(\begin{matrix}j\\ m+1\end{matrix}),valid,mathwriting
+images\valid_000453d57c3d334d.png,\int_{E}f(x)\mu(dx),valid,mathwriting
+images\valid_0005d0be8e507b24.png,\overline{z}=1-i\sqrt{\nu},valid,mathwriting
+images\valid_0005ea8e21185d36.png,S=\int_{M}BF,valid,mathwriting
+images\valid_00061be0501a1fa8.png,Q:=\bigcup_{\sigma\in\sigma(T_{0})}Q_{\sigma},valid,mathwriting
+images\valid_0013be3abc070fb7.png,\frac{1}{\sqrt{d}_{u}},valid,mathwriting
+images\valid_00146a32fdab9e8e.png,\frac{d^{2}x}{dt^{2}},valid,mathwriting
+images\valid_00184588166a4dac.png,\frac{dP}{d\tau},valid,mathwriting
+images\valid_0019bb8e97507f8e.png,\int x\cdot dx,valid,mathwriting
+images\valid_001f0c3d8940f546.png,\frac{dC_{U}}{dC_{W}},valid,mathwriting
+images\valid_001f0f96215e2d84.png,\tilde{C}_{8},valid,mathwriting
+images\valid_00235ec3dee919dd.png,\int_{0}^{\infty}\frac{sin(x)}{x}dx,valid,mathwriting
+images\valid_0023e88388577dc1.png,V=(\begin{matrix}0&1\\ 1&0\end{matrix}),valid,mathwriting
+images\valid_00245713d08b4f1a.png,R=\int_{0}^{\tau}X(s)ds,valid,mathwriting
+images\valid_00253e181f0200ab.png,T=(\begin{matrix}1&0\\ 1&0\end{matrix}),valid,mathwriting
+images\valid_0025484cf71c8ab7.png,F,valid,mathwriting
+images\valid_002651244bc93554.png,\int_{A}P_{A}dA=1,valid,mathwriting
+images\valid_002b6a98000765fb.png,"\frac{\partial\varphi}{\partial t}(x,t)=F(\varphi).",valid,mathwriting
+images\valid_002c168eb422aab9.png,10^{-12}W/\sqrt{Hz},valid,mathwriting
+images\valid_003169384315282b.png,\int x^{s}\phi(x)dx,valid,mathwriting
+images\valid_003921302c543b2c.png,\frac{d^{2}u}{dx^{2}}-u=0,valid,mathwriting
+images\valid_0040a950663bd899.png,pz\overline{z}+gz+\overline{gz}=q,valid,mathwriting
+images\valid_004466873ec97648.png,o_{n}(R),valid,mathwriting
+images\valid_0047f70eafca2534.png,[\begin{matrix}a\\ b\\ c\end{matrix}],valid,mathwriting
+images\valid_00622d73c8739bd8.png,[\begin{matrix}A&U\\ V&C\end{matrix}],valid,mathwriting
+images\valid_006631d6baa51d31.png,V=|a\cdot(b\times c)|,valid,mathwriting
+images\valid_0067440924b60b2b.png,[g^{ij}]=\frac{1}{g}\frac{\partial g}{\partial g_{ij}},valid,mathwriting
+images\valid_0068bc1f523b42d8.png,"P(e^{\prime})=\{a_{1},b_{4}\}",valid,mathwriting
+images\valid_006b9bfab1127fac.png,X\frac{d}{dX},valid,mathwriting
+images\valid_006fb32b84a99137.png,[\begin{matrix}1&1\\ 0&1\end{matrix}],valid,mathwriting
+images\valid_0075591d8b2ba4d2.png,F_{x}[f(x)],valid,mathwriting
+images\valid_007a46e2dd19428e.png,4^{-N}(\begin{matrix}2N\\ N\end{matrix})\approx\frac{1}{\sqrt{\pi N}},valid,mathwriting
+images\valid_007a639f47c479d0.png,\sqrt[3]{z},valid,mathwriting
+images\valid_008004981b5b3ee1.png,\tilde{E}=E\times\mathbb{Z}_{n},valid,mathwriting
+images\valid_008d3f60da3e972b.png,(\begin{matrix}n+1\\ 3\end{matrix})+1,valid,mathwriting
+images\valid_008f588f1c25ce16.png,v_{y}\sqrt{v_{x}^{2}+v_{y}^{2}},valid,mathwriting
+images\valid_009183c575123315.png,\prod_{i=1}^{n},valid,mathwriting
+images\valid_00997a3afd226540.png,r=a-|n|\lfloor\frac{a}{|n|}\rfloor,valid,mathwriting
+images\valid_009f7b727b467490.png,\frac{\pi}{2}(i-1)\le v_{i}<\frac{\pi}{2}i,valid,mathwriting
+images\valid_009fc6849e2b7909.png,|\omega_{i}|=q^{1/2},valid,mathwriting
+images\valid_00a32b900a4aa32f.png,(\begin{matrix}0\\ 1\end{matrix}),valid,mathwriting
+images\valid_00a58f479a9d95b9.png,S_{0}+h\nu_{ex}\rightarrow S_{1},valid,mathwriting
+images\valid_00ac5cd85e462376.png,\forall u(wR_{i}u\Rightarrow u\Vdash A),valid,mathwriting
+images\valid_00b2a1efdeae0ced.png,"H_{n}(\underline{q},\underline{x})",valid,mathwriting
+images\valid_00b2ce18a5aa30a6.png,"\sum_{i=1}^{k}\sum_{w\in V}f_{i}(s_{i},w)",valid,mathwriting
+images\valid_00b45d3bd1d56ead.png,\int v_{i}dm,valid,mathwriting
+images\valid_00c22b6f5407cf2d.png,"K_{h_{\lambda}}(X_{0},X)",valid,mathwriting
+images\valid_00c4f34b460c7933.png,\hat{f}(k),valid,mathwriting
+images\valid_00c94cb75d8df0bf.png,"\int^{c\in C}F(c,c)",valid,mathwriting
+images\valid_00d3c94d3fc0dd27.png,arctan\sqrt{2}=54.7^{\circ},valid,mathwriting
+images\valid_00e00364101abad0.png,[\begin{matrix}a&b\\ c&d\\ \end{matrix}],valid,mathwriting
+images\valid_00e6d1340b0b48b7.png,(\begin{matrix}k-1\\ D-1\end{matrix}),valid,mathwriting
+images\valid_00e8bf4cde24f874.png,;u,valid,mathwriting
+images\valid_00ed2238753c9850.png,"G,\overline{G},\tilde{G}",valid,mathwriting
+images\valid_00ee5698f103452f.png,F=Mg=\dot{m}\Delta v,valid,mathwriting
+images\valid_00f3fa64f4c2235f.png,"(X,Y,Z,aZ^{4})",valid,mathwriting
+images\valid_00f546829c405447.png,"[K^{j},P^{k}]=i\delta^{jk}H",valid,mathwriting
+images\valid_0101e1e2b84d7837.png,"H_{i}=\langle h_{i},G^{\prime}\rangle",valid,mathwriting
+images\valid_01054bf06792066a.png,\sum_{0\le k\le n}(\begin{matrix}n\\ k\end{matrix})=2^{n},valid,mathwriting
+images\valid_01058e873802b3d2.png,"\xi_{[t]}=(\xi_{1},...,\xi_{t})",valid,mathwriting
+images\valid_010963a06d1d5a79.png,\tilde{\gamma}(0)=p,valid,mathwriting
+images\valid_0114d751a72fd56b.png,y=c_{1}e^{x}+xe^{x},valid,mathwriting
+images\valid_0115ad5ee12ad7d4.png,(\begin{matrix}[n]\\ 1\end{matrix}),valid,mathwriting
+images\valid_011a66ef71133c7d.png,c\notin A,valid,mathwriting
+images\valid_011bc2c4d3e15714.png,T_{0}=2\pi\sqrt{\frac{l}{g}},valid,mathwriting
+images\valid_011f633d896bd07b.png,p\in Z(g^{*}),valid,mathwriting
+images\valid_012c517a05e2c2d4.png,\int x^{k}d\mu(x)=m_{k},valid,mathwriting
+images\valid_012cebd6f0be97bb.png,X_{i}=(Y|Y>K),valid,mathwriting
+images\valid_012f1f23d40a2995.png,\int_{\gamma}f(z)dz,valid,mathwriting
+images\valid_013b7229b727f967.png,a\notin A,valid,mathwriting
+images\valid_013f565c7a547d0b.png,"\mu_{G}(H_{1},H_{2})=(-1)^{k}p^{(\begin{matrix}k\\ 2\end{matrix})}",valid,mathwriting
+images\valid_01468b08b993df97.png,lim_{\lambda\in\Lambda}||ae_{\lambda}-a||\rightarrow0,valid,mathwriting
+images\valid_01470b33b8c78f3f.png,X:=\bigcup_{k=1}^{m}3B_{j_{k}},valid,mathwriting
+images\valid_014be054e72e64fd.png,\int_{1}^{0}\frac{dt}{t}=-\infty,valid,mathwriting
+images\valid_014d90d483380e66.png,\langle\psi^{jk}|\psi_{lm}\rangle=\delta_{jl}\delta_{km},valid,mathwriting
+images\valid_01529aa0572f4897.png,R_{x}=(R_{2}/R_{1})\cdot R_{3},valid,mathwriting
+images\valid_0154666b7b559c17.png,a\cdot(pb)\ne pa\cdot b,valid,mathwriting
+images\valid_0155c0fe01231b04.png,\tilde{X}\in T_{e}E,valid,mathwriting
+images\valid_016af79ba8f2cca8.png,1.3\frac{a}{d}\sqrt{n},valid,mathwriting
+images\valid_016e9b0a2882071d.png,x=\sqrt[3]{u}+\sqrt[3]{v},valid,mathwriting
+images\valid_0178bf7cceb64473.png,L>>(x+a/2),valid,mathwriting
+images\valid_017a79eea7fa5f63.png,(l_{1}+l_{2})^{\theta}=l_{1}^{\theta}+l_{2}^{\theta},valid,mathwriting
+images\valid_017b290258802288.png,A_{\mu}\rightarrow A_{\mu}+\partial_{\mu}\phi(x),valid,mathwriting
+images\valid_017c4e5970880570.png,"2,\sqrt{5},\sqrt{6},3",valid,mathwriting
+images\valid_01844e9baa82698c.png,\rho(r)\sim e^{-2Z_{\alpha}r},valid,mathwriting
+images\valid_018b8fb309ce7af2.png,d\overline{v}=-\frac{e\cdot\overline{E}}{m}dt,valid,mathwriting
+images\valid_018f456e217f1301.png,log\hat{\lambda}\approx Z\sqrt{4/D},valid,mathwriting
+images\valid_018f48ac8fe4bd53.png,|0|<|1|+|-2|,valid,mathwriting
+images\valid_018f8eb18419d5bb.png,\tilde{v},valid,mathwriting
+images\valid_018fb881d2eef21d.png,F_{r}=\frac{v}{\sqrt{g\frac{A}{B}}},valid,mathwriting
+images\valid_01927fe0f1d3c23d.png,(\begin{matrix}0&1\\ -1&0\\ \end{matrix}),valid,mathwriting
+images\valid_0198a68035125b5a.png,G,valid,mathwriting
+images\valid_01992bb808919d17.png,1^{\prime}s,valid,mathwriting
+images\valid_01998b624db95830.png,\hat{\beta}=(\overline{y/x}),valid,mathwriting
+images\valid_019d0ab8b91ae217.png,L_{X}dz=f(z)dz,valid,mathwriting
+images\valid_01a0415f932322d3.png,\rho(\nu)d\nu=\frac{u(\nu)d\nu}{V},valid,mathwriting
+images\valid_01a0b54b759ab60d.png,3k+1=2^{a}k^{\prime},valid,mathwriting
+images\valid_01a33dcbdaf5d858.png,\hat{\theta}=\hat{z},valid,mathwriting
+images\valid_01a595d8d764a7b7.png,f_{c}=\frac{1}{2\pi C(R+S)},valid,mathwriting
+images\valid_01ab63ab784befeb.png,"C[x,y]/(x,y)\cong C",valid,mathwriting
+images\valid_01afdb3e5885a92e.png,Z\notin A,valid,mathwriting
+images\valid_01ba83643730c5de.png,D=\pi\overline{\pi},valid,mathwriting
+images\valid_01c6fa23cc55f9b5.png,\hat{n}\cdot\hat{m}=0,valid,mathwriting
+images\valid_01c763d4dc2c0f7b.png,0<4-2\alpha-\beta,valid,mathwriting
+images\valid_01c8b6bf03461430.png,"a,b\in\hat{R}",valid,mathwriting
+images\valid_01c9c8eabc606030.png,d=(1/2)b_{2},valid,mathwriting
+images\valid_01caf09d3c268a62.png,D\{J\}\subseteq\tilde{D},valid,mathwriting
+images\valid_01d23354b74a314b.png,Q>\sqrt{\frac{1-k^{2}}{2}},valid,mathwriting
+images\valid_01d7e75800e155ff.png,(\overline{y}^{i}),valid,mathwriting
+images\valid_01d914f73dac0056.png,log^{-1}(\delta^{-1}),valid,mathwriting
+images\valid_01dad228bc703cd9.png,|\overline{VT}|,valid,mathwriting
+images\valid_01dae525096a98d8.png,r^{\prime}(d)=\frac{1}{cos^{2}(d/R)},valid,mathwriting
+images\valid_01e2141af4688612.png,"\hat{t}_{g}(t,\omega)",valid,mathwriting
+images\valid_01e91c0fe3870264.png,\int_{S}H^{2}dA,valid,mathwriting
+images\valid_01f0c52a1d63c65c.png,\overline{K}(C),valid,mathwriting
+images\valid_01f1c306074573c4.png,\tilde{P_{n}}(x),valid,mathwriting
+images\valid_01f34cb89e7569cc.png,S=\int wdx,valid,mathwriting
+images\valid_01f4535d0510517a.png,x^{\prime}=\gamma(x-vt),valid,mathwriting
+images\valid_01f550ac46e27ad8.png,[\begin{matrix}A&B\\ C&D\end{matrix}],valid,mathwriting
+images\valid_01f60638b521fcfa.png,1-e^{-n^{2}/(2\times365)},valid,mathwriting
+images\valid_01f610152b8ee452.png,"(xy)^{n}=x^{n}y^{n}[y,x]^{(\begin{matrix}n\\ 2\end{matrix})}",valid,mathwriting
+images\valid_01f629c06e785801.png,(\begin{matrix}6\\ 4\end{matrix}),valid,mathwriting
+images\valid_01f63cd74f51acbd.png,t\notin\gamma,valid,mathwriting
+images\valid_01f76dc2902158d1.png,A=\frac{\sqrt{3}}{4}a^{2},valid,mathwriting
+images\valid_01f7d578f71e9296.png,\forall j\notin S,valid,mathwriting
+images\valid_01fe4387cf57cadb.png,\tilde{K}^{n+2}(X)=\tilde{K}^{n}(X),valid,mathwriting
+images\valid_01ff5719c87fee7b.png,\int dx=x+C,valid,mathwriting
+images\valid_02007a14be74702d.png,"\chi(x,y,z)=(x,y)",valid,mathwriting
+images\valid_0207674815339c52.png,(\begin{matrix}n\\ i\end{matrix})2^{-n},valid,mathwriting
+images\valid_020f181eb5a8dade.png,"\partial_{t}v=-\delta_{u}H(u,v)",valid,mathwriting
+images\valid_02111fb4fcdeaa11.png,|\Psi_{A_{1}...A_{m}}\rangle,valid,mathwriting
+images\valid_0219326a0f03aaad.png,\langle\Psi_{1}|\Psi_{0}\rangle=0,valid,mathwriting
+images\valid_02196236beee9488.png,"x_{1},x_{2}\in\Omega\\ X",valid,mathwriting
+images\valid_0229adad31bd6ce6.png,L=-\tilde{F}\dot{v}^{2}+2\dot{v}\dot{r},valid,mathwriting
+images\valid_022c63bd11dd057a.png,\sqrt{-1},valid,mathwriting
+images\valid_0238a713657f3f98.png,V(\tilde{\beta}),valid,mathwriting
+images\valid_023e8d97ca009298.png,\int_{\Omega}|f\varphi|dx<+\infty,valid,mathwriting
+images\valid_023fce90b50ec425.png,S=\sum_{i=1}^{g}n_{i}(\overline{r_{i}}-\overline{r})^{2},valid,mathwriting
+images\valid_0249fcae2a892125.png,I^{i+j+1},valid,mathwriting
+images\valid_025389753384ca9a.png,C,valid,mathwriting
+images\valid_0258eeb102cc8ec9.png,\xi=\prod_{j=2}^{\infty}(1-\frac{1}{d_{j}}),valid,mathwriting
+images\valid_026800ccaf27ca23.png,w_{i}=\frac{\partial R}{\partial a_{i}},valid,mathwriting
+images\valid_0270a5a5c92c6df0.png,\Delta\vec{F}=A\Delta\vec{p},valid,mathwriting
+images\valid_0277b3b795607a4c.png,\overline{X}_{n}=\frac{1}{n}(X_{1}+\cdot\cdot\cdot+X_{n}),valid,mathwriting
+images\valid_0278c238e066d7d2.png,U\subset2^{(\Gamma^{*}\times\Sigma^{*})},valid,mathwriting
+images\valid_027ea2b9430ed7b2.png,\int d^{3}xJ^{0},valid,mathwriting
+images\valid_02857e5be2f6c73f.png,\int dy,valid,mathwriting
+images\valid_028679cd23bcdcd3.png,T=a\dot{\gamma}(t)+bt\dot{\gamma}(t),valid,mathwriting
+images\valid_0287f57cb05d52e3.png,-\overline{u^{\prime}v^{\prime}},valid,mathwriting
+images\valid_0287f6b826c8e21c.png,"\overline{X}_{n}=(X_{n1},...,X_{nk})",valid,mathwriting
+images\valid_028b0cf7c7b136a6.png,\hat{z}=\pm\hat{p},valid,mathwriting
+images\valid_028bfc3df3c1ead8.png,p_{k}=\frac{\partial S}{\partial q_{k}},valid,mathwriting
+images\valid_029091ef7cb77942.png,\frac{\sqrt{2}}{12},valid,mathwriting
+images\valid_02a18c6b93ef8f5a.png,\psi_{\alpha}(z)=|f(z)|^{\alpha},valid,mathwriting
+images\valid_02a215a34f76299d.png,-(2\alpha+1)x,valid,mathwriting
+images\valid_02a3724ad26f3fa9.png,R=\mu_{1}+\sqrt{S_{1}}X,valid,mathwriting
+images\valid_02a96f889596646c.png,1=\sqrt{(N_{x}^{2}+N_{z}^{2})},valid,mathwriting
+images\valid_02b5fbdfb817a1d0.png,\int f^{2}dP<\infty,valid,mathwriting
+images\valid_02b84ec09813f4d8.png,\tilde{H}_{d},valid,mathwriting
+images\valid_02b8d436b5ff27df.png,m\ge(\begin{matrix}k\\ 2\end{matrix}),valid,mathwriting
+images\valid_02b9fe007833159f.png,v(t)=I\frac{dl(t)}{dt},valid,mathwriting
+images\valid_02c4a6d862511830.png,\underline{\lambda},valid,mathwriting
+images\valid_02c4b7e3fd9b722e.png,A.A_{2}=O,valid,mathwriting
+images\valid_02cdc41b22ef974a.png,Tx=\sum_{k=1}^{s}a_{k}(a_{k}\cdot x),valid,mathwriting
+images\valid_02d0defd926a5a97.png,"FV(xy)=\{x,y\}",valid,mathwriting
+images\valid_02d5c5a7f740c471.png,P=[\begin{matrix}1&0\\ 0&0\end{matrix}],valid,mathwriting
+images\valid_02dc214fe1b13bfc.png,(\begin{matrix}p&q\\ nq&p\end{matrix}),valid,mathwriting
+images\valid_02dcc79cdc7ee3f0.png,F_{0}=XZ-Y^{2},valid,mathwriting
+images\valid_02e122b1af92f3fe.png,f(k;\lambda)=\frac{\lambda^{k}e^{-\lambda}}{k!},valid,mathwriting
+images\valid_02e60cafcdda43ff.png,x=1+(-1),valid,mathwriting
+images\valid_02e71c2f96463460.png,\forall j\notin S,valid,mathwriting
+images\valid_02e7f6eab554ea46.png,(\begin{matrix}n\\ k\end{matrix})k!2^{(\begin{matrix}n\\ 2\end{matrix})-(\begin{matrix}k\\ 2\end{matrix})},valid,mathwriting
+images\valid_02f5ace6fe0e5182.png,"L,\overline{k}",valid,mathwriting
+images\valid_02f5be48b07a6ec4.png,\psi_{1}({\Omega_{2}}^{\Omega_{2}}),valid,mathwriting
+images\valid_02f88d6ee41d4ee1.png,T=\frac{\overline{X}-\mu}{S/\sqrt{n}},valid,mathwriting
+images\valid_02fb048bf32b830e.png,x\sqrt{3},valid,mathwriting
+images\valid_02ffceec7744d550.png,\mu_{3}^{4}n(logn)^{2},valid,mathwriting
+images\valid_03027246b586dac1.png,x_{i}|x_{1}\cdot\cdot\cdot x_{i-1}x_{i+1}\cdot\cdot\cdot x_{n}+1,valid,mathwriting
+images\valid_030b08403a465942.png,\frac{1}{T}\frac{d^{2}T}{dt^{2}}=-k^{2},valid,mathwriting
+images\valid_030d4730ba6cce59.png,\hat{a}_{j},valid,mathwriting
+images\valid_030e6dbc833522a5.png,U_{\rho}=v_{r}-v_{r}^{\prime}+\frac{ra_{r}^{\prime}}{c},valid,mathwriting
+images\valid_0313a2e6a88ddd22.png,(\begin{matrix}p+q\\ q\end{matrix}),valid,mathwriting
+images\valid_0316d93a3d5b750c.png,H_{\omega^{\omega^{\omega}}+\omega^{\omega}}(1)-1,valid,mathwriting
+images\valid_031c8126a9ace4a6.png,[\begin{matrix}4&6\\ 3&5\end{matrix}],valid,mathwriting
+images\valid_0320b540fd696afb.png,b_{k}|k>0,valid,mathwriting
+images\valid_03288283f74572f9.png,2((\begin{matrix}n\\ 1\end{matrix})+(\begin{matrix}n\\ 2\end{matrix})+(\begin{matrix}n\\ 3\end{matrix})),valid,mathwriting
+images\valid_032a9d28747f9bc6.png,Q(\sqrt{13}),valid,mathwriting
+images\valid_032e4fa85ea80213.png,\frac{q}{A}=-k\frac{dT}{dx},valid,mathwriting
+images\valid_0332e23a538306d4.png,"x^{p^{2}},y^{p}\in G^{\prime}",valid,mathwriting
+images\valid_033488d7a4d2eb75.png,\{f_{n}:S_{n}\rightarrow T_{n}\}_{n=0}^{\infty},valid,mathwriting
+images\valid_0335951405c01a09.png,p_{1}=p(x_{0}+\Delta x),valid,mathwriting
+images\valid_033a1099450aa893.png,\int d^{D}x\sqrt{-g}G,valid,mathwriting
+images\valid_033fecd9b9bf5df2.png,\hat{S_{z}},valid,mathwriting
+images\valid_0348098b3d25778a.png,\frac{\partial u_{i}}{\partial x_{i}}=0,valid,mathwriting
+images\valid_0350ccecbad0ccbb.png,(\begin{matrix}n\\ q\end{matrix}),valid,mathwriting
+images\valid_0355170d1d9c8fb1.png,\int_{E}w(x)dx,valid,mathwriting
+images\valid_03571691a35553bc.png,\int_{0}^{t}f(u)du,valid,mathwriting
+images\valid_03600c84bd03c11a.png,s_{n}=\prod_{i=1}^{n}\pi_{i},valid,mathwriting
+images\valid_03629edeb52f488e.png,\pi(p^{k})=p^{k-1}\pi(p),valid,mathwriting
+images\valid_0367a57bbda63fa2.png,\mathbb{E},valid,mathwriting
+images\valid_0368d1073da40a57.png,V=R(\frac{Tn}{P}),valid,mathwriting
+images\valid_0371985450e0152f.png,"\{v_{1},v_{2}\},\{v_{2},v_{3}\}",valid,mathwriting
+images\valid_0372fa83e05129d6.png,\int fg=f(x)\int g,valid,mathwriting
+images\valid_037adeb96ad22cab.png,\hat{se}_{\theta},valid,mathwriting
+images\valid_037b527312c66917.png,\frac{d^{2}x}{dt^{2}},valid,mathwriting
+images\valid_0380640569d40b5b.png,\int_{0}^{1}\cdot\cdot\cdot dx,valid,mathwriting
+images\valid_0383de7a3e22c339.png,\vec{v}_{B|A}=\vec{v}_{B}-\vec{v}_{A},valid,mathwriting
+images\valid_038640fabb567de8.png,\overline{Y_{v}}=P_{\overline{x}}\overline{X_{v}},valid,mathwriting
+images\valid_0387b745a9818f3c.png,z=a_{x}x+a_{y}y+d,valid,mathwriting
+images\valid_038ae84c98527c1a.png,[\begin{matrix}U_{1}\\ U_{2}\end{matrix}],valid,mathwriting
+images\valid_038d31c83e1f2a14.png,\frac{P_{t+1}}{P_{t}}=1-\frac{1}{2N},valid,mathwriting
+images\valid_038d81cbc3fee8a4.png,I=\int xcos(x)dx,valid,mathwriting
+images\valid_038e354e5c479630.png,Pr(R_{i}<\underline{R}),valid,mathwriting
+images\valid_0392bc8541fd16c6.png,"L(\phi,\partial_{\mu}\phi)",valid,mathwriting
+images\valid_0392f8a3ba83db99.png,\int pdq,valid,mathwriting
+images\valid_039a3595e4f5a9be.png,V^{*}(a\otimes h)=\Phi(a)h,valid,mathwriting
+images\valid_03a41599f17633fa.png,1+k_{i}4^{k_{i}},valid,mathwriting
+images\valid_03afcb804041bd02.png,u(0)=f(x_{0}),valid,mathwriting
+images\valid_03b504a915a073ee.png,-I=I_{0}sin\delta,valid,mathwriting
+images\valid_03b51b2c81f6a509.png,F_{x}[f(x)],valid,mathwriting
+images\valid_03c3da1a7fdbabf1.png,A=(a_{ij}),valid,mathwriting
+images\valid_03cb498f31bf335f.png,E^{2}=p\cdot p+{m_{0}}^{2},valid,mathwriting
+images\valid_03cb8f488c22c843.png,tan2\theta\equiv|p|/m,valid,mathwriting
+images\valid_03d03ea46c28a257.png,\int p(x)f(x)dx=-H,valid,mathwriting
+images\valid_03d48a19c52751e6.png,x^{3}-2x^{2}-5x+6,valid,mathwriting
+images\valid_03d57e6f4ff2af26.png,\tilde{Y_{k}},valid,mathwriting
+images\valid_03d8b0dbcfc65b11.png,"d\in D^{n},r\in R",valid,mathwriting
+images\valid_03e180727a5a53cb.png,\Omega=\rho+i\tilde{\rho}(\rho),valid,mathwriting
+images\valid_03ede575c929120f.png,\int_{0}^{1}f(x)v(x)dx,valid,mathwriting
+images\valid_03efc14f58317aa5.png,\hat{e}_{3},valid,mathwriting
+images\valid_03f20fd9f00d4d76.png,b_{\mu^{7}},valid,mathwriting
+images\valid_03faa80dacddebb4.png,\frac{dv}{dr},valid,mathwriting
+images\valid_0400b6822431b3b3.png,\hat{R},valid,mathwriting
+images\valid_0404ffd10433f331.png,\psi_{1}({\Omega_{2}}^{\Omega_{2}}),valid,mathwriting
+images\valid_0408e58bea1050d6.png,"\tilde{S}(q,\omega)",valid,mathwriting
+images\valid_04091d689e72099f.png,"L(s,\pi,r),L(s,\tilde{\pi},r)",valid,mathwriting
+images\valid_040ca87dce4ed6fe.png,\frac{\partial u_{i}}{\partial p_{j}}<0,valid,mathwriting
+images\valid_040d05ba2734ba84.png,q(1)^{2}+q(1)-1,valid,mathwriting
+images\valid_040dc3fb3e7b1fe0.png,\frac{C}{MR_{e}^{2}}\approx0.3313,valid,mathwriting
+images\valid_041047bad039bcce.png,x_{1}+y_{1}\sqrt{n}=u^{2329},valid,mathwriting
+images\valid_04127c114679458c.png,{(\begin{matrix}41\end{matrix})}^{3},valid,mathwriting
+images\valid_041280bf5f9c0ac2.png,\int cos^{2}xdx,valid,mathwriting
+images\valid_041506e78a61a899.png,"V(P,e(P,u))=u",valid,mathwriting
+images\valid_0415482481846d81.png,\int_{S}1dS,valid,mathwriting
+images\valid_0418d37054f32efd.png,u=+\frac{\partial\psi}{\partial y},valid,mathwriting
+images\valid_041a70c640f4b16e.png,T=37^{\circ}C=310K,valid,mathwriting
+images\valid_041cf00628ce3e7b.png,(\frac{K}{N})\ge2r_{o}-1,valid,mathwriting
+images\valid_041e2c67db70a2ec.png,f_{0}(x)+u(4x)/4,valid,mathwriting
+images\valid_041e839944f8ea98.png,0(),valid,mathwriting
+images\valid_042414f532c2d22c.png,\frac{d^{2}y}{du^{2}}+y=g(u),valid,mathwriting
+images\valid_042be0721558671b.png,g_{kl}=2\chi\Delta n\overline{n},valid,mathwriting
+images\valid_042d6a89524751b6.png,\tilde{\beta},valid,mathwriting
+images\valid_043270c362331308.png,(B_{E}u)(v),valid,mathwriting
+images\valid_04335a39a4fde0b0.png,(\begin{matrix}ix&w\\ \overline{w}&-ix\end{matrix}),valid,mathwriting
+images\valid_04365365f3f36017.png,A\le\tilde{A},valid,mathwriting
+images\valid_04386b78684c53be.png,W=\int PdV,valid,mathwriting
+images\valid_04394a4a3825d1fc.png,\hat{\alpha},valid,mathwriting
+images\valid_043e198f42a3dbd1.png,\frac{d\beta}{dt},valid,mathwriting
+images\valid_0441649263607278.png,[f]=::[\begin{matrix}a&b\\ c&d\end{matrix}],valid,mathwriting
+images\valid_0447b1f41e39c5b3.png,\hat{H}^{\prime}=-\frac{e}{mc}\hat{A}\cdot\hat{p},valid,mathwriting
+images\valid_044d42fb33dd88a4.png,S=\int wdx,valid,mathwriting
+images\valid_045345ba0acc7fc5.png,(2e^{0i})^{0.5}=\sqrt{2},valid,mathwriting
+images\valid_04570f0942863a2f.png,M<_{DM}N,valid,mathwriting
+images\valid_04571e987352083a.png,x_{0}\in M(t_{0}),valid,mathwriting
+images\valid_0461731c99bc1e3c.png,s_{n}=\prod_{i=1}^{n}\pi_{i},valid,mathwriting
+images\valid_0461ec2eaa2404cc.png,NE(X),valid,mathwriting
+images\valid_0466e827b1be80bd.png,y=(\begin{matrix}v\\ u\\ p\end{matrix}),valid,mathwriting
+images\valid_046ce410835a0748.png,\tilde{O}(log(n)^{7.5}),valid,mathwriting
+images\valid_0472236490de12d1.png,F(X)=\prod_{i=1}^{s}f_{i}(x),valid,mathwriting
+images\valid_0473355c2916778e.png,"L^{2}(R^{n}),l^{2}(Z)",valid,mathwriting
+images\valid_04745cc58f2939a7.png,(\begin{matrix}bi&z\\ -z&di\end{matrix}),valid,mathwriting
+images\valid_047850542e97ced3.png,(\begin{matrix}n-1\\ r-1\end{matrix}),valid,mathwriting
+images\valid_04815167aa93b7c3.png,X_{1}\approx\sqrt{R_{1}R_{2}},valid,mathwriting
+images\valid_04853826ad8eab8b.png,\frac{dx}{ds}=e^{x},valid,mathwriting
+images\valid_0488bcee0d319019.png,\frac{dE}{dx}=0,valid,mathwriting
+images\valid_048a3bec5d340abc.png,\overline{w}_{g}\in R^{d},valid,mathwriting
+images\valid_048c7aee467893a8.png,n^{*}=\sqrt{2E_{i}}/Z^{2},valid,mathwriting
+images\valid_049527cd2bac6190.png,|\alpha|=\Sigma_{i=1}^{N}\alpha_{i},valid,mathwriting
+images\valid_0496e1256fa8df3d.png,(0.999)x-y=2,valid,mathwriting
+images\valid_049768daf9ed69af.png,Q=\omega\cdot\epsilon_{r}^{\prime\prime}\cdot\epsilon_{0}\cdot E^{2},valid,mathwriting
+images\valid_04a765d2780b6a79.png,cf(\prod A/D)<\lambda,valid,mathwriting
+images\valid_04a84573cb51a1f0.png,cf(\aleph_{\delta})=cf(\delta),valid,mathwriting
+images\valid_04ab1bd76738b805.png,\pi_{n}=p_{1}(\pi_{n-1}),valid,mathwriting
+images\valid_04b0460787469bef.png,\sigma=\int\sqrt{k(s)}ds,valid,mathwriting
+images\valid_04b3114f218b305f.png,\overline{P}(A),valid,mathwriting
+images\valid_04b5600de3bbaa34.png,Ag^{+}+e^{-}\rightleftharpoons Ag(s),valid,mathwriting
+images\valid_04bc6ca68b2d1c89.png,y=a\frac{d-c}{a-b}+c,valid,mathwriting
+images\valid_04bcab8ded274ebb.png,\frac{1}{Z_{n}}e^{-ntrV(H)},valid,mathwriting
+images\valid_04c608f3e63de162.png,\hat{d}(n),valid,mathwriting
+images\valid_04c6e497b6833f48.png,C_{1}C_{2}R_{1}R_{2}=1,valid,mathwriting
+images\valid_04cba84c1cba4c5f.png,n->\infty,valid,mathwriting
+images\valid_04cc13393c629cc0.png,NPV_{0}<0,valid,mathwriting
+images\valid_04ce366a6528989e.png,"L(\phi,\partial_{\mu}\phi,x^{\mu})",valid,mathwriting
+images\valid_04d0ea3c16359188.png,\frac{1}{2}v^{2}=U(x),valid,mathwriting
+images\valid_04d3798c9e2f78a1.png,e^{-}e^{-}\longrightarrow e^{-}e^{-},valid,mathwriting
+images\valid_04d630767e6d9779.png,f=\frac{n_{1}}{n_{0}}=\frac{2(1-a)}{a},valid,mathwriting
+images\valid_04dcbde3ebfeaba5.png,S,valid,mathwriting
+images\valid_04e0c52aa8da96ae.png,s_{k}=\prod_{i=1}^{m}x_{i},valid,mathwriting
+images\valid_04ea506b5a75ca41.png,\sqrt{(}t),valid,mathwriting
+images\valid_04ef5dec00edcc6d.png,\frac{d^{2}y}{d^{2}t},valid,mathwriting
+images\test_000a4e8ca49c5a1c.png,(x-y)/sqrt(2),test,mathwriting
+images\test_001083e26028da36.png,"\nabla I=(I_{x},I_{y})",test,mathwriting
+images\test_0017bb5822bcba69.png,P=P(C(Z)),test,mathwriting
+images\test_002ae6d5dd4173e4.png,x_{1}-x_{2}+x_{0}=0,test,mathwriting
+images\test_00386113d577085b.png,"\langle a_{0},a_{1},...\rangle\in R^{\omega}",test,mathwriting
+images\test_003ca9082c7047d3.png,\partial_{i}f=\frac{\partial f}{\partial\xi^{i}}:=\frac{\partial\overline{f}}{\partial\xi^{i}},test,mathwriting
+images\test_004c9413be3ff1be.png,\langle A\rangle_{\psi}=||A\psi||^{2},test,mathwriting
+images\test_004fc8d3f626f1d9.png,"\delta_{j,j_{1}}\delta_{m,m_{1}}",test,mathwriting
+images\test_0052b8e13b5f4a36.png,w(\neg\theta)=F_{\neg}(w(\theta)),test,mathwriting
+images\test_00692074bbc0f678.png,"t\longrightarrow F(t,t_{0},x)",test,mathwriting
+images\test_006badbfc63bbd21.png,"p=(p_{x},p_{y},p_{z})",test,mathwriting
+images\test_0082d4aa943b9f8c.png,|\frac{d^{2}y}{dx^{2}}|\approx\frac{1}{R},test,mathwriting
+images\test_0083f66ddd05c46c.png,"m_{i,j}=x^{i}\cdot x^{j}",test,mathwriting
+images\test_0090db2a639b5c98.png,S_{ijk}\rightarrow S_{ij}(\omega_{k}),test,mathwriting
+images\test_00915f0ffe17930e.png,"(g^{a}modp,g,p)",test,mathwriting
+images\test_009d124a50399bba.png,J_{i}=\sum_{j}L_{ij}\frac{\partial F_{j}}{\partial x_{j}},test,mathwriting
+images\test_009fb93aab47d6f5.png,\{f_{X}(\cdot;\theta)|\theta\in\Theta\},test,mathwriting
+images\test_00ad7566b9f1d872.png,\dot{x}(t)=f(x(t)),test,mathwriting
+images\test_00ba90fe7f71d8c6.png,\Omega((logn)/n^{2}),test,mathwriting
+images\test_00c46c9b07b39bb7.png,l_{n}=kl_{n}\cdot\frac{b_{n}}{b_{a}}\cdot\frac{s_{n}}{s_{a}},test,mathwriting
+images\test_00d4fc6636cbf2d9.png,\tilde{g}_{n}=[\begin{matrix}g_{n}\\ \gamma_{n}\end{matrix}],test,mathwriting
+images\test_00db5331b85f4d47.png,N=|V|,test,mathwriting
+images\test_00eaf4f2d3d20bb1.png,B=ln(-b),test,mathwriting
+images\test_00fcddfee1ebfee6.png,2sin(x/2),test,mathwriting
+images\test_00fee560e6c9af79.png,\sqrt{1-\omega^{2}r_{0}^{2}},test,mathwriting
+images\test_010d0f9e951a7a44.png,x_{i}^{\prime}\equiv\frac{1}{1+e^{-\frac{x_{i}-\mu_{i}}{\sigma_{i}}}},test,mathwriting
+images\test_010d4fea2361f01f.png,Inj(M_{i})<\epsilon(n),test,mathwriting
+images\test_0111fa141bb73b48.png,-a^{n}u[-n-1],test,mathwriting
+images\test_0114e881d8b22bbb.png,(\Lambda(A):A\in B_{b}(S)),test,mathwriting
+images\test_011f1f41eb55b661.png,(\frac{lnN}{N})\rightarrow0,test,mathwriting
+images\test_0121d7fdad59c8ab.png,\Leftrightarrow|PA|^{2}=9|PB|^{2},test,mathwriting
+images\test_01292cf19c2c9c7c.png,u=1+l^{2}+m^{2},test,mathwriting
+images\test_013a32b84ce6252f.png,"\{L(u,v):u,v\in X\}",test,mathwriting
+images\test_01453872d3d2afe5.png,=J+\epsilon_{0}\frac{\partial E}{\partial t},test,mathwriting
+images\test_014f7412fa06f5c0.png,||L_{x}||_{(l^{p})^{*}}=||x||_{q},test,mathwriting
+images\test_015e012d8baa97f3.png,"\epsilon,\delta,K>0",test,mathwriting
+images\test_016a39f81ff20b8d.png,\frac{\partial}{\partial\overline{z}}w(z)=0,test,mathwriting
+images\test_01752f0f5fba0225.png,L=(\begin{matrix}1&0\\ \frac{-1}{f}&1\end{matrix}),test,mathwriting
+images\test_0175c1fb5814dc11.png,"\Omega=\sqrt{|\chi_{g,e}|^{2}+\delta^{2}}",test,mathwriting
+images\test_0180366e774d93be.png,\Omega(eg)=g^{-1}\Omega(e)g,test,mathwriting
+images\test_01859fc130dc9008.png,(++++),test,mathwriting
+images\test_01917677eaf160bb.png,Pr(s|I)\propto1/s,test,mathwriting
+images\test_0199f657babdf636.png,\prod_{p}p/(p-1),test,mathwriting
+images\test_01a2f3186b7e33e1.png,"(2n,n,\lambda,1)",test,mathwriting
+images\test_01a53ae1e3a9b918.png,E:R^{n}\rightarrow T_{p}M,test,mathwriting
+images\test_01ab618a2350036f.png,"f_{n}\rightarrow\chi_{[1,2)}",test,mathwriting
+images\test_01b552b8a037ab13.png,T_{pq}(e_{p}\otimes e_{q}),test,mathwriting
+images\test_01b74db41e479782.png,\vec{x}\in S,test,mathwriting
+images\test_01c37bbe7ea55c56.png,T+ATT=1+E,test,mathwriting
+images\test_01cdd808862eab64.png,T^{t}:=S^{1}\times\cdot\cdot\cdot\times S^{1},test,mathwriting
+images\test_01cf085d26abe325.png,G^{p^{k}}=\{g^{p^{k}}|g\in G\},test,mathwriting
+images\test_01d12458811a5a38.png,"\Omega=arg(-z_{2},z_{1})",test,mathwriting
+images\test_01d2b56291c7ffdd.png,N_{i}\overline{r_{i}},test,mathwriting
+images\test_01d2f97f90ed79e6.png,"m\equiv\frac{RF_{,R}}{F}",test,mathwriting
+images\test_01d4d9a9dc145333.png,K_{m}=\frac{1}{2}(k_{1}+k_{2}),test,mathwriting
+images\test_01d54b93c127e89c.png,F^{0}[f]=f,test,mathwriting
+images\test_01d90fce29b20f64.png,A\models_{X}^{+}Rt_{1}...t_{n},test,mathwriting
+images\test_01e4c8973307a964.png,"|g,n\rangle\rightarrow|e,n-1\rangle",test,mathwriting
+images\test_01e6c79f4d27bc54.png,N(t)=N_{0}2^{-t/t_{1/2}},test,mathwriting
+images\test_01f3445177808c3d.png,X_{2i}\epsilon R^{Q},test,mathwriting
+images\test_0204f1101b3f4033.png,"(x,y,\theta,\kappa,\kappa^{\prime})",test,mathwriting
+images\test_02248037ee4a5528.png,"(h,h(\hat{k}),h(\hat{l}))",test,mathwriting
+images\test_022b4cfb5a5a3856.png,d^{\prime}=V_{ud}d+V_{us}s,test,mathwriting
+images\test_022be26e0a8ab535.png,|\psi\rangle=\sum_{n=0}^{\infty}a_{n}|\psi_{n}\rangle,test,mathwriting
+images\test_0235a447c15a24d7.png,nlog_{2}n-\frac{n}{ln2},test,mathwriting
+images\test_023a443f36a838ff.png,\nabla_{\vec{\theta}}=D_{d}\nabla,test,mathwriting
+images\test_024279a4b8037bae.png,f(y)=2+2y+y^{2},test,mathwriting
+images\test_0247a5d7e1002d66.png,|V_{0}|\gg E_{f},test,mathwriting
+images\test_0255dc5b14261907.png,1+x+\frac{x^{2}}{2},test,mathwriting
+images\test_025f51bee0e59494.png,g=g_{-1}\oplus g_{0}\oplus g_{1},test,mathwriting
+images\test_02657f6bba1d2004.png,f_{a}(bx)=f_{f_{a}(b)}(x),test,mathwriting
+images\test_026fd85034106735.png,T^{-1}=(T_{b}^{a})^{-1},test,mathwriting
+images\test_02720f6a67e8bc09.png,L_{10}=(C/P)^{p},test,mathwriting
+images\test_0272a794109d5d2d.png,P_{F}=\sqrt{P_{P}\cdot P_{L}},test,mathwriting
+images\test_0276c02c9b9222e9.png,f^{-1}(y)=\sqrt{y},test,mathwriting
+images\test_028414d36ea98262.png,\Delta b/b^{2}\approx\Delta f/f^{2},test,mathwriting
+images\test_02894b4ff1ee6c7b.png,"0/x=0,x/x=1",test,mathwriting
+images\test_028cf1f0507df703.png,U_{i}(I)=I_{L_{i}},test,mathwriting
+images\test_029b5da0999d4903.png,"\omega_{\{(k,i),(k^{\prime},i^{\prime}),(k^{\prime\prime},i^{\prime\prime})\}}",test,mathwriting
+images\test_029decc2d74fd082.png,abca^{-1}b^{-1}d\sim?,test,mathwriting
+images\test_02ace78dfc726867.png,2sin(\theta/2)r,test,mathwriting
+images\test_02aced0c052805c6.png,1/x\approx1-x,test,mathwriting
+images\test_02b1dc6d4efd493a.png,\Omega(R)=cP(R),test,mathwriting
+images\test_02b7060b95d998eb.png,-|I|>I_{0},test,mathwriting
+images\test_02c39c1be9d660b7.png,1-4\pi r^{3}/3V,test,mathwriting
+images\test_02c6f6dea91a2a06.png,(RU^{2}D^{-1}BD^{-1}),test,mathwriting
+images\test_02c9daf282f5a1e3.png,"\sum_{x\in\{0,1\}^{T}}|x\rangle|f(x)\rangle",test,mathwriting
+images\test_02d5b5f98ac5fbd2.png,f_{z}(x)=e^{ix^{t}Zx/2},test,mathwriting
+images\test_02da6f52e30f674d.png,2^{k}t_{0},test,mathwriting
+images\test_02dcdb815d18cdf1.png,"f(x_{t},t)=x_{t}e^{\theta t}",test,mathwriting
+images\test_02de91b624143438.png,y^{2}=x^{3}-n^{2}x,test,mathwriting
+images\test_030373f9d3edac3b.png,\frac{R_{U}}{r_{e}}\approx\frac{r_{H}}{r_{e}}\approx10^{42},test,mathwriting
+images\test_030a0f18b6fcb87b.png,\pi(x)-\pi(\frac{x}{2})\ge1,test,mathwriting
+images\test_030ea5646116a251.png,M_{2}=P_{1}^{\prime}|P_{2}|...,test,mathwriting
+images\test_0316d949cd776194.png,X_{k}=p(e^{2\pi i\frac{k}{2^{n}}}),test,mathwriting
+images\test_032278982233fefa.png,"L_{r},L_{t},L_{L}/10",test,mathwriting
+images\test_032360b882783120.png,\kappa_{2}=\mu_{2}^{\prime}-{\mu_{1}^{\prime}}^{2},test,mathwriting
+images\test_0325d90612c71772.png,"\hat{\Sigma}_{j,/j}",test,mathwriting
+images\test_03277de2f80a8aaf.png,Y_{n+1}=I-XY_{n},test,mathwriting
+images\test_0333d9584ff7c0d0.png,f^{-1}(x)=\frac{1}{f(x)},test,mathwriting
+images\test_0339bd185b869ac1.png,\frac{dD}{dt}=\frac{1}{\epsilon_{f}}\frac{d\epsilon_{p}}{dt},test,mathwriting
+images\test_034e1c65312b7f9d.png,u_{min}=min\{u_{i}\},test,mathwriting
+images\test_035a670b49c3ce36.png,Li(x)=\int_{0}^{x}\frac{dt}{log(t)},test,mathwriting
+images\test_036ac8debd6a3120.png,j_{z}=-\frac{1}{\mu_{0}}\nabla^{2}A,test,mathwriting
+images\test_036f0970a5c42b1e.png,"\langle x^{*},x\rangle",test,mathwriting
+images\test_03762d643e1dbb50.png,\nabla\cdot P=-\rho_{b},test,mathwriting
+images\test_037c0549cfc11f2d.png,A\cap B=\overline{\overline{A}\cup\overline{B}},test,mathwriting
+images\test_0384f21195efa622.png,z_{n+1}={z_{n}}^{2}+c,test,mathwriting
+images\test_038c609ec875dc17.png,\Phi_{lm}=\vec{r}\times\nabla Y_{lm},test,mathwriting
+images\test_039523fde61322a2.png,D(EQ)\le n-1,test,mathwriting
+images\test_03a5fbf204ec2a69.png,"(x_{i},x_{i+1})\in E",test,mathwriting
+images\test_03ab27a5e969801b.png,e^{e^{e^{e^{7.705}}}}<10^{10^{10^{964}}},test,mathwriting
+images\test_03b25f204c7b47de.png,J_{(1)}=J_{(2)},test,mathwriting
+images\test_03b5b80e61ede1ac.png,\pm z_{1}^{c_{1}}...z_{n}^{c_{n}},test,mathwriting
+images\test_03c1e5d37f7dc43d.png,\overline{g}_{\kappa\lambda}=\eta_{\kappa\lambda}=,test,mathwriting
+images\test_03d0d068dbfaa5c5.png,Q(\sqrt{d})/Q,test,mathwriting
+images\test_03d40d713cff6b26.png,4^{n}+2^{n+1}-1,test,mathwriting
+images\test_03d80f03e7257f44.png,"[1,f(x,y)]",test,mathwriting
+images\test_03dc827f8b4f9386.png,(b\overline{g}+g\overline{b})/\sqrt{2},test,mathwriting
+images\test_03dd32b2bd99f8c1.png,"Q_{\alpha}=M_{,\alpha}",test,mathwriting
+images\test_03e43d8e767e5aec.png,"\nabla\cdot(u,v)=u_{x}+v_{y}",test,mathwriting
+images\test_03ec1cf693f33af4.png,e^{-ix}=\frac{1}{e^{ix}},test,mathwriting
+images\test_03f04833cb837350.png,\frac{2log(l-1)-logl}{2},test,mathwriting
+images\test_03f4d7169d322943.png,lim_{\Delta x\rightarrow0}g(\Delta x)=0,test,mathwriting
+images\test_03f960eefb034cc9.png,1-C_{xy},test,mathwriting
+images\test_040b8e680187356c.png,R_{j}^{*}=d/a_{j},test,mathwriting
+images\test_0414df14fce6c763.png,\frac{1}{3}=0.(3),test,mathwriting
+images\test_0417a1bac9ff37fa.png,T(ax+by)-T(0),test,mathwriting
+images\test_0419c6098f354d5f.png,I_{K}(m_{K})/H_{K},test,mathwriting
+images\test_0422ffb14648ef14.png,"U_{t}=e^{itA},t\in R",test,mathwriting
+images\test_042f9dd4f246cd51.png,x^{*}=\nabla f(\nabla f^{*}(x^{*})),test,mathwriting
+images\test_04303e80bb3b363f.png,p_{j}(x)=j\sum_{i=1}^{j}|x_{i}|,test,mathwriting
+images\test_043083dc47710e3f.png,V=f(t)=V_{0}e^{-\frac{t}{\tau}},test,mathwriting
+images\test_0439c6e2406abd02.png,k=3.45(N+1),test,mathwriting
+images\test_043ab312194e307f.png,"H_{1}:\{0,1\}^{*}\rightarrow G_{1}^{*}",test,mathwriting
+images\test_044414882ca1e523.png,O(n^{\sqrt{k}}),test,mathwriting
+images\test_0448d738a6ef71e5.png,"\Psi_{A}(1,2,...,N_{A})",test,mathwriting
+images\test_04671785d6764ac7.png,"s(r,E,\hat{\Omega},t)",test,mathwriting
+images\test_046bcbd7b4683540.png,\Rightarrow\frac{1}{2x}<[1/x],test,mathwriting
+images\test_047c8a1e14a47a8d.png,cr+cs=a^{2}+b^{2},test,mathwriting
+images\test_0480cf86b72aaad9.png,R=df/dn(n=0),test,mathwriting
+images\test_0496e150b09423d4.png,{(\hat{k}_{F})}^{\kappa\lambda\mu\nu},test,mathwriting
+images\test_049c5fa2130b640a.png,A(t)=e^{W\cdot t}A(0),test,mathwriting
+images\test_049c87d8b46e48e3.png,\sqrt{16-x^{2}},test,mathwriting
+images\test_04a29575b6d95c14.png,\frac{dD}{dt}=\frac{1}{\epsilon_{f}}\frac{d\epsilon_{p}}{dt},test,mathwriting
+images\test_04b22a5fda1d3489.png,"H_{n}(x)=\sum_{k=0}^{n}a_{n,k}x^{k}",test,mathwriting
+images\test_04bce9e95c175534.png,\frac{1}{N}\frac{\sqrt{N}}{2}=\frac{1}{2\sqrt{N}},test,mathwriting
+images\test_04c6131d52decb32.png,[n:=n+1],test,mathwriting
+images\test_04d04edbd034c6e2.png,U_{p}=\frac{F^{2}}{4\omega^{2}},test,mathwriting
+images\test_04d5cd7876505b42.png,\hat{\Omega}=U^{\dagger}\hat{\Omega}U,test,mathwriting
+images\test_04d613d7897993bb.png,\lambda^{N+1}=\prod_{i=0}^{N}(p-q_{i}),test,mathwriting
+images\test_04d7ed69bae7380c.png,(a-b)t+b,test,mathwriting
+images\test_04d8125ee94f096c.png,\overline{F}(x)\equiv Pr[X>x],test,mathwriting
+images\test_04e1ad3980a3a81f.png,g^{-1}\mu(A)=\mu(gA),test,mathwriting
+images\test_04eb7017ff882087.png,"\nabla^{2}p=f(\nu,V)",test,mathwriting
+images\test_04eb8f8a476f98f6.png,\eta=1-\frac{1}{r_{v}^{\gamma-1}},test,mathwriting
+images\test_04edac9fe8bf5338.png,ACDA_{si}=\frac{Vd_{hsd}}{V_{i}},test,mathwriting
+images\test_04edd2773e1d1be2.png,P(Z\ge k)\le\frac{1}{2k^{2}},test,mathwriting
+images\test_050334e823c90724.png,\bigcap_{n\in N}J^{n}=\{0\},test,mathwriting
+images\test_05085e53669a2d82.png,I^{+}(S)\cap T,test,mathwriting
+images\test_0514870f7b7882a9.png,\int_{0}^{1}\frac{sin(1/x)}{x}dx,test,mathwriting
+images\test_05158c8c6594ffd7.png,"(\overline{3},1,-\frac{4}{3})",test,mathwriting
+images\test_0518e4f59a069378.png,"-\sqrt{n},...,\sqrt{n}",test,mathwriting
+images\test_051c96516aa53311.png,"(a+t,b+t]",test,mathwriting
+images\test_051dca26f81bbffa.png,\frac{1}{n}E(f-Ef)^{2},test,mathwriting
+images\test_052b8aebfd8741b9.png,2m-2<n(m-1),test,mathwriting
+images\test_0532ff1744b26b27.png,W=W^{\prime}+\mu^{-1},test,mathwriting
+images\test_054562f99b6fb2ff.png,E=H=T+V,test,mathwriting
+images\test_054e5679c6eb8a09.png,(\frac{(\begin{matrix}99\\ 49\end{matrix})}{(\begin{matrix}100\\ 50\end{matrix})})^{100}=\frac{1}{2^{100}},test,mathwriting
+images\test_05630d29b19ef4e9.png,[a-bi],test,mathwriting
+images\test_0572f2b7059fbb57.png,lim_{x\rightarrow0}\frac{O(x)}{O(x)},test,mathwriting
+images\test_0577724edc225bbb.png,lim_{x\rightarrow0}\frac{x}{x^{3}}=\infty.(6),test,mathwriting
+images\test_058e024d79ccf0db.png,e^{2}=-\frac{1}{\sqrt{2}}e_{1}+2e_{2},test,mathwriting
+images\test_05906cd6fccaca38.png,0<k<log_{2}^{2}b,test,mathwriting
+images\test_0590b231d1da49bd.png,<,test,mathwriting
+images\test_05a39bcdbcd491a8.png,"e_{2},e_{3}\in(-1,0]",test,mathwriting
+images\test_05afdedd8fca7285.png,=10^{-23}\frac{erg}{s\cdot cm^{2}\cdot Hz},test,mathwriting
+images\test_05bd5644a2dbbb80.png,\{f_{X}(\cdot;\theta)|\theta\in\Theta\},test,mathwriting
+images\test_05d49362d9180518.png,|\psi(t)\rangle=U(t)|\psi(0)\rangle,test,mathwriting
+images\test_05e62d58c104a6b6.png,\vec{n}_{i}\cdot\vec{x}\le b_{i},test,mathwriting
+images\test_05ed816134184613.png,p(n-1)\le1/2<p(n),test,mathwriting
+images\test_05f4416e8a265bee.png,0.5=E[X_{1}],test,mathwriting
+images\test_05f89b48c79bb626.png,J=A_{G}T^{2}e^{\frac{-W}{kT}},test,mathwriting
+images\test_05ff9f336cb4000d.png,\dot{M}=\dot{B}=0,test,mathwriting
+images\test_060162f2a242592b.png,(2m-6)^{2}=50|m|,test,mathwriting
+images\test_06052148b2ed3983.png,v,test,mathwriting
+images\test_0605ccf2d4ba7976.png,W=\frac{\tilde{W}}{\frac{dz}{d\zeta}}=\frac{\tilde{W}}{1-\frac{1}{\zeta^{2}}},test,mathwriting
+images\test_060a7e23513df5d6.png,"Z\cup[(0,1)\cap Q]",test,mathwriting
+images\test_061f715f098c3a23.png,\frac{x^{2}}{1-x^{2}}R,test,mathwriting
+images\test_06207fc7caa654db.png,w=\sqrt{KW-UV},test,mathwriting
+images\test_0625c86dd5028c58.png,\frac{1}{12}(\begin{matrix}4&8&4\\ 5&7&-4\\ 1&-1&4\end{matrix}),test,mathwriting
+images\test_06530b484fd92953.png,(a+bm)/k,test,mathwriting
+images\test_0654733b9416d1b9.png,\frac{d}{dt}(\frac{dt}{d\tau})\approx0,test,mathwriting
+images\test_06584bf963755bf9.png,\frac{2log(l-1)-logl}{2},test,mathwriting
+images\test_065f369d408a7044.png,\sum_{i=1}^{n}i=\frac{n(n+1)}{2},test,mathwriting
+images\test_066e40ab3c48f38a.png,x^{2}-\sqrt{x}=13,test,mathwriting
+images\test_06773a394d1ee0cd.png,1+2+3+4=10,test,mathwriting
+images\test_0677b0841b3eabb8.png,d=\frac{v^{2}}{g}sin(2\theta),test,mathwriting
+images\test_068953c99e05c2d8.png,f^{-1}(\overline{Z})=\overline{f^{-1}(Z)},test,mathwriting
+images\test_06909af025a4639f.png,L_{X}f=i_{X}df,test,mathwriting

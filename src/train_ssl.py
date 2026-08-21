@@ -65,6 +65,7 @@ class UnlabeledSSLDataset(Dataset):
 
         dirs_to_search = [
             data_dir,
+            "d:\\Major Project\\data\\mathwriting",
             "d:\\Major Project\\data\\expanded",
             "d:\\Major Project\\data\\kaggle_dataset"
         ]

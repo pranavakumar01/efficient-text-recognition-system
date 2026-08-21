@@ -115,7 +115,7 @@ async def process_document(
         if image_np is None:
             return JSONResponse({"error": "Invalid image file"}, status_code=400)
 
-        out = doc_engine.process_document(image_np, model_type=model_type)
+        out = doc_engine.process_document(image_np, model_type=model_type, enable_autocorrect=enable_autocorrect)
         return JSONResponse({
             "status": "success",
             "model_type": out["model_type"],

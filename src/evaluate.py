@@ -13,22 +13,27 @@ from src.utils.metrics import OCRMetrics
 def run_evaluation(
     data_dir: str = "d:\\Major Project\\data\\expanded",
     output_csv: str = "d:\\Major Project\\docs\\benchmark_results.csv",
-    model_type: str = "comparison"
+    model_type: str = "comparison",
+    split: str = None,
+    max_samples: int = None
 ):
     model_type = model_type.lower()
     print("=" * 70)
     print(f" [*] STARTING MODEL EVALUATION (Mode: {model_type.upper()})")
+    if split:
+        print(f" [*] Split: {split.upper()}")
     print("=" * 70)
 
     # 1. Load Dataset
-    dataset = OCRDataset(data_dir=data_dir)
+    dataset = OCRDataset(data_dir=data_dir, split=split)
     if len(dataset) == 0:
         print(f"[!] No evaluation samples found in '{data_dir}'. Generating dataset first...")
         from data.dataset_expander import generate_expanded_dataset
         generate_expanded_dataset(output_dir=data_dir, num_samples=100)
-        dataset = OCRDataset(data_dir=data_dir)
+        dataset = OCRDataset(data_dir=data_dir, split=split)
 
-    print(f"[*] Loaded {len(dataset)} evaluation samples from '{data_dir}'")
+    total_samples = len(dataset) if max_samples is None else min(len(dataset), max_samples)
+    print(f"[*] Evaluating {total_samples} samples from '{data_dir}'...")
 
     # 2. Instantiate Inference Engine
     engine = OCRInferenceEngine()
@@ -39,7 +44,7 @@ def run_evaluation(
     eval_mode = "both" if model_type in ["comparison", "both"] else model_type
 
     # Process evaluation loop
-    for idx in range(len(dataset)):
+    for idx in range(total_samples):
         img_path, ground_truth = dataset.samples[idx]
         img_np = cv2.imread(img_path)
         if img_np is None:
@@ -62,6 +67,9 @@ def run_evaluation(
             trocr_wer = OCRMetrics.calculate_wer(ground_truth, trocr_info["predicted_text"])
             trocr_wer_list.append(trocr_wer)
             trocr_latency_list.append(trocr_info["latency_ms"])
+
+        if (idx + 1) % 10 == 0 or (idx + 1) == total_samples:
+            print(f" [*] Evaluated [{idx + 1}/{total_samples}] samples...", flush=True)
 
     cnn_params = OCRMetrics.count_parameters(engine.cnn_bilstm_model)
     trocr_params = 62000000
@@ -116,6 +124,8 @@ if __name__ == "__main__":
     parser.add_argument("--data_dir", type=str, default="d:\\Major Project\\data\\expanded")
     parser.add_argument("--output_csv", type=str, default="d:\\Major Project\\docs\\benchmark_results.csv")
     parser.add_argument("--model_type", type=str, default="comparison", choices=["cnn", "transformer", "comparison", "both"])
+    parser.add_argument("--split", type=str, default=None, help="Optional dataset split filter (train/valid/test)")
+    parser.add_argument("--max_samples", type=int, default=None, help="Maximum number of samples to evaluate")
     args = parser.parse_args()
 
-    run_evaluation(data_dir=args.data_dir, output_csv=args.output_csv, model_type=args.model_type)
+    run_evaluation(data_dir=args.data_dir, output_csv=args.output_csv, model_type=args.model_type, split=args.split, max_samples=args.max_samples)
