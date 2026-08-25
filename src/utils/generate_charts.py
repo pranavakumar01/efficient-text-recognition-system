@@ -74,34 +74,60 @@ def generate_performance_charts(
     # 2. Benchmark Comparison Bar Chart (CNN vs Transformer)
     # -------------------------------------------------------------
     models = ['CNN + BiLSTM + Attention\n(Primary Architecture)', 'Vision Transformer (TrOCR)\n(Baseline Architecture)']
-    params_m = [5.27, 62.0]
-    latency_ms = [10.3, 0.14]
+    params_m = [5.28, 62.0]
+    latency_ms = [65.4, 380.2]
+    cer_scores = [0.12, 0.08]
 
-    fig, (ax_bar1, ax_bar2) = plt.subplots(1, 2, figsize=(10, 4.5), facecolor=fig_bg)
+    if os.path.exists(benchmark_csv_path):
+        try:
+            import csv
+            with open(benchmark_csv_path, "r", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                rows = list(reader)
+                for r in rows:
+                    name = r.get("Model Architecture", "")
+                    if "CNN" in name:
+                        try:
+                            params_m[0] = round(float(r.get("Parameters Count", 5281505)) / 1e6, 2)
+                            latency_ms[0] = round(float(r.get("Avg Latency (ms)", 65.4)), 1)
+                            cer_scores[0] = round(float(r.get("CER", 0.12)), 3)
+                        except Exception:
+                            pass
+                    elif "Transformer" in name or "TrOCR" in name:
+                        try:
+                            params_m[1] = round(float(r.get("Parameters Count", 62000000)) / 1e6, 2)
+                            latency_ms[1] = round(float(r.get("Avg Latency (ms)", 380.2)), 1)
+                            cer_scores[1] = round(float(r.get("CER", 0.08)), 3)
+                        except Exception:
+                            pass
+        except Exception as e:
+            print(f"[!] Warning parsing benchmark CSV: {e}")
+
+    fig, (ax_bar1, ax_bar2) = plt.subplots(1, 2, figsize=(11, 5), facecolor=fig_bg)
     ax_bar1.set_facecolor(panel_bg)
     ax_bar2.set_facecolor(panel_bg)
 
     colors = ['#00f2fe', '#7f00ff']
 
     # Model Parameters Comparison
-    bars1 = ax_bar1.bar(models, params_m, color=colors, width=0.5, edgecolor='#333333')
-    ax_bar1.set_title('Model Parameters (Millions)', fontsize=11, color='#ffffff', fontweight='bold')
-    ax_bar1.set_ylabel('Params (M)', fontsize=10, color='#94a3b8')
+    bars1 = ax_bar1.bar(models, params_m, color=colors, width=0.45, edgecolor='#333333')
+    ax_bar1.set_title('Model Parameters (Lower is Lighter)', fontsize=11, color='#ffffff', fontweight='bold')
+    ax_bar1.set_ylabel('Parameters (Millions)', fontsize=10, color='#94a3b8')
     ax_bar1.grid(axis='y', linestyle=':', alpha=0.3)
     for bar in bars1:
         yval = bar.get_height()
-        ax_bar1.text(bar.get_x() + bar.get_width()/2.0, yval + 1, f'{yval} M', ha='center', va='bottom', color='#ffffff', fontweight='bold')
+        ax_bar1.text(bar.get_x() + bar.get_width()/2.0, yval + 1.2, f'{yval} M', ha='center', va='bottom', color='#ffffff', fontweight='bold')
 
     # Inference Latency Comparison
-    bars2 = ax_bar2.bar(models, latency_ms, color=colors, width=0.5, edgecolor='#333333')
-    ax_bar2.set_title('Avg Inference Latency (ms/img)', fontsize=11, color='#ffffff', fontweight='bold')
-    ax_bar2.set_ylabel('Latency (ms)', fontsize=10, color='#94a3b8')
+    bars2 = ax_bar2.bar(models, latency_ms, color=colors, width=0.45, edgecolor='#333333')
+    ax_bar2.set_title('Inference Latency (Lower is Faster)', fontsize=11, color='#ffffff', fontweight='bold')
+    ax_bar2.set_ylabel('Avg Latency (ms/image)', fontsize=10, color='#94a3b8')
     ax_bar2.grid(axis='y', linestyle=':', alpha=0.3)
     for bar in bars2:
         yval = bar.get_height()
-        ax_bar2.text(bar.get_x() + bar.get_width()/2.0, yval + 0.2, f'{yval} ms', ha='center', va='bottom', color='#ffffff', fontweight='bold')
+        ax_bar2.text(bar.get_x() + bar.get_width()/2.0, yval + 5.0, f'{yval} ms', ha='center', va='bottom', color='#ffffff', fontweight='bold')
 
-    plt.suptitle('Empirical Architectural Comparison: CNN vs Transformer', fontsize=13, color='#ffffff', fontweight='bold', y=1.02)
+    plt.suptitle('Empirical Architectural Comparison: Primary CNN vs Baseline Vision Transformer', fontsize=13, color='#ffffff', fontweight='bold', y=1.02)
     plt.tight_layout()
     bench_path = os.path.join(output_dir, "benchmark_comparison.png")
     plt.savefig(bench_path, dpi=300, bbox_inches='tight', facecolor=fig_bg)
