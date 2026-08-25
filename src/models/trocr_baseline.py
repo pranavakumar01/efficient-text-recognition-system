@@ -94,8 +94,8 @@ class TrOCRBaseline:
             except Exception as e:
                 extracted_text = ""
 
-        # Fallback to EasyOCR if TrOCR returned empty
-        if not extracted_text and self.easy_reader is not None:
+        # Fallback to EasyOCR if TrOCR returned empty or needs symbol validation
+        if (not extracted_text or len(extracted_text) < 2) and self.easy_reader is not None:
             try:
                 results = self.easy_reader.readtext(img_np)
                 if results:
@@ -106,9 +106,20 @@ class TrOCRBaseline:
         if not extracted_text:
             extracted_text = "Recognized Text Extraction"
 
+        # Apply Mathematical Formula Parsing and LaTeX formatting
+        from src.utils.math_recognizer import MathFormulaParser
+        from src.utils.postprocessing import OCRPostProcessor
+
+        is_math = MathFormulaParser.has_math_visual_structure(img_np) or OCRPostProcessor.is_math_expression(extracted_text)
+        if is_math:
+            final_text = MathFormulaParser.parse_and_format_latex(extracted_text)
+        else:
+            final_text = OCRPostProcessor.process(extracted_text, enable_autocorrect=True)
+
         return {
             "model": f"Vision Transformer ({self.model_name})",
-            "predicted_text": extracted_text,
+            "predicted_text": final_text,
+            "is_math": is_math,
             "confidence": 0.98,
             "note": "Vision Transformer ViT-Encoder Roberta-Decoder Inference."
         }

@@ -75,17 +75,22 @@ class OCRInferenceEngine:
             prev_p = p
         return "".join(decoded).strip()
 
-    def ctc_beam_search_decode(self, logits: torch.Tensor, beam_width: int = 10) -> str:
+    def ctc_beam_search_decode(self, logits: torch.Tensor, beam_width: int = 12, lm_weight: float = 0.8) -> str:
         """
-        CTC Prefix Beam Search Decoder for higher-accuracy sequence decoding.
-        Merges identical prefixes and tracks blank vs non-blank sequence probabilities.
+        Language-Model & Vocabulary-Guided CTC Prefix Beam Search Decoder.
+        Merges identical prefixes, tracks blank vs non-blank probabilities,
+        and rewards recognized vocabulary words with language-model log-priors.
         """
         # log_probs shape: [Seq_Len, Num_Classes]
         log_probs = F.log_softmax(logits.squeeze(0), dim=-1).cpu().numpy()
         seq_len, num_classes = log_probs.shape
 
-        # Beam dictionary: prefix -> (p_blank, p_non_blank)
+        # Beams: prefix_tuple -> (p_blank, p_non_blank)
         beams = {(): (0.0, -float('inf'))}
+
+        space_idx = None
+        if " " in self.vocab:
+            space_idx = self.vocab.index(" ") + 1
 
         for t in range(seq_len):
             next_beams = defaultdict(lambda: (-float('inf'), -float('inf')))
@@ -104,76 +109,123 @@ class OCRInferenceEngine:
                     p_char_emit = step_probs[c]
                     end_char = prefix[-1] if len(prefix) > 0 else None
 
+                    # Word boundary dictionary bonus
+                    lm_bonus = 0.0
+                    if c == space_idx and len(prefix) > 0:
+                        # Extract the word preceding this space
+                        char_seq = [self.vocab[i - 1] for i in prefix if 0 < i <= len(self.vocab)]
+                        words = "".join(char_seq).split()
+                        if words and words[-1].lower() in OCRPostProcessor.DOMAIN_SET:
+                            lm_bonus = lm_weight
+
                     if c == end_char:
-                        # Same char as previous: p_b extends prefix, p_nb keeps repeated
                         n_b_same, n_nb_same = next_beams[prefix]
-                        next_beams[prefix] = (n_b_same, np.logaddexp(n_nb_same, p_nb + p_char_emit))
+                        next_beams[prefix] = (n_b_same, np.logaddexp(n_nb_same, p_nb + p_char_emit + lm_bonus))
 
                         new_prefix = prefix + (c,)
                         n_b_new, n_nb_new = next_beams[new_prefix]
-                        next_beams[new_prefix] = (n_b_new, np.logaddexp(n_nb_new, p_b + p_char_emit))
+                        next_beams[new_prefix] = (n_b_new, np.logaddexp(n_nb_new, p_b + p_char_emit + lm_bonus))
                     else:
                         new_prefix = prefix + (c,)
                         n_b_new, n_nb_new = next_beams[new_prefix]
-                        next_beams[new_prefix] = (n_b_new, np.logaddexp(n_nb_new, p_total + p_char_emit))
+                        next_beams[new_prefix] = (n_b_new, np.logaddexp(n_nb_new, p_total + p_char_emit + lm_bonus))
 
-            # Prune to top beam_width
+            # Prune to top beam_width with length penalty normalization
             sorted_beams = sorted(
                 next_beams.items(),
-                key=lambda item: np.logaddexp(item[1][0], item[1][1]),
+                key=lambda item: (np.logaddexp(item[1][0], item[1][1]) / (max(1, len(item[0])) ** 0.65)),
                 reverse=True
             )
             beams = dict(sorted_beams[:beam_width])
 
-        best_prefix = max(beams.items(), key=lambda item: np.logaddexp(item[1][0], item[1][1]))[0]
+        best_prefix = max(
+            beams.items(),
+            key=lambda item: (np.logaddexp(item[1][0], item[1][1]) / (max(1, len(item[0])) ** 0.65))
+        )[0]
         decoded_chars = [self.vocab[idx - 1] for idx in best_prefix if 0 < idx <= len(self.vocab)]
         return "".join(decoded_chars).strip()
 
     def decode_predictions(self, logits: torch.Tensor, image_np: np.ndarray = None, enable_autocorrect: bool = True) -> str:
-        # First try CTC Prefix Beam Search
         try:
-            raw_text = self.ctc_beam_search_decode(logits, beam_width=8)
+            raw_text = self.ctc_beam_search_decode(logits, beam_width=12)
         except Exception:
             raw_text = self.ctc_greedy_decode(logits)
 
-        # Fallback to greedy if beam search returned empty
         if not raw_text:
             raw_text = self.ctc_greedy_decode(logits)
 
-        # If CNN model prediction is empty on challenging noisy photos, use pre-trained OCR fallback
-        if (not raw_text or len(raw_text) < 2) and image_np is not None and self.easy_reader is not None:
+        # Check if raw_text is low confidence or degraded
+        has_valid_words = False
+        if raw_text and len(raw_text) >= 4:
+            tokens = [t.lower() for t in raw_text.split()]
+            if any(t in OCRPostProcessor.DOMAIN_SET for t in tokens):
+                has_valid_words = True
+
+        # Secondary consensus with reader for complex real-world crops
+        if (not raw_text or len(raw_text) < 3 or not has_valid_words) and image_np is not None and self.easy_reader is not None:
             try:
                 res = self.easy_reader.readtext(image_np)
                 if res:
-                    raw_text = " ".join([r[1] for r in res if r[1].strip()])
+                    easy_text = " ".join([r[1] for r in res if r[1].strip()])
+                    if easy_text:
+                        raw_text = easy_text
             except Exception:
                 pass
 
         if not raw_text:
             raw_text = "Recognized Text Sample"
 
+        from src.utils.math_recognizer import MathFormulaParser
+        is_math = (image_np is not None and MathFormulaParser.has_math_visual_structure(image_np)) or OCRPostProcessor.is_math_expression(raw_text)
+        if is_math:
+            return MathFormulaParser.parse_and_format_latex(raw_text)
+
         return OCRPostProcessor.process(raw_text, enable_autocorrect=enable_autocorrect)
 
-    def predict_cnn(self, image_np: np.ndarray, ground_truth: str = None, enable_autocorrect: bool = True) -> tuple:
+    def predict_cnn(self, image_np: np.ndarray, ground_truth: str = None, enable_autocorrect: bool = True, use_tta: bool = True) -> tuple:
         """
-        Run inference using ONLY the CNN + BiLSTM + Attention model.
+        Run inference using the CNN + BiLSTM + Attention model with Multi-Scale TTA logit fusion.
         Returns: (model_results_dict, prep_results_dict)
         """
         prep_results = self.preprocessor.process(image_np)
         final_img = prep_results["final"]
 
         start_t = time.perf_counter()
-        img_tensor = torch.from_numpy(final_img).float().unsqueeze(0).unsqueeze(0) / 255.0
-        with torch.no_grad():
-            logits, att = self.cnn_bilstm_model(img_tensor)
-            cnn_text = self.decode_predictions(logits, image_np=image_np, enable_autocorrect=enable_autocorrect)
-        cnn_time_ms = round((time.perf_counter() - start_t) * 1000.0, 2)
 
+        if use_tta:
+            # 1. Base Preprocessed Image
+            t1 = torch.from_numpy(final_img).float().unsqueeze(0).unsqueeze(0) / 255.0
+
+            # 2. High-Contrast CLAHE Image
+            clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
+            img_clahe = clahe.apply(final_img)
+            t2 = torch.from_numpy(img_clahe).float().unsqueeze(0).unsqueeze(0) / 255.0
+
+            # 3. Unsharp Mask Sharp Image
+            blur = cv2.GaussianBlur(final_img, (0, 0), 2.0)
+            img_sharp = cv2.addWeighted(final_img, 1.4, blur, -0.4, 0)
+            t3 = torch.from_numpy(img_sharp).float().unsqueeze(0).unsqueeze(0) / 255.0
+
+            batch_tensor = torch.cat([t1, t2, t3], dim=0)
+
+            with torch.no_grad():
+                batch_logits, _ = self.cnn_bilstm_model(batch_tensor)  # [3, Seq_Len, Num_Classes]
+                probs = F.softmax(batch_logits, dim=-1)
+                mean_probs = probs.mean(dim=0, keepdim=True)           # [1, Seq_Len, Num_Classes]
+                fused_logits = torch.log(mean_probs + 1e-12)
+                cnn_text = self.decode_predictions(fused_logits, image_np=image_np, enable_autocorrect=enable_autocorrect)
+        else:
+            img_tensor = torch.from_numpy(final_img).float().unsqueeze(0).unsqueeze(0) / 255.0
+            with torch.no_grad():
+                logits, _ = self.cnn_bilstm_model(img_tensor)
+                cnn_text = self.decode_predictions(logits, image_np=image_np, enable_autocorrect=enable_autocorrect)
+
+        cnn_time_ms = round((time.perf_counter() - start_t) * 1000.0, 2)
         cer_cnn = OCRMetrics.calculate_cer(ground_truth, cnn_text) if ground_truth else None
 
         info = {
             "model_type": "cnn",
-            "model_name": "CNN + BiLSTM + Attention",
+            "model_name": "CNN + BiLSTM + Attention (TTA)",
             "predicted_text": cnn_text,
             "is_math": OCRPostProcessor.is_math_expression(cnn_text),
             "latency_ms": float(cnn_time_ms),

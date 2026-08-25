@@ -20,7 +20,12 @@ def train_model(
 ):
     os.makedirs(save_dir, exist_ok=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"[*] Training on device: {device}")
+    if device.type == "cpu":
+        threads = max(1, (os.cpu_count() or 4) - 1)
+        torch.set_num_threads(threads)
+        print(f"[*] Training on device: {device} (Optimized with {threads} CPU threads)")
+    else:
+        print(f"[*] Training on device: {device}")
 
     # 1. Dataset & Tokenizer Setup
     tokenizer = Tokenizer()
@@ -48,8 +53,8 @@ def train_model(
         generate_synthetic_dataset(output_dir=data_dir)
         full_dataset = OCRDataset(data_dir=data_dir, tokenizer=tokenizer)
 
-    # Train / Val Split (80% train, 20% val)
-    val_size = max(1, int(len(full_dataset) * 0.2))
+    # Train / Val Split (85% train, 15% val)
+    val_size = max(1, int(len(full_dataset) * 0.15))
     train_size = len(full_dataset) - val_size
     train_dataset, val_dataset = random_split(full_dataset, [train_size, val_size])
 
@@ -69,7 +74,7 @@ def train_model(
 
     criterion = nn.CTCLoss(blank=tokenizer.blank_idx, zero_infinity=True)
     optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=1e-4)
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=3)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs, eta_min=1e-5)
 
     history = []
     best_val_loss = float("inf")
@@ -105,7 +110,7 @@ def train_model(
                 optimizer.step()
                 running_train_loss += loss.item() * b_size
 
-            if batch_idx % 25 == 0 or batch_idx == total_batches:
+            if batch_idx % 20 == 0 or batch_idx == total_batches:
                 current_loss = running_train_loss / max(1, batch_idx * batch_size)
                 print(f" [*] Epoch [{epoch}/{epochs}] Batch [{batch_idx}/{total_batches}] - Train Loss: {current_loss:.4f}", flush=True)
 
@@ -132,7 +137,7 @@ def train_model(
                 if not torch.isnan(val_loss) and not torch.isinf(val_loss):
                     running_val_loss += val_loss.item() * b_size
 
-                # Calculate CER and WER for validation samples
+                # Calculate CER and WER for validation samples using CTC greedy decode
                 preds = logits.argmax(dim=-1).cpu().numpy()
                 for i, pred_seq in enumerate(preds):
                     decoded_pred = tokenizer.decode(pred_seq)
@@ -147,7 +152,7 @@ def train_model(
         avg_wer = sum(wer_scores) / max(1, len(wer_scores))
         elapsed_sec = round(time.time() - start_time, 2)
 
-        scheduler.step(avg_val_loss)
+        scheduler.step()
 
         epoch_record = {
             "epoch": epoch,
@@ -175,7 +180,7 @@ def train_model(
                 "ssl_initialized": use_ssl
             }
             torch.save(checkpoint_data, best_checkpoint_path)
-            print(f"  [+] Saved new best model checkpoint to '{best_checkpoint_path}' (Val Loss: {avg_val_loss:.4f})")
+            print(f"  [+] Saved new best model checkpoint to '{best_checkpoint_path}' (Val Loss: {avg_val_loss:.4f}, CER: {avg_cer:.4f})")
 
     # Save training history JSON
     history_path = os.path.join(save_dir, "training_history.json")

@@ -1,61 +1,151 @@
 image_path,label
-images\sample_0000.png,Self Supervised Learning 98
-images\sample_0001.png,Character Error Rate CER
-images\sample_0002.png,Document Image Analysis
-images\sample_0003.png,Feature Extraction ResNet
-images\sample_0004.png,Convolutional Neural Network
-images\sample_0005.png,NMAMIT Nitte Campus 15
-images\sample_0006.png,Feature Extraction ResNet 73
-images\sample_0007.png,x^2 + y^2 = z^2
-images\sample_0008.png,Convolutional Neural Network
-images\sample_0009.png,x^2 + y^2 = z^2
-images\sample_0010.png,Self Supervised Learning 14
-images\sample_0011.png,Document Image Analysis 44
-images\sample_0012.png,Synthetic Training Data 89
-images\sample_0013.png,E = m * c ^ 2 28
-images\sample_0014.png,Information Science Dept
-images\sample_0015.png,x^2 + y^2 = z^2
-images\sample_0016.png,Deep Learning Major Project 98
-images\sample_0017.png,Computer Vision Module 5
-images\sample_0018.png,Efficient Text Recognition
-images\sample_0019.png,Synthetic Training Data 96
-images\sample_0020.png,OCR System 2026 70
-images\sample_0021.png,Word Error Rate WER 6
-images\sample_0022.png,Character Error Rate CER 11
-images\sample_0023.png,Synthetic Training Data 38
-images\sample_0024.png,Self Supervised Learning
-images\sample_0025.png,Word Error Rate WER 69
-images\sample_0026.png,PyTorch Deep Learning 27
-images\sample_0027.png,Data Science Research 13
-images\sample_0028.png,Sequence Sequence Model
-images\sample_0029.png,E = m * c ^ 2
-images\sample_0030.png,1234567890 Math Sample
-images\sample_0031.png,x^2 + y^2 = z^2 83
-images\sample_0032.png,Attention Mechanism OCR 17
-images\sample_0033.png,NMAMIT Nitte Campus
-images\sample_0034.png,A . B = A & B + C^2
-images\sample_0035.png,Word Error Rate WER 5
-images\sample_0036.png,PyTorch Deep Learning
-images\sample_0037.png,Word Error Rate WER
-images\sample_0038.png,A . B = A & B + C^2 2
-images\sample_0039.png,Bidirectional LSTM Model 99
-images\sample_0040.png,Deep Learning Major Project 29
-images\sample_0041.png,x^2 + y^2 = z^2 16
-images\sample_0042.png,Efficient Text Recognition
-images\sample_0043.png,Sequence Sequence Model 27
-images\sample_0044.png,x^2 + y^2 = z^2
-images\sample_0045.png,Feature Extraction ResNet 73
-images\sample_0046.png,Self Supervised Learning
-images\sample_0047.png,1234567890 Math Sample 36
-images\sample_0048.png,Information Science Dept 47
-images\sample_0049.png,Word Error Rate WER 91
-images\sample_0050.png,1234567890 Math Sample 74
-images\sample_0051.png,x^2 + y^2 = z^2
-images\sample_0052.png,Self Supervised Learning 50
-images\sample_0053.png,Pattern Recognition Lab
-images\sample_0054.png,Computer Vision Module
-images\sample_0055.png,PyTorch Deep Learning 56
-images\sample_0056.png,E = m * c ^ 2
-images\sample_0057.png,Self Supervised Learning
-images\sample_0058.png,Document Image Analysis 98
-images\sample_0059.png,Sequence Sequence Model 7
+images\sample_0000.png,Computer Vision Image Processing
+images\sample_0001.png,x^2 + y^2 = z^2
+images\sample_0002.png,Optical Character Recognition Engine
+images\sample_0003.png,lim_{x->0} (sin x / x) = 1
+images\sample_0004.png,lim_{x->0} (sin x / x) = 1
+images\sample_0005.png,Deep Learning Major Project
+images\sample_0006.png,E = m * c ^ 2
+images\sample_0007.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0008.png,Character and Word Error Rate CER
+images\sample_0009.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0010.png,a^2 + b^2 = c^2
+images\sample_0011.png,Character and Word Error Rate CER
+images\sample_0012.png,Connectionist Temporal Classification
+images\sample_0013.png,Optical Character Recognition Engine
+images\sample_0014.png,E = m * c ^ 2
+images\sample_0015.png,lim_{x->0} (sin x / x) = 1
+images\sample_0016.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0017.png,PyTorch Deep Learning Pipeline
+images\sample_0018.png,Deep Learning Major Project
+images\sample_0019.png,Document Image Machine Translation
+images\sample_0020.png,Efficient Text Recognition System
+images\sample_0021.png,Document Image Machine Translation
+images\sample_0022.png,d/dx (e^x) = e^x
+images\sample_0023.png,Efficient Text Recognition System
+images\sample_0024.png,d/dx (e^x) = e^x
+images\sample_0025.png,Bidirectional LSTM Sequence Model
+images\sample_0026.png,Document Image Machine Translation
+images\sample_0027.png,Self Supervised Learning 2026
+images\sample_0028.png,Optical Character Recognition Engine
+images\sample_0029.png,lim_{x->0} (sin x / x) = 1
+images\sample_0030.png,Convolutional Neural Network Architecture
+images\sample_0031.png,Character and Word Error Rate CER
+images\sample_0032.png,Computer Vision Image Processing
+images\sample_0033.png,A . B = A & B + C^2
+images\sample_0034.png,Document Image Machine Translation
+images\sample_0035.png,lim_{x->0} (sin x / x) = 1
+images\sample_0036.png,lim_{x->0} (sin x / x) = 1
+images\sample_0037.png,lim_{x->0} (sin x / x) = 1
+images\sample_0038.png,Document Image Machine Translation
+images\sample_0039.png,Connectionist Temporal Classification
+images\sample_0040.png,Convolutional Neural Network Architecture
+images\sample_0041.png,Character and Word Error Rate CER
+images\sample_0042.png,Deep Learning Major Project
+images\sample_0043.png,Document Image Machine Translation
+images\sample_0044.png,Deep Learning Major Project
+images\sample_0045.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0046.png,Optical Character Recognition Engine
+images\sample_0047.png,a^2 + b^2 = c^2
+images\sample_0048.png,PyTorch Deep Learning Pipeline
+images\sample_0049.png,Self Supervised Learning 2026
+images\sample_0050.png,lim_{x->0} (sin x / x) = 1
+images\sample_0051.png,E = m * c ^ 2
+images\sample_0052.png,d/dx (e^x) = e^x
+images\sample_0053.png,Feature Map Extraction ResNet Backbone
+images\sample_0054.png,Connectionist Temporal Classification
+images\sample_0055.png,Convolutional Neural Network Architecture
+images\sample_0056.png,A . B = A & B + C^2
+images\sample_0057.png,Pattern Recognition Lab NMAMIT
+images\sample_0058.png,Efficient Text Recognition System
+images\sample_0059.png,A . B = A & B + C^2
+images\sample_0060.png,Convolutional Neural Network Architecture
+images\sample_0061.png,d/dx (e^x) = e^x
+images\sample_0062.png,lim_{x->0} (sin x / x) = 1
+images\sample_0063.png,E = m * c ^ 2
+images\sample_0064.png,x^2 + y^2 = z^2
+images\sample_0065.png,Connectionist Temporal Classification
+images\sample_0066.png,Character and Word Error Rate CER
+images\sample_0067.png,Computer Vision Image Processing
+images\sample_0068.png,x^2 + y^2 = z^2
+images\sample_0069.png,PyTorch Deep Learning Pipeline
+images\sample_0070.png,PyTorch Deep Learning Pipeline
+images\sample_0071.png,Pattern Recognition Lab NMAMIT
+images\sample_0072.png,Optical Character Recognition Engine
+images\sample_0073.png,Computer Vision Image Processing
+images\sample_0074.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0075.png,A . B = A & B + C^2
+images\sample_0076.png,Feature Map Extraction ResNet Backbone
+images\sample_0077.png,Attention Mechanism for OCR
+images\sample_0078.png,Self Supervised Learning 2026
+images\sample_0079.png,Self Supervised Learning 2026
+images\sample_0080.png,Document Image Machine Translation
+images\sample_0081.png,Connectionist Temporal Classification
+images\sample_0082.png,Computer Vision Image Processing
+images\sample_0083.png,lim_{x->0} (sin x / x) = 1
+images\sample_0084.png,d/dx (e^x) = e^x
+images\sample_0085.png,a^2 + b^2 = c^2
+images\sample_0086.png,Efficient Text Recognition System
+images\sample_0087.png,Self Supervised Learning 2026
+images\sample_0088.png,Computer Vision Image Processing
+images\sample_0089.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0090.png,Connectionist Temporal Classification
+images\sample_0091.png,Bidirectional LSTM Sequence Model
+images\sample_0092.png,a^2 + b^2 = c^2
+images\sample_0093.png,Convolutional Neural Network Architecture
+images\sample_0094.png,Pattern Recognition Lab NMAMIT
+images\sample_0095.png,Attention Mechanism for OCR
+images\sample_0096.png,Bidirectional LSTM Sequence Model
+images\sample_0097.png,Deep Learning Major Project
+images\sample_0098.png,E = m * c ^ 2
+images\sample_0099.png,d/dx (e^x) = e^x
+images\sample_0100.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0101.png,Self Supervised Learning 2026
+images\sample_0102.png,d/dx (e^x) = e^x
+images\sample_0103.png,Document Image Machine Translation
+images\sample_0104.png,d/dx (e^x) = e^x
+images\sample_0105.png,Convolutional Neural Network Architecture
+images\sample_0106.png,Deep Learning Major Project
+images\sample_0107.png,x^2 + y^2 = z^2
+images\sample_0108.png,Self Supervised Learning 2026
+images\sample_0109.png,a^2 + b^2 = c^2
+images\sample_0110.png,Computer Vision Image Processing
+images\sample_0111.png,Bidirectional LSTM Sequence Model
+images\sample_0112.png,Optical Character Recognition Engine
+images\sample_0113.png,sum_{i=1}^n i = n(n+1)/2
+images\sample_0114.png,Document Image Machine Translation
+images\sample_0115.png,Feature Map Extraction ResNet Backbone
+images\sample_0116.png,Information Science and Engineering
+images\sample_0117.png,a^2 + b^2 = c^2
+images\sample_0118.png,Computer Vision Image Processing
+images\sample_0119.png,Convolutional Neural Network Architecture
+images\sample_0120.png,Convolutional Neural Network Architecture
+images\sample_0121.png,x^2 + y^2 = z^2
+images\sample_0122.png,Convolutional Neural Network Architecture
+images\sample_0123.png,PyTorch Deep Learning Pipeline
+images\sample_0124.png,Feature Map Extraction ResNet Backbone
+images\sample_0125.png,Optical Character Recognition Engine
+images\sample_0126.png,E = m * c ^ 2
+images\sample_0127.png,Convolutional Neural Network Architecture
+images\sample_0128.png,Optical Character Recognition Engine
+images\sample_0129.png,Convolutional Neural Network Architecture
+images\sample_0130.png,Self Supervised Learning 2026
+images\sample_0131.png,Computer Vision Image Processing
+images\sample_0132.png,Attention Mechanism for OCR
+images\sample_0133.png,A . B = A & B + C^2
+images\sample_0134.png,Document Image Machine Translation
+images\sample_0135.png,d/dx (e^x) = e^x
+images\sample_0136.png,x^2 + y^2 = z^2
+images\sample_0137.png,Computer Vision Image Processing
+images\sample_0138.png,Convolutional Neural Network Architecture
+images\sample_0139.png,a^2 + b^2 = c^2
+images\sample_0140.png,lim_{x->0} (sin x / x) = 1
+images\sample_0141.png,A . B = A & B + C^2
+images\sample_0142.png,Pattern Recognition Lab NMAMIT
+images\sample_0143.png,Connectionist Temporal Classification
+images\sample_0144.png,Document Image Machine Translation
+images\sample_0145.png,PyTorch Deep Learning Pipeline
+images\sample_0146.png,Feature Map Extraction ResNet Backbone
+images\sample_0147.png,Bidirectional LSTM Sequence Model
+images\sample_0148.png,Document Image Machine Translation
+images\sample_0149.png,sum_{i=1}^n i = n(n+1)/2

@@ -272,9 +272,9 @@
 
         <!-- Model Selection Segmented Control -->
         <div class="selector-box">
-          <button class="model-option-btn active" id="btnModeCNN" onclick="setMode('cnn')">🧠 CNN + BiLSTM</button>
+          <button class="model-option-btn" id="btnModeCNN" onclick="setMode('cnn')">🧠 CNN + BiLSTM</button>
           <button class="model-option-btn" id="btnModeTransformer" onclick="setMode('transformer')">🤖 Vision Transformer</button>
-          <button class="model-option-btn" id="btnModeBoth" onclick="setMode('both')">⚡ Dual Comparison</button>
+          <button class="model-option-btn active" id="btnModeBoth" onclick="setMode('both')">⚡ Dual Comparison</button>
         </div>
         
         <div class="dropzone" id="dropzone" onclick="document.getElementById('fileInput').click();">
@@ -331,8 +331,9 @@
         <div class="model-card primary" id="cardCNN">
           <div class="model-badge" style="display: flex; justify-content: space-between; align-items: center;">
             <span>Primary Architecture (Guide Recommended)</span>
-            <div>
-              <button class="btn-export" onclick="exportTranscript('cnn', 'txt')">📥 Export TXT</button>
+            <div style="display: flex; gap: 0.3rem;">
+              <button class="btn-export" onclick="copyText('cnnResult')">📋 Copy</button>
+              <button class="btn-export" onclick="exportTranscript('cnn', 'txt')">📥 TXT</button>
               <button class="btn-export" onclick="exportTranscript('cnn', 'json')">📥 JSON</button>
             </div>
           </div>
@@ -351,8 +352,9 @@
         <div class="model-card transformer-mode" id="cardTransformer">
           <div class="model-badge" style="display: flex; justify-content: space-between; align-items: center; color: var(--accent-purple);">
             <span>Baseline Transformer Architecture</span>
-            <div>
-              <button class="btn-export" onclick="exportTranscript('trocr', 'txt')">📥 Export TXT</button>
+            <div style="display: flex; gap: 0.3rem;">
+              <button class="btn-export" onclick="copyText('trocrResult')">📋 Copy</button>
+              <button class="btn-export" onclick="exportTranscript('trocr', 'txt')">📥 TXT</button>
               <button class="btn-export" onclick="exportTranscript('trocr', 'json')">📥 JSON</button>
             </div>
           </div>
@@ -390,7 +392,7 @@
 
   <script>
     let currentFile = null;
-    let selectedModelMode = "cnn";
+    let selectedModelMode = "both";
     let autoCorrectEnabled = true;
 
     function toggleAutoCorrect() {
@@ -474,6 +476,9 @@
         const fetchRes = await fetch(data.image_b64);
         const blob = await fetchRes.blob();
         currentFile = new File([blob], filename, { type: "image/png" });
+        
+        // Auto-run inference immediately so the output is shown right away
+        runInference();
       } catch (err) { console.log(err); }
     }
 
@@ -484,6 +489,8 @@
       reader.onload = (e) => {
         document.getElementById('previewImg').src = e.target.result;
         document.getElementById('previewBox').style.display = 'flex';
+        // Auto-run inference immediately on file upload
+        runInference();
       };
       reader.readAsDataURL(file);
     }
@@ -495,7 +502,7 @@
       }
 
       const btnRun = document.getElementById('btnRun');
-      btnRun.innerText = "⏳ Running Selected Model...";
+      btnRun.innerText = "⏳ Recognizing Text & Equations...";
       btnRun.disabled = true;
 
       const formData = new FormData();
@@ -647,10 +654,23 @@
       } catch (err) { alert("Export failed."); }
     }
 
+    function copyText(elementId) {
+      const el = document.getElementById(elementId);
+      if (!el || !el.innerText || el.innerText === "Awaiting Inference...") {
+        alert("No extracted text to copy yet.");
+        return;
+      }
+      navigator.clipboard.writeText(el.innerText).then(() => {
+        alert("📋 Text copied to clipboard:\n" + el.innerText);
+      }).catch(err => {
+        alert("Clipboard copy failed: " + err);
+      });
+    }
+
     window.onload = () => {
       loadPresets();
       loadAnalytics();
-      setMode('cnn');
+      setMode('both'); // Show dual comparison by default
     };
   </script>
 </body>

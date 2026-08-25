@@ -5,37 +5,43 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
+TTF_FONTS = ["arial.ttf", "calibri.ttf", "times.ttf", "consola.ttf", "segoeui.ttf"]
+
+def get_font(name: str = "arial.ttf", size: int = 24):
+    path = os.path.join("C:\\Windows\\Fonts", name)
+    if os.path.exists(path):
+        try:
+            return ImageFont.truetype(path, size=size)
+        except Exception:
+            pass
+    return ImageFont.load_default()
+
 SAMPLE_TEXTS = [
-    "Efficient Text Recognition",
-    "Self Supervised Learning",
+    "Efficient Text Recognition System",
+    "Self Supervised Learning 2026",
     "Deep Learning Major Project",
-    "Convolutional Neural Network",
-    "Bidirectional LSTM Model",
-    "Attention Mechanism OCR",
+    "Convolutional Neural Network Architecture",
+    "Bidirectional LSTM Sequence Model",
+    "Attention Mechanism for OCR",
     "A . B = A & B + C^2",
     "E = m * c ^ 2",
-    "OCR System 2026",
-    "Pattern Recognition Lab",
-    "PyTorch Deep Learning",
-    "Computer Vision Module",
-    "Document Image Analysis",
-    "Feature Extraction ResNet",
-    "Sequence Sequence Model",
-    "Information Science Dept",
-    "NMAMIT Nitte Campus",
-    "Synthetic Training Data",
-    "Character Error Rate CER",
-    "Word Error Rate WER",
-    "1234567890 Math Sample",
+    "Pattern Recognition Lab NMAMIT",
+    "PyTorch Deep Learning Pipeline",
+    "Computer Vision Image Processing",
+    "Document Image Machine Translation",
+    "Feature Map Extraction ResNet Backbone",
+    "Connectionist Temporal Classification",
+    "Information Science and Engineering",
+    "Character and Word Error Rate CER",
     "x^2 + y^2 = z^2",
-    "Data Science Research",
-    "Machine Learning Pipeline"
+    "lim_{x->0} (sin x / x) = 1",
+    "d/dx (e^x) = e^x",
+    "a^2 + b^2 = c^2",
+    "sum_{i=1}^n i = n(n+1)/2",
+    "Optical Character Recognition Engine"
 ]
 
-def generate_synthetic_dataset(output_dir: str = "d:\\Major Project\\data\\synthetic", num_samples: int = 60):
-    """
-    Generates synthetic text image dataset with ground truth annotations.csv for training & testing.
-    """
+def generate_synthetic_dataset(output_dir: str = "d:\\Major Project\\data\\synthetic", num_samples: int = 150):
     images_dir = os.path.join(output_dir, "images")
     os.makedirs(images_dir, exist_ok=True)
     csv_path = os.path.join(output_dir, "annotations.csv")
@@ -44,36 +50,40 @@ def generate_synthetic_dataset(output_dir: str = "d:\\Major Project\\data\\synth
 
     for i in range(num_samples):
         text = random.choice(SAMPLE_TEXTS)
-        if random.random() > 0.5:
-            # Add subtle variations
-            text = text + " " + str(random.randint(1, 99))
-        
-        img_w, img_h = 512, 64
-        image = Image.new("RGB", (img_w, img_h), color=(255, 255, 255))
+        font_name = random.choice(TTF_FONTS)
+        font = get_font(font_name, size=random.randint(22, 28))
+
+        dummy_img = Image.new("RGB", (10, 10))
+        dummy_draw = ImageDraw.Draw(dummy_img)
+        bbox = dummy_draw.textbbox((0, 0), text, font=font)
+        text_w = max(10, bbox[2] - bbox[0])
+        text_h = max(10, bbox[3] - bbox[1])
+
+        pad_x = random.randint(16, 24)
+        pad_y = random.randint(8, 12)
+        canvas_w = text_w + pad_x * 2
+        canvas_h = text_h + pad_y * 2
+
+        bg_val = random.randint(238, 255)
+        image = Image.new("RGB", (canvas_w, canvas_h), color=(bg_val, bg_val, bg_val))
         draw = ImageDraw.Draw(image)
-        
-        # Position text with subtle offset
-        offset_x = random.randint(10, 30)
-        offset_y = random.randint(10, 18)
-        draw.text((offset_x, offset_y), text, fill=(random.randint(0, 30), random.randint(0, 30), random.randint(0, 30)))
-        
+        draw.text((pad_x - bbox[0], pad_y - bbox[1]), text, font=font, fill=(random.randint(0, 30), random.randint(0, 30), random.randint(0, 30)))
         img_np = np.array(image)
-        
-        # Apply synthetic noise/degradation variations
-        if random.random() > 0.4:
-            noise = np.random.normal(0, random.randint(5, 15), img_np.shape).astype(np.uint8)
-            img_np = cv2.add(img_np, noise)
-            
+
+        # Scale to standard height = 32
+        h, w, _ = img_np.shape
+        aspect = w / max(1, h)
+        new_w = max(16, int(32 * aspect))
+        resized = cv2.resize(img_np, (new_w, 32), interpolation=cv2.INTER_AREA)
+
         if random.random() > 0.5:
-            angle = random.uniform(-2.0, 2.0)
-            M = cv2.getRotationMatrix2D((img_w // 2, img_h // 2), angle, 1.0)
-            img_np = cv2.warpAffine(img_np, M, (img_w, img_h), borderValue=(255, 255, 255))
-            
+            noise = np.random.normal(0, random.randint(4, 10), resized.shape).astype(np.uint8)
+            resized = cv2.add(resized, noise)
+
         filename = f"sample_{i:04d}.png"
         filepath = os.path.join(images_dir, filename)
-        cv2.imwrite(filepath, cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR))
-        
-        # Store relative image path and text label
+        cv2.imwrite(filepath, cv2.cvtColor(resized, cv2.COLOR_RGB2BGR))
+
         rel_path = os.path.join("images", filename)
         records.append((rel_path, text))
 
