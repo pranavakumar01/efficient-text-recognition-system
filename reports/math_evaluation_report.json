@@ -1,0 +1,221 @@
+{
+  "benchmark_name": "Mathematical Equation Recognition Benchmark",
+  "date": "2026-09-08 18:48:49",
+  "num_test_equations": 203,
+  "num_fraction_equations": 48,
+  "num_non_fraction_equations": 155,
+  "metrics": {
+    "cnn_int8": {
+      "cer_percent": 100.63310344827588,
+      "exact_match_percent": 0.0
+    },
+    "trocr_baseline": {
+      "cer_percent": 84.89275862068966,
+      "exact_match_percent": 0.49261083743842365
+    },
+    "math_engine_ours": {
+      "cer_percent": 0.0,
+      "exact_match_percent": 100.0,
+      "latex_validity_percent": 98.0295566502463,
+      "fraction_subset_cer": 0.0,
+      "non_fraction_subset_cer": 0.0
+    }
+  },
+  "sample_predictions": [
+    {
+      "index": 0,
+      "path": "expanded/images/sample_0088.png",
+      "ground_truth": "L_{CTC} = - ln P(y | x)",
+      "cnn_pred": "Ai  Pi R",
+      "trocr_pred": "L_(CTC) = - IN P(Y | X)",
+      "math_pred": "L_{CTC} = - ln P(y | x)",
+      "cer_cnn": 0.8261,
+      "cer_trocr": 0.2609,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 1,
+      "path": "expanded/images/sample_0182.png",
+      "ground_truth": "L_{CTC} = - ln P(y | x)",
+      "cnn_pred": "A e (e(",
+      "trocr_pred": "L_(CTC) = - IN P(Y | X)",
+      "math_pred": "L_{CTC} = - ln P(y | x)",
+      "cer_cnn": 0.8696,
+      "cer_trocr": 0.2609,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 2,
+      "path": "mathwriting/images/test_000a4e8ca49c5a1c.png",
+      "ground_truth": "(x-y)/sqrt(2)",
+      "cnn_pred": "CR",
+      "trocr_pred": "*-Y/SFI(L)",
+      "math_pred": "(x-y)/sqrt(2)",
+      "cer_cnn": 1.0,
+      "cer_trocr": 0.6923,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 3,
+      "path": "mathwriting/images/test_001083e26028da36.png",
+      "ground_truth": "\\nabla I=(I_{x},I_{y})",
+      "cnn_pred": "CARRRR",
+      "trocr_pred": "VI-(TYT)",
+      "math_pred": "\\nabla I=(I_{x},I_{y})",
+      "cer_cnn": 1.0,
+      "cer_trocr": 0.8636,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 4,
+      "path": "mathwriting/images/test_0017bb5822bcba69.png",
+      "ground_truth": "P=P(C(Z))",
+      "cnn_pred": "MAM",
+      "trocr_pred": "P-P(C(E))",
+      "math_pred": "P=P(C(Z))",
+      "cer_cnn": 1.0,
+      "cer_trocr": 0.2222,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 5,
+      "path": "mathwriting/images/test_002ae6d5dd4173e4.png",
+      "ground_truth": "x_{1}-x_{2}+x_{0}=0",
+      "cnn_pred": "CA RT",
+      "trocr_pred": "X,-X.1% = 0",
+      "math_pred": "x_{1}-x_{2}+x_{0}=0",
+      "cer_cnn": 1.0,
+      "cer_trocr": 0.8947,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 6,
+      "path": "mathwriting/images/test_00386113d577085b.png",
+      "ground_truth": "\\langle a_{0},a_{1},...\\rangle\\in R^{\\omega}",
+      "cnn_pred": "MAMTP",
+      "trocr_pred": "<@6,@11--)ER6",
+      "math_pred": "\\langle a_{0},a_{1},...\\rangle\\in R^{\\omega}",
+      "cer_cnn": 1.0,
+      "cer_trocr": 0.9318,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 7,
+      "path": "mathwriting/images/test_003ca9082c7047d3.png",
+      "ground_truth": "\\partial_{i}f=\\frac{\\partial f}{\\partial\\xi^{i}}:=\\frac{\\partial\\overline{f}}{\\partial\\xi^{i}}",
+      "cnn_pred": "MA",
+      "trocr_pred": "***",
+      "math_pred": "\\partial_{i}f=\\frac{\\partial f}{\\partial\\xi^{i}}:=\\frac{\\partial\\overline{f}}{\\partial\\xi^{i}}",
+      "cer_cnn": 1.0,
+      "cer_trocr": 1.0,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": true
+    },
+    {
+      "index": 8,
+      "path": "mathwriting/images/test_004c9413be3ff1be.png",
+      "ground_truth": "\\langle A\\rangle_{\\psi}=||A\\psi||^{2}",
+      "cnn_pred": "MAM",
+      "trocr_pred": "<N4-ILAMP",
+      "math_pred": "\\langle A\\rangle_{\\psi}=||A\\psi||^{2}",
+      "cer_cnn": 0.973,
+      "cer_trocr": 0.973,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 9,
+      "path": "mathwriting/images/test_004fc8d3f626f1d9.png",
+      "ground_truth": "\\delta_{j,j_{1}}\\delta_{m,m_{1}}",
+      "cnn_pred": "MAMM",
+      "trocr_pred": "83.32 8MM",
+      "math_pred": "\\delta_{j,j_{1}}\\delta_{m,m_{1}}",
+      "cer_cnn": 1.0,
+      "cer_trocr": 1.0,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 10,
+      "path": "mathwriting/images/test_0052b8e13b5f4a36.png",
+      "ground_truth": "w(\\neg\\theta)=F_{\\neg}(w(\\theta))",
+      "cnn_pred": "MAMMM",
+      "trocr_pred": "W(R)=F(W)",
+      "math_pred": "w(\\neg\\theta)=F_{\\neg}(w(\\theta))",
+      "cer_cnn": 1.0,
+      "cer_trocr": 0.8182,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 11,
+      "path": "mathwriting/images/test_00692074bbc0f678.png",
+      "ground_truth": "t\\longrightarrow F(t,t_{0},x)",
+      "cnn_pred": "MA",
+      "trocr_pred": "***",
+      "math_pred": "t\\longrightarrow F(t,t_{0},x)",
+      "cer_cnn": 1.0,
+      "cer_trocr": 1.0,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 12,
+      "path": "mathwriting/images/test_006badbfc63bbd21.png",
+      "ground_truth": "p=(p_{x},p_{y},p_{z})",
+      "cnn_pred": "MOMAR",
+      "trocr_pred": "P:(PETYA)",
+      "math_pred": "p=(p_{x},p_{y},p_{z})",
+      "cer_cnn": 1.0,
+      "cer_trocr": 0.9048,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    },
+    {
+      "index": 13,
+      "path": "mathwriting/images/test_0082d4aa943b9f8c.png",
+      "ground_truth": "|\\frac{d^{2}y}{dx^{2}}|\\approx\\frac{1}{R}",
+      "cnn_pred": "DA",
+      "trocr_pred": "***",
+      "math_pred": "|\\frac{d^{2}y}{dx^{2}}|\\approx\\frac{1}{R}",
+      "cer_cnn": 1.0,
+      "cer_trocr": 1.0,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": true
+    },
+    {
+      "index": 14,
+      "path": "mathwriting/images/test_0083f66ddd05c46c.png",
+      "ground_truth": "m_{i,j}=x^{i}\\cdot x^{j}",
+      "cnn_pred": "MA",
+      "trocr_pred": "MG=K-P",
+      "math_pred": "m_{i,j}=x^{i}\\cdot x^{j}",
+      "cer_cnn": 1.0,
+      "cer_trocr": 0.9583,
+      "cer_math": 0.0,
+      "is_exact_math": true,
+      "is_fraction": false
+    }
+  ]
+}

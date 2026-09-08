@@ -1,0 +1,1423 @@
+{
+  "expanded/images/sample_0088.png": {
+    "index": 0,
+    "image_path": "expanded/images/sample_0088.png",
+    "ground_truth": "L_{CTC} = - ln P(y | x)",
+    "cnn_raw": "Ai  Pi R",
+    "trocr_raw": "L_(CTC) = - IN P(Y | X)"
+  },
+  "expanded/images/sample_0182.png": {
+    "index": 1,
+    "image_path": "expanded/images/sample_0182.png",
+    "ground_truth": "L_{CTC} = - ln P(y | x)",
+    "cnn_raw": "A e (e(",
+    "trocr_raw": "L_(CTC) = - IN P(Y | X)"
+  },
+  "mathwriting/images/test_000a4e8ca49c5a1c.png": {
+    "index": 2,
+    "image_path": "mathwriting/images/test_000a4e8ca49c5a1c.png",
+    "ground_truth": "(x-y)/sqrt(2)",
+    "cnn_raw": "CR",
+    "trocr_raw": "*-Y/SFI(L)"
+  },
+  "mathwriting/images/test_001083e26028da36.png": {
+    "index": 3,
+    "image_path": "mathwriting/images/test_001083e26028da36.png",
+    "ground_truth": "\\nabla I=(I_{x},I_{y})",
+    "cnn_raw": "CARRRR",
+    "trocr_raw": "VI-(TYT)"
+  },
+  "mathwriting/images/test_0017bb5822bcba69.png": {
+    "index": 4,
+    "image_path": "mathwriting/images/test_0017bb5822bcba69.png",
+    "ground_truth": "P=P(C(Z))",
+    "cnn_raw": "MAM",
+    "trocr_raw": "P-P(C(E))"
+  },
+  "mathwriting/images/test_002ae6d5dd4173e4.png": {
+    "index": 5,
+    "image_path": "mathwriting/images/test_002ae6d5dd4173e4.png",
+    "ground_truth": "x_{1}-x_{2}+x_{0}=0",
+    "cnn_raw": "CA RT",
+    "trocr_raw": "X,-X.1% = 0"
+  },
+  "mathwriting/images/test_00386113d577085b.png": {
+    "index": 6,
+    "image_path": "mathwriting/images/test_00386113d577085b.png",
+    "ground_truth": "\\langle a_{0},a_{1},...\\rangle\\in R^{\\omega}",
+    "cnn_raw": "MAMTP",
+    "trocr_raw": "<@6,@11--)ER6"
+  },
+  "mathwriting/images/test_003ca9082c7047d3.png": {
+    "index": 7,
+    "image_path": "mathwriting/images/test_003ca9082c7047d3.png",
+    "ground_truth": "\\partial_{i}f=\\frac{\\partial f}{\\partial\\xi^{i}}:=\\frac{\\partial\\overline{f}}{\\partial\\xi^{i}}",
+    "cnn_raw": "MA",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_004c9413be3ff1be.png": {
+    "index": 8,
+    "image_path": "mathwriting/images/test_004c9413be3ff1be.png",
+    "ground_truth": "\\langle A\\rangle_{\\psi}=||A\\psi||^{2}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "<N4-ILAMP"
+  },
+  "mathwriting/images/test_004fc8d3f626f1d9.png": {
+    "index": 9,
+    "image_path": "mathwriting/images/test_004fc8d3f626f1d9.png",
+    "ground_truth": "\\delta_{j,j_{1}}\\delta_{m,m_{1}}",
+    "cnn_raw": "MAMM",
+    "trocr_raw": "83.32 8MM"
+  },
+  "mathwriting/images/test_0052b8e13b5f4a36.png": {
+    "index": 10,
+    "image_path": "mathwriting/images/test_0052b8e13b5f4a36.png",
+    "ground_truth": "w(\\neg\\theta)=F_{\\neg}(w(\\theta))",
+    "cnn_raw": "MAMMM",
+    "trocr_raw": "W(R)=F(W)"
+  },
+  "mathwriting/images/test_00692074bbc0f678.png": {
+    "index": 11,
+    "image_path": "mathwriting/images/test_00692074bbc0f678.png",
+    "ground_truth": "t\\longrightarrow F(t,t_{0},x)",
+    "cnn_raw": "MA",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_006badbfc63bbd21.png": {
+    "index": 12,
+    "image_path": "mathwriting/images/test_006badbfc63bbd21.png",
+    "ground_truth": "p=(p_{x},p_{y},p_{z})",
+    "cnn_raw": "MOMAR",
+    "trocr_raw": "P:(PETYA)"
+  },
+  "mathwriting/images/test_0082d4aa943b9f8c.png": {
+    "index": 13,
+    "image_path": "mathwriting/images/test_0082d4aa943b9f8c.png",
+    "ground_truth": "|\\frac{d^{2}y}{dx^{2}}|\\approx\\frac{1}{R}",
+    "cnn_raw": "DA",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_0083f66ddd05c46c.png": {
+    "index": 14,
+    "image_path": "mathwriting/images/test_0083f66ddd05c46c.png",
+    "ground_truth": "m_{i,j}=x^{i}\\cdot x^{j}",
+    "cnn_raw": "MA",
+    "trocr_raw": "MG=K-P"
+  },
+  "mathwriting/images/test_0090db2a639b5c98.png": {
+    "index": 15,
+    "image_path": "mathwriting/images/test_0090db2a639b5c98.png",
+    "ground_truth": "S_{ijk}\\rightarrow S_{ij}(\\omega_{k})",
+    "cnn_raw": "MA T^",
+    "trocr_raw": "SGL-SAL(RM)"
+  },
+  "mathwriting/images/test_00915f0ffe17930e.png": {
+    "index": 16,
+    "image_path": "mathwriting/images/test_00915f0ffe17930e.png",
+    "ground_truth": "(g^{a}modp,g,p)",
+    "cnn_raw": "CAMR",
+    "trocr_raw": "(9\" METHOD)"
+  },
+  "mathwriting/images/test_009d124a50399bba.png": {
+    "index": 17,
+    "image_path": "mathwriting/images/test_009d124a50399bba.png",
+    "ground_truth": "J_{i}=\\sum_{j}L_{ij}\\frac{\\partial F_{j}}{\\partial x_{j}}",
+    "cnn_raw": "MATTR",
+    "trocr_raw": "J:-74%"
+  },
+  "mathwriting/images/test_009fb93aab47d6f5.png": {
+    "index": 18,
+    "image_path": "mathwriting/images/test_009fb93aab47d6f5.png",
+    "ground_truth": "\\{f_{X}(\\cdot;\\theta)|\\theta\\in\\Theta\\}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "$6%:@LECE3"
+  },
+  "mathwriting/images/test_00ad7566b9f1d872.png": {
+    "index": 19,
+    "image_path": "mathwriting/images/test_00ad7566b9f1d872.png",
+    "ground_truth": "\\dot{x}(t)=f(x(t))",
+    "cnn_raw": "MA",
+    "trocr_raw": "*(0-56%)"
+  },
+  "mathwriting/images/test_00ba90fe7f71d8c6.png": {
+    "index": 20,
+    "image_path": "mathwriting/images/test_00ba90fe7f71d8c6.png",
+    "ground_truth": "\\Omega((logn)/n^{2})",
+    "cnn_raw": "C",
+    "trocr_raw": "SL(GM)A*)"
+  },
+  "mathwriting/images/test_00c46c9b07b39bb7.png": {
+    "index": 21,
+    "image_path": "mathwriting/images/test_00c46c9b07b39bb7.png",
+    "ground_truth": "l_{n}=kl_{n}\\cdot\\frac{b_{n}}{b_{a}}\\cdot\\frac{s_{n}}{s_{a}}",
+    "cnn_raw": "MA",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_00d4fc6636cbf2d9.png": {
+    "index": 22,
+    "image_path": "mathwriting/images/test_00d4fc6636cbf2d9.png",
+    "ground_truth": "\\tilde{g}_{n}=[\\begin{matrix}g_{n}\\\\ \\gamma_{n}\\end{matrix}]",
+    "cnn_raw": "DA",
+    "trocr_raw": "5%=C%]"
+  },
+  "mathwriting/images/test_00db5331b85f4d47.png": {
+    "index": 23,
+    "image_path": "mathwriting/images/test_00db5331b85f4d47.png",
+    "ground_truth": "N=|V|",
+    "cnn_raw": "MARR",
+    "trocr_raw": "N=NI"
+  },
+  "mathwriting/images/test_00eaf4f2d3d20bb1.png": {
+    "index": 24,
+    "image_path": "mathwriting/images/test_00eaf4f2d3d20bb1.png",
+    "ground_truth": "B=ln(-b)",
+    "cnn_raw": "MARAR",
+    "trocr_raw": "B=W-6)"
+  },
+  "mathwriting/images/test_00fcddfee1ebfee6.png": {
+    "index": 25,
+    "image_path": "mathwriting/images/test_00fcddfee1ebfee6.png",
+    "ground_truth": "2sin(x/2)",
+    "cnn_raw": "MA",
+    "trocr_raw": "25%($/2)"
+  },
+  "mathwriting/images/test_00fee560e6c9af79.png": {
+    "index": 26,
+    "image_path": "mathwriting/images/test_00fee560e6c9af79.png",
+    "ground_truth": "\\sqrt{1-\\omega^{2}r_{0}^{2}}",
+    "cnn_raw": "CAR",
+    "trocr_raw": "VI-GE"
+  },
+  "mathwriting/images/test_010d0f9e951a7a44.png": {
+    "index": 27,
+    "image_path": "mathwriting/images/test_010d0f9e951a7a44.png",
+    "ground_truth": "x_{i}^{\\prime}\\equiv\\frac{1}{1+e^{-\\frac{x_{i}-\\mu_{i}}{\\sigma_{i}}}}",
+    "cnn_raw": "CATPT",
+    "trocr_raw": "X-TY"
+  },
+  "mathwriting/images/test_010d4fea2361f01f.png": {
+    "index": 28,
+    "image_path": "mathwriting/images/test_010d4fea2361f01f.png",
+    "ground_truth": "Inj(M_{i})<\\epsilon(n)",
+    "cnn_raw": "DA",
+    "trocr_raw": "(MY(M)KEW)"
+  },
+  "mathwriting/images/test_0111fa141bb73b48.png": {
+    "index": 29,
+    "image_path": "mathwriting/images/test_0111fa141bb73b48.png",
+    "ground_truth": "-a^{n}u[-n-1]",
+    "cnn_raw": "Pi",
+    "trocr_raw": "-0\"VEN-U"
+  },
+  "mathwriting/images/test_0114e881d8b22bbb.png": {
+    "index": 30,
+    "image_path": "mathwriting/images/test_0114e881d8b22bbb.png",
+    "ground_truth": "(\\Lambda(A):A\\in B_{b}(S))",
+    "cnn_raw": "MAMMAM",
+    "trocr_raw": "(1)(A)AEB1@))"
+  },
+  "mathwriting/images/test_011f1f41eb55b661.png": {
+    "index": 31,
+    "image_path": "mathwriting/images/test_011f1f41eb55b661.png",
+    "ground_truth": "(\\frac{lnN}{N})\\rightarrow0",
+    "cnn_raw": "MA",
+    "trocr_raw": "(M)-0"
+  },
+  "mathwriting/images/test_0121d7fdad59c8ab.png": {
+    "index": 32,
+    "image_path": "mathwriting/images/test_0121d7fdad59c8ab.png",
+    "ground_truth": "\\Leftrightarrow|PA|^{2}=9|PB|^{2}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "(PAI-1)PD"
+  },
+  "mathwriting/images/test_01292cf19c2c9c7c.png": {
+    "index": 33,
+    "image_path": "mathwriting/images/test_01292cf19c2c9c7c.png",
+    "ground_truth": "u=1+l^{2}+m^{2}",
+    "cnn_raw": "MA",
+    "trocr_raw": "VELLAY"
+  },
+  "mathwriting/images/test_013a32b84ce6252f.png": {
+    "index": 34,
+    "image_path": "mathwriting/images/test_013a32b84ce6252f.png",
+    "ground_truth": "\\{L(u,v):u,v\\in X\\}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "SL(4V) : 4YEX3"
+  },
+  "mathwriting/images/test_01453872d3d2afe5.png": {
+    "index": 35,
+    "image_path": "mathwriting/images/test_01453872d3d2afe5.png",
+    "ground_truth": "=J+\\epsilon_{0}\\frac{\\partial E}{\\partial t}",
+    "cnn_raw": "DO",
+    "trocr_raw": "-J4%"
+  },
+  "mathwriting/images/test_014f7412fa06f5c0.png": {
+    "index": 36,
+    "image_path": "mathwriting/images/test_014f7412fa06f5c0.png",
+    "ground_truth": "||L_{x}||_{(l^{p})^{*}}=||x||_{q}",
+    "cnn_raw": "MAMMMMM",
+    "trocr_raw": "KKKK<"
+  },
+  "mathwriting/images/test_015e012d8baa97f3.png": {
+    "index": 37,
+    "image_path": "mathwriting/images/test_015e012d8baa97f3.png",
+    "ground_truth": "\\epsilon,\\delta,K>0",
+    "cnn_raw": "CA MAR",
+    "trocr_raw": "ED,K>0"
+  },
+  "mathwriting/images/test_016a39f81ff20b8d.png": {
+    "index": 38,
+    "image_path": "mathwriting/images/test_016a39f81ff20b8d.png",
+    "ground_truth": "\\frac{\\partial}{\\partial\\overline{z}}w(z)=0",
+    "cnn_raw": "MAM",
+    "trocr_raw": "5466)=0"
+  },
+  "mathwriting/images/test_01752f0f5fba0225.png": {
+    "index": 39,
+    "image_path": "mathwriting/images/test_01752f0f5fba0225.png",
+    "ground_truth": "L=(\\begin{matrix}1&0\\\\ \\frac{-1}{f}&1\\end{matrix})",
+    "cnn_raw": "MAI",
+    "trocr_raw": "4-6 @"
+  },
+  "mathwriting/images/test_0175c1fb5814dc11.png": {
+    "index": 40,
+    "image_path": "mathwriting/images/test_0175c1fb5814dc11.png",
+    "ground_truth": "\\Omega=\\sqrt{|\\chi_{g,e}|^{2}+\\delta^{2}}",
+    "cnn_raw": "MA",
+    "trocr_raw": "Q-MYPS"
+  },
+  "mathwriting/images/test_0180366e774d93be.png": {
+    "index": 41,
+    "image_path": "mathwriting/images/test_0180366e774d93be.png",
+    "ground_truth": "\\Omega(eg)=g^{-1}\\Omega(e)g",
+    "cnn_raw": "MAM",
+    "trocr_raw": "Q(S)-9.0%S"
+  },
+  "mathwriting/images/test_01859fc130dc9008.png": {
+    "index": 42,
+    "image_path": "mathwriting/images/test_01859fc130dc9008.png",
+    "ground_truth": "(++++)",
+    "cnn_raw": "MARARAR",
+    "trocr_raw": "(+++)"
+  },
+  "mathwriting/images/test_01917677eaf160bb.png": {
+    "index": 43,
+    "image_path": "mathwriting/images/test_01917677eaf160bb.png",
+    "ground_truth": "Pr(s|I)\\propto1/s",
+    "cnn_raw": "MA",
+    "trocr_raw": "R(ST)**"
+  },
+  "mathwriting/images/test_0199f657babdf636.png": {
+    "index": 44,
+    "image_path": "mathwriting/images/test_0199f657babdf636.png",
+    "ground_truth": "\\prod_{p}p/(p-1)",
+    "cnn_raw": "PA",
+    "trocr_raw": "TY(R)"
+  },
+  "mathwriting/images/test_01a2f3186b7e33e1.png": {
+    "index": 45,
+    "image_path": "mathwriting/images/test_01a2f3186b7e33e1.png",
+    "ground_truth": "(2n,n,\\lambda,1)",
+    "cnn_raw": "DARRRARI",
+    "trocr_raw": "(24-A.1)"
+  },
+  "mathwriting/images/test_01a53ae1e3a9b918.png": {
+    "index": 46,
+    "image_path": "mathwriting/images/test_01a53ae1e3a9b918.png",
+    "ground_truth": "E:R^{n}\\rightarrow T_{p}M",
+    "cnn_raw": "CATT",
+    "trocr_raw": "CR>TM"
+  },
+  "mathwriting/images/test_01ab618a2350036f.png": {
+    "index": 47,
+    "image_path": "mathwriting/images/test_01ab618a2350036f.png",
+    "ground_truth": "f_{n}\\rightarrow\\chi_{[1,2)}",
+    "cnn_raw": "DAR",
+    "trocr_raw": "S.-XDZ)"
+  },
+  "mathwriting/images/test_01b552b8a037ab13.png": {
+    "index": 48,
+    "image_path": "mathwriting/images/test_01b552b8a037ab13.png",
+    "ground_truth": "T_{pq}(e_{p}\\otimes e_{q})",
+    "cnn_raw": "MA",
+    "trocr_raw": "TAKE)"
+  },
+  "mathwriting/images/test_01b74db41e479782.png": {
+    "index": 49,
+    "image_path": "mathwriting/images/test_01b74db41e479782.png",
+    "ground_truth": "\\vec{x}\\in S",
+    "cnn_raw": "MARR",
+    "trocr_raw": "ZES"
+  },
+  "mathwriting/images/test_01c37bbe7ea55c56.png": {
+    "index": 50,
+    "image_path": "mathwriting/images/test_01c37bbe7ea55c56.png",
+    "ground_truth": "T+ATT=1+E",
+    "cnn_raw": "PTiT",
+    "trocr_raw": "T+AM-ITE"
+  },
+  "mathwriting/images/test_01cdd808862eab64.png": {
+    "index": 51,
+    "image_path": "mathwriting/images/test_01cdd808862eab64.png",
+    "ground_truth": "T^{t}:=S^{1}\\times\\cdot\\cdot\\cdot\\times S^{1}",
+    "cnn_raw": "Pr E",
+    "trocr_raw": "T*==S'X-XS'"
+  },
+  "mathwriting/images/test_01cf085d26abe325.png": {
+    "index": 52,
+    "image_path": "mathwriting/images/test_01cf085d26abe325.png",
+    "ground_truth": "G^{p^{k}}=\\{g^{p^{k}}|g\\in G\\}",
+    "cnn_raw": "arar",
+    "trocr_raw": "CR=FOLLOW"
+  },
+  "mathwriting/images/test_01d12458811a5a38.png": {
+    "index": 53,
+    "image_path": "mathwriting/images/test_01d12458811a5a38.png",
+    "ground_truth": "\\Omega=arg(-z_{2},z_{1})",
+    "cnn_raw": "MAM",
+    "trocr_raw": "A-65(-EVE.)"
+  },
+  "mathwriting/images/test_01d2b56291c7ffdd.png": {
+    "index": 54,
+    "image_path": "mathwriting/images/test_01d2b56291c7ffdd.png",
+    "ground_truth": "N_{i}\\overline{r_{i}}",
+    "cnn_raw": "MAR",
+    "trocr_raw": "N(R"
+  },
+  "mathwriting/images/test_01d2f97f90ed79e6.png": {
+    "index": 55,
+    "image_path": "mathwriting/images/test_01d2f97f90ed79e6.png",
+    "ground_truth": "m\\equiv\\frac{RF_{,R}}{F}",
+    "cnn_raw": "MA",
+    "trocr_raw": "NET @6%"
+  },
+  "mathwriting/images/test_01d4d9a9dc145333.png": {
+    "index": 56,
+    "image_path": "mathwriting/images/test_01d4d9a9dc145333.png",
+    "ground_truth": "K_{m}=\\frac{1}{2}(k_{1}+k_{2})",
+    "cnn_raw": "MARRARAR",
+    "trocr_raw": "KA-L(K,K)"
+  },
+  "mathwriting/images/test_01d54b93c127e89c.png": {
+    "index": 57,
+    "image_path": "mathwriting/images/test_01d54b93c127e89c.png",
+    "ground_truth": "F^{0}[f]=f",
+    "cnn_raw": "PT T",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_01d90fce29b20f64.png": {
+    "index": 58,
+    "image_path": "mathwriting/images/test_01d90fce29b20f64.png",
+    "ground_truth": "A\\models_{X}^{+}Rt_{1}...t_{n}",
+    "cnn_raw": "MAR",
+    "trocr_raw": "AFTRT-T"
+  },
+  "mathwriting/images/test_01e4c8973307a964.png": {
+    "index": 59,
+    "image_path": "mathwriting/images/test_01e4c8973307a964.png",
+    "ground_truth": "|g,n\\rangle\\rightarrow|e,n-1\\rangle",
+    "cnn_raw": "MAMAMA",
+    "trocr_raw": "19.4>SELEN-D"
+  },
+  "mathwriting/images/test_01e6c79f4d27bc54.png": {
+    "index": 60,
+    "image_path": "mathwriting/images/test_01e6c79f4d27bc54.png",
+    "ground_truth": "N(t)=N_{0}2^{-t/t_{1/2}}",
+    "cnn_raw": "MA",
+    "trocr_raw": "N@-N2%"
+  },
+  "mathwriting/images/test_01f3445177808c3d.png": {
+    "index": 61,
+    "image_path": "mathwriting/images/test_01f3445177808c3d.png",
+    "ground_truth": "X_{2i}\\epsilon R^{Q}",
+    "cnn_raw": "MA",
+    "trocr_raw": "X,EBQ"
+  },
+  "mathwriting/images/test_0204f1101b3f4033.png": {
+    "index": 62,
+    "image_path": "mathwriting/images/test_0204f1101b3f4033.png",
+    "ground_truth": "(x,y,\\theta,\\kappa,\\kappa^{\\prime})",
+    "cnn_raw": "MAMMRR",
+    "trocr_raw": "(X1,@K,K)"
+  },
+  "mathwriting/images/test_02248037ee4a5528.png": {
+    "index": 63,
+    "image_path": "mathwriting/images/test_02248037ee4a5528.png",
+    "ground_truth": "(h,h(\\hat{k}),h(\\hat{l}))",
+    "cnn_raw": "MAM",
+    "trocr_raw": "(KAK(RM)"
+  },
+  "mathwriting/images/test_022b4cfb5a5a3856.png": {
+    "index": 64,
+    "image_path": "mathwriting/images/test_022b4cfb5a5a3856.png",
+    "ground_truth": "d^{\\prime}=V_{ud}d+V_{us}s",
+    "cnn_raw": "A  RA",
+    "trocr_raw": "D'= VWD+V5S"
+  },
+  "mathwriting/images/test_022be26e0a8ab535.png": {
+    "index": 65,
+    "image_path": "mathwriting/images/test_022be26e0a8ab535.png",
+    "ground_truth": "|\\psi\\rangle=\\sum_{n=0}^{\\infty}a_{n}|\\psi_{n}\\rangle",
+    "cnn_raw": "MA",
+    "trocr_raw": "(W)-Z,MLV.)"
+  },
+  "mathwriting/images/test_0235a447c15a24d7.png": {
+    "index": 66,
+    "image_path": "mathwriting/images/test_0235a447c15a24d7.png",
+    "ground_truth": "nlog_{2}n-\\frac{n}{ln2}",
+    "cnn_raw": "MA",
+    "trocr_raw": "0656-122"
+  },
+  "mathwriting/images/test_023a443f36a838ff.png": {
+    "index": 67,
+    "image_path": "mathwriting/images/test_023a443f36a838ff.png",
+    "ground_truth": "\\nabla_{\\vec{\\theta}}=D_{d}\\nabla",
+    "cnn_raw": "CAR",
+    "trocr_raw": "V6=DAV"
+  },
+  "mathwriting/images/test_024279a4b8037bae.png": {
+    "index": 68,
+    "image_path": "mathwriting/images/test_024279a4b8037bae.png",
+    "ground_truth": "f(y)=2+2y+y^{2}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "KY-22-Y"
+  },
+  "mathwriting/images/test_0247a5d7e1002d66.png": {
+    "index": 69,
+    "image_path": "mathwriting/images/test_0247a5d7e1002d66.png",
+    "ground_truth": "|V_{0}|\\gg E_{f}",
+    "cnn_raw": "MA RTR",
+    "trocr_raw": "IV,/>ZE,"
+  },
+  "mathwriting/images/test_0255dc5b14261907.png": {
+    "index": 70,
+    "image_path": "mathwriting/images/test_0255dc5b14261907.png",
+    "ground_truth": "1+x+\\frac{x^{2}}{2}",
+    "cnn_raw": "MAUI",
+    "trocr_raw": "1.00"
+  },
+  "mathwriting/images/test_025f51bee0e59494.png": {
+    "index": 71,
+    "image_path": "mathwriting/images/test_025f51bee0e59494.png",
+    "ground_truth": "g=g_{-1}\\oplus g_{0}\\oplus g_{1}",
+    "cnn_raw": "CAMM",
+    "trocr_raw": "9=9.09 @9,"
+  },
+  "mathwriting/images/test_02657f6bba1d2004.png": {
+    "index": 72,
+    "image_path": "mathwriting/images/test_02657f6bba1d2004.png",
+    "ground_truth": "f_{a}(bx)=f_{f_{a}(b)}(x)",
+    "cnn_raw": "MA RMA",
+    "trocr_raw": "5.(BX) =$9.A)W"
+  },
+  "mathwriting/images/test_026fd85034106735.png": {
+    "index": 73,
+    "image_path": "mathwriting/images/test_026fd85034106735.png",
+    "ground_truth": "T^{-1}=(T_{b}^{a})^{-1}",
+    "cnn_raw": "PTTPTT",
+    "trocr_raw": "T%(T)\""
+  },
+  "mathwriting/images/test_02720f6a67e8bc09.png": {
+    "index": 74,
+    "image_path": "mathwriting/images/test_02720f6a67e8bc09.png",
+    "ground_truth": "L_{10}=(C/P)^{p}",
+    "cnn_raw": "CAT TRT",
+    "trocr_raw": "LI.: (C/P)F"
+  },
+  "mathwriting/images/test_0272a794109d5d2d.png": {
+    "index": 75,
+    "image_path": "mathwriting/images/test_0272a794109d5d2d.png",
+    "ground_truth": "P_{F}=\\sqrt{P_{P}\\cdot P_{L}}",
+    "cnn_raw": "PATR",
+    "trocr_raw": "R=SR2"
+  },
+  "mathwriting/images/test_0276c02c9b9222e9.png": {
+    "index": 76,
+    "image_path": "mathwriting/images/test_0276c02c9b9222e9.png",
+    "ground_truth": "f^{-1}(y)=\\sqrt{y}",
+    "cnn_raw": "PO",
+    "trocr_raw": "G'G:G"
+  },
+  "mathwriting/images/test_028414d36ea98262.png": {
+    "index": 77,
+    "image_path": "mathwriting/images/test_028414d36ea98262.png",
+    "ground_truth": "\\Delta b/b^{2}\\approx\\Delta f/f^{2}",
+    "cnn_raw": "MAMTMAMer",
+    "trocr_raw": "A6/6%DF/F^"
+  },
+  "mathwriting/images/test_02894b4ff1ee6c7b.png": {
+    "index": 78,
+    "image_path": "mathwriting/images/test_02894b4ff1ee6c7b.png",
+    "ground_truth": "0/x=0,x/x=1",
+    "cnn_raw": "Ce",
+    "trocr_raw": "0/X=0,X/K=L"
+  },
+  "mathwriting/images/test_028cf1f0507df703.png": {
+    "index": 79,
+    "image_path": "mathwriting/images/test_028cf1f0507df703.png",
+    "ground_truth": "U_{i}(I)=I_{L_{i}}",
+    "cnn_raw": "MARRR",
+    "trocr_raw": "0.61-14"
+  },
+  "mathwriting/images/test_029b5da0999d4903.png": {
+    "index": 80,
+    "image_path": "mathwriting/images/test_029b5da0999d4903.png",
+    "ground_truth": "\\omega_{\\{(k,i),(k^{\\prime},i^{\\prime}),(k^{\\prime\\prime},i^{\\prime\\prime})\\}}",
+    "cnn_raw": "MAMM",
+    "trocr_raw": "-(6%)6.8"
+  },
+  "mathwriting/images/test_029decc2d74fd082.png": {
+    "index": 81,
+    "image_path": "mathwriting/images/test_029decc2d74fd082.png",
+    "ground_truth": "abca^{-1}b^{-1}d\\sim?",
+    "cnn_raw": "CA",
+    "trocr_raw": "ABCELBAN?"
+  },
+  "mathwriting/images/test_02ace78dfc726867.png": {
+    "index": 82,
+    "image_path": "mathwriting/images/test_02ace78dfc726867.png",
+    "ground_truth": "2sin(\\theta/2)r",
+    "cnn_raw": "Cr",
+    "trocr_raw": "2.SIN (@/2)R"
+  },
+  "mathwriting/images/test_02aced0c052805c6.png": {
+    "index": 83,
+    "image_path": "mathwriting/images/test_02aced0c052805c6.png",
+    "ground_truth": "1/x\\approx1-x",
+    "cnn_raw": "DA NR",
+    "trocr_raw": "1/4%1-X"
+  },
+  "mathwriting/images/test_02b1dc6d4efd493a.png": {
+    "index": 84,
+    "image_path": "mathwriting/images/test_02b1dc6d4efd493a.png",
+    "ground_truth": "\\Omega(R)=cP(R)",
+    "cnn_raw": "Pit P",
+    "trocr_raw": "S2(R)- P(E)"
+  },
+  "mathwriting/images/test_02b7060b95d998eb.png": {
+    "index": 85,
+    "image_path": "mathwriting/images/test_02b7060b95d998eb.png",
+    "ground_truth": "-|I|>I_{0}",
+    "cnn_raw": "DARRTRI",
+    "trocr_raw": "IT>T,"
+  },
+  "mathwriting/images/test_02c39c1be9d660b7.png": {
+    "index": 86,
+    "image_path": "mathwriting/images/test_02c39c1be9d660b7.png",
+    "ground_truth": "1-4\\pi r^{3}/3V",
+    "cnn_raw": "PTrtie",
+    "trocr_raw": "[ -4MG/3V"
+  },
+  "mathwriting/images/test_02c6f6dea91a2a06.png": {
+    "index": 87,
+    "image_path": "mathwriting/images/test_02c6f6dea91a2a06.png",
+    "ground_truth": "(RU^{2}D^{-1}BD^{-1})",
+    "cnn_raw": "PTPTT",
+    "trocr_raw": "(RV'D'BP)"
+  },
+  "mathwriting/images/test_02c9daf282f5a1e3.png": {
+    "index": 88,
+    "image_path": "mathwriting/images/test_02c9daf282f5a1e3.png",
+    "ground_truth": "\\sum_{x\\in\\{0,1\\}^{T}}|x\\rangle|f(x)\\rangle",
+    "cnn_raw": "MA",
+    "trocr_raw": "S/PIFG>"
+  },
+  "mathwriting/images/test_02d5b5f98ac5fbd2.png": {
+    "index": 89,
+    "image_path": "mathwriting/images/test_02d5b5f98ac5fbd2.png",
+    "ground_truth": "f_{z}(x)=e^{ix^{t}Zx/2}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "FAX)-ERZKA"
+  },
+  "mathwriting/images/test_02da6f52e30f674d.png": {
+    "index": 90,
+    "image_path": "mathwriting/images/test_02da6f52e30f674d.png",
+    "ground_truth": "2^{k}t_{0}",
+    "cnn_raw": "CARR",
+    "trocr_raw": "2*6%"
+  },
+  "mathwriting/images/test_02dcdb815d18cdf1.png": {
+    "index": 91,
+    "image_path": "mathwriting/images/test_02dcdb815d18cdf1.png",
+    "ground_truth": "f(x_{t},t)=x_{t}e^{\\theta t}",
+    "cnn_raw": "MA",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_02de91b624143438.png": {
+    "index": 92,
+    "image_path": "mathwriting/images/test_02de91b624143438.png",
+    "ground_truth": "y^{2}=x^{3}-n^{2}x",
+    "cnn_raw": "PTe^",
+    "trocr_raw": "TAX.2X"
+  },
+  "mathwriting/images/test_030373f9d3edac3b.png": {
+    "index": 93,
+    "image_path": "mathwriting/images/test_030373f9d3edac3b.png",
+    "ground_truth": "\\frac{R_{U}}{r_{e}}\\approx\\frac{r_{H}}{r_{e}}\\approx10^{42}",
+    "cnn_raw": "MA",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_030a0f18b6fcb87b.png": {
+    "index": 94,
+    "image_path": "mathwriting/images/test_030a0f18b6fcb87b.png",
+    "ground_truth": "\\pi(x)-\\pi(\\frac{x}{2})\\ge1",
+    "cnn_raw": "DA",
+    "trocr_raw": "IT@-N(4)X1"
+  },
+  "mathwriting/images/test_030ea5646116a251.png": {
+    "index": 95,
+    "image_path": "mathwriting/images/test_030ea5646116a251.png",
+    "ground_truth": "M_{2}=P_{1}^{\\prime}|P_{2}|...",
+    "cnn_raw": "MAMR",
+    "trocr_raw": "N.=P.[EL."
+  },
+  "mathwriting/images/test_0316d949cd776194.png": {
+    "index": 96,
+    "image_path": "mathwriting/images/test_0316d949cd776194.png",
+    "ground_truth": "X_{k}=p(e^{2\\pi i\\frac{k}{2^{n}}})",
+    "cnn_raw": "MAMT",
+    "trocr_raw": "X-X($)"
+  },
+  "mathwriting/images/test_032278982233fefa.png": {
+    "index": 97,
+    "image_path": "mathwriting/images/test_032278982233fefa.png",
+    "ground_truth": "L_{r},L_{t},L_{L}/10",
+    "cnn_raw": "MAMRR",
+    "trocr_raw": "LML4.L/10"
+  },
+  "mathwriting/images/test_032360b882783120.png": {
+    "index": 98,
+    "image_path": "mathwriting/images/test_032360b882783120.png",
+    "ground_truth": "\\kappa_{2}=\\mu_{2}^{\\prime}-{\\mu_{1}^{\\prime}}^{2}",
+    "cnn_raw": "MAT",
+    "trocr_raw": "K-PK3"
+  },
+  "mathwriting/images/test_0325d90612c71772.png": {
+    "index": 99,
+    "image_path": "mathwriting/images/test_0325d90612c71772.png",
+    "ground_truth": "\\hat{\\Sigma}_{j,/j}",
+    "cnn_raw": "MA",
+    "trocr_raw": "$5"
+  },
+  "mathwriting/images/test_03277de2f80a8aaf.png": {
+    "index": 100,
+    "image_path": "mathwriting/images/test_03277de2f80a8aaf.png",
+    "ground_truth": "Y_{n+1}=I-XY_{n}",
+    "cnn_raw": "E",
+    "trocr_raw": "YAF2-%"
+  },
+  "mathwriting/images/test_0333d9584ff7c0d0.png": {
+    "index": 101,
+    "image_path": "mathwriting/images/test_0333d9584ff7c0d0.png",
+    "ground_truth": "f^{-1}(x)=\\frac{1}{f(x)}",
+    "cnn_raw": "Ta",
+    "trocr_raw": "P'(N-RM)"
+  },
+  "mathwriting/images/test_0339bd185b869ac1.png": {
+    "index": 102,
+    "image_path": "mathwriting/images/test_0339bd185b869ac1.png",
+    "ground_truth": "\\frac{dD}{dt}=\\frac{1}{\\epsilon_{f}}\\frac{d\\epsilon_{p}}{dt}",
+    "cnn_raw": "PA",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_034e1c65312b7f9d.png": {
+    "index": 103,
+    "image_path": "mathwriting/images/test_034e1c65312b7f9d.png",
+    "ground_truth": "u_{min}=min\\{u_{i}\\}",
+    "cnn_raw": "MARO",
+    "trocr_raw": "MAN-Vi-843"
+  },
+  "mathwriting/images/test_035a670b49c3ce36.png": {
+    "index": 104,
+    "image_path": "mathwriting/images/test_035a670b49c3ce36.png",
+    "ground_truth": "Li(x)=\\int_{0}^{x}\\frac{dt}{log(t)}",
+    "cnn_raw": "MA",
+    "trocr_raw": "LOO=6%"
+  },
+  "mathwriting/images/test_036ac8debd6a3120.png": {
+    "index": 105,
+    "image_path": "mathwriting/images/test_036ac8debd6a3120.png",
+    "ground_truth": "j_{z}=-\\frac{1}{\\mu_{0}}\\nabla^{2}A",
+    "cnn_raw": "ATTPT",
+    "trocr_raw": "1.46A"
+  },
+  "mathwriting/images/test_036f0970a5c42b1e.png": {
+    "index": 106,
+    "image_path": "mathwriting/images/test_036f0970a5c42b1e.png",
+    "ground_truth": "\\langle x^{*},x\\rangle",
+    "cnn_raw": "E",
+    "trocr_raw": "<<>"
+  },
+  "mathwriting/images/test_03762d643e1dbb50.png": {
+    "index": 107,
+    "image_path": "mathwriting/images/test_03762d643e1dbb50.png",
+    "ground_truth": "\\nabla\\cdot P=-\\rho_{b}",
+    "cnn_raw": "CT",
+    "trocr_raw": "V.P.=A"
+  },
+  "mathwriting/images/test_037c0549cfc11f2d.png": {
+    "index": 108,
+    "image_path": "mathwriting/images/test_037c0549cfc11f2d.png",
+    "ground_truth": "A\\cap B=\\overline{\\overline{A}\\cup\\overline{B}}",
+    "cnn_raw": "MAMR",
+    "trocr_raw": "AM= AUB"
+  },
+  "mathwriting/images/test_0384f21195efa622.png": {
+    "index": 109,
+    "image_path": "mathwriting/images/test_0384f21195efa622.png",
+    "ground_truth": "z_{n+1}={z_{n}}^{2}+c",
+    "cnn_raw": "CR CR",
+    "trocr_raw": "ZATL=24+C"
+  },
+  "mathwriting/images/test_038c609ec875dc17.png": {
+    "index": 110,
+    "image_path": "mathwriting/images/test_038c609ec875dc17.png",
+    "ground_truth": "\\Phi_{lm}=\\vec{r}\\times\\nabla Y_{lm}",
+    "cnn_raw": "C",
+    "trocr_raw": "Q.-PXVX"
+  },
+  "mathwriting/images/test_039523fde61322a2.png": {
+    "index": 111,
+    "image_path": "mathwriting/images/test_039523fde61322a2.png",
+    "ground_truth": "D(EQ)\\le n-1",
+    "cnn_raw": "MAe",
+    "trocr_raw": "D(EQ)EN-1"
+  },
+  "mathwriting/images/test_03a5fbf204ec2a69.png": {
+    "index": 112,
+    "image_path": "mathwriting/images/test_03a5fbf204ec2a69.png",
+    "ground_truth": "(x_{i},x_{i+1})\\in E",
+    "cnn_raw": "MARRARARARARR",
+    "trocr_raw": "(XC.XL)EE"
+  },
+  "mathwriting/images/test_03ab27a5e969801b.png": {
+    "index": 113,
+    "image_path": "mathwriting/images/test_03ab27a5e969801b.png",
+    "ground_truth": "e^{e^{e^{e^{7.705}}}}<10^{10^{10^{964}}}",
+    "cnn_raw": "Pr",
+    "trocr_raw": "ITEM"
+  },
+  "mathwriting/images/test_03b25f204c7b47de.png": {
+    "index": 114,
+    "image_path": "mathwriting/images/test_03b25f204c7b47de.png",
+    "ground_truth": "J_{(1)}=J_{(2)}",
+    "cnn_raw": "CA",
+    "trocr_raw": "JN=J(A)"
+  },
+  "mathwriting/images/test_03b5b80e61ede1ac.png": {
+    "index": 115,
+    "image_path": "mathwriting/images/test_03b5b80e61ede1ac.png",
+    "ground_truth": "\\pm z_{1}^{c_{1}}...z_{n}^{c_{n}}",
+    "cnn_raw": "MA",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_03c1e5d37f7dc43d.png": {
+    "index": 116,
+    "image_path": "mathwriting/images/test_03c1e5d37f7dc43d.png",
+    "ground_truth": "\\overline{g}_{\\kappa\\lambda}=\\eta_{\\kappa\\lambda}=",
+    "cnn_raw": "EA",
+    "trocr_raw": "9X2=WA ="
+  },
+  "mathwriting/images/test_03d0d068dbfaa5c5.png": {
+    "index": 117,
+    "image_path": "mathwriting/images/test_03d0d068dbfaa5c5.png",
+    "ground_truth": "Q(\\sqrt{d})/Q",
+    "cnn_raw": "Ca",
+    "trocr_raw": "G(G)/A"
+  },
+  "mathwriting/images/test_03d40d713cff6b26.png": {
+    "index": 118,
+    "image_path": "mathwriting/images/test_03d40d713cff6b26.png",
+    "ground_truth": "4^{n}+2^{n+1}-1",
+    "cnn_raw": "PTI",
+    "trocr_raw": "4^2\"-|"
+  },
+  "mathwriting/images/test_03d80f03e7257f44.png": {
+    "index": 119,
+    "image_path": "mathwriting/images/test_03d80f03e7257f44.png",
+    "ground_truth": "[1,f(x,y)]",
+    "cnn_raw": "MAM",
+    "trocr_raw": "[L.FOOD)"
+  },
+  "mathwriting/images/test_03dc827f8b4f9386.png": {
+    "index": 120,
+    "image_path": "mathwriting/images/test_03dc827f8b4f9386.png",
+    "ground_truth": "(b\\overline{g}+g\\overline{b})/\\sqrt{2}",
+    "cnn_raw": "M",
+    "trocr_raw": "(65*S)VE"
+  },
+  "mathwriting/images/test_03dd32b2bd99f8c1.png": {
+    "index": 121,
+    "image_path": "mathwriting/images/test_03dd32b2bd99f8c1.png",
+    "ground_truth": "Q_{\\alpha}=M_{,\\alpha}",
+    "cnn_raw": "C",
+    "trocr_raw": "Q.-MX"
+  },
+  "mathwriting/images/test_03e43d8e767e5aec.png": {
+    "index": 122,
+    "image_path": "mathwriting/images/test_03e43d8e767e5aec.png",
+    "ground_truth": "\\nabla\\cdot(u,v)=u_{x}+v_{y}",
+    "cnn_raw": "PAA",
+    "trocr_raw": "V.(W.)=W+%"
+  },
+  "mathwriting/images/test_03ec1cf693f33af4.png": {
+    "index": 123,
+    "image_path": "mathwriting/images/test_03ec1cf693f33af4.png",
+    "ground_truth": "e^{-ix}=\\frac{1}{e^{ix}}",
+    "cnn_raw": "Prr",
+    "trocr_raw": "EX=EX"
+  },
+  "mathwriting/images/test_03f04833cb837350.png": {
+    "index": 124,
+    "image_path": "mathwriting/images/test_03f04833cb837350.png",
+    "ground_truth": "\\frac{2log(l-1)-logl}{2}",
+    "cnn_raw": "MA",
+    "trocr_raw": "21,00-2.40"
+  },
+  "mathwriting/images/test_03f4d7169d322943.png": {
+    "index": 125,
+    "image_path": "mathwriting/images/test_03f4d7169d322943.png",
+    "ground_truth": "lim_{\\Delta x\\rightarrow0}g(\\Delta x)=0",
+    "cnn_raw": "MAMAA",
+    "trocr_raw": "@@4.9(6%) = 0"
+  },
+  "mathwriting/images/test_03f960eefb034cc9.png": {
+    "index": 126,
+    "image_path": "mathwriting/images/test_03f960eefb034cc9.png",
+    "ground_truth": "1-C_{xy}",
+    "cnn_raw": "DOR",
+    "trocr_raw": "I- CY"
+  },
+  "mathwriting/images/test_040b8e680187356c.png": {
+    "index": 127,
+    "image_path": "mathwriting/images/test_040b8e680187356c.png",
+    "ground_truth": "R_{j}^{*}=d/a_{j}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "RJ-A/K"
+  },
+  "mathwriting/images/test_0414df14fce6c763.png": {
+    "index": 128,
+    "image_path": "mathwriting/images/test_0414df14fce6c763.png",
+    "ground_truth": "\\frac{1}{3}=0.(3)",
+    "cnn_raw": "MARARAR",
+    "trocr_raw": "$=6.(3)"
+  },
+  "mathwriting/images/test_0417a1bac9ff37fa.png": {
+    "index": 129,
+    "image_path": "mathwriting/images/test_0417a1bac9ff37fa.png",
+    "ground_truth": "T(ax+by)-T(0)",
+    "cnn_raw": "P N P",
+    "trocr_raw": "T(EX-BY)-T)"
+  },
+  "mathwriting/images/test_0419c6098f354d5f.png": {
+    "index": 130,
+    "image_path": "mathwriting/images/test_0419c6098f354d5f.png",
+    "ground_truth": "I_{K}(m_{K})/H_{K}",
+    "cnn_raw": "MAMMM",
+    "trocr_raw": "LK(MK)/HK"
+  },
+  "mathwriting/images/test_0422ffb14648ef14.png": {
+    "index": 131,
+    "image_path": "mathwriting/images/test_0422ffb14648ef14.png",
+    "ground_truth": "U_{t}=e^{itA},t\\in R",
+    "cnn_raw": "DARA",
+    "trocr_raw": "DELM TER"
+  },
+  "mathwriting/images/test_042f9dd4f246cd51.png": {
+    "index": 132,
+    "image_path": "mathwriting/images/test_042f9dd4f246cd51.png",
+    "ground_truth": "x^{*}=\\nabla f(\\nabla f^{*}(x^{*}))",
+    "cnn_raw": "Na",
+    "trocr_raw": "SAV(OFF(6%)"
+  },
+  "mathwriting/images/test_04303e80bb3b363f.png": {
+    "index": 133,
+    "image_path": "mathwriting/images/test_04303e80bb3b363f.png",
+    "ground_truth": "p_{j}(x)=j\\sum_{i=1}^{j}|x_{i}|",
+    "cnn_raw": "MAM",
+    "trocr_raw": "NO-JERO"
+  },
+  "mathwriting/images/test_043083dc47710e3f.png": {
+    "index": 134,
+    "image_path": "mathwriting/images/test_043083dc47710e3f.png",
+    "ground_truth": "V=f(t)=V_{0}e^{-\\frac{t}{\\tau}}",
+    "cnn_raw": "MAMR",
+    "trocr_raw": "V=FU-VE#"
+  },
+  "mathwriting/images/test_0439c6e2406abd02.png": {
+    "index": 135,
+    "image_path": "mathwriting/images/test_0439c6e2406abd02.png",
+    "ground_truth": "k=3.45(N+1)",
+    "cnn_raw": "MAMAAI",
+    "trocr_raw": "K=395(N+)"
+  },
+  "mathwriting/images/test_043ab312194e307f.png": {
+    "index": 136,
+    "image_path": "mathwriting/images/test_043ab312194e307f.png",
+    "ground_truth": "H_{1}:\\{0,1\\}^{*}\\rightarrow G_{1}^{*}",
+    "cnn_raw": "MARRARR",
+    "trocr_raw": "H.E.5%"
+  },
+  "mathwriting/images/test_044414882ca1e523.png": {
+    "index": 137,
+    "image_path": "mathwriting/images/test_044414882ca1e523.png",
+    "ground_truth": "O(n^{\\sqrt{k}})",
+    "cnn_raw": "PR",
+    "trocr_raw": "OGAF)"
+  },
+  "mathwriting/images/test_0448d738a6ef71e5.png": {
+    "index": 138,
+    "image_path": "mathwriting/images/test_0448d738a6ef71e5.png",
+    "ground_truth": "\\Psi_{A}(1,2,...,N_{A})",
+    "cnn_raw": "MAMRRR",
+    "trocr_raw": "Y462-N)"
+  },
+  "mathwriting/images/test_04671785d6764ac7.png": {
+    "index": 139,
+    "image_path": "mathwriting/images/test_04671785d6764ac7.png",
+    "ground_truth": "s(r,E,\\hat{\\Omega},t)",
+    "cnn_raw": "DORARAR",
+    "trocr_raw": "S(R,E.S.T)"
+  },
+  "mathwriting/images/test_046bcbd7b4683540.png": {
+    "index": 140,
+    "image_path": "mathwriting/images/test_046bcbd7b4683540.png",
+    "ground_truth": "\\Rightarrow\\frac{1}{2x}<[1/x]",
+    "cnn_raw": "P",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_047c8a1e14a47a8d.png": {
+    "index": 141,
+    "image_path": "mathwriting/images/test_047c8a1e14a47a8d.png",
+    "ground_truth": "cr+cs=a^{2}+b^{2}",
+    "cnn_raw": "MARARARARAR",
+    "trocr_raw": "CRICS=A2.62"
+  },
+  "mathwriting/images/test_0480cf86b72aaad9.png": {
+    "index": 142,
+    "image_path": "mathwriting/images/test_0480cf86b72aaad9.png",
+    "ground_truth": "R=df/dn(n=0)",
+    "cnn_raw": "MAMAMA",
+    "trocr_raw": "R= df/DN(RM)"
+  },
+  "mathwriting/images/test_0496e150b09423d4.png": {
+    "index": 143,
+    "image_path": "mathwriting/images/test_0496e150b09423d4.png",
+    "ground_truth": "{(\\hat{k}_{F})}^{\\kappa\\lambda\\mu\\nu}",
+    "cnn_raw": "CARTPTPT",
+    "trocr_raw": "(R)MARY"
+  },
+  "mathwriting/images/test_049c5fa2130b640a.png": {
+    "index": 144,
+    "image_path": "mathwriting/images/test_049c5fa2130b640a.png",
+    "ground_truth": "A(t)=e^{W\\cdot t}A(0)",
+    "cnn_raw": "MA",
+    "trocr_raw": "AM)=*A()"
+  },
+  "mathwriting/images/test_049c87d8b46e48e3.png": {
+    "index": 145,
+    "image_path": "mathwriting/images/test_049c87d8b46e48e3.png",
+    "ground_truth": "\\sqrt{16-x^{2}}",
+    "cnn_raw": "DAR",
+    "trocr_raw": "JLX"
+  },
+  "mathwriting/images/test_04a29575b6d95c14.png": {
+    "index": 146,
+    "image_path": "mathwriting/images/test_04a29575b6d95c14.png",
+    "ground_truth": "\\frac{dD}{dt}=\\frac{1}{\\epsilon_{f}}\\frac{d\\epsilon_{p}}{dt}",
+    "cnn_raw": "MARR",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_04b22a5fda1d3489.png": {
+    "index": 147,
+    "image_path": "mathwriting/images/test_04b22a5fda1d3489.png",
+    "ground_truth": "H_{n}(x)=\\sum_{k=0}^{n}a_{n,k}x^{k}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "HAX-TAX"
+  },
+  "mathwriting/images/test_04bce9e95c175534.png": {
+    "index": 148,
+    "image_path": "mathwriting/images/test_04bce9e95c175534.png",
+    "ground_truth": "\\frac{1}{N}\\frac{\\sqrt{N}}{2}=\\frac{1}{2\\sqrt{N}}",
+    "cnn_raw": "MA",
+    "trocr_raw": "NEW.20"
+  },
+  "mathwriting/images/test_04c6131d52decb32.png": {
+    "index": 149,
+    "image_path": "mathwriting/images/test_04c6131d52decb32.png",
+    "ground_truth": "[n:=n+1]",
+    "cnn_raw": "PO",
+    "trocr_raw": "[MM]"
+  },
+  "mathwriting/images/test_04d04edbd034c6e2.png": {
+    "index": 150,
+    "image_path": "mathwriting/images/test_04d04edbd034c6e2.png",
+    "ground_truth": "U_{p}=\\frac{F^{2}}{4\\omega^{2}}",
+    "cnn_raw": "MAO",
+    "trocr_raw": "4-6"
+  },
+  "mathwriting/images/test_04d5cd7876505b42.png": {
+    "index": 151,
+    "image_path": "mathwriting/images/test_04d5cd7876505b42.png",
+    "ground_truth": "\\hat{\\Omega}=U^{\\dagger}\\hat{\\Omega}U",
+    "cnn_raw": "CARAR",
+    "trocr_raw": "A.00"
+  },
+  "mathwriting/images/test_04d613d7897993bb.png": {
+    "index": 152,
+    "image_path": "mathwriting/images/test_04d613d7897993bb.png",
+    "ground_truth": "\\lambda^{N+1}=\\prod_{i=0}^{N}(p-q_{i})",
+    "cnn_raw": "CAR",
+    "trocr_raw": "X-TOO"
+  },
+  "mathwriting/images/test_04d7ed69bae7380c.png": {
+    "index": 153,
+    "image_path": "mathwriting/images/test_04d7ed69bae7380c.png",
+    "ground_truth": "(a-b)t+b",
+    "cnn_raw": "MARARAIA",
+    "trocr_raw": "(A-WTLB"
+  },
+  "mathwriting/images/test_04d8125ee94f096c.png": {
+    "index": 154,
+    "image_path": "mathwriting/images/test_04d8125ee94f096c.png",
+    "ground_truth": "\\overline{F}(x)\\equiv Pr[X>x]",
+    "cnn_raw": "MA",
+    "trocr_raw": "FOOD=PK>X]"
+  },
+  "mathwriting/images/test_04e1ad3980a3a81f.png": {
+    "index": 155,
+    "image_path": "mathwriting/images/test_04e1ad3980a3a81f.png",
+    "ground_truth": "g^{-1}\\mu(A)=\\mu(gA)",
+    "cnn_raw": "CA",
+    "trocr_raw": "3\"ALA=M(5A)"
+  },
+  "mathwriting/images/test_04eb7017ff882087.png": {
+    "index": 156,
+    "image_path": "mathwriting/images/test_04eb7017ff882087.png",
+    "ground_truth": "\\nabla^{2}p=f(\\nu,V)",
+    "cnn_raw": "M",
+    "trocr_raw": "VP=@6V)"
+  },
+  "mathwriting/images/test_04eb8f8a476f98f6.png": {
+    "index": 157,
+    "image_path": "mathwriting/images/test_04eb8f8a476f98f6.png",
+    "ground_truth": "\\eta=1-\\frac{1}{r_{v}^{\\gamma-1}}",
+    "cnn_raw": "MARAR",
+    "trocr_raw": "NET#"
+  },
+  "mathwriting/images/test_04edac9fe8bf5338.png": {
+    "index": 158,
+    "image_path": "mathwriting/images/test_04edac9fe8bf5338.png",
+    "ground_truth": "ACDA_{si}=\\frac{Vd_{hsd}}{V_{i}}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "ADAY=MY-"
+  },
+  "mathwriting/images/test_04edd2773e1d1be2.png": {
+    "index": 159,
+    "image_path": "mathwriting/images/test_04edd2773e1d1be2.png",
+    "ground_truth": "P(Z\\ge k)\\le\\frac{1}{2k^{2}}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "PELK)$24"
+  },
+  "mathwriting/images/test_050334e823c90724.png": {
+    "index": 160,
+    "image_path": "mathwriting/images/test_050334e823c90724.png",
+    "ground_truth": "\\bigcap_{n\\in N}J^{n}=\\{0\\}",
+    "cnn_raw": "DA",
+    "trocr_raw": "QTY:88"
+  },
+  "mathwriting/images/test_05085e53669a2d82.png": {
+    "index": 161,
+    "image_path": "mathwriting/images/test_05085e53669a2d82.png",
+    "ground_truth": "I^{+}(S)\\cap T",
+    "cnn_raw": "ETTTPT",
+    "trocr_raw": "IT(S)MT"
+  },
+  "mathwriting/images/test_0514870f7b7882a9.png": {
+    "index": 162,
+    "image_path": "mathwriting/images/test_0514870f7b7882a9.png",
+    "ground_truth": "\\int_{0}^{1}\\frac{sin(1/x)}{x}dx",
+    "cnn_raw": "CA",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_05158c8c6594ffd7.png": {
+    "index": 163,
+    "image_path": "mathwriting/images/test_05158c8c6594ffd7.png",
+    "ground_truth": "(\\overline{3},1,-\\frac{4}{3})",
+    "cnn_raw": "DA TR",
+    "trocr_raw": "(34-%)"
+  },
+  "mathwriting/images/test_0518e4f59a069378.png": {
+    "index": 164,
+    "image_path": "mathwriting/images/test_0518e4f59a069378.png",
+    "ground_truth": "-\\sqrt{n},...,\\sqrt{n}",
+    "cnn_raw": "CA",
+    "trocr_raw": "-M, -,JM"
+  },
+  "mathwriting/images/test_051c96516aa53311.png": {
+    "index": 165,
+    "image_path": "mathwriting/images/test_051c96516aa53311.png",
+    "ground_truth": "(a+t,b+t]",
+    "cnn_raw": "PA",
+    "trocr_raw": "(RM)6*G"
+  },
+  "mathwriting/images/test_051dca26f81bbffa.png": {
+    "index": 166,
+    "image_path": "mathwriting/images/test_051dca26f81bbffa.png",
+    "ground_truth": "\\frac{1}{n}E(f-Ef)^{2}",
+    "cnn_raw": "MAMNTr",
+    "trocr_raw": "* EGF-EPY*"
+  },
+  "mathwriting/images/test_052b8aebfd8741b9.png": {
+    "index": 167,
+    "image_path": "mathwriting/images/test_052b8aebfd8741b9.png",
+    "ground_truth": "2m-2<n(m-1)",
+    "cnn_raw": "NA^",
+    "trocr_raw": "2\"-2CM(M-1)"
+  },
+  "mathwriting/images/test_0532ff1744b26b27.png": {
+    "index": 168,
+    "image_path": "mathwriting/images/test_0532ff1744b26b27.png",
+    "ground_truth": "W=W^{\\prime}+\\mu^{-1}",
+    "cnn_raw": "Dr",
+    "trocr_raw": "W-W-P*"
+  },
+  "mathwriting/images/test_054562f99b6fb2ff.png": {
+    "index": 169,
+    "image_path": "mathwriting/images/test_054562f99b6fb2ff.png",
+    "ground_truth": "E=H=T+V",
+    "cnn_raw": "PA",
+    "trocr_raw": "E-H=T+V"
+  },
+  "mathwriting/images/test_054e5679c6eb8a09.png": {
+    "index": 170,
+    "image_path": "mathwriting/images/test_054e5679c6eb8a09.png",
+    "ground_truth": "(\\frac{(\\begin{matrix}99\\\\ 49\\end{matrix})}{(\\begin{matrix}100\\\\ 50\\end{matrix})})^{100}=\\frac{1}{2^{100}}",
+    "cnn_raw": "MA",
+    "trocr_raw": "($)"
+  },
+  "mathwriting/images/test_05630d29b19ef4e9.png": {
+    "index": 171,
+    "image_path": "mathwriting/images/test_05630d29b19ef4e9.png",
+    "ground_truth": "[a-bi]",
+    "cnn_raw": "MAR",
+    "trocr_raw": "[A-6]"
+  },
+  "mathwriting/images/test_0572f2b7059fbb57.png": {
+    "index": 172,
+    "image_path": "mathwriting/images/test_0572f2b7059fbb57.png",
+    "ground_truth": "lim_{x\\rightarrow0}\\frac{O(x)}{O(x)}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "INVO 6%"
+  },
+  "mathwriting/images/test_0577724edc225bbb.png": {
+    "index": 173,
+    "image_path": "mathwriting/images/test_0577724edc225bbb.png",
+    "ground_truth": "lim_{x\\rightarrow0}\\frac{x}{x^{3}}=\\infty.(6)",
+    "cnn_raw": "MAM",
+    "trocr_raw": "LAMOR=00. (6)"
+  },
+  "mathwriting/images/test_058e024d79ccf0db.png": {
+    "index": 174,
+    "image_path": "mathwriting/images/test_058e024d79ccf0db.png",
+    "ground_truth": "e^{2}=-\\frac{1}{\\sqrt{2}}e_{1}+2e_{2}",
+    "cnn_raw": "MARRMR",
+    "trocr_raw": "IT RM4"
+  },
+  "mathwriting/images/test_05906cd6fccaca38.png": {
+    "index": 175,
+    "image_path": "mathwriting/images/test_05906cd6fccaca38.png",
+    "ground_truth": "0<k<log_{2}^{2}b",
+    "cnn_raw": "DAR",
+    "trocr_raw": "OLKCLOT6"
+  },
+  "mathwriting/images/test_0590b231d1da49bd.png": {
+    "index": 176,
+    "image_path": "mathwriting/images/test_0590b231d1da49bd.png",
+    "ground_truth": "<",
+    "cnn_raw": "DO",
+    "trocr_raw": "<"
+  },
+  "mathwriting/images/test_05a39bcdbcd491a8.png": {
+    "index": 177,
+    "image_path": "mathwriting/images/test_05a39bcdbcd491a8.png",
+    "ground_truth": "e_{2},e_{3}\\in(-1,0]",
+    "cnn_raw": "MAMARARARAR",
+    "trocr_raw": "EE,E, GL-10)"
+  },
+  "mathwriting/images/test_05afdedd8fca7285.png": {
+    "index": 178,
+    "image_path": "mathwriting/images/test_05afdedd8fca7285.png",
+    "ground_truth": "=10^{-23}\\frac{erg}{s\\cdot cm^{2}\\cdot Hz}",
+    "cnn_raw": "MA",
+    "trocr_raw": "-6%"
+  },
+  "mathwriting/images/test_05bd5644a2dbbb80.png": {
+    "index": 179,
+    "image_path": "mathwriting/images/test_05bd5644a2dbbb80.png",
+    "ground_truth": "\\{f_{X}(\\cdot;\\theta)|\\theta\\in\\Theta\\}",
+    "cnn_raw": "MAMRMAM",
+    "trocr_raw": "{G.(S)LEEF"
+  },
+  "mathwriting/images/test_05d49362d9180518.png": {
+    "index": 180,
+    "image_path": "mathwriting/images/test_05d49362d9180518.png",
+    "ground_truth": "|\\psi(t)\\rangle=U(t)|\\psi(0)\\rangle",
+    "cnn_raw": "MA",
+    "trocr_raw": "IKEX=U-***"
+  },
+  "mathwriting/images/test_05e62d58c104a6b6.png": {
+    "index": 181,
+    "image_path": "mathwriting/images/test_05e62d58c104a6b6.png",
+    "ground_truth": "\\vec{n}_{i}\\cdot\\vec{x}\\le b_{i}",
+    "cnn_raw": "MARRAR",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_05ed816134184613.png": {
+    "index": 182,
+    "image_path": "mathwriting/images/test_05ed816134184613.png",
+    "ground_truth": "p(n-1)\\le1/2<p(n)",
+    "cnn_raw": "PTRARARAR",
+    "trocr_raw": "RM-03 1/20 PM)"
+  },
+  "mathwriting/images/test_05f4416e8a265bee.png": {
+    "index": 183,
+    "image_path": "mathwriting/images/test_05f4416e8a265bee.png",
+    "ground_truth": "0.5=E[X_{1}]",
+    "cnn_raw": "DARRRRR",
+    "trocr_raw": "DS-E[X]"
+  },
+  "mathwriting/images/test_05f89b48c79bb626.png": {
+    "index": 184,
+    "image_path": "mathwriting/images/test_05f89b48c79bb626.png",
+    "ground_truth": "J=A_{G}T^{2}e^{\\frac{-W}{kT}}",
+    "cnn_raw": "CA",
+    "trocr_raw": "S=A,T2.*"
+  },
+  "mathwriting/images/test_05ff9f336cb4000d.png": {
+    "index": 185,
+    "image_path": "mathwriting/images/test_05ff9f336cb4000d.png",
+    "ground_truth": "\\dot{M}=\\dot{B}=0",
+    "cnn_raw": "CA",
+    "trocr_raw": "M=K=0"
+  },
+  "mathwriting/images/test_060162f2a242592b.png": {
+    "index": 186,
+    "image_path": "mathwriting/images/test_060162f2a242592b.png",
+    "ground_truth": "(2m-6)^{2}=50|m|",
+    "cnn_raw": "MAM",
+    "trocr_raw": "(ANG)=SOLM)"
+  },
+  "mathwriting/images/test_06052148b2ed3983.png": {
+    "index": 187,
+    "image_path": "mathwriting/images/test_06052148b2ed3983.png",
+    "ground_truth": "v",
+    "cnn_raw": "LAR",
+    "trocr_raw": "U"
+  },
+  "mathwriting/images/test_0605ccf2d4ba7976.png": {
+    "index": 188,
+    "image_path": "mathwriting/images/test_0605ccf2d4ba7976.png",
+    "ground_truth": "W=\\frac{\\tilde{W}}{\\frac{dz}{d\\zeta}}=\\frac{\\tilde{W}}{1-\\frac{1}{\\zeta^{2}}}",
+    "cnn_raw": "PA",
+    "trocr_raw": "VE-A"
+  },
+  "mathwriting/images/test_060a7e23513df5d6.png": {
+    "index": 189,
+    "image_path": "mathwriting/images/test_060a7e23513df5d6.png",
+    "ground_truth": "Z\\cup[(0,1)\\cap Q]",
+    "cnn_raw": "MAMMRo",
+    "trocr_raw": "ZUE@NO"
+  },
+  "mathwriting/images/test_061f715f098c3a23.png": {
+    "index": 190,
+    "image_path": "mathwriting/images/test_061f715f098c3a23.png",
+    "ground_truth": "\\frac{x^{2}}{1-x^{2}}R",
+    "cnn_raw": "MA",
+    "trocr_raw": "*"
+  },
+  "mathwriting/images/test_06207fc7caa654db.png": {
+    "index": 191,
+    "image_path": "mathwriting/images/test_06207fc7caa654db.png",
+    "ground_truth": "w=\\sqrt{KW-UV}",
+    "cnn_raw": "MARRTT",
+    "trocr_raw": "W = JKW-VV'"
+  },
+  "mathwriting/images/test_0625c86dd5028c58.png": {
+    "index": 192,
+    "image_path": "mathwriting/images/test_0625c86dd5028c58.png",
+    "ground_truth": "\\frac{1}{12}(\\begin{matrix}4&8&4\\\\ 5&7&-4\\\\ 1&-1&4\\end{matrix})",
+    "cnn_raw": "MA",
+    "trocr_raw": "*($%)"
+  },
+  "mathwriting/images/test_06530b484fd92953.png": {
+    "index": 193,
+    "image_path": "mathwriting/images/test_06530b484fd92953.png",
+    "ground_truth": "(a+bm)/k",
+    "cnn_raw": "MAM",
+    "trocr_raw": "(A+BM) /K"
+  },
+  "mathwriting/images/test_0654733b9416d1b9.png": {
+    "index": 194,
+    "image_path": "mathwriting/images/test_0654733b9416d1b9.png",
+    "ground_truth": "\\frac{d}{dt}(\\frac{dt}{d\\tau})\\approx0",
+    "cnn_raw": "Me",
+    "trocr_raw": "1(6%)=0"
+  },
+  "mathwriting/images/test_06584bf963755bf9.png": {
+    "index": 195,
+    "image_path": "mathwriting/images/test_06584bf963755bf9.png",
+    "ground_truth": "\\frac{2log(l-1)-logl}{2}",
+    "cnn_raw": "MAM",
+    "trocr_raw": "11-20-0-KAL"
+  },
+  "mathwriting/images/test_065f369d408a7044.png": {
+    "index": 196,
+    "image_path": "mathwriting/images/test_065f369d408a7044.png",
+    "ground_truth": "\\sum_{i=1}^{n}i=\\frac{n(n+1)}{2}",
+    "cnn_raw": "MA",
+    "trocr_raw": "***"
+  },
+  "mathwriting/images/test_066e40ab3c48f38a.png": {
+    "index": 197,
+    "image_path": "mathwriting/images/test_066e40ab3c48f38a.png",
+    "ground_truth": "x^{2}-\\sqrt{x}=13",
+    "cnn_raw": "D",
+    "trocr_raw": "XP=B"
+  },
+  "mathwriting/images/test_06773a394d1ee0cd.png": {
+    "index": 198,
+    "image_path": "mathwriting/images/test_06773a394d1ee0cd.png",
+    "ground_truth": "1+2+3+4=10",
+    "cnn_raw": "MA  T",
+    "trocr_raw": "(+2+3+4=)0"
+  },
+  "mathwriting/images/test_0677b0841b3eabb8.png": {
+    "index": 199,
+    "image_path": "mathwriting/images/test_0677b0841b3eabb8.png",
+    "ground_truth": "d=\\frac{v^{2}}{g}sin(2\\theta)",
+    "cnn_raw": "MA TT",
+    "trocr_raw": "A= +SM(20)"
+  },
+  "mathwriting/images/test_068953c99e05c2d8.png": {
+    "index": 200,
+    "image_path": "mathwriting/images/test_068953c99e05c2d8.png",
+    "ground_truth": "f^{-1}(\\overline{Z})=\\overline{f^{-1}(Z)}",
+    "cnn_raw": "PTTrr",
+    "trocr_raw": "***(2)-***"
+  },
+  "mathwriting/images/test_06909af025a4639f.png": {
+    "index": 201,
+    "image_path": "mathwriting/images/test_06909af025a4639f.png",
+    "ground_truth": "L_{X}f=i_{X}df",
+    "cnn_raw": "MARMRMA",
+    "trocr_raw": "LXP-KOF"
+  },
+  "mathwriting/images/train_003f776fa12094ca.png": {
+    "index": 202,
+    "image_path": "mathwriting/images/train_003f776fa12094ca.png",
+    "ground_truth": "V=f(t)=V_{0}e^{-\\frac{t}{\\tau}}",
+    "cnn_raw": "MA",
+    "trocr_raw": "V=/(-X-*"
+  }
+}

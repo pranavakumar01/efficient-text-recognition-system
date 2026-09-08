@@ -5,6 +5,7 @@ import base64
 from PIL import Image
 
 from src.infer import OCRInferenceEngine
+from src.preprocessing.enhancement import ImagePreprocessor
 
 class LineSegmenter:
     """
@@ -13,51 +14,85 @@ class LineSegmenter:
     Cleanly extracts individual text line crops with tight bounding boxes from full-page documents.
     """
     @staticmethod
-    def segment_lines(img_np: np.ndarray, min_line_height: int = 10) -> list:
-        """
-        Returns list of dicts: [{'crop': np.ndarray, 'bbox': (x, y, w, h)}, ...]
-        """
+    def _split_tall_band(binary_crop: np.ndarray, min_line_height: int = 8) -> list:
+        hpp = np.sum(binary_crop > 0, axis=1)
+        if len(hpp) == 0:
+            return []
+        thresh = max(1.0, np.mean(hpp) * 0.15)
+        slices = []
+        in_line = False
+        start = 0
+        for y, val in enumerate(hpp):
+            if val > thresh and not in_line:
+                in_line = True
+                start = y
+            elif val <= thresh and in_line:
+                in_line = False
+                if y - start >= min_line_height:
+                    slices.append((start, y))
+        if in_line and len(hpp) - start >= min_line_height:
+            slices.append((start, len(hpp)))
+        return slices
+
+    @classmethod
+    def segment_lines(cls, img_np: np.ndarray, min_line_height: int = 8) -> list:
         if img_np is None:
             return []
 
         gray = cv2.cvtColor(img_np, cv2.COLOR_BGR2GRAY) if len(img_np.shape) == 3 else img_np.copy()
         h, w = gray.shape
 
-        # Inverted binarization so text strokes are 255 (white on black background)
         blur = cv2.GaussianBlur(gray, (3, 3), 0)
         _, binary = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
-        # Dynamic kernel width based on image dimensions
-        kernel_w = max(20, int(w * 0.04))
-        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (kernel_w, 3))
-        dilated = cv2.dilate(binary, kernel, iterations=2)
+        kernel_w = max(16, int(w * 0.035))
+        h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (kernel_w, 1))
+        dilated = cv2.dilate(binary, h_kernel, iterations=2)
 
-        # Find line contours
         contours, _ = cv2.findContours(dilated, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-        line_boxes = []
+        raw_boxes = []
         for cnt in contours:
             x, y, bw, bh = cv2.boundingRect(cnt)
-            # Filter tiny noise artifacts
-            if bh >= min_line_height and bw >= 20 and (bw * bh) > 300:
-                line_boxes.append((x, y, bw, bh))
+            if bh >= min_line_height and bw >= 15 and (bw * bh) > 100:
+                raw_boxes.append((x, y, bw, bh))
 
-        # Sort line boxes strictly top-to-bottom (by y coordinate)
-        line_boxes = sorted(line_boxes, key=lambda b: b[1])
+        if not raw_boxes:
+            return [{"crop": img_np, "bbox": (0, 0, w, h)}]
 
-        # Merge boxes that heavily overlap vertically
+        median_h = float(np.median([b[3] for b in raw_boxes]))
+        max_single_line_h = max(26, int(median_h * 1.85))
+
+        sliced_boxes = []
+        for (x, y, bw, bh) in raw_boxes:
+            if bh > max_single_line_h:
+                crop_bin = binary[y:y+bh, x:x+bw]
+                sub_slices = cls._split_tall_band(crop_bin, min_line_height=min_line_height)
+                if len(sub_slices) > 1:
+                    for s_start, s_end in sub_slices:
+                        sub_h = s_end - s_start
+                        if sub_h >= min_line_height:
+                            sliced_boxes.append((x, y + s_start, bw, sub_h))
+                else:
+                    sliced_boxes.append((x, y, bw, bh))
+            else:
+                sliced_boxes.append((x, y, bw, bh))
+
+        sliced_boxes = sorted(sliced_boxes, key=lambda b: (b[1], b[0]))
+
         merged_boxes = []
-        for box in line_boxes:
+        for box in sliced_boxes:
             if not merged_boxes:
                 merged_boxes.append(box)
                 continue
             prev_x, prev_y, prev_w, prev_h = merged_boxes[-1]
             curr_x, curr_y, curr_w, curr_h = box
 
-            # Check if boxes are on the same vertical line band
             v_overlap = min(prev_y + prev_h, curr_y + curr_h) - max(prev_y, curr_y)
-            if v_overlap > (0.6 * min(prev_h, curr_h)):
-                # Merge into single wider line
+            min_h = min(prev_h, curr_h)
+            h_gap = curr_x - (prev_x + prev_w)
+
+            if v_overlap > (0.6 * min_h) and h_gap < 50 and abs(prev_y - curr_y) < (0.5 * min_h):
                 new_x = min(prev_x, curr_x)
                 new_y = min(prev_y, curr_y)
                 new_w = max(prev_x + prev_w, curr_x + curr_w) - new_x
@@ -66,11 +101,12 @@ class LineSegmenter:
             else:
                 merged_boxes.append(box)
 
+        merged_boxes = sorted(merged_boxes, key=lambda b: b[1])
+
         results = []
         for (x, y, bw, bh) in merged_boxes:
-            # Add safe margin padding
-            pad_y = max(2, int(bh * 0.12))
-            pad_x = max(2, int(bw * 0.03))
+            pad_y = max(2, int(bh * 0.15))
+            pad_x = max(3, int(bw * 0.02))
 
             y1 = max(0, y - pad_y)
             y2 = min(h, y + bh + pad_y)
@@ -84,28 +120,36 @@ class LineSegmenter:
                     "bbox": (x1, y1, x2 - x1, y2 - y1)
                 })
 
-        # Fallback if no contours found (treat entire image as single crop)
-        if not results:
-            results.append({
-                "crop": img_np,
-                "bbox": (0, 0, w, h)
-            })
-
-        return results
+        return results if results else [{"crop": img_np, "bbox": (0, 0, w, h)}]
 
 
 class DocumentOCREngine:
     """
     End-to-End Full Page Document & Multi-Line OCR Processing Engine.
-    Supports separate execution of CNN-based model and Transformer-based model.
+    Supports separate execution of CNN-based model and Transformer-based model,
+    quantized edge execution, and historical document enhancement.
     """
-    def __init__(self, inference_engine: OCRInferenceEngine = None):
-        self.inference_engine = inference_engine if inference_engine is not None else OCRInferenceEngine()
+    def __init__(self, inference_engine: OCRInferenceEngine = None, use_quantized: bool = False):
+        self.inference_engine = inference_engine if inference_engine is not None else OCRInferenceEngine(use_quantized=use_quantized)
         self.segmenter = LineSegmenter()
 
-    def process_document(self, img_np: np.ndarray, model_type: str = "both", enable_autocorrect: bool = True) -> dict:
-        line_segments = self.segmenter.segment_lines(img_np)
-        
+    def process_document(self, img_np: np.ndarray, model_type: str = "both",
+                         enable_autocorrect: bool = True, domain: str = "auto",
+                         is_historical: bool = False, use_quantized: bool = False) -> dict:
+        if use_quantized != getattr(self.inference_engine, "use_quantized", False):
+            self.inference_engine = OCRInferenceEngine(use_quantized=use_quantized)
+
+        # Full-page historical background restoration once before line segmentation
+        if is_historical:
+            p = ImagePreprocessor()
+            working_img = p.enhance_historical(img_np)
+            if len(working_img.shape) == 2:
+                working_img = cv2.cvtColor(working_img, cv2.COLOR_GRAY2BGR)
+        else:
+            working_img = img_np
+
+        line_segments = self.segmenter.segment_lines(working_img)
+
         annotated_img = img_np.copy()
         lines_output = []
         cnn_transcript = []
@@ -118,7 +162,10 @@ class DocumentOCREngine:
             crop = seg["crop"]
             x, y, bw, bh = seg["bbox"]
 
-            res = self.inference_engine.run_pipeline(crop, model_type=model_type, enable_autocorrect=enable_autocorrect)
+            res = self.inference_engine.run_pipeline(
+                crop, model_type=model_type, enable_autocorrect=enable_autocorrect,
+                domain=domain, is_historical=False
+            )
 
             cnn_text = res["cnn_bilstm_attention"]["predicted_text"] if res.get("cnn_bilstm_attention") else ""
             trocr_text = res["transformer_baseline"]["predicted_text"] if res.get("transformer_baseline") else ""
@@ -134,7 +181,6 @@ class DocumentOCREngine:
             if trocr_text: trocr_transcript.append(trocr_text)
             full_transcript.append(line_pred)
 
-            # Draw bounding box overlay on annotated image
             color = (34, 139, 34) if model_type == "cnn" else ((147, 20, 255) if model_type == "transformer" else (0, 242, 254))
             cv2.rectangle(annotated_img, (x, y), (x + bw, y + bh), color, 2)
             cv2.putText(
@@ -150,18 +196,25 @@ class DocumentOCREngine:
                 "predicted_text": line_pred
             })
 
-        # Encode annotated image to base64 for UI rendering
         _, buffer = cv2.imencode('.png', annotated_img)
         annotated_base64 = base64.b64encode(buffer).decode('utf-8')
+
+        cnn_full = "\n".join(cnn_transcript)
+        trocr_full = "\n".join(trocr_transcript)
+        if enable_autocorrect:
+            from src.utils.postprocessing import OCRPostProcessor
+            cnn_full = OCRPostProcessor.process(cnn_full, enable_autocorrect=True)
+            trocr_full = OCRPostProcessor.process(trocr_full, enable_autocorrect=True)
 
         return {
             "model_type": model_type,
             "total_lines_detected": len(line_segments),
-            "cnn_transcript": "\n".join(cnn_transcript),
-            "trocr_transcript": "\n".join(trocr_transcript),
+            "cnn_transcript": cnn_full,
+            "trocr_transcript": trocr_full,
             "full_transcript": "\n".join(full_transcript),
             "lines": lines_output,
-            "annotated_image_base64": f"data:image/png;base64,{annotated_base64}"
+            "annotated_image_base64": f"data:image/png;base64,{annotated_base64}",
+            "is_quantized": use_quantized
         }
 
 
@@ -172,6 +225,3 @@ if __name__ == "__main__":
         img = cv2.imread(sample_path)
         out = doc_engine.process_document(img, model_type="both")
         print(f"[OK] Document OCR Test passed! Detected {out['total_lines_detected']} line(s).")
-        print(f"CNN Transcript:\n{out['cnn_transcript']}")
-        print(f"TrOCR Transcript:\n{out['trocr_transcript']}")
-

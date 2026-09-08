@@ -1,0 +1,16 @@
+image_path,dataset,is_math,ctc_feasible,ground_truth,cnn_prediction,cnn_cer,cnn_wer,trocr_prediction,trocr_cer,trocr_wer
+data\expanded\images\sample_0004.png,expanded,0,1,Optical Character Recognition Engine,Dial Dan dentin Ding,0.6111,1.0,Optical Character Recognition Engine,0.0,0.0
+data\expanded\images\sample_0013.png,expanded,0,1,Self Supervised Representation Learning,Mt tia rmentitin ring,0.6154,1.0,Self Supervised Representation Learning,0.0,0.0
+data\expanded\images\sample_0019.png,expanded,0,1,Adaptive Histogram Equalization Filtering,Artie Man Din Train,0.7073,1.0,Adaptive Histogram Equalization Filtering,0.0,0.0
+data\expanded\images\sample_0026.png,expanded,0,1,Low Resource Domain Adaptation Test,De en De Msen Don,0.7714,1.0,Low Resource Domain Adaptation Test,0.0,0.0
+data\expanded\images\sample_0032.png,expanded,0,1,Optical Character Recognition Engine,Dial Dote Dentin One,0.5833,1.0,Optical Character Recognition Engine,0.0,0.0
+data\expanded\images\sample_0045.png,expanded,0,1,Connectionist Temporal Classification Loss,Cotinga Point Tinting Ms,0.6905,1.0,Connectionist Temporal Classification Loss,0.0,0.0
+data\expanded\images\sample_0049.png,expanded,0,1,Ancient Text Restoration and OCR,Deer Ton Data ad n,0.6875,1.0,Ancient Text Restoration And Or,0.0938,0.4
+data\expanded\images\sample_0053.png,expanded,0,1,Ancient Text Restoration and OCR,Cunt nd Ten ant R,0.6562,1.0,Ancient Text Restoration And Or,0.0938,0.4
+data\expanded\images\sample_0059.png,expanded,0,1,Self Supervised Representation Learning,Dad Feria edition Bring,0.6154,1.0,Self Supervised Representation Learning,0.0,0.0
+data\expanded\images\sample_0060.png,expanded,0,1,Self Supervised Representation Learning,D rand Nrrtitin Grin,0.6667,1.0,Self Supervised Representation Learning,0.0,0.0
+data\expanded\images\sample_0061.png,expanded,0,1,sqrt{x^2 + y^2} <= |x| + |y|,ai^t y^t) ypx) p),0.75,1.0,SQRT(X^2 + y^2} <= [X| + LYL,0.3929,0.4286
+data\expanded\images\sample_0063.png,expanded,0,1,Low Resource Domain Adaptation Test,De Need Di sin Poe,0.7429,1.0,Low Resource Domain Adaptation Test,0.0,0.0
+data\expanded\images\sample_0068.png,expanded,0,1,Self Supervised Representation Learning,Nd Nice Dating Grin,0.7179,1.0,Self Supervised Representation Learning,0.0,0.0
+data\expanded\images\sample_0078.png,expanded,0,1,Ancient Text Restoration and OCR,Cion ad Dirtier and R,0.5938,0.8,Ancient Text Restoration And Or,0.0938,0.4
+data\expanded\images\sample_0079.png,expanded,0,1,Low Resource Domain Adaptation Test,D Nn Di Main Peg,0.7143,1.0,Low Resource Domain Adaptation Test,0.0,0.0

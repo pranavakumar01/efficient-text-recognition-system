@@ -59,12 +59,24 @@ def get_sample_image(filename: str):
     b64 = encode_img_to_b64(img_np)
     return JSONResponse({"image_b64": f"data:image/png;base64,{b64}"})
 
+@app.get("/api/edge_metrics")
+def get_edge_metrics():
+    summary_path = os.path.join("d:\\Major Project", "docs", "edge_benchmark_summary.json")
+    if os.path.exists(summary_path):
+        with open(summary_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return JSONResponse({"status": "success", "edge_metrics": data})
+    return JSONResponse({"status": "pending", "message": "Edge benchmark not yet computed"})
+
 @app.post("/api/predict")
 async def predict(
     file: UploadFile = File(...),
     model_type: str = Form("both"),
     enable_autocorrect: bool = Form(True),
-    ground_truth: str = Form(None)
+    ground_truth: str = Form(None),
+    domain: str = Form("auto"),
+    is_historical: bool = Form(False),
+    use_quantized: bool = Form(False)
 ):
     try:
         contents = await file.read()
@@ -74,16 +86,24 @@ async def predict(
         if image_np is None:
             return JSONResponse({"error": "Invalid image file"}, status_code=400)
 
+        global engine
+        if use_quantized != getattr(engine, "use_quantized", False):
+            engine = OCRInferenceEngine(use_quantized=use_quantized)
+
         results = engine.run_pipeline(
             image_np,
             model_type=model_type,
             ground_truth=ground_truth,
-            enable_autocorrect=enable_autocorrect
+            enable_autocorrect=enable_autocorrect,
+            domain=domain,
+            is_historical=is_historical
         )
 
         b64_preprocessing = {}
         if results.get("preprocessing"):
             for stage_name, stage_img in results["preprocessing"].items():
+                if not isinstance(stage_img, np.ndarray):
+                    continue
                 if len(stage_img.shape) == 2:
                     stage_img = cv2.cvtColor(stage_img, cv2.COLOR_GRAY2BGR)
                 b64_preprocessing[stage_name] = f"data:image/png;base64,{encode_img_to_b64(stage_img)}"
@@ -92,9 +112,11 @@ async def predict(
             "status": "success",
             "active_model": results.get("active_model", model_type),
             "autocorrect_enabled": enable_autocorrect,
+            "is_quantized": use_quantized,
             "preprocessing_stages": b64_preprocessing,
             "primary_model": results.get("cnn_bilstm_attention"),
-            "baseline_model": results.get("transformer_baseline")
+            "baseline_model": results.get("transformer_baseline"),
+            "math_engine": results.get("math_engine")
         })
     except Exception as e:
         import traceback
@@ -105,7 +127,10 @@ async def predict(
 async def process_document(
     file: UploadFile = File(...),
     model_type: str = Form("both"),
-    enable_autocorrect: bool = Form(True)
+    enable_autocorrect: bool = Form(True),
+    domain: str = Form("auto"),
+    is_historical: bool = Form(False),
+    use_quantized: bool = Form(False)
 ):
     try:
         contents = await file.read()
@@ -115,11 +140,16 @@ async def process_document(
         if image_np is None:
             return JSONResponse({"error": "Invalid image file"}, status_code=400)
 
-        out = doc_engine.process_document(image_np, model_type=model_type, enable_autocorrect=enable_autocorrect)
+        global doc_engine
+        out = doc_engine.process_document(
+            image_np, model_type=model_type, enable_autocorrect=enable_autocorrect,
+            domain=domain, is_historical=is_historical, use_quantized=use_quantized
+        )
         return JSONResponse({
             "status": "success",
             "model_type": out["model_type"],
             "autocorrect_enabled": enable_autocorrect,
+            "is_quantized": use_quantized,
             "total_lines_detected": out["total_lines_detected"],
             "cnn_transcript": out["cnn_transcript"],
             "trocr_transcript": out["trocr_transcript"],

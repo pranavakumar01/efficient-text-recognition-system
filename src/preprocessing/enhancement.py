@@ -4,9 +4,10 @@ from PIL import Image
 
 class ImagePreprocessor:
     """
-    Advanced Preprocessing pipeline for document, handwritten, and scene text recognition.
-    Includes edge-preserving contrast enhancement, robust deskewing, noise reduction,
-    and aspect-ratio preserving dynamic normalization.
+    Advanced Preprocessing pipeline for document, handwritten, mathematical,
+    and historical text recognition.
+    Includes domain detection, adaptive historical enhancement, edge-preserving
+    contrast enhancement, robust deskewing, and aspect-ratio preserving normalization.
     """
     def __init__(self, target_height: int = 32, default_max_width: int = 640):
         self.target_height = target_height
@@ -23,7 +24,7 @@ class ImagePreprocessor:
                 blended = (image[:, :, :3] * alpha[:, :, None] + bg * (1.0 - alpha[:, :, None])).astype(np.uint8)
                 return cv2.cvtColor(blended, cv2.COLOR_BGR2GRAY)
             return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        return image
+        return image.copy()
 
     def denoise(self, image: np.ndarray) -> np.ndarray:
         # Fast bilateral filtering preserves high-frequency character edges and stroke terminals
@@ -40,12 +41,92 @@ class ImagePreprocessor:
         _, binary = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         return binary
 
+    def enhance_historical(self, image: np.ndarray) -> np.ndarray:
+        """
+        Specialized restoration for degraded historical archival documents:
+        1. Background illumination correction (rolling ball / large median filter).
+        2. Contrast normalization to eliminate aged yellow paper tone and bleed-through.
+        3. Morphological stroke reconnection for faded antique letterforms.
+        """
+        gray = self.grayscale(image)
+        # Background estimation via large morphological opening
+        bg_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (25, 25))
+        background = cv2.morphologyEx(gray, cv2.MORPH_DILATE, bg_kernel)
+        background = cv2.GaussianBlur(background, (25, 25), 0)
+
+        # Difference-based background normalization
+        diff = cv2.absdiff(gray, background)
+        normalized = cv2.normalize(diff, None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8U)
+        # Invert so ink is dark on light background
+        normalized = 255 - normalized
+
+        # Subtle CLAHE pass for enhanced character edge contrast
+        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+        enhanced = clahe.apply(normalized)
+
+        # Morphological closing to reconnect faded ink stroke fragments
+        close_kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2, 2))
+        restored = cv2.morphologyEx(enhanced, cv2.MORPH_CLOSE, close_kernel)
+        return restored
+
+    @staticmethod
+    def detect_domain(image_np: np.ndarray) -> str:
+        """
+        Heuristic image domain detector: classifies crop as 'handwritten', 'math', or 'printed'.
+        Analyzes stroke orientation entropy, horizontal line structures, and contour properties.
+        """
+        if image_np is None:
+            return "printed"
+
+        gray = cv2.cvtColor(image_np, cv2.COLOR_BGR2GRAY) if len(image_np.shape) == 3 else image_np
+        h, w = gray.shape
+        if h < 8 or w < 8:
+            return "printed"
+
+        # Binarize inverted
+        _, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+
+        # 1. Math check: detect horizontal fraction bars or isolated operator lines
+        h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (max(16, int(w * 0.15)), 1))
+        h_lines = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, h_kernel)
+        if cv2.countNonZero(h_lines) > (w * 0.12):
+            return "math"
+
+        # 2. Handwriting check: compute gradient orientation variance
+        sobel_x = cv2.Sobel(gray, cv2.CV_32F, 1, 0, ksize=3)
+        sobel_y = cv2.Sobel(gray, cv2.CV_32F, 0, 1, ksize=3)
+        mag = np.sqrt(sobel_x**2 + sobel_y**2)
+        angles = np.arctan2(sobel_y, sobel_x) * 180 / np.pi
+
+        # High-magnitude edge pixels
+        edge_mask = mag > 50
+        if np.sum(edge_mask) > 50:
+            edge_angles = angles[edge_mask]
+            # Standard deviation of edge angles: handwriting has substantially higher angle entropy
+            angle_std = np.std(edge_angles)
+
+            # Connected component analysis for stroke curvature
+            contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            if contours:
+                aspect_ratios = []
+                for c in contours:
+                    _, _, cw, ch = cv2.boundingRect(c)
+                    if ch > 4 and cw > 4:
+                        aspect_ratios.append(cw / float(ch))
+
+                if aspect_ratios:
+                    ar_variance = np.var(aspect_ratios)
+                    # Real handwriting exhibits both variable orientation angles and irregular aspect ratio variance
+                    if angle_std > 82.0 or (ar_variance > 1.8 and angle_std > 70.0):
+                        return "handwritten"
+
+        return "printed"
+
     def deskew(self, image: np.ndarray) -> np.ndarray:
         """
-        Calculates skew angle on inverted text foreground strokes (not the background canvas)
-        and applies rotation correction within safe bounds [-20 deg, +20 deg].
+        Calculates skew angle on inverted text foreground strokes
+        and applies rotation correction within safe bounds [-25 deg, +25 deg].
         """
-        # Invert so text strokes are > 0 (white on black)
         if np.mean(image) > 127:
             _, thresh = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
         else:
@@ -63,7 +144,6 @@ class ImagePreprocessor:
         else:
             angle = -angle
 
-        # Clamp angle: only correct modest rotation tilts, ignore extreme orientations
         if abs(angle) > 25.0 or abs(angle) < 0.3:
             return image
 
@@ -73,41 +153,55 @@ class ImagePreprocessor:
         rotated = cv2.warpAffine(image, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
         return rotated
 
-    def resize_and_pad(self, image: np.ndarray, max_width: int = None) -> np.ndarray:
-        """
-        Resizes image to target_height while preserving original aspect ratio.
-        Pads width to next multiple of 16 (or minimum 32) with white background.
-        """
+    def resize_and_pad(self, image: np.ndarray, max_width: int = None, return_content_width: bool = False):
         h, w = image.shape[:2]
         if h <= 0 or w <= 0:
-            return np.ones((self.target_height, 128), dtype=np.uint8) * 255
+            blank = np.ones((self.target_height, 128), dtype=np.uint8) * 255
+            return (blank, 128) if return_content_width else blank
 
         aspect_ratio = w / float(h)
         new_w = max(16, int(self.target_height * aspect_ratio))
         max_w = max_width or self.default_max_width
         new_w = min(new_w, max_w)
 
-        # Scale with INTER_AREA for downsampling, INTER_CUBIC for upsampling
         interp = cv2.INTER_AREA if new_w < w else cv2.INTER_CUBIC
         resized = cv2.resize(image, (new_w, self.target_height), interpolation=interp)
 
-        # Pad width to nearest multiple of 16 for clean CNN pooling
         target_w = int(np.ceil(new_w / 16.0) * 16)
         target_w = max(32, target_w)
 
         if target_w > new_w:
             canvas = np.ones((self.target_height, target_w), dtype=np.uint8) * 255
             canvas[:, :new_w] = resized
-            return canvas
-        return resized
+            return (canvas, new_w) if return_content_width else canvas
+        return (resized, new_w) if return_content_width else resized
 
-    def process(self, image: np.ndarray, max_width: int = None) -> dict:
+    def prepare(self, image: np.ndarray, max_width: int = None, is_historical: bool = False) -> tuple:
+        """
+        Primary preprocessing entry point.
+        Returns (final_uint8_image, content_width).
+        """
+        if is_historical:
+            enhanced = self.enhance_historical(image)
+        else:
+            gray = self.grayscale(image)
+            denoised = self.denoise(gray)
+            enhanced = self.enhance_contrast(denoised)
+
+        deskewed = self.deskew(enhanced)
+        final_img, content_width = self.resize_and_pad(
+            deskewed, max_width=max_width, return_content_width=True
+        )
+        return final_img, content_width
+
+    def process(self, image: np.ndarray, max_width: int = None, is_historical: bool = False) -> dict:
         gray = self.grayscale(image)
         denoised = self.denoise(gray)
-        enhanced = self.enhance_contrast(denoised)
+        enhanced = self.enhance_historical(image) if is_historical else self.enhance_contrast(denoised)
         binarized = self.binarize(enhanced)
-        deskewed = self.deskew(enhanced)  # Deskew grayscale-enhanced to retain anti-aliasing
-        final_img = self.resize_and_pad(deskewed, max_width=max_width)
+        deskewed = self.deskew(enhanced)
+        final_img, content_width = self.prepare(image, max_width=max_width, is_historical=is_historical)
+        domain = self.detect_domain(image)
 
         return {
             "grayscale": gray,
@@ -115,13 +209,7 @@ class ImagePreprocessor:
             "enhanced": enhanced,
             "binarized": binarized,
             "deskewed": deskewed,
-            "final": final_img
+            "final": final_img,
+            "content_width": content_width,
+            "detected_domain": domain,
         }
-
-
-if __name__ == "__main__":
-    prep = ImagePreprocessor()
-    test_img = np.ones((64, 400, 3), dtype=np.uint8) * 255
-    cv2.putText(test_img, "Test OCR Preprocessing", (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 0), 2)
-    res = prep.process(test_img)
-    print("Preprocessor test passed. Final output shape:", res["final"].shape)

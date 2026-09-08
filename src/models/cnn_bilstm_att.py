@@ -44,20 +44,32 @@ class CNNFeatureExtractor(nn.Module):
 
 class BahdanauAttention(nn.Module):
     """
-    Bahdanau Sequence Attention Mechanism.
+    Temporal Sequence Attention Mechanism.
+    Computes attentive sequence representations across timesteps with full parameter compatibility.
     """
     def __init__(self, hidden_dim: int):
         super(BahdanauAttention, self).__init__()
         self.W1 = nn.Linear(hidden_dim, hidden_dim)
         self.W2 = nn.Linear(hidden_dim, hidden_dim)
         self.V = nn.Linear(hidden_dim, 1)
+        self.scale = (hidden_dim ** 0.5)
 
-    def forward(self, query: torch.Tensor, values: torch.Tensor) -> torch.Tensor:
-        # query: [B, hidden_dim], values: [B, seq_len, hidden_dim]
-        score = self.V(torch.tanh(self.W1(values) + self.W2(query).unsqueeze(1)))
-        attention_weights = F.softmax(score, dim=1)
-        context_vector = torch.sum(attention_weights * values, dim=1)
-        return context_vector, attention_weights
+    def forward(self, query: torch.Tensor, values: torch.Tensor) -> tuple:
+        # values: [B, seq_len, hidden_dim]
+        # If query is 2D [B, hidden_dim], compute sequence-level additive attention
+        if query.dim() == 2:
+            score = self.V(torch.tanh(self.W1(values) + self.W2(query).unsqueeze(1)))
+            attention_weights = F.softmax(score, dim=1)
+            context = torch.sum(attention_weights * values, dim=1, keepdim=True).expand_as(values)
+            return context, attention_weights
+
+        # If query is 3D [B, seq_len, hidden_dim], compute full temporal self-attention
+        q = self.W2(query)
+        k = self.W1(values)
+        scores = torch.bmm(q, k.transpose(1, 2)) / self.scale
+        att_weights = F.softmax(scores, dim=-1)
+        context = torch.bmm(att_weights, values)
+        return context, att_weights
 
 class CNN_BiLSTM_Attention(nn.Module):
     """
@@ -127,11 +139,10 @@ class CNN_BiLSTM_Attention(nn.Module):
         features = self.feature_extractor(x)  # [B, Seq_Len, Hidden_Dim]
         lstm_out, _ = self.bilstm(features)   # [B, Seq_Len, Hidden_Dim * 2]
         
-        # Compute Bahdanau sequence attention
-        query = torch.mean(lstm_out, dim=1)
-        context, att_weights = self.attention(query, lstm_out)
+        # Compute temporal sequence attention across BiLSTM states
+        context, att_weights = self.attention(lstm_out, lstm_out)
 
-        # Attentive feature modulation: modulate sequence with temporal attention weights
-        attended_seq = lstm_out * (1.0 + att_weights)
+        # Attentive residual sequence representation
+        attended_seq = lstm_out + context
         logits = self.classifier(attended_seq)   # [B, Seq_Len, Num_Classes]
         return logits, att_weights

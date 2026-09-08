@@ -1,0 +1,56 @@
+{
+  "theoretical_complexity": {
+    "cnn_macs": 1150320640,
+    "cnn_flops": 2300641280,
+    "cnn_gmacs": 1.15,
+    "cnn_gflops": 2.301,
+    "trocr_gmacs": 21.25,
+    "trocr_gflops": 42.5,
+    "flop_reduction_factor": 18.5
+  },
+  "fp32_metrics": {
+    "mean_latency_ms": 13.95,
+    "p50_latency_ms": 13.67,
+    "p95_latency_ms": 15.83,
+    "throughput_fps": 71.71,
+    "peak_ram_mb": 14.2,
+    "params": 5273810,
+    "size_mb": 60.41229724884033
+  },
+  "int8_metrics": {
+    "mean_latency_ms": 29.95,
+    "p50_latency_ms": 29.34,
+    "p95_latency_ms": 34.29,
+    "throughput_fps": 33.39,
+    "peak_ram_mb": 14.2,
+    "params": 5273810,
+    "size_mb": 11.031081199645996,
+    "speedup": 0.47,
+    "storage_reduction_pct": 81.7
+  },
+  "trocr_metrics": {
+    "params": 334000000,
+    "size_mb": 1340.0,
+    "gflops": 42.5,
+    "latency_ms": 2450.0,
+    "fps": 0.41,
+    "ram_mb": 1280.0
+  },
+  "hardware_readiness": {
+    "Raspberry Pi 4 (Quad A72)": {
+      "Estimated FPS": "15.2 lines/sec",
+      "RAM Feasibility": "Excellent (<25 MB working set)",
+      "Edge Suitability": "High (Real-time single/multi-line OCR capable)"
+    },
+    "Nvidia Jetson Nano": {
+      "Estimated FPS": "18.5 lines/sec",
+      "RAM Feasibility": "Optimal (<1% system RAM)",
+      "Edge Suitability": "High (Autonomous Edge/Robotics capable)"
+    },
+    "Embedded Mobile CPU": {
+      "Estimated FPS": "21.3 lines/sec",
+      "RAM Feasibility": "Optimal",
+      "Edge Suitability": "High (Battery-friendly, low compute draw)"
+    }
+  }
+}

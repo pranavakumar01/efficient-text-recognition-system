@@ -56,26 +56,71 @@ class SimCLRTransform:
 
 class UnlabeledSSLDataset(Dataset):
     """
-    Unlabeled Image Dataset for Self-Supervised Learning Pretraining.
-    Does not require text label annotations.
+    Unlabeled image dataset for self-supervised pre-training. No text labels.
+
+    Two ways to choose images:
+
+    * manifest=<path to data/splits.csv> (preferred) - uses only the images in
+      the given split. This matters: SimCLR is unsupervised, but running it over
+      the test images still lets the encoder shape its features around them, and
+      the resulting test CER is then no longer a clean held-out measurement.
+
+    * data_dir=<folder> (legacy) - walks that folder plus the project's other
+      data folders. Note that this includes test images, so a run using this
+      path must be described as transductive, not as a held-out result.
+
+    The previous version accepted `data_dir` but then always appended a
+    hardcoded list of every data folder to the search, so `--data_dir` could
+    only ever add images and never restrict them.
     """
-    def __init__(self, data_dir: str, transform: SimCLRTransform = None):
+
+    IMG_EXT = (".png", ".jpg", ".jpeg")
+
+    def __init__(self, data_dir: str = None, transform: SimCLRTransform = None,
+                 manifest: str = None, split: str = "train"):
         self.transform = transform or SimCLRTransform()
         self.image_paths = []
+        self.source = ""
 
-        dirs_to_search = [
-            data_dir,
-            "d:\\Major Project\\data\\mathwriting",
-            "d:\\Major Project\\data\\expanded",
-            "d:\\Major Project\\data\\kaggle_dataset"
-        ]
+        if manifest:
+            if not os.path.exists(manifest):
+                raise FileNotFoundError(
+                    f"Split manifest not found at {manifest}. "
+                    f"Run: python -m src.make_splits"
+                )
+            import csv
+            root = os.path.dirname(os.path.abspath(manifest))
+            with open(manifest, "r", encoding="utf-8", newline="") as f:
+                for row in csv.DictReader(f):
+                    if split and row.get("split", "").lower() != split.lower():
+                        continue
+                    rel = (row.get("image_path") or "").replace("\\", "/")
+                    path = os.path.join(root, os.path.normpath(rel))
+                    if os.path.exists(path):
+                        self.image_paths.append(path)
+            self.source = f"{manifest} (split={split})"
+        else:
+            project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            data_root = os.path.join(project_root, "data")
+            dirs_to_search = [d for d in (
+                data_dir,
+                os.path.join(data_root, "mathwriting"),
+                os.path.join(data_root, "expanded"),
+                os.path.join(data_root, "kaggle_dataset"),
+            ) if d]
 
-        for d in dirs_to_search:
-            if os.path.exists(d):
-                for root, _, files in os.walk(d):
+            seen = set()
+            for d in dirs_to_search:
+                if not os.path.exists(d):
+                    continue
+                for dirpath, _, files in os.walk(d):
                     for fname in files:
-                        if fname.lower().endswith((".png", ".jpg", ".jpeg")):
-                            self.image_paths.append(os.path.join(root, fname))
+                        if fname.lower().endswith(self.IMG_EXT):
+                            p = os.path.join(dirpath, fname)
+                            if p not in seen:      # data_dir may overlap the others
+                                seen.add(p)
+                                self.image_paths.append(p)
+            self.source = f"directory walk ({len(dirs_to_search)} folders, ALL SPLITS)"
 
     def __len__(self):
         return len(self.image_paths)
@@ -87,26 +132,42 @@ class UnlabeledSSLDataset(Dataset):
 
 
 def train_ssl(
-    data_dir: str = "d:\\Major Project\\data\\synthetic",
+    data_dir: str = None,
     epochs: int = 5,
     batch_size: int = 8,
     lr: float = 1e-3,
-    save_dir: str = "d:\\Major Project\\src\\models\\checkpoints"
+    save_dir: str = None,
+    manifest: str = None,
+    split: str = "train",
 ):
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    save_dir = save_dir or os.path.join(project_root, "src", "models", "checkpoints")
     os.makedirs(save_dir, exist_ok=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"[*] SSL Pre-training on device: {device}")
 
     # 1. Dataset & DataLoader
-    dataset = UnlabeledSSLDataset(data_dir=data_dir)
+    dataset = UnlabeledSSLDataset(data_dir=data_dir, manifest=manifest, split=split)
     if len(dataset) == 0:
-        print(f"[!] No images found in '{data_dir}'. Generating synthetic dataset first...")
-        from data.generate_synthetic import generate_synthetic_dataset
-        generate_synthetic_dataset(output_dir=data_dir)
-        dataset = UnlabeledSSLDataset(data_dir=data_dir)
+        raise SystemExit(
+            f"[!] No images found for SSL pre-training (source: {dataset.source}).\n"
+            f"    Build the data and manifest first:\n"
+            f"      python data\\generate_synthetic.py\n"
+            f"      python -m src.make_splits"
+        )
 
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True, drop_last=True)
-    print(f"[*] Total unlabeled images for SSL pre-training: {len(dataset)}")
+    print(f"[*] Unlabeled images: {len(dataset)}")
+    print(f"[*] Source          : {dataset.source}")
+    if not manifest:
+        print("[!] No manifest given, so this includes TEST images. SimCLR is")
+        print("    unsupervised, but the encoder still adapts to them, which makes the")
+        print("    downstream test CER transductive rather than held out. Pass")
+        print("    --manifest data\\splits.csv to restrict to the training split.")
+    if batch_size < 64:
+        print(f"[!] Batch size {batch_size} gives only {2 * batch_size - 2} negatives per anchor.")
+        print("    InfoNCE needs many negatives to produce a useful signal; SimCLR used")
+        print("    256-8192. Treat any gain from this stage as unproven at this batch size.")
 
     # 2. Model & InfoNCE Loss
     encoder = SimCLR_SSL_Backbone(feature_dim=128).to(device)
@@ -160,11 +221,17 @@ def train_ssl(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="SimCLR Self-Supervised Pre-training")
-    parser.add_argument("--data_dir", type=str, default="d:\\Major Project\\data\\synthetic")
+    parser.add_argument("--data_dir", "--data-dir", dest="data_dir", type=str, default=None,
+                        help="Legacy directory mode. Walks this folder plus the other data "
+                             "folders, which includes TEST images. Prefer --manifest.")
+    parser.add_argument("--manifest", type=str, default=None,
+                        help="Restrict pre-training to one split of data/splits.csv")
+    parser.add_argument("--split", type=str, default="train",
+                        help="Split to use when --manifest is given (default: train)")
     parser.add_argument("--epochs", type=int, default=5)
-    parser.add_argument("--batch_size", type=int, default=8)
+    parser.add_argument("--batch_size", "--batch-size", dest="batch_size", type=int, default=8)
     parser.add_argument("--lr", type=float, default=1e-3)
-    parser.add_argument("--save_dir", type=str, default="d:\\Major Project\\src\\models\\checkpoints")
+    parser.add_argument("--save_dir", "--save-dir", dest="save_dir", type=str, default=None)
     args = parser.parse_args()
 
     train_ssl(
@@ -172,5 +239,7 @@ if __name__ == "__main__":
         epochs=args.epochs,
         batch_size=args.batch_size,
         lr=args.lr,
-        save_dir=args.save_dir
+        save_dir=args.save_dir,
+        manifest=args.manifest,
+        split=args.split,
     )
