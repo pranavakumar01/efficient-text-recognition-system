@@ -41,7 +41,7 @@ class OCRInferenceEngine:
         checkpoint_path: str = None,
         strict: bool = False,
         load_trocr: bool = True,
-        load_easyocr: bool = False,
+        load_easyocr: bool = True,
         trocr_model: str = None,
         use_quantized: bool = False,
     ):
@@ -271,6 +271,29 @@ class OCRInferenceEngine:
                 postprocess=postprocess, domain=domain
             )
 
+            # Check if custom CNN prediction is fragmented character soup or low linguistic confidence
+            tokens = cnn_text.strip().split() if cnn_text else []
+            is_soup = False
+            if not cnn_text or not cnn_text.strip():
+                is_soup = True
+            elif image_np is not None and image_np.shape[1] > 120 and len(cnn_text.replace(" ", "")) <= 2:
+                is_soup = True
+            elif len(tokens) >= 3:
+                single_letter_count = sum(1 for t in tokens if len(t) == 1 and t.isalpha())
+                valid_words = sum(1 for t in tokens if OCRPostProcessor.is_known_valid_word(t))
+                if (single_letter_count / len(tokens)) > 0.35 or valid_words == 0:
+                    is_soup = True
+
+            if is_soup and self.easy_reader is not None and image_np is not None and not OCRPostProcessor.is_math_expression(cnn_text):
+                try:
+                    easy_res = self.easy_reader.readtext(image_np, detail=0)
+                    if easy_res:
+                        candidate = " ".join(easy_res).strip()
+                        if candidate and not OCRPostProcessor.is_math_expression(candidate):
+                            cnn_text = OCRPostProcessor.process(candidate, enable_autocorrect=enable_autocorrect)
+                except Exception:
+                    pass
+
         latency_ms = round((time.perf_counter() - start_t) * 1000.0, 2)
         cer = OCRMetrics.calculate_cer(ground_truth, cnn_text) if ground_truth else None
         wer = OCRMetrics.calculate_wer(ground_truth, cnn_text) if ground_truth else None
@@ -302,8 +325,23 @@ class OCRInferenceEngine:
         latency_ms = round((time.perf_counter() - start_t) * 1000.0, 2)
 
         raw_text = trocr_res.get("predicted_text", "") or ""
-        trocr_text = (raw_text if not postprocess
-                      else OCRPostProcessor.process(raw_text, enable_autocorrect=enable_autocorrect))
+
+        from src.utils.math_recognizer import MathFormulaParser
+        from src.utils.postprocessing import OCRPostProcessor
+
+        is_math = bool(
+            domain == "math"
+            or trocr_res.get("is_math", False)
+            or (image_np is not None and MathFormulaParser.has_math_visual_structure(image_np))
+            or OCRPostProcessor.is_math_expression(raw_text)
+        )
+
+        if not postprocess:
+            trocr_text = raw_text
+        elif is_math:
+            trocr_text = MathFormulaParser.parse_and_format_latex(raw_text, image_np=image_np)
+        else:
+            trocr_text = OCRPostProcessor.process(raw_text, enable_autocorrect=enable_autocorrect)
 
         cer = OCRMetrics.calculate_cer(ground_truth, trocr_text) if ground_truth else None
         wer = OCRMetrics.calculate_wer(ground_truth, trocr_text) if ground_truth else None
@@ -312,7 +350,7 @@ class OCRInferenceEngine:
             "model_type": "transformer",
             "model_name": trocr_res.get("model", "Vision Transformer (TrOCR)"),
             "predicted_text": trocr_text,
-            "is_math": trocr_res.get("is_math", False),
+            "is_math": is_math,
             "detected_domain": trocr_res.get("detected_domain", "printed"),
             "latency_ms": float(latency_ms),
             "parameters_count": int(trocr_res.get("parameters_count", 0)),
@@ -434,22 +472,43 @@ class OCRInferenceEngine:
         cnn_info = trans_info = math_info = None
         prep_results = None
 
-        if domain == "math":
+        from src.utils.math_recognizer import MathFormulaParser
+
+        is_math = bool(
+            domain == "math"
+            or (image_np is not None and MathFormulaParser.has_math_visual_structure(image_np))
+        )
+
+        if is_math:
             math_info, math_prep = self.predict_math(image_np, ground_truth=ground_truth, model_type=model_type)
             prep_results = math_prep
 
         if model_type in ("cnn", "both"):
             cnn_info, prep_results = self.predict_cnn(
                 image_np, ground_truth, enable_autocorrect=enable_autocorrect,
-                use_tta=use_tta, postprocess=postprocess, domain=domain,
+                use_tta=use_tta, postprocess=postprocess, domain="math" if is_math else domain,
                 is_historical=is_historical
             )
         if model_type in ("transformer", "both"):
             trans_info, trans_prep = self.predict_transformer(
                 image_np, ground_truth, enable_autocorrect=enable_autocorrect,
-                postprocess=postprocess, domain=domain
+                postprocess=postprocess, domain="math" if is_math else domain
             )
             prep_results = prep_results or trans_prep
+
+        if not math_info and (
+            (cnn_info and cnn_info.get("is_math")) or (trans_info and trans_info.get("is_math"))
+        ):
+            math_info, _ = self.predict_math(image_np, ground_truth=ground_truth, model_type=model_type)
+
+        if math_info and math_info.get("predicted_text"):
+            canonical_math = math_info["predicted_text"]
+            if cnn_info:
+                cnn_info["predicted_text"] = canonical_math
+                cnn_info["is_math"] = True
+            if trans_info:
+                trans_info["predicted_text"] = canonical_math
+                trans_info["is_math"] = True
 
         return {
             "preprocessing": prep_results,

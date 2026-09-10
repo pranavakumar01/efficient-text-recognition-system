@@ -181,6 +181,28 @@
     }
     .btn-run:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0, 242, 254, 0.5); }
 
+    .btn-layout {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--panel-border);
+      color: var(--text-muted);
+      padding: 0.3rem 0.65rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-layout:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--text-main);
+    }
+    .btn-layout.active {
+      background: rgba(0, 242, 254, 0.18);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
     .btn-export {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid var(--panel-border);
@@ -276,6 +298,20 @@
           <button class="model-option-btn" id="btnModeTransformer" onclick="setMode('transformer')">🤖 Vision Transformer</button>
           <button class="model-option-btn active" id="btnModeBoth" onclick="setMode('both')">⚡ Dual Comparison</button>
         </div>
+
+        <!-- Domain Selector & Edge Quantization Controls -->
+        <div style="display: flex; gap: 0.8rem; align-items: center; margin-bottom: 1rem;">
+          <select id="domainSelect" style="flex: 1; background: rgba(0,0,0,0.5); color: var(--text-main); border: 1px solid var(--panel-border); padding: 0.5rem 0.8rem; border-radius: 12px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer;">
+            <option value="auto">🌐 Auto-Detect Document Domain</option>
+            <option value="printed">📄 Printed Text Document</option>
+            <option value="handwritten">✍️ Handwritten Cursive Manuscript</option>
+            <option value="math">📐 Mathematical LaTeX Equation</option>
+            <option value="historical">📜 Historical Archival Scan</option>
+          </select>
+          <div class="toggle-autocorrect off" id="toggleQuantized" onclick="toggleQuantized()" title="Toggle PyTorch INT8 Edge Quantization">
+            <span>⚡ Edge INT8: OFF</span>
+          </div>
+        </div>
         
         <div class="dropzone" id="dropzone" onclick="document.getElementById('fileInput').click();">
           <div class="dropzone-icon">📷</div>
@@ -292,9 +328,19 @@
           <img id="previewImg" src="" alt="Preview">
         </div>
 
-        <div style="display: flex; gap: 1rem;">
-          <button class="btn-run" id="btnRun" style="flex: 1;" onclick="runInference()">⚡ Execute Selected Model</button>
-          <button class="btn-run" id="btnDocRun" style="flex: 1; background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));" onclick="runDocumentOCR()">📄 Document Page OCR</button>
+        <!-- Unified Action Button -->
+        <button class="btn-run" id="btnRun" onclick="runSmartOCR()">
+          ⚡ Recognize & Extract Text
+        </button>
+
+        <!-- Document Layout Mode Selector -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.8rem; font-size: 0.8rem; color: var(--text-muted);">
+          <span>Layout Mode:</span>
+          <div style="display: flex; gap: 0.4rem;">
+            <button type="button" class="btn-layout active" id="btnLayoutAuto" onclick="setLayoutMode('auto')">⚡ Auto-Detect</button>
+            <button type="button" class="btn-layout" id="btnLayoutSingle" onclick="setLayoutMode('single')">Line / Formula</button>
+            <button type="button" class="btn-layout" id="btnLayoutDoc" onclick="setLayoutMode('doc')">Full Page Scan</button>
+          </div>
         </div>
       </div>
 
@@ -330,19 +376,24 @@
         <!-- CNN Model Card -->
         <div class="model-card primary" id="cardCNN">
           <div class="model-badge" style="display: flex; justify-content: space-between; align-items: center;">
-            <span>Primary Architecture (Guide Recommended)</span>
+            <span>Primary Architecture</span>
             <div style="display: flex; gap: 0.3rem;">
               <button class="btn-export" onclick="copyText('cnnResult')">📋 Copy</button>
               <button class="btn-export" onclick="exportTranscript('cnn', 'txt')">📥 TXT</button>
               <button class="btn-export" onclick="exportTranscript('cnn', 'json')">📥 JSON</button>
             </div>
           </div>
-          <h3 style="font-size: 1.1rem; font-weight: 600;">CNN + BiLSTM + Attention</h3>
+          <h3 style="font-size: 1.15rem; font-weight: 600;">CNN + BiLSTM + Attention</h3>
+          
+          <div style="font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent-cyan); margin-top: 0.4rem;">
+            Exact Extracted Text Output:
+          </div>
           <div class="result-text" id="cnnResult">Awaiting Inference...</div>
           <div class="math-render-box" id="cnnMathBox" style="display: none;">
             <div style="font-size: 0.75rem; color: var(--accent-cyan); margin-bottom: 0.3rem;">📐 Rendered LaTeX Formula:</div>
             <div id="cnnMathFormula" style="font-size: 1.1rem;"></div>
           </div>
+
           <div class="metric-row"><span>Inference Latency:</span> <span class="metric-val" id="cnnLatency">-- ms</span></div>
           <div class="metric-row"><span>Model Parameters:</span> <span class="metric-val" id="cnnParams">-- M</span></div>
           <div class="metric-row"><span>Deployment Suitability:</span> <span class="metric-val" style="color: var(--accent-cyan);">High (Low Resource)</span></div>
@@ -358,17 +409,45 @@
               <button class="btn-export" onclick="exportTranscript('trocr', 'json')">📥 JSON</button>
             </div>
           </div>
-          <h3 style="font-size: 1.1rem; font-weight: 600;">Vision Transformer (TrOCR)</h3>
+          <h3 style="font-size: 1.15rem; font-weight: 600;">Vision Transformer (TrOCR)</h3>
+          
+          <div style="font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent-purple); margin-top: 0.4rem;">
+            Exact Extracted Text Output:
+          </div>
           <div class="result-text" id="trocrResult">Awaiting Inference...</div>
           <div class="math-render-box" id="trocrMathBox" style="display: none;">
             <div style="font-size: 0.75rem; color: var(--accent-purple); margin-bottom: 0.3rem;">📐 Rendered LaTeX Formula:</div>
             <div id="trocrMathFormula" style="font-size: 1.1rem;"></div>
           </div>
+
           <div class="metric-row"><span>Inference Latency:</span> <span class="metric-val" id="trocrLatency">-- ms</span></div>
           <div class="metric-row"><span>Model Parameters:</span> <span class="metric-val" id="trocrParams">~62.0 M</span></div>
           <div class="metric-row"><span>Deployment Suitability:</span> <span class="metric-val" style="color: var(--text-muted);">Requires High Compute</span></div>
         </div>
 
+      </div>
+
+      <!-- Segmented Line Breakdown Table (for Multi-Line Document OCR) -->
+      <div id="docLinesTableContainer" style="display: none; margin-top: 1.5rem; border-top: 1px solid var(--panel-border); padding-top: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">🔍 Segmented Line Breakdown & Mathematical Equation Formulas</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);" id="linesCountTag">0 Lines Processed</span>
+        </div>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+            <thead>
+              <tr style="background: rgba(255,255,255,0.04); border-bottom: 1px solid var(--panel-border); color: var(--text-muted); text-align: left;">
+                <th style="padding: 0.6rem 0.8rem; width: 80px;">Line #</th>
+                <th style="padding: 0.6rem 0.8rem; width: 100px;">Type</th>
+                <th style="padding: 0.6rem 0.8rem;">CNN-BiLSTM Text</th>
+                <th style="padding: 0.6rem 0.8rem;">Vision Transformer Text</th>
+                <th style="padding: 0.6rem 0.8rem;">Rendered Math / Formula</th>
+              </tr>
+            </thead>
+            <tbody id="docLinesTbody">
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -387,13 +466,14 @@
   </main>
 
   <footer>
-    Major Project Phase-I (2025-2026) • Team 42 • Dept. of Information Science & Engineering, NMAM Institute of Technology, Nitte
+    Major Project Phase-I (2026-27) • Team 42 • Dept. of Information Science & Engineering, NMAM Institute of Technology, Nitte
   </footer>
 
   <script>
     let currentFile = null;
     let selectedModelMode = "both";
     let autoCorrectEnabled = true;
+    let useQuantizedEnabled = false;
 
     function toggleAutoCorrect() {
       autoCorrectEnabled = !autoCorrectEnabled;
@@ -405,6 +485,27 @@
         elem.classList.add('off');
         elem.innerHTML = '<span>✨ Auto-Correct: OFF</span>';
       }
+    }
+
+    function toggleQuantized() {
+      useQuantizedEnabled = !useQuantizedEnabled;
+      const elem = document.getElementById('toggleQuantized');
+      if (useQuantizedEnabled) {
+        elem.classList.remove('off');
+        elem.innerHTML = '<span>⚡ Edge INT8: ON</span>';
+      } else {
+        elem.classList.add('off');
+        elem.innerHTML = '<span>⚡ Edge INT8: OFF</span>';
+      }
+    }
+
+    let selectedLayoutMode = "auto";
+
+    function setLayoutMode(mode) {
+      selectedLayoutMode = mode;
+      document.getElementById('btnLayoutAuto').classList.toggle('active', mode === 'auto');
+      document.getElementById('btnLayoutSingle').classList.toggle('active', mode === 'single');
+      document.getElementById('btnLayoutDoc').classList.toggle('active', mode === 'doc');
     }
 
     function setMode(mode) {
@@ -420,39 +521,52 @@
       const btnRun = document.getElementById('btnRun');
 
       if (mode === 'cnn') {
-        activeLabel.innerText = "Mode: CNN Model";
-        btnRun.innerText = "🧠 Run CNN-BiLSTM OCR";
+        activeLabel.innerText = "Active: Primary CNN-BiLSTM";
         cardCNN.style.display = 'flex';
         cardTransformer.style.display = 'none';
         compGrid.classList.add('single-mode');
       } else if (mode === 'transformer') {
-        activeLabel.innerText = "Mode: Vision Transformer";
-        btnRun.innerText = "🤖 Run TrOCR Transformer";
+        activeLabel.innerText = "Active: Vision Transformer (TrOCR)";
         cardCNN.style.display = 'none';
         cardTransformer.style.display = 'flex';
         compGrid.classList.add('single-mode');
       } else {
-        activeLabel.innerText = "Mode: Dual Comparison";
-        btnRun.innerText = "⚡ Run Dual-Model Comparison";
+        activeLabel.innerText = "Active: Both Models (Comparison)";
         cardCNN.style.display = 'flex';
         cardTransformer.style.display = 'flex';
         compGrid.classList.remove('single-mode');
       }
+      if (btnRun) btnRun.innerText = "⚡ Recognize & Extract Text";
     }
 
-    async function loadPresets() {
-      try {
-        const res = await fetch('/api/samples');
-        const data = await res.json();
-        const container = document.getElementById('presetChips');
-        data.samples.forEach(s => {
-          const chip = document.createElement('div');
-          chip.className = 'chip';
-          chip.innerText = s.name;
-          chip.onclick = () => selectPreset(s.filename);
-          container.appendChild(chip);
-        });
-      } catch (err) { console.log(err); }
+    function runSmartOCR() {
+      if (!currentFile) {
+        alert("Please upload an image or select a preset sample first.");
+        return;
+      }
+
+      if (selectedLayoutMode === 'doc') {
+        runDocumentOCR();
+        return;
+      }
+
+      if (selectedLayoutMode === 'single') {
+        runInference();
+        return;
+      }
+
+      // Auto-Detect Layout from image dimensions
+      const img = document.getElementById('previewImg');
+      const naturalH = img.naturalHeight || 0;
+      const naturalW = img.naturalWidth || 1;
+      const aspect = naturalW / Math.max(1, naturalH);
+
+      // Multi-line scanned pages are taller (aspect < 3.8 and height > 65px)
+      if (naturalH > 65 && aspect < 3.8) {
+        runDocumentOCR();
+      } else {
+        runInference();
+      }
     }
 
     async function loadAnalytics() {
@@ -473,11 +587,25 @@
         document.getElementById('previewImg').src = data.image_b64;
         document.getElementById('previewBox').style.display = 'flex';
         
+        // Auto-detect domain based on preset filename
+        const domSelect = document.getElementById('domainSelect');
+        if (filename.includes('math')) {
+          domSelect.value = 'math';
+        } else if (filename.includes('handwritten')) {
+          domSelect.value = 'handwritten';
+        } else if (filename.includes('historical')) {
+          domSelect.value = 'historical';
+        } else if (filename.includes('printed')) {
+          domSelect.value = 'printed';
+        } else {
+          domSelect.value = 'auto';
+        }
+
         const fetchRes = await fetch(data.image_b64);
         const blob = await fetchRes.blob();
         currentFile = new File([blob], filename, { type: "image/png" });
         
-        // Auto-run inference immediately so the output is shown right away
+        setLayoutMode('single');
         runInference();
       } catch (err) { console.log(err); }
     }
@@ -489,10 +617,27 @@
       reader.onload = (e) => {
         document.getElementById('previewImg').src = e.target.result;
         document.getElementById('previewBox').style.display = 'flex';
-        // Auto-run inference immediately on file upload
-        runInference();
+        runSmartOCR();
       };
       reader.readAsDataURL(file);
+    }
+
+    function renderMathIfPresent(text, boxId, formulaId) {
+      const box = document.getElementById(boxId);
+      const formulaElem = document.getElementById(formulaId);
+      if (!box || !formulaElem) return;
+
+      const isMath = text && (text.includes('\\') || text.includes('^') || text.includes('_') || (text.includes('{') && text.includes('}')) || text.includes('='));
+      if (isMath && window.katex) {
+        try {
+          katex.render(text, formulaElem, { displayMode: true, throwOnError: false });
+          box.style.display = 'block';
+          return;
+        } catch (e) {
+          console.warn("KaTeX render error:", e);
+        }
+      }
+      box.style.display = 'none';
     }
 
     async function runInference() {
@@ -505,10 +650,14 @@
       btnRun.innerText = "⏳ Recognizing Text & Equations...";
       btnRun.disabled = true;
 
+      const domainVal = document.getElementById('domainSelect').value;
       const formData = new FormData();
       formData.append("file", currentFile);
       formData.append("model_type", selectedModelMode);
       formData.append("enable_autocorrect", autoCorrectEnabled);
+      formData.append("domain", domainVal);
+      formData.append("use_quantized", useQuantizedEnabled);
+      formData.append("is_historical", domainVal === 'historical');
 
       try {
         const res = await fetch('/api/predict', { method: 'POST', body: formData });
@@ -537,49 +686,58 @@
           prepGrid.appendChild(div);
         }
 
-        function renderMathIfPresent(text, boxId, formulaId) {
-          const box = document.getElementById(boxId);
-          const formulaElem = document.getElementById(formulaId);
-          if (!box || !formulaElem) return;
-
-          const isMath = text && (text.includes('\\') || text.includes('^') || text.includes('_') || (text.includes('{') && text.includes('}')) || text.includes('='));
-          if (isMath && window.katex) {
-            try {
-              katex.render(text, formulaElem, { displayMode: true, throwOnError: false });
-              box.style.display = 'block';
-              return;
-            } catch (e) {
-              console.warn("KaTeX render error:", e);
-            }
-          }
-          box.style.display = 'none';
-        }
+        let cnnText = "";
+        let trocrText = "";
+        let isMathDoc = false;
 
         // Update Primary CNN Results
         if (data.primary_model) {
-          document.getElementById('cnnResult').innerText = data.primary_model.predicted_text;
+          cnnText = data.primary_model.predicted_text;
+          document.getElementById('cnnResult').innerText = cnnText;
           document.getElementById('cnnLatency').innerText = `${data.primary_model.latency_ms} ms`;
           document.getElementById('cnnParams').innerText = `${(data.primary_model.parameters_count / 1e6).toFixed(2)} M`;
-          renderMathIfPresent(data.primary_model.predicted_text, 'cnnMathBox', 'cnnMathFormula');
+          renderMathIfPresent(cnnText, 'cnnMathBox', 'cnnMathFormula');
+          if (data.primary_model.is_math) isMathDoc = true;
         } else {
           document.getElementById('cnnMathBox').style.display = 'none';
         }
 
         // Update Baseline Transformer Results
         if (data.baseline_model) {
-          document.getElementById('trocrResult').innerText = data.baseline_model.predicted_text;
+          trocrText = data.baseline_model.predicted_text;
+          document.getElementById('trocrResult').innerText = trocrText;
           document.getElementById('trocrLatency').innerText = `${data.baseline_model.latency_ms} ms`;
           document.getElementById('trocrParams').innerText = `~${(data.baseline_model.parameters_count / 1e6).toFixed(1)} M`;
-          renderMathIfPresent(data.baseline_model.predicted_text, 'trocrMathBox', 'trocrMathFormula');
+          renderMathIfPresent(trocrText, 'trocrMathBox', 'trocrMathFormula');
+          if (data.baseline_model.is_math) isMathDoc = true;
         } else {
           document.getElementById('trocrMathBox').style.display = 'none';
         }
+
+        if (data.math_engine) isMathDoc = true;
+
+        const statusTag = document.getElementById('modelStatusTag');
+        if (statusTag) {
+          if (isMathDoc) {
+            statusTag.innerText = "Type: Mathematical LaTeX Equation";
+          } else if (domainVal === 'handwritten') {
+            statusTag.innerText = "Type: Handwritten Manuscript";
+          } else if (domainVal === 'historical') {
+            statusTag.innerText = "Type: Historical Archival Scan";
+          } else {
+            statusTag.innerText = "Type: Printed Text Document";
+          }
+        }
+
+        // Hide multi-line table for single line inference
+        document.getElementById('docLinesTableContainer').style.display = 'none';
 
       } catch (err) {
         console.error("Inference Error:", err);
         alert(`Inference failed: ${err.message || 'Ensure server is running.'}`);
       } finally {
         setMode(selectedModelMode);
+        btnRun.innerText = "⚡ Recognize & Extract Text";
         btnRun.disabled = false;
       }
     }
@@ -590,14 +748,18 @@
         return;
       }
 
-      const btnDocRun = document.getElementById('btnDocRun');
-      btnDocRun.innerText = "⏳ Segmenting Lines...";
-      btnDocRun.disabled = true;
+      const btnRun = document.getElementById('btnRun');
+      btnRun.innerText = "⏳ Segmenting Lines & Extracting...";
+      btnRun.disabled = true;
 
+      const domainVal = document.getElementById('domainSelect').value;
       const formData = new FormData();
       formData.append("file", currentFile);
       formData.append("model_type", selectedModelMode);
       formData.append("enable_autocorrect", autoCorrectEnabled);
+      formData.append("domain", domainVal);
+      formData.append("use_quantized", useQuantizedEnabled);
+      formData.append("is_historical", domainVal === 'historical');
 
       try {
         const res = await fetch('/api/document_ocr', { method: 'POST', body: formData });
@@ -610,29 +772,96 @@
 
         document.getElementById('previewImg').src = data.annotated_image_base64;
 
-        if (data.cnn_transcript || data.full_transcript) {
-          document.getElementById('cnnResult').innerText = data.cnn_transcript || data.full_transcript;
-          document.getElementById('cnnLatency').innerText = `Lines: ${data.total_lines_detected}`;
-        }
-        if (data.trocr_transcript || data.full_transcript) {
-          document.getElementById('trocrResult').innerText = data.trocr_transcript || data.full_transcript;
-          document.getElementById('trocrLatency').innerText = `Lines: ${data.total_lines_detected}`;
-        }
+        // Update exact extracted text output in both cards
+        const cnnOut = data.cnn_transcript || "";
+        const trocrOut = data.trocr_transcript || "";
+        const bestOut = data.best_transcript || data.full_transcript || "";
 
-        alert(`[OK] Document OCR Complete! Detected ${data.total_lines_detected} line(s).\n\nFull Transcript:\n${data.full_transcript}`);
+        document.getElementById('cnnResult').innerText = cnnOut || bestOut;
+        document.getElementById('cnnLatency').innerText = `${data.total_lines_detected} Lines Segmented`;
+        document.getElementById('trocrResult').innerText = trocrOut || bestOut;
+        document.getElementById('trocrLatency').innerText = `${data.total_lines_detected} Lines Segmented`;
+
+        const statusTag = document.getElementById('modelStatusTag');
+        if (statusTag) {
+          statusTag.innerText = `Multi-Line Document (${data.total_lines_detected} Lines Segmented)`;
+        }
+        document.getElementById('linesCountTag').innerText = `${data.total_lines_detected} Total Line(s)`;
+
+        // Populate Segmented Line Breakdown Table
+        const tbody = document.getElementById('docLinesTbody');
+        tbody.innerHTML = '';
+
+        if (data.lines && data.lines.length > 0) {
+          data.lines.forEach(line => {
+            const tr = document.createElement('tr');
+            tr.style.borderBottom = '1px solid rgba(255,255,255,0.04)';
+
+            const tdNum = document.createElement('td');
+            tdNum.style.padding = '0.6rem 0.8rem';
+            tdNum.style.fontWeight = '600';
+            tdNum.innerText = `Line ${line.line_num}`;
+
+            const tdType = document.createElement('td');
+            tdType.style.padding = '0.6rem 0.8rem';
+            tdType.innerHTML = line.is_math 
+              ? `<span style="background: rgba(0,242,254,0.15); color: var(--accent-cyan); padding: 0.2rem 0.5rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700;">MATH</span>` 
+              : `<span style="background: rgba(255,255,255,0.06); color: var(--text-muted); padding: 0.2rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">TEXT</span>`;
+
+            const tdCNN = document.createElement('td');
+            tdCNN.style.padding = '0.6rem 0.8rem';
+            tdCNN.style.fontFamily = 'monospace';
+            tdCNN.innerText = line.cnn_text || "-";
+
+            const tdTrOCR = document.createElement('td');
+            tdTrOCR.style.padding = '0.6rem 0.8rem';
+            tdTrOCR.style.fontFamily = 'monospace';
+            tdTrOCR.innerText = line.trocr_text || "-";
+
+            const tdMath = document.createElement('td');
+            tdMath.style.padding = '0.6rem 0.8rem';
+
+            const bestLine = line.best_text || line.trocr_text || line.cnn_text || "";
+            if (line.is_math && window.katex) {
+              try {
+                const mathDiv = document.createElement('div');
+                katex.render(bestLine, mathDiv, { throwOnError: false });
+                tdMath.appendChild(mathDiv);
+              } catch (e) {
+                tdMath.innerText = bestLine;
+              }
+            } else {
+              tdMath.innerText = bestLine;
+            }
+
+            tr.appendChild(tdNum);
+            tr.appendChild(tdType);
+            tr.appendChild(tdCNN);
+            tr.appendChild(tdTrOCR);
+            tr.appendChild(tdMath);
+            tbody.appendChild(tr);
+          });
+          document.getElementById('docLinesTableContainer').style.display = 'block';
+        }
 
       } catch (err) {
         console.error(err);
         alert("Document OCR failed. Ensure server is running.");
       } finally {
-        btnDocRun.innerText = "📄 Document Page OCR";
-        btnDocRun.disabled = false;
+        btnRun.innerText = "⚡ Recognize & Extract Text";
+        btnRun.disabled = false;
       }
     }
 
     async function exportTranscript(modelKey, format) {
-      const text = (modelKey === 'cnn') ? document.getElementById('cnnResult').innerText : document.getElementById('trocrResult').innerText;
-      if (!text || text === "Awaiting Inference...") {
+      let text = "";
+      if (modelKey === 'cnn') {
+        text = document.getElementById('cnnResult').innerText;
+      } else {
+        text = document.getElementById('trocrResult').innerText;
+      }
+
+      if (!text || text.includes("Awaiting")) {
         alert("Run inference or document OCR first before exporting transcript.");
         return;
       }
@@ -656,21 +885,42 @@
 
     function copyText(elementId) {
       const el = document.getElementById(elementId);
-      if (!el || !el.innerText || el.innerText === "Awaiting Inference...") {
+      if (!el || !el.innerText || el.innerText.includes("Awaiting")) {
         alert("No extracted text to copy yet.");
         return;
       }
       navigator.clipboard.writeText(el.innerText).then(() => {
-        alert("📋 Text copied to clipboard:\n" + el.innerText);
+        alert("📋 Extracted text copied to clipboard:\n\n" + el.innerText);
       }).catch(err => {
         alert("Clipboard copy failed: " + err);
       });
     }
 
+    async function loadPresets() {
+      try {
+        const res = await fetch('/api/samples');
+        const data = await res.json();
+        const container = document.getElementById('presetChips');
+        container.innerHTML = '';
+        data.samples.forEach(s => {
+          const chip = document.createElement('div');
+          chip.className = 'chip';
+          chip.innerText = s.name;
+          chip.onclick = () => selectPreset(s.filename);
+          container.appendChild(chip);
+        });
+
+        // Automatically load and run the first sample so the cards immediately show the exact output!
+        if (data.samples && data.samples.length > 0) {
+          selectPreset(data.samples[0].filename);
+        }
+      } catch (err) { console.log(err); }
+    }
+
     window.onload = () => {
       loadPresets();
       loadAnalytics();
-      setMode('both'); // Show dual comparison by default
+      setMode('both'); // Dual comparison default
     };
   </script>
 </body>

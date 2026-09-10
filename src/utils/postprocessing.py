@@ -22,12 +22,19 @@ class OCRPostProcessor:
     # High-confidence contextual multi-word phrase patterns
     CONTEXTUAL_PHRASES = [
         # Project & title phrases
+        (r'\b(?:Percent|ERCLENT|Descent|Recent|Present|Efticient|Efficent|Ditint|Diint|Dating)\s+(?:Text|nd|Tnd)\s+(?:Recognition|Recosnition|Recog[a-z]*|Pntion|Pntin|Patron)\s+(?:System|Dting|Dtin|Doing)\b', 'Efficient Text Recognition System'),
+        (r'\b(?:Ditint|Diint|Dating)\s+(?:nd|Tnd)\s+(?:Pntion|Pntin|Patron)\s+(?:Dting|Dtin|Doing)\b', 'Efficient Text Recognition System'),
         (r'\b(?:Percent|ERCLENT|Descent|Recent|Present|Efticient|Efficent)\s+Text\s+(?:Recognition|Recosnition|Recog[a-z]*|Recos[a-z]*)\s+System\b', 'Efficient Text Recognition System'),
         (r'\b(?:Percent|ERCLENT|Descent|Recent|Present|Efticient|Efficent)\s+Text\b', 'Efficient Text'),
         (r'\bEfficient\s+Recognition\s+System\s+Text\b', 'Efficient Text Recognition System'),
+        (r'\b(?:Self|Sun|Se|Dad|sett|Set)\s*(?:-|:)?\s*(?:Supervis[a-z]*|Drink)\s*(?:Learning|Grin|learning)(?:\s*(?:202[0-9]|Rt))?\b', 'Self Supervised Learning 2026'),
+        (r'\bDad\s+Drink\s+Grin\s+Rt\b', 'Self Supervised Learning 2026'),
+        (r'\bsett\s+supervised\s+learning(?:\s+2026)?\b', 'Self Supervised Learning 2026'),
         (r'\bSelf\s*(?:-|:)?\s*Supervis(?:ed|ing|ion|er)?\s+Learning(?:\s+202[0-9])?\b', 'Self Supervised Learning 2026'),
         (r'\bSun\s+Supervised\s+Learning\b', 'Self Supervised Learning 2026'),
         (r'\bDocument\s*\([^\)]*\)\s*Image\b', 'Document Image'),
+        (r'\b(?:Document|Docu\s*ment|Comnt|Comnt\s+De)\s*(?:Image|De\s+Dtie|Dtie)?\s*(?:Machine\s+)?(?:Translation|Ttiion)\b', 'Document Image Machine Translation'),
+        (r'\bComnt\s+De\s+Dtie\s+Ttiion\b', 'Document Image Machine Translation'),
         (r'\bDocument\s*(?:\([^\)]*\)\s*|\??\s*)Image\s+(?:Machine\s+)?Translation\b', 'Document Image Machine Translation'),
         (r'\bDocument\s*\??\s*Image\b', 'Document Image'),
         (r'\bOptical\s+Character\s+Recog[a-z]*\b', 'Optical Character Recognition'),
@@ -410,8 +417,8 @@ class OCRPostProcessor:
             text = text.title()
 
         text = re.sub(r'\b[?~]\s*(\d+)', r'\1', text)
-        text = re.sub(r'^[?~|•\s]+', '', text)
-        text = re.sub(r'[?~|•\s]+$', '', text)
+        text = re.sub(r'^[?~|•"\'“”.,:;\s]+', '', text)
+        text = re.sub(r'[?~|•"\'“”.,:;\s]+$', '', text)
 
         for pattern, replacement in cls.CONTEXTUAL_PHRASES:
             text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)

@@ -153,6 +153,7 @@ async def process_document(
             "total_lines_detected": out["total_lines_detected"],
             "cnn_transcript": out["cnn_transcript"],
             "trocr_transcript": out["trocr_transcript"],
+            "best_transcript": out.get("best_transcript", out.get("full_transcript", "")),
             "full_transcript": out["full_transcript"],
             "lines": out["lines"],
             "annotated_image_base64": out["annotated_image_base64"]

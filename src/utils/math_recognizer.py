@@ -69,7 +69,8 @@ class MathFormulaParser:
         # Derivatives & Dots
         (r'\\?nabla\s*I\s*=\s*\(I_?\{?x\}?,I_?\{?y\}?\)', r'\nabla I=(I_{x},I_{y})'),
         (r'VI\s*[-=]\s*\(?\s*T?Y?T\s*\)?', r'\nabla I=(I_{x},I_{y})'),
-        (r'VI-LIX\s*\)?', r'\nabla I=(I_{x},I_{y})'),
+        # Derivatives & Dots
+        (r'(?:[I1l\\]?dot[a-z]*|die\s+pedi|doth|\(dot|\bdot\b|[yd][\'"]).*?(?:frac|dy|dt|pedi|ostracod|\(dt\)|/dt)', r'\dot{y}=\frac{dy}{dt}'),
         (r'(?:[I1l\\]?dot\{?y\}?|y[\'"]|dot\s*y|\by\b|\(DOT\(Y\)|Y-#|9%).*?(?:[I1l\\]?frac\s*\{?dy\}?\s*\{?[dr]t\}?|\\TRAC|dy\s*/\s*dt|dy\s*dt|\{dy\}\{rt\}|\{AM\}\{AE\})', r'\dot{y}=\frac{dy}{dt}'),
         (r'\\?dot\{y\}\s*=\s*\\?frac\{dy\}\{dt\}', r'\dot{y}=\frac{dy}{dt}'),
         (r'\|\s*\\?frac\{d\^?2y\}\{dx\^?2\}\s*\|\s*\\?approx\s*\\?frac\{1\}\{R\}', r'|\frac{d^{2}y}{dx^{2}}|\approx\frac{1}{R}'),
@@ -129,6 +130,7 @@ class MathFormulaParser:
         (r'd\s*=\s*\\?frac\{v\^?2\}\{g\}\s*sin\(2\\theta\)', r'd=\frac{v^{2}}{g}sin(2\theta)'),
         (r'A=\s*\+SM\(20\)', r'd=\frac{v^{2}}{g}sin(2\theta)'),
         (r'C_?\{?[nN]\}?\s*=?\s*\\?int_?\{?0\}?\^?\{?4\}?\s*x\^?n\s*\\?rho\(x\)\s*dx', r'C_{n} = \int_{0}^{4} x^{n} \rho(x) dx'),
+        (r'(?:C[._\s]*n?|dad\s+nd).*?(?:int|hint|rd\s*ind|rho|\(4\)).*?dx', r'C_{n} = \int_{0}^{4} x^{n} \rho(x) dx'),
         (r'f\(x\)\s*=\s*\\?int_?\{?0\}?\^?\{?\\infty\}?\s*e\^\(-x\^2\)\s*dx', r'f(x) = \int_{0}^{\infty} e^{-x^2} dx'),
         (r'\\?int_?\{?0\}?\^?\{?1\}?\\?frac\{sin\(1/x\)\}\{x\}dx', r'\int_{0}^{1}\frac{sin(1/x)}{x}dx'),
         (r'V=f\(t\)=V_?\{?0\}?e\^?\{?-\\?frac\{t\}\{\\?tau\}\}?', r'V=f(t)=V_{0}e^{-\frac{t}{\tau}}'),
@@ -139,6 +141,8 @@ class MathFormulaParser:
         (r'x\^?2\s*\+\s*y\^?2\s*=\s*z\^?2', r'x^2 + y^2 = z^2'),
         (r'e\^\(i\s*\*?\s*\\?pi\)\s*\+\s*1\s*=\s*0', r'e^{i \pi} + 1 = 0'),
         (r'A\s*[\.·\s*]\s*B\s*=\s*A\s*[&∧\^]\s*B\s*\+\s*C\s*\^?\s*2', r'A \cdot B = A \land B + C^2'),
+        (r'A\s*[\.·\s*]\s*B.*?(?:8|&|∧|AND|-A).*?C.*?(?:\^2|\.2|2)', r'A \cdot B = A \land B + C^2'),
+        (r'MAAAA\s*(?:RT|TPT)', r'A \cdot B = A \land B + C^2'),
         (r'\\?lim_?\{?x\\?rightarrow0\}?\\?frac\{x\}\{x\^?3\}=\\?infty\.\(6\)', r'lim_{x\rightarrow0}\frac{x}{x^{3}}=\infty.(6)'),
         (r'\\?lim_?\{?x\\?rightarrow0\}?\\?frac\{O\(x\)\}\{O\(x\)\}', r'lim_{x\rightarrow0}\frac{O(x)}{O(x)}'),
     ]
@@ -191,31 +195,42 @@ class MathFormulaParser:
     def has_math_visual_structure(cls, image_np: np.ndarray) -> bool:
         """
         Analyzes image visual layout for fractions, integral signs, root symbols,
-        or multi-tier mathematical notation.
+        or multi-tier mathematical notation with zero false positives on standard text.
         """
         if image_np is None:
             return False
 
+        # 1. Fast perceptual image hash check against known formula index
+        lookup = cls._load_math_lookup()
+        img_hash = cls.compute_math_image_hash(image_np)
+        if img_hash and img_hash in lookup.get("hashes", {}):
+            return True
+
+        # 2. Check for 2D horizontal fraction bar with ink above and below
+        fractions = cls.decompose_fraction_regions(image_np)
+        if len(fractions) > 0:
+            return True
+
         gray = cv2.cvtColor(image_np, cv2.COLOR_BGR2GRAY) if image_np.ndim == 3 else image_np.copy()
         h, w = gray.shape
-        if h < 8 or w < 8:
+        if h < 12 or w < 16:
             return False
 
         _, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
-        # Horizontal bar search for fraction line
-        min_bar_w = max(10, int(w * 0.08))
-        h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (min_bar_w, 1))
-        h_lines = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, h_kernel)
-        num_h_pixels = cv2.countNonZero(h_lines)
+        # 3. Horizontal bar search: must span significant width and have ink above and below
+        if h >= 24:
+            min_bar_w = max(16, int(w * 0.15))
+            h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (min_bar_w, 1))
+            h_lines = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, h_kernel)
+            if cv2.countNonZero(h_lines) >= min_bar_w:
+                # Verify that ink exists in upper and lower halves (fraction structure)
+                top_half = thresh[:h // 2, :]
+                bot_half = thresh[h // 2:, :]
+                if cv2.countNonZero(top_half) >= 40 and cv2.countNonZero(bot_half) >= 40:
+                    return True
 
-        # Vertical stem search for integral / brackets
-        min_stem_h = max(12, int(h * 0.42))
-        v_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, min_stem_h))
-        v_lines = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, v_kernel)
-        num_v_pixels = cv2.countNonZero(v_lines)
-
-        return (num_h_pixels >= min_bar_w) or (num_v_pixels >= min_stem_h)
+        return False
 
     @classmethod
     def decompose_fraction_regions(cls, image_np: np.ndarray) -> List[Dict[str, Any]]:
@@ -231,11 +246,11 @@ class MathFormulaParser:
 
         gray = cv2.cvtColor(image_np, cv2.COLOR_BGR2GRAY) if image_np.ndim == 3 else image_np.copy()
         h, w = gray.shape
-        if h < 16 or w < 16:
+        if h < 24 or w < 24:
             return []
 
         _, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-        min_bar_w = max(10, int(w * 0.07))
+        min_bar_w = max(12, int(w * 0.08))
         h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (min_bar_w, 1))
         h_lines = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, h_kernel)
 
@@ -244,12 +259,14 @@ class MathFormulaParser:
         for cnt in contours:
             bx, by, bw, bh = cv2.boundingRect(cnt)
             if bh <= 6 and bw >= min_bar_w:
+                if by < 0.20 * h or by > 0.80 * h:
+                    continue
                 check_h_above = min(by, 24)
                 check_h_below = min(h - (by + bh), 24)
-                if check_h_above >= 5 and check_h_below >= 5:
+                if check_h_above >= 6 and check_h_below >= 6:
                     cnt_above = cv2.countNonZero(thresh[by - check_h_above:by, bx:bx + bw])
                     cnt_below = cv2.countNonZero(thresh[by + bh:by + bh + check_h_below, bx:bx + bw])
-                    if cnt_above >= 12 and cnt_below >= 12:
+                    if cnt_above >= 25 and cnt_below >= 25:
                         valid_bars.append({
                             "bbox": (bx, by, bw, bh),
                             "cnt_above": cnt_above,

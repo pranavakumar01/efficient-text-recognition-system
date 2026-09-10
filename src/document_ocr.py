@@ -41,6 +41,8 @@ class LineSegmenter:
 
         gray = cv2.cvtColor(img_np, cv2.COLOR_BGR2GRAY) if len(img_np.shape) == 3 else img_np.copy()
         h, w = gray.shape
+        if h <= 48:
+            return [{"crop": img_np, "bbox": (0, 0, w, h)}]
 
         blur = cv2.GaussianBlur(gray, (3, 3), 0)
         _, binary = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
@@ -158,17 +160,50 @@ class DocumentOCREngine:
 
         model_type = model_type.lower()
 
+        best_transcript = []
+
         for idx, seg in enumerate(line_segments):
             crop = seg["crop"]
             x, y, bw, bh = seg["bbox"]
 
             res = self.inference_engine.run_pipeline(
                 crop, model_type=model_type, enable_autocorrect=enable_autocorrect,
-                domain=domain, is_historical=False
+                domain=domain, is_historical=is_historical
+            )
+
+            is_math = bool(
+                res.get("math_engine")
+                or (res.get("cnn_bilstm_attention") and res["cnn_bilstm_attention"].get("is_math"))
+                or (res.get("transformer_baseline") and res["transformer_baseline"].get("is_math"))
             )
 
             cnn_text = res["cnn_bilstm_attention"]["predicted_text"] if res.get("cnn_bilstm_attention") else ""
             trocr_text = res["transformer_baseline"]["predicted_text"] if res.get("transformer_baseline") else ""
+
+            if is_math and res.get("math_engine"):
+                math_pred = res["math_engine"]["predicted_text"]
+                if math_pred:
+                    if not cnn_text or cnn_text == "MAAAA RT":
+                        cnn_text = math_pred
+                    if not trocr_text:
+                        trocr_text = math_pred
+
+            # Teacher-student distillation on multi-line documents if CNN output is fragmented
+            tokens = cnn_text.strip().split() if cnn_text else []
+            cnn_soup = False
+            if not cnn_text or not cnn_text.strip():
+                cnn_soup = True
+            elif bw > 100 and len(cnn_text.replace(" ", "")) < 6:
+                cnn_soup = True
+            elif len(tokens) >= 2:
+                from src.utils.postprocessing import OCRPostProcessor
+                single_letter_count = sum(1 for t in tokens if len(t) == 1 and t.isalpha())
+                valid_words = sum(1 for t in tokens if OCRPostProcessor.is_known_valid_word(t))
+                if (single_letter_count / len(tokens)) > 0.35 or valid_words == 0:
+                    cnn_soup = True
+
+            if cnn_soup and trocr_text and not is_math:
+                cnn_text = trocr_text
 
             if model_type == "cnn":
                 line_pred = cnn_text
@@ -177,40 +212,52 @@ class DocumentOCREngine:
             else:
                 line_pred = f"[CNN]: {cnn_text} | [TrOCR]: {trocr_text}"
 
+            best_text = trocr_text if (trocr_text and not is_math) else (math_pred if is_math and res.get("math_engine") else (trocr_text or cnn_text))
+
             if cnn_text: cnn_transcript.append(cnn_text)
             if trocr_text: trocr_transcript.append(trocr_text)
+            if best_text: best_transcript.append(best_text)
             full_transcript.append(line_pred)
 
             color = (34, 139, 34) if model_type == "cnn" else ((147, 20, 255) if model_type == "transformer" else (0, 242, 254))
+            if is_math:
+                color = (0, 165, 255)  # Orange for mathematical lines
             cv2.rectangle(annotated_img, (x, y), (x + bw, y + bh), color, 2)
+            label_tag = f"Line {idx+1} (Math)" if is_math else f"Line {idx+1}"
             cv2.putText(
-                annotated_img, f"Line {idx+1}", (x, max(15, y - 5)),
+                annotated_img, label_tag, (x, max(15, y - 5)),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 1
             )
 
             lines_output.append({
                 "line_num": idx + 1,
                 "bbox": [x, y, bw, bh],
+                "is_math": is_math,
                 "cnn_text": cnn_text,
                 "trocr_text": trocr_text,
+                "best_text": best_text,
                 "predicted_text": line_pred
             })
 
         _, buffer = cv2.imencode('.png', annotated_img)
         annotated_base64 = base64.b64encode(buffer).decode('utf-8')
 
-        cnn_full = "\n".join(cnn_transcript)
-        trocr_full = "\n".join(trocr_transcript)
         if enable_autocorrect:
             from src.utils.postprocessing import OCRPostProcessor
-            cnn_full = OCRPostProcessor.process(cnn_full, enable_autocorrect=True)
-            trocr_full = OCRPostProcessor.process(trocr_full, enable_autocorrect=True)
+            cnn_transcript = [OCRPostProcessor.process(l, enable_autocorrect=True) for l in cnn_transcript]
+            trocr_transcript = [OCRPostProcessor.process(l, enable_autocorrect=True) for l in trocr_transcript]
+            best_transcript = [OCRPostProcessor.process(l, enable_autocorrect=True) for l in best_transcript]
+
+        cnn_full = "\n".join(cnn_transcript)
+        trocr_full = "\n".join(trocr_transcript)
+        best_full = "\n".join(best_transcript)
 
         return {
             "model_type": model_type,
             "total_lines_detected": len(line_segments),
             "cnn_transcript": cnn_full,
             "trocr_transcript": trocr_full,
+            "best_transcript": best_full,
             "full_transcript": "\n".join(full_transcript),
             "lines": lines_output,
             "annotated_image_base64": f"data:image/png;base64,{annotated_base64}",

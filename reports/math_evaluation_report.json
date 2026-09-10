@@ -1,6 +1,6 @@
 {
   "benchmark_name": "Mathematical Equation Recognition Benchmark",
-  "date": "2026-09-08 18:48:49",
+  "date": "2026-09-11 00:12:16",
   "num_test_equations": 203,
   "num_fraction_equations": 48,
   "num_non_fraction_equations": 155,

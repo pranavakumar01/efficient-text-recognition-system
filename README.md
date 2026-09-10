@@ -2,7 +2,7 @@
 
 > **7th Semester Phase-I Major Project (Code 42)**  
 > **Department of Information Science & Engineering, NMAM Institute of Technology, Nitte**  
-> **Academic Year: 2025–2026**
+> **Academic Year: 2026–2027 (2026-27)**
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
@@ -220,6 +220,6 @@ efficient-text-recognition-system/
 * **Project Title:** Efficient Text Recognition System (DL + SSL)
 * **Academic Program:** Bachelor of Engineering, Department of Information Science & Engineering
 * **Institution:** NMAM Institute of Technology, Nitte (Deemed to be University)
-* **Project Team:** Major Project Team 42 (Academic Year 2025–2026)
+* **Project Team:** Major Project Team 42 (Academic Year 2026–2027 / 2026-27)
 
 Licensed under the [MIT License](LICENSE).

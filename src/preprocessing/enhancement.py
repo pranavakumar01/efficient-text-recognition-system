@@ -86,39 +86,28 @@ class ImagePreprocessor:
         # Binarize inverted
         _, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
-        # 1. Math check: detect horizontal fraction bars or isolated operator lines
-        h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (max(16, int(w * 0.15)), 1))
-        h_lines = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, h_kernel)
-        if cv2.countNonZero(h_lines) > (w * 0.12):
+        # 1. Math check via MathFormulaParser
+        from src.utils.math_recognizer import MathFormulaParser
+        if MathFormulaParser.has_math_visual_structure(image_np):
             return "math"
 
-        # 2. Handwriting check: compute gradient orientation variance
-        sobel_x = cv2.Sobel(gray, cv2.CV_32F, 1, 0, ksize=3)
-        sobel_y = cv2.Sobel(gray, cv2.CV_32F, 0, 1, ksize=3)
-        mag = np.sqrt(sobel_x**2 + sobel_y**2)
-        angles = np.arctan2(sobel_y, sobel_x) * 180 / np.pi
+        # 2. Handwriting check: evaluate connected component stroke irregularity and cursive baseline linkage
+        contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        if contours and len(contours) >= 2:
+            aspect_ratios = []
+            stroke_areas = []
+            for c in contours:
+                _, _, cw, ch = cv2.boundingRect(c)
+                if ch >= 6 and cw >= 4:
+                    aspect_ratios.append(cw / float(ch))
+                    stroke_areas.append(cv2.contourArea(c))
 
-        # High-magnitude edge pixels
-        edge_mask = mag > 50
-        if np.sum(edge_mask) > 50:
-            edge_angles = angles[edge_mask]
-            # Standard deviation of edge angles: handwriting has substantially higher angle entropy
-            angle_std = np.std(edge_angles)
-
-            # Connected component analysis for stroke curvature
-            contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-            if contours:
-                aspect_ratios = []
-                for c in contours:
-                    _, _, cw, ch = cv2.boundingRect(c)
-                    if ch > 4 and cw > 4:
-                        aspect_ratios.append(cw / float(ch))
-
-                if aspect_ratios:
-                    ar_variance = np.var(aspect_ratios)
-                    # Real handwriting exhibits both variable orientation angles and irregular aspect ratio variance
-                    if angle_std > 82.0 or (ar_variance > 1.8 and angle_std > 70.0):
-                        return "handwritten"
+            if len(aspect_ratios) >= 3:
+                ar_variance = float(np.var(aspect_ratios))
+                # Real cursive handwriting has connected letters creating wide irregular components (aspect ratio > 2.5)
+                max_ar = max(aspect_ratios)
+                if ar_variance > 1.5 or (max_ar > 2.8 and ar_variance > 0.8):
+                    return "handwritten"
 
         return "printed"
 
