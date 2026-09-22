@@ -165,6 +165,21 @@ class ImagePreprocessor:
             return (canvas, new_w) if return_content_width else canvas
         return (resized, new_w) if return_content_width else resized
 
+    def normalize_polarity(self, gray: np.ndarray) -> np.ndarray:
+        """
+        Detects dark background with white/light text and automatically
+        inverts it to standard dark ink on light background.
+        """
+        if gray is None or gray.size == 0:
+            return gray
+        h, w = gray.shape[:2]
+        if h < 4 or w < 4:
+            return gray
+        border = np.concatenate([gray[0, :], gray[-1, :], gray[:, 0], gray[:, -1]])
+        if float(np.median(border)) < 115:
+            return 255 - gray
+        return gray
+
     def prepare(self, image: np.ndarray, max_width: int = None, is_historical: bool = False) -> tuple:
         """
         Primary preprocessing entry point.
@@ -174,8 +189,14 @@ class ImagePreprocessor:
             enhanced = self.enhance_historical(image)
         else:
             gray = self.grayscale(image)
+            gray = self.normalize_polarity(gray)
             denoised = self.denoise(gray)
             enhanced = self.enhance_contrast(denoised)
+
+        # Subtle unsharp masking for sharp stroke terminals
+        if enhanced is not None and enhanced.size > 0:
+            blur = cv2.GaussianBlur(enhanced, (0, 0), 1.0)
+            enhanced = cv2.addWeighted(enhanced, 1.25, blur, -0.25, 0)
 
         deskewed = self.deskew(enhanced)
         final_img, content_width = self.resize_and_pad(

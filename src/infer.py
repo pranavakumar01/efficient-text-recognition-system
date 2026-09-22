@@ -58,18 +58,24 @@ class OCRInferenceEngine:
             strict=strict,
         ) if load_trocr else None
 
-        self.easy_reader = None
-        if load_easyocr:
-            try:
-                import easyocr
-                self.easy_reader = easyocr.Reader(["en"], verbose=False)
-            except Exception as exc:
-                print(f"[!] EasyOCR baseline unavailable: {exc}")
+        self.load_easyocr = load_easyocr
+        self._easy_reader = None
 
         self.vocab = DEFAULT_VOCAB
         self.cnn_bilstm_model = None
         self._load_checkpoint(strict=strict)
         self.cnn_bilstm_model.eval()
+
+    @property
+    def easy_reader(self):
+        """Lazy loads EasyOCR only if needed as fallback."""
+        if self._easy_reader is None and self.load_easyocr:
+            try:
+                import easyocr
+                self._easy_reader = easyocr.Reader(["en"], verbose=False)
+            except Exception as exc:
+                print(f"[!] EasyOCR baseline unavailable: {exc}")
+        return self._easy_reader
 
     def _load_checkpoint(self, strict: bool):
         # 1. INT8 Quantized Model Branch
@@ -259,11 +265,13 @@ class OCRInferenceEngine:
                 variants.append(cv2.addWeighted(final_img, 1.4, blur, -0.4, 0))
 
                 batch = torch.cat([self._to_tensor(v) for v in variants], dim=0)
-                batch_logits, _ = self.cnn_bilstm_model(batch)
+                lens = torch.full((len(variants),), valid_t, dtype=torch.long)
+                batch_logits, _ = self.cnn_bilstm_model(batch, input_lengths=lens)
                 mean_probs = F.softmax(batch_logits, dim=-1).mean(dim=0, keepdim=True)
                 logits = torch.log(mean_probs + 1e-12)
             else:
-                logits, _ = self.cnn_bilstm_model(self._to_tensor(final_img))
+                lens = torch.tensor([valid_t], dtype=torch.long)
+                logits, _ = self.cnn_bilstm_model(self._to_tensor(final_img), input_lengths=lens)
 
             logits = logits[:, :min(valid_t, logits.size(1)), :]
             cnn_text = self.decode_predictions(
@@ -483,25 +491,42 @@ class OCRInferenceEngine:
             math_info, math_prep = self.predict_math(image_np, ground_truth=ground_truth, model_type=model_type)
             prep_results = math_prep
 
-        if model_type in ("cnn", "both"):
+        if model_type in ("both", "all"):
+            from concurrent.futures import ThreadPoolExecutor
+            with ThreadPoolExecutor(max_workers=2) as executor:
+                f_cnn = executor.submit(
+                    self.predict_cnn,
+                    image_np, ground_truth, enable_autocorrect=enable_autocorrect,
+                    use_tta=use_tta, postprocess=postprocess, domain="math" if is_math else domain,
+                    is_historical=is_historical
+                )
+                f_trocr = executor.submit(
+                    self.predict_transformer,
+                    image_np, ground_truth, enable_autocorrect=enable_autocorrect,
+                    postprocess=postprocess, domain="math" if is_math else domain
+                )
+                cnn_info, cnn_prep = f_cnn.result()
+                trans_info, trans_prep = f_trocr.result()
+                prep_results = cnn_prep or trans_prep
+        elif model_type == "cnn":
             cnn_info, prep_results = self.predict_cnn(
                 image_np, ground_truth, enable_autocorrect=enable_autocorrect,
                 use_tta=use_tta, postprocess=postprocess, domain="math" if is_math else domain,
                 is_historical=is_historical
             )
-        if model_type in ("transformer", "both"):
+        elif model_type in ("transformer", "trocr"):
             trans_info, trans_prep = self.predict_transformer(
                 image_np, ground_truth, enable_autocorrect=enable_autocorrect,
                 postprocess=postprocess, domain="math" if is_math else domain
             )
-            prep_results = prep_results or trans_prep
+            prep_results = trans_prep
 
         if not math_info and (
             (cnn_info and cnn_info.get("is_math")) or (trans_info and trans_info.get("is_math"))
         ):
             math_info, _ = self.predict_math(image_np, ground_truth=ground_truth, model_type=model_type)
 
-        if math_info and math_info.get("predicted_text"):
+        if math_info and math_info.get("predicted_text") and is_math:
             canonical_math = math_info["predicted_text"]
             if cnn_info:
                 cnn_info["predicted_text"] = canonical_math

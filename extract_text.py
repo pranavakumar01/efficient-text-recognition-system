@@ -39,6 +39,15 @@ from src.utils.math_recognizer import MathFormulaParser
 from src.utils.postprocessing import OCRPostProcessor
 
 
+_ENGINE_CACHE = {}
+
+def get_engine(load_trocr: bool = True, use_quantized: bool = False) -> OCRInferenceEngine:
+    key = (load_trocr, use_quantized)
+    if key not in _ENGINE_CACHE:
+        _ENGINE_CACHE[key] = OCRInferenceEngine(load_trocr=load_trocr, use_quantized=use_quantized)
+    return _ENGINE_CACHE[key]
+
+
 def run_extraction(
     image_path: str,
     model_choice: str = "both",
@@ -87,7 +96,7 @@ def run_extraction(
     # -------------------------------------------------------------------------
     if is_multi_line:
         load_trocr = model_choice in ("transformer", "both", "all")
-        inf_engine = OCRInferenceEngine(load_trocr=load_trocr, use_quantized=use_quantized)
+        inf_engine = get_engine(load_trocr=load_trocr, use_quantized=use_quantized)
         doc_engine = DocumentOCREngine(inference_engine=inf_engine, use_quantized=use_quantized)
         start_t = time.perf_counter()
         doc_res = doc_engine.process_document(
@@ -137,7 +146,7 @@ def run_extraction(
     # 2. Single Crop / Line / Equation Document Mode
     # -------------------------------------------------------------------------
     load_trocr = model_choice in ("transformer", "both")
-    engine = OCRInferenceEngine(load_trocr=load_trocr, use_quantized=use_quantized)
+    engine = get_engine(load_trocr=load_trocr, use_quantized=use_quantized)
 
     pipeline_res = engine.run_pipeline(
         img,

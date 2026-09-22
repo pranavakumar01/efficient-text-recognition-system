@@ -1,3 +1,2 @@
 Model Architecture,Parameters Count,Avg Latency (ms),Throughput (FPS),CER,WER,Scored Samples,Empty Predictions
-CNN + BiLSTM + Attention,5273810,261.58,3.8,0.6749,0.9867,15,0
-Vision Transformer (microsoft/trocr-base-printed),333921792,6437.49,0.2,0.045,0.1086,15,0
+CNN + BiLSTM + Attention,5277401,191.36,5.2,0.0171,0.0337,50,0

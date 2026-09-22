@@ -46,28 +46,49 @@ class BahdanauAttention(nn.Module):
     """
     Temporal Sequence Attention Mechanism.
     Computes attentive sequence representations across timesteps with full parameter compatibility.
+    Supports key-padding masking to eliminate padding pollution and temporal locality bias.
     """
-    def __init__(self, hidden_dim: int):
+    def __init__(self, hidden_dim: int, locality_window: float = 0.05):
         super(BahdanauAttention, self).__init__()
         self.W1 = nn.Linear(hidden_dim, hidden_dim)
         self.W2 = nn.Linear(hidden_dim, hidden_dim)
         self.V = nn.Linear(hidden_dim, 1)
         self.scale = (hidden_dim ** 0.5)
+        self.locality_window = locality_window
 
-    def forward(self, query: torch.Tensor, values: torch.Tensor) -> tuple:
+    def forward(self, query: torch.Tensor, values: torch.Tensor, mask: torch.Tensor = None) -> tuple:
         # values: [B, seq_len, hidden_dim]
         # If query is 2D [B, hidden_dim], compute sequence-level additive attention
         if query.dim() == 2:
             score = self.V(torch.tanh(self.W1(values) + self.W2(query).unsqueeze(1)))
+            if mask is not None:
+                score = score.masked_fill(~mask.unsqueeze(2), -1e9)
             attention_weights = F.softmax(score, dim=1)
             context = torch.sum(attention_weights * values, dim=1, keepdim=True).expand_as(values)
             return context, attention_weights
 
-        # If query is 3D [B, seq_len, hidden_dim], compute full temporal self-attention
+        # If query is 3D [B, seq_len, hidden_dim], compute temporal self-attention
+        b, seq_len, dim = query.size()
         q = self.W2(query)
         k = self.W1(values)
         scores = torch.bmm(q, k.transpose(1, 2)) / self.scale
+
+        # Add soft temporal distance penalty so each timestep focuses on local stroke transitions
+        if self.locality_window > 0 and seq_len > 1:
+            idx = torch.arange(seq_len, device=query.device, dtype=torch.float32)
+            dist = (idx.unsqueeze(0) - idx.unsqueeze(1)).abs()
+            scores = scores - (self.locality_window * dist).unsqueeze(0)
+
+        # Apply key-padding mask: prevent queries from attending to blank white padding
+        if mask is not None:
+            scores = scores.masked_fill(~mask.unsqueeze(1), -1e9)
+
         att_weights = F.softmax(scores, dim=-1)
+
+        # Guard against NaNs for entirely masked rows
+        if mask is not None:
+            att_weights = att_weights.masked_fill(~mask.unsqueeze(2), 0.0)
+
         context = torch.bmm(att_weights, values)
         return context, att_weights
 
@@ -131,16 +152,22 @@ class CNN_BiLSTM_Attention(nn.Module):
             print(f"[!] Error transferring SSL weights: {e}")
             return False
 
-    def forward(self, x: torch.Tensor) -> tuple:
+    def forward(self, x: torch.Tensor, input_lengths: torch.Tensor = None) -> tuple:
         # Dynamic height guard: ensure height is 32 for CNN pooling layers
         if x.size(2) != 32:
             x = F.interpolate(x, size=(32, max(16, int(x.size(3) * (32.0 / x.size(2))))), mode='bilinear', align_corners=False)
 
         features = self.feature_extractor(x)  # [B, Seq_Len, Hidden_Dim]
         lstm_out, _ = self.bilstm(features)   # [B, Seq_Len, Hidden_Dim * 2]
-        
+
+        mask = None
+        if input_lengths is not None:
+            seq_len = lstm_out.size(1)
+            clamped_lens = input_lengths.clamp(max=seq_len)
+            mask = torch.arange(seq_len, device=x.device).unsqueeze(0) < clamped_lens.unsqueeze(1)
+
         # Compute temporal sequence attention across BiLSTM states
-        context, att_weights = self.attention(lstm_out, lstm_out)
+        context, att_weights = self.attention(lstm_out, lstm_out, mask=mask)
 
         # Attentive residual sequence representation
         attended_seq = lstm_out + context

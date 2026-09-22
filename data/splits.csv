@@ -1599,46 +1599,6 @@ kaggle_dataset,kaggle_dataset/handwritten/VALIDATION_9826.jpg,CAMILLE,train,,0,3
 kaggle_dataset,kaggle_dataset/handwritten/VALIDATION_9897.jpg,NEBCHI,train,,0,324,44,58,6,1
 kaggle_dataset,kaggle_dataset/handwritten/VALIDATION_9996.jpg,CHANDLER,train,,0,284,31,73,8,1
 kaggle_dataset,kaggle_dataset/handwritten/VALIDATION_9998.jpg,KAJAANI,train,,0,388,29,107,7,1
-kaggle_dataset,kaggle_dataset/historical/hist_0000.png,Historical Manuscript Document Sample 1,train,,0,2446,3512,5,39,0
-kaggle_dataset,kaggle_dataset/historical/hist_0001.png,Historical Manuscript Document Sample 2,train,,0,1490,1388,8,39,0
-kaggle_dataset,kaggle_dataset/historical/hist_0002.png,Historical Manuscript Document Sample 3,train,,0,2446,3512,5,39,0
-kaggle_dataset,kaggle_dataset/historical/hist_0003.png,Historical Manuscript Document Sample 4,valid,,0,1120,1568,5,39,0
-kaggle_dataset,kaggle_dataset/historical/hist_0004.png,Historical Manuscript Document Sample 5,train,,0,2446,3512,5,39,0
-kaggle_dataset,kaggle_dataset/historical/hist_0005.png,Historical Manuscript Document Sample 6,train,,0,1392,2295,4,39,0
-kaggle_dataset,kaggle_dataset/historical/hist_0006.png,Historical Manuscript Document Sample 7,train,,0,1537,2047,6,39,0
-kaggle_dataset,kaggle_dataset/historical/hist_0007.png,Historical Manuscript Document Sample 8,train,,0,1192,1638,5,39,0
-kaggle_dataset,kaggle_dataset/historical/hist_0008.png,Historical Manuscript Document Sample 9,train,,0,1489,1280,9,39,0
-kaggle_dataset,kaggle_dataset/historical/hist_0009.png,Historical Manuscript Document Sample 10,valid,,0,1512,2008,6,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0010.png,Historical Manuscript Document Sample 11,train,,0,928,1358,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0011.png,Historical Manuscript Document Sample 12,train,,0,1505,1382,8,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0012.png,Historical Manuscript Document Sample 13,test,,0,1120,1568,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0013.png,Historical Manuscript Document Sample 14,train,,0,1942,1273,12,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0014.png,Historical Manuscript Document Sample 15,train,,0,2481,3509,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0015.png,Historical Manuscript Document Sample 16,train,,0,1392,2295,4,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0016.png,Historical Manuscript Document Sample 17,train,,0,937,1275,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0017.png,Historical Manuscript Document Sample 18,train,,0,1120,1568,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0018.png,Historical Manuscript Document Sample 19,valid,,0,1251,1755,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0019.png,Historical Manuscript Document Sample 20,train,,0,1482,1270,9,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0020.png,Historical Manuscript Document Sample 21,train,,0,2481,3509,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0021.png,Historical Manuscript Document Sample 22,train,,0,929,1363,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0022.png,Historical Manuscript Document Sample 23,test,,0,1498,1386,8,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0023.png,Historical Manuscript Document Sample 24,train,,0,2481,3509,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0024.png,Historical Manuscript Document Sample 25,test,,0,1489,1280,9,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0025.png,Historical Manuscript Document Sample 26,train,,0,1496,1271,9,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0026.png,Historical Manuscript Document Sample 27,train,,0,1381,1369,8,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0027.png,Historical Manuscript Document Sample 28,test,,0,1392,2295,4,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0028.png,Historical Manuscript Document Sample 29,train,,0,1493,1275,9,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0029.png,Historical Manuscript Document Sample 30,train,,0,1511,2008,6,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0030.png,Historical Manuscript Document Sample 31,train,,0,1120,1568,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0031.png,Historical Manuscript Document Sample 32,train,,0,1478,1280,9,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0032.png,Historical Manuscript Document Sample 33,train,,0,1501,1275,9,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0033.png,Historical Manuscript Document Sample 34,train,,0,1495,1346,8,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0034.png,Historical Manuscript Document Sample 35,valid,,0,2446,3512,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0035.png,Historical Manuscript Document Sample 36,valid,,0,1503,1283,9,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0036.png,Historical Manuscript Document Sample 37,valid,,0,1392,2295,4,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0037.png,Historical Manuscript Document Sample 38,train,,0,1392,2295,4,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0038.png,Historical Manuscript Document Sample 39,train,,0,2446,3512,5,40,0
-kaggle_dataset,kaggle_dataset/historical/hist_0039.png,Historical Manuscript Document Sample 40,valid,,0,1384,1384,8,40,0
 mathwriting,mathwriting/images/test_000a4e8ca49c5a1c.png,(x-y)/sqrt(2),test,test,1,169,64,21,13,1
 mathwriting,mathwriting/images/test_001083e26028da36.png,"\nabla I=(I_{x},I_{y})",test,test,1,165,64,20,22,0
 mathwriting,mathwriting/images/test_0017bb5822bcba69.png,P=P(C(Z)),test,test,1,130,64,16,9,1
@@ -3639,153 +3599,1203 @@ mathwriting,mathwriting/images/valid_04dcbde3ebfeaba5.png,S,valid,valid,1,64,64,
 mathwriting,mathwriting/images/valid_04e0c52aa8da96ae.png,s_{k}=\prod_{i=1}^{m}x_{i},valid,valid,1,132,64,16,26,0
 mathwriting,mathwriting/images/valid_04ea506b5a75ca41.png,\sqrt{(}t),valid,valid,1,94,64,11,10,1
 mathwriting,mathwriting/images/valid_04ef5dec00edcc6d.png,\frac{d^{2}y}{d^{2}t},valid,valid,1,74,64,9,21,0
-synthetic,synthetic/images/sample_0000.png,Computer Vision Image Processing,test,,0,351,32,87,32,1
-synthetic,synthetic/images/sample_0001.png,x^2 + y^2 = z^2,train,,0,198,32,49,15,1
-synthetic,synthetic/images/sample_0002.png,Optical Character Recognition Engine,test,,0,451,32,112,36,1
-synthetic,synthetic/images/sample_0003.png,lim_{x->0} (sin x / x) = 1,train,,1,281,32,70,26,1
-synthetic,synthetic/images/sample_0004.png,lim_{x->0} (sin x / x) = 1,train,,1,227,32,56,26,1
-synthetic,synthetic/images/sample_0005.png,Deep Learning Major Project,valid,,0,247,32,61,27,1
-synthetic,synthetic/images/sample_0006.png,E = m * c ^ 2,valid,,0,168,32,42,13,1
-synthetic,synthetic/images/sample_0007.png,sum_{i=1}^n i = n(n+1)/2,train,,1,190,32,47,24,1
-synthetic,synthetic/images/sample_0008.png,Character and Word Error Rate CER,train,,0,359,32,89,33,1
-synthetic,synthetic/images/sample_0009.png,sum_{i=1}^n i = n(n+1)/2,train,,1,248,32,62,24,1
-synthetic,synthetic/images/sample_0010.png,a^2 + b^2 = c^2,train,,0,184,32,46,15,1
-synthetic,synthetic/images/sample_0011.png,Character and Word Error Rate CER,train,,0,357,32,89,33,1
-synthetic,synthetic/images/sample_0012.png,Connectionist Temporal Classification,train,,0,299,32,74,37,1
-synthetic,synthetic/images/sample_0013.png,Optical Character Recognition Engine,test,,0,354,32,88,36,1
-synthetic,synthetic/images/sample_0014.png,E = m * c ^ 2,valid,,0,179,32,44,13,1
-synthetic,synthetic/images/sample_0015.png,lim_{x->0} (sin x / x) = 1,train,,1,237,32,59,26,1
-synthetic,synthetic/images/sample_0016.png,sum_{i=1}^n i = n(n+1)/2,train,,1,237,32,59,24,1
-synthetic,synthetic/images/sample_0017.png,PyTorch Deep Learning Pipeline,train,,0,291,32,72,30,1
-synthetic,synthetic/images/sample_0018.png,Deep Learning Major Project,valid,,0,294,32,73,27,1
-synthetic,synthetic/images/sample_0019.png,Document Image Machine Translation,train,,0,433,32,108,34,1
-synthetic,synthetic/images/sample_0020.png,Efficient Text Recognition System,valid,,0,251,32,62,33,1
-synthetic,synthetic/images/sample_0021.png,Document Image Machine Translation,train,,0,295,32,73,34,1
-synthetic,synthetic/images/sample_0022.png,d/dx (e^x) = e^x,train,,0,183,32,45,16,1
-synthetic,synthetic/images/sample_0023.png,Efficient Text Recognition System,valid,,0,264,32,66,33,1
-synthetic,synthetic/images/sample_0024.png,d/dx (e^x) = e^x,train,,0,178,32,44,16,1
-synthetic,synthetic/images/sample_0025.png,Bidirectional LSTM Sequence Model,train,,0,299,32,74,33,1
-synthetic,synthetic/images/sample_0026.png,Document Image Machine Translation,train,,0,338,32,84,34,1
-synthetic,synthetic/images/sample_0027.png,Self Supervised Learning 2026,test,,0,252,32,63,29,1
-synthetic,synthetic/images/sample_0028.png,Optical Character Recognition Engine,test,,0,295,32,73,36,1
-synthetic,synthetic/images/sample_0029.png,lim_{x->0} (sin x / x) = 1,train,,1,230,32,57,26,1
-synthetic,synthetic/images/sample_0030.png,Convolutional Neural Network Architecture,train,,0,437,32,109,41,1
-synthetic,synthetic/images/sample_0031.png,Character and Word Error Rate CER,train,,0,402,32,100,33,1
-synthetic,synthetic/images/sample_0032.png,Computer Vision Image Processing,test,,0,247,32,61,32,1
-synthetic,synthetic/images/sample_0033.png,A . B = A & B + C^2,valid,,0,223,32,55,19,1
-synthetic,synthetic/images/sample_0034.png,Document Image Machine Translation,train,,0,336,32,84,34,1
-synthetic,synthetic/images/sample_0035.png,lim_{x->0} (sin x / x) = 1,train,,1,275,32,68,26,1
-synthetic,synthetic/images/sample_0036.png,lim_{x->0} (sin x / x) = 1,train,,1,269,32,67,26,1
-synthetic,synthetic/images/sample_0037.png,lim_{x->0} (sin x / x) = 1,train,,1,223,32,55,26,1
-synthetic,synthetic/images/sample_0038.png,Document Image Machine Translation,train,,0,307,32,76,34,1
-synthetic,synthetic/images/sample_0039.png,Connectionist Temporal Classification,train,,0,356,32,89,37,1
-synthetic,synthetic/images/sample_0040.png,Convolutional Neural Network Architecture,train,,0,386,32,96,41,1
-synthetic,synthetic/images/sample_0041.png,Character and Word Error Rate CER,train,,0,333,32,83,33,1
-synthetic,synthetic/images/sample_0042.png,Deep Learning Major Project,valid,,0,246,32,61,27,1
-synthetic,synthetic/images/sample_0043.png,Document Image Machine Translation,train,,0,348,32,87,34,1
-synthetic,synthetic/images/sample_0044.png,Deep Learning Major Project,valid,,0,280,32,70,27,1
-synthetic,synthetic/images/sample_0045.png,sum_{i=1}^n i = n(n+1)/2,train,,1,219,32,54,24,1
-synthetic,synthetic/images/sample_0046.png,Optical Character Recognition Engine,test,,0,345,32,86,36,1
-synthetic,synthetic/images/sample_0047.png,a^2 + b^2 = c^2,train,,0,148,32,37,15,1
-synthetic,synthetic/images/sample_0048.png,PyTorch Deep Learning Pipeline,train,,0,278,32,69,30,1
-synthetic,synthetic/images/sample_0049.png,Self Supervised Learning 2026,test,,0,333,32,83,29,1
-synthetic,synthetic/images/sample_0050.png,lim_{x->0} (sin x / x) = 1,train,,1,236,32,59,26,1
-synthetic,synthetic/images/sample_0051.png,E = m * c ^ 2,valid,,0,147,32,36,13,1
-synthetic,synthetic/images/sample_0052.png,d/dx (e^x) = e^x,train,,0,162,32,40,16,1
-synthetic,synthetic/images/sample_0053.png,Feature Map Extraction ResNet Backbone,valid,,0,342,32,85,38,1
-synthetic,synthetic/images/sample_0054.png,Connectionist Temporal Classification,train,,0,314,32,78,37,1
-synthetic,synthetic/images/sample_0055.png,Convolutional Neural Network Architecture,train,,0,362,32,90,41,1
-synthetic,synthetic/images/sample_0056.png,A . B = A & B + C^2,valid,,0,228,32,57,19,1
-synthetic,synthetic/images/sample_0057.png,Pattern Recognition Lab NMAMIT,train,,0,257,32,64,30,1
-synthetic,synthetic/images/sample_0058.png,Efficient Text Recognition System,valid,,0,335,32,83,33,1
-synthetic,synthetic/images/sample_0059.png,A . B = A & B + C^2,valid,,0,255,32,63,19,1
-synthetic,synthetic/images/sample_0060.png,Convolutional Neural Network Architecture,train,,0,426,32,106,41,1
-synthetic,synthetic/images/sample_0061.png,d/dx (e^x) = e^x,train,,0,166,32,41,16,1
-synthetic,synthetic/images/sample_0062.png,lim_{x->0} (sin x / x) = 1,train,,1,207,32,51,26,1
-synthetic,synthetic/images/sample_0063.png,E = m * c ^ 2,valid,,0,135,32,33,13,1
-synthetic,synthetic/images/sample_0064.png,x^2 + y^2 = z^2,train,,0,152,32,38,15,1
-synthetic,synthetic/images/sample_0065.png,Connectionist Temporal Classification,train,,0,364,32,91,37,1
-synthetic,synthetic/images/sample_0066.png,Character and Word Error Rate CER,train,,0,384,32,96,33,1
-synthetic,synthetic/images/sample_0067.png,Computer Vision Image Processing,test,,0,324,32,81,32,1
-synthetic,synthetic/images/sample_0068.png,x^2 + y^2 = z^2,train,,0,143,32,35,15,1
-synthetic,synthetic/images/sample_0069.png,PyTorch Deep Learning Pipeline,train,,0,300,32,75,30,1
-synthetic,synthetic/images/sample_0070.png,PyTorch Deep Learning Pipeline,train,,0,281,32,70,30,1
-synthetic,synthetic/images/sample_0071.png,Pattern Recognition Lab NMAMIT,train,,0,306,32,76,30,1
-synthetic,synthetic/images/sample_0072.png,Optical Character Recognition Engine,test,,0,393,32,98,36,1
-synthetic,synthetic/images/sample_0073.png,Computer Vision Image Processing,test,,0,311,32,77,32,1
-synthetic,synthetic/images/sample_0074.png,sum_{i=1}^n i = n(n+1)/2,train,,1,199,32,49,24,1
-synthetic,synthetic/images/sample_0075.png,A . B = A & B + C^2,valid,,0,253,32,63,19,1
-synthetic,synthetic/images/sample_0076.png,Feature Map Extraction ResNet Backbone,valid,,0,356,32,89,38,1
-synthetic,synthetic/images/sample_0077.png,Attention Mechanism for OCR,valid,,0,329,32,82,27,1
-synthetic,synthetic/images/sample_0078.png,Self Supervised Learning 2026,test,,0,261,32,65,29,1
-synthetic,synthetic/images/sample_0079.png,Self Supervised Learning 2026,test,,0,242,32,60,29,1
-synthetic,synthetic/images/sample_0080.png,Document Image Machine Translation,train,,0,307,32,76,34,1
-synthetic,synthetic/images/sample_0081.png,Connectionist Temporal Classification,train,,0,336,32,84,37,1
-synthetic,synthetic/images/sample_0082.png,Computer Vision Image Processing,test,,0,288,32,72,32,1
-synthetic,synthetic/images/sample_0083.png,lim_{x->0} (sin x / x) = 1,train,,1,220,32,55,26,1
-synthetic,synthetic/images/sample_0084.png,d/dx (e^x) = e^x,train,,0,184,32,46,16,1
-synthetic,synthetic/images/sample_0085.png,a^2 + b^2 = c^2,train,,0,185,32,46,15,1
-synthetic,synthetic/images/sample_0086.png,Efficient Text Recognition System,valid,,0,287,32,71,33,1
-synthetic,synthetic/images/sample_0087.png,Self Supervised Learning 2026,test,,0,277,32,69,29,1
-synthetic,synthetic/images/sample_0088.png,Computer Vision Image Processing,test,,0,295,32,73,32,1
-synthetic,synthetic/images/sample_0089.png,sum_{i=1}^n i = n(n+1)/2,train,,1,251,32,62,24,1
-synthetic,synthetic/images/sample_0090.png,Connectionist Temporal Classification,train,,0,341,32,85,37,1
-synthetic,synthetic/images/sample_0091.png,Bidirectional LSTM Sequence Model,train,,0,412,32,103,33,1
-synthetic,synthetic/images/sample_0092.png,a^2 + b^2 = c^2,train,,0,183,32,45,15,1
-synthetic,synthetic/images/sample_0093.png,Convolutional Neural Network Architecture,train,,0,453,32,113,41,1
-synthetic,synthetic/images/sample_0094.png,Pattern Recognition Lab NMAMIT,train,,0,306,32,76,30,1
-synthetic,synthetic/images/sample_0095.png,Attention Mechanism for OCR,valid,,0,268,32,67,27,1
-synthetic,synthetic/images/sample_0096.png,Bidirectional LSTM Sequence Model,train,,0,318,32,79,33,1
-synthetic,synthetic/images/sample_0097.png,Deep Learning Major Project,valid,,0,256,32,64,27,1
-synthetic,synthetic/images/sample_0098.png,E = m * c ^ 2,valid,,0,145,32,36,13,1
-synthetic,synthetic/images/sample_0099.png,d/dx (e^x) = e^x,train,,0,160,32,40,16,1
-synthetic,synthetic/images/sample_0100.png,sum_{i=1}^n i = n(n+1)/2,train,,1,233,32,58,24,1
-synthetic,synthetic/images/sample_0101.png,Self Supervised Learning 2026,test,,0,247,32,61,29,1
-synthetic,synthetic/images/sample_0102.png,d/dx (e^x) = e^x,train,,0,138,32,34,16,1
-synthetic,synthetic/images/sample_0103.png,Document Image Machine Translation,train,,0,384,32,96,34,1
-synthetic,synthetic/images/sample_0104.png,d/dx (e^x) = e^x,train,,0,193,32,48,16,1
-synthetic,synthetic/images/sample_0105.png,Convolutional Neural Network Architecture,train,,0,411,32,102,41,1
-synthetic,synthetic/images/sample_0106.png,Deep Learning Major Project,valid,,0,260,32,65,27,1
-synthetic,synthetic/images/sample_0107.png,x^2 + y^2 = z^2,train,,0,148,32,37,15,1
-synthetic,synthetic/images/sample_0108.png,Self Supervised Learning 2026,test,,0,256,32,64,29,1
-synthetic,synthetic/images/sample_0109.png,a^2 + b^2 = c^2,train,,0,149,32,37,15,1
-synthetic,synthetic/images/sample_0110.png,Computer Vision Image Processing,test,,0,323,32,80,32,1
-synthetic,synthetic/images/sample_0111.png,Bidirectional LSTM Sequence Model,train,,0,314,32,78,33,1
-synthetic,synthetic/images/sample_0112.png,Optical Character Recognition Engine,test,,0,297,32,74,36,1
-synthetic,synthetic/images/sample_0113.png,sum_{i=1}^n i = n(n+1)/2,train,,1,239,32,59,24,1
-synthetic,synthetic/images/sample_0114.png,Document Image Machine Translation,train,,0,315,32,78,34,1
-synthetic,synthetic/images/sample_0115.png,Feature Map Extraction ResNet Backbone,valid,,0,388,32,97,38,1
-synthetic,synthetic/images/sample_0116.png,Information Science and Engineering,train,,0,290,32,72,35,1
-synthetic,synthetic/images/sample_0117.png,a^2 + b^2 = c^2,train,,0,196,32,49,15,1
-synthetic,synthetic/images/sample_0118.png,Computer Vision Image Processing,test,,0,279,32,69,32,1
-synthetic,synthetic/images/sample_0119.png,Convolutional Neural Network Architecture,train,,0,470,32,117,41,1
-synthetic,synthetic/images/sample_0120.png,Convolutional Neural Network Architecture,train,,0,423,32,105,41,1
-synthetic,synthetic/images/sample_0121.png,x^2 + y^2 = z^2,train,,0,159,32,39,15,1
-synthetic,synthetic/images/sample_0122.png,Convolutional Neural Network Architecture,train,,0,466,32,116,41,1
-synthetic,synthetic/images/sample_0123.png,PyTorch Deep Learning Pipeline,train,,0,301,32,75,30,1
-synthetic,synthetic/images/sample_0124.png,Feature Map Extraction ResNet Backbone,valid,,0,374,32,93,38,1
-synthetic,synthetic/images/sample_0125.png,Optical Character Recognition Engine,test,,0,314,32,78,36,1
-synthetic,synthetic/images/sample_0126.png,E = m * c ^ 2,valid,,0,170,32,42,13,1
-synthetic,synthetic/images/sample_0127.png,Convolutional Neural Network Architecture,train,,0,531,32,132,41,1
-synthetic,synthetic/images/sample_0128.png,Optical Character Recognition Engine,test,,0,328,32,82,36,1
-synthetic,synthetic/images/sample_0129.png,Convolutional Neural Network Architecture,train,,0,478,32,119,41,1
-synthetic,synthetic/images/sample_0130.png,Self Supervised Learning 2026,test,,0,317,32,79,29,1
-synthetic,synthetic/images/sample_0131.png,Computer Vision Image Processing,test,,0,389,32,97,32,1
-synthetic,synthetic/images/sample_0132.png,Attention Mechanism for OCR,valid,,0,342,32,85,27,1
-synthetic,synthetic/images/sample_0133.png,A . B = A & B + C^2,valid,,0,226,32,56,19,1
-synthetic,synthetic/images/sample_0134.png,Document Image Machine Translation,train,,0,419,32,104,34,1
-synthetic,synthetic/images/sample_0135.png,d/dx (e^x) = e^x,train,,0,128,32,32,16,1
-synthetic,synthetic/images/sample_0136.png,x^2 + y^2 = z^2,train,,0,160,32,40,15,1
-synthetic,synthetic/images/sample_0137.png,Computer Vision Image Processing,test,,0,363,32,90,32,1
-synthetic,synthetic/images/sample_0138.png,Convolutional Neural Network Architecture,train,,0,430,32,107,41,1
-synthetic,synthetic/images/sample_0139.png,a^2 + b^2 = c^2,train,,0,225,32,56,15,1
-synthetic,synthetic/images/sample_0140.png,lim_{x->0} (sin x / x) = 1,train,,1,218,32,54,26,1
-synthetic,synthetic/images/sample_0141.png,A . B = A & B + C^2,valid,,0,261,32,65,19,1
-synthetic,synthetic/images/sample_0142.png,Pattern Recognition Lab NMAMIT,train,,0,320,32,80,30,1
-synthetic,synthetic/images/sample_0143.png,Connectionist Temporal Classification,train,,0,400,32,100,37,1
-synthetic,synthetic/images/sample_0144.png,Document Image Machine Translation,train,,0,325,32,81,34,1
-synthetic,synthetic/images/sample_0145.png,PyTorch Deep Learning Pipeline,train,,0,273,32,68,30,1
-synthetic,synthetic/images/sample_0146.png,Feature Map Extraction ResNet Backbone,valid,,0,313,32,78,38,1
-synthetic,synthetic/images/sample_0147.png,Bidirectional LSTM Sequence Model,train,,0,302,32,75,33,1
-synthetic,synthetic/images/sample_0148.png,Document Image Machine Translation,train,,0,344,32,86,34,1
-synthetic,synthetic/images/sample_0149.png,sum_{i=1}^n i = n(n+1)/2,train,,1,251,32,62,24,1
+synthetic,synthetic/images/sample_0000.png,Gradient tensor,train,,0,166,32,41,15,1
+synthetic,synthetic/images/sample_0001.png,sequence batch gradient image vocab,train,,0,435,32,108,35,1
+synthetic,synthetic/images/sample_0002.png,Complex handwriting,train,,0,197,32,49,19,1
+synthetic,synthetic/images/sample_0003.png,Paper and Symbol,train,,0,204,32,51,16,1
+synthetic,synthetic/images/sample_0004.png,Record label,train,,0,232,32,58,12,1
+synthetic,synthetic/images/sample_0005.png,Allows real,train,,0,136,32,34,11,1
+synthetic,synthetic/images/sample_0006.png,Sequence scale padding symbol linear,train,,0,315,32,78,36,1
+synthetic,synthetic/images/sample_0007.png,Value: 1046 samples,test,,0,229,32,57,19,1
+synthetic,synthetic/images/sample_0008.png,Open source software accelerates scientific discovery,train,,0,458,32,114,53,1
+synthetic,synthetic/images/sample_0009.png,Gives honest,train,,0,152,32,38,12,1
+synthetic,synthetic/images/sample_0010.png,Continues to evolve rapidly,train,,0,253,32,63,27,1
+synthetic,synthetic/images/sample_0011.png,Measured: 5263 epochs,train,,0,221,32,55,21,1
+synthetic,synthetic/images/sample_0012.png,Artificial Intelligence and Deep Learning,test,,0,501,32,125,41,1
+synthetic,synthetic/images/sample_0013.png,feature token linear channel encode,train,,0,360,32,90,35,1
+synthetic,synthetic/images/sample_0014.png,Method Speed Attention Design,train,,0,305,32,76,29,1
+synthetic,synthetic/images/sample_0015.png,bahdanau sequence attention mechanism,train,,0,352,32,88,37,1
+synthetic,synthetic/images/sample_0016.png,Filtering removes noise while,train,,0,275,32,68,29,1
+synthetic,synthetic/images/sample_0017.png,Library and Vector,test,,0,227,32,56,18,1
+synthetic,synthetic/images/sample_0018.png,Filtering removes noise while keeping,train,,0,472,32,118,37,1
+synthetic,synthetic/images/sample_0019.png,Total: 266 epochs,train,,0,248,32,62,17,1
+synthetic,synthetic/images/sample_0020.png,system padding,test,,0,169,32,42,14,1
+synthetic,synthetic/images/sample_0021.png,Analysis requires robust,train,,0,256,32,64,24,1
+synthetic,synthetic/images/sample_0022.png,Count: 762 %,test,,0,160,32,40,12,1
+synthetic,synthetic/images/sample_0023.png,Hardware rate batch stride,train,,0,426,32,106,26,1
+synthetic,synthetic/images/sample_0024.png,Paper into searchable text,train,,0,230,32,57,26,1
+synthetic,synthetic/images/sample_0025.png,vector kernel result text number,test,,0,318,32,79,32,1
+synthetic,synthetic/images/sample_0026.png,Be intuitive responsive and,train,,0,283,32,70,27,1
+synthetic,synthetic/images/sample_0027.png,report vector padding system,train,,0,294,32,73,28,1
+synthetic,synthetic/images/sample_0028.png,align hardware,valid,,0,155,32,38,14,1
+synthetic,synthetic/images/sample_0029.png,score loss weight,valid,,0,174,32,43,17,1
+synthetic,synthetic/images/sample_0030.png,Metric library scale process target,valid,,0,276,32,69,35,1
+synthetic,synthetic/images/sample_0031.png,Linear and Tensor,train,,0,224,32,56,17,1
+synthetic,synthetic/images/sample_0032.png,Software engineers,train,,0,206,32,51,18,1
+synthetic,synthetic/images/sample_0033.png,Scale spatial training library,train,,0,302,32,75,30,1
+synthetic,synthetic/images/sample_0034.png,Attention and Pooling,train,,0,246,32,61,21,1
+synthetic,synthetic/images/sample_0035.png,scale method,test,,0,196,32,49,12,1
+synthetic,synthetic/images/sample_0036.png,Predict and Filter,train,,0,181,32,45,18,1
+synthetic,synthetic/images/sample_0037.png,vision transformer pretrained decoder,train,,0,392,32,98,37,1
+synthetic,synthetic/images/sample_0038.png,Pack my box with five dozen liquor jugs,train,,0,312,32,78,39,1
+synthetic,synthetic/images/sample_0039.png,Continues to,train,,0,146,32,36,12,1
+synthetic,synthetic/images/sample_0040.png,Weight Vocab Compute Project Stride,train,,0,306,32,76,35,1
+synthetic,synthetic/images/sample_0041.png,Total: 1800 epochs,train,,0,178,32,44,18,1
+synthetic,synthetic/images/sample_0042.png,Recorded: 798 %,train,,0,176,32,44,15,1
+synthetic,synthetic/images/sample_0043.png,word paper,train,,0,113,32,28,10,1
+synthetic,synthetic/images/sample_0044.png,Manuscript Rate Channel Loss,test,,0,296,32,74,28,1
+synthetic,synthetic/images/sample_0045.png,Published date: 11 September 2026,train,,0,325,32,81,33,1
+synthetic,synthetic/images/sample_0046.png,Temporal Filter Metric,train,,0,235,32,58,22,1
+synthetic,synthetic/images/sample_0047.png,Keeping edges,train,,0,162,32,40,13,1
+synthetic,synthetic/images/sample_0048.png,Dynamically focus,train,,0,185,32,46,17,1
+synthetic,synthetic/images/sample_0049.png,Capture past,test,,0,171,32,42,12,1
+synthetic,synthetic/images/sample_0050.png,Digital preservation safeguards centuries,train,,0,376,32,94,41,1
+synthetic,synthetic/images/sample_0051.png,Reasoning underpins,train,,0,173,32,43,19,1
+synthetic,synthetic/images/sample_0052.png,Design and Platform,train,,0,229,32,57,19,1
+synthetic,synthetic/images/sample_0053.png,Error Symbol Study,valid,,0,181,32,45,18,1
+synthetic,synthetic/images/sample_0054.png,symbol analysis,valid,,0,175,32,43,15,1
+synthetic,synthetic/images/sample_0055.png,science dataset pooling network learning,train,,0,355,32,88,40,1
+synthetic,synthetic/images/sample_0056.png,Platform and Report,train,,0,184,32,46,19,1
+synthetic,synthetic/images/sample_0057.png,Report generated at 11:45:00 UTC,test,,0,312,32,78,32,1
+synthetic,synthetic/images/sample_0058.png,Channel and Model,train,,0,227,32,56,17,1
+synthetic,synthetic/images/sample_0059.png,Measured: 6491 pixels,train,,0,192,32,48,21,1
+synthetic,synthetic/images/sample_0060.png,Latency: 42.5 ms per single page scan,train,,0,424,32,106,37,1
+synthetic,synthetic/images/sample_0061.png,channel word learning score label,train,,0,427,32,106,33,1
+synthetic,synthetic/images/sample_0062.png,Character pooling,train,,0,164,32,41,17,1
+synthetic,synthetic/images/sample_0063.png,Output: 6115 ms,train,,0,192,32,48,15,1
+synthetic,synthetic/images/sample_0064.png,Target Decode Memory Compute,valid,,0,309,32,77,28,1
+synthetic,synthetic/images/sample_0065.png,"Score: CER 0.042, WER 0.089, FPS 45.2",train,,0,383,32,95,37,1
+synthetic,synthetic/images/sample_0066.png,Engine network,train,,0,181,32,45,14,1
+synthetic,synthetic/images/sample_0067.png,Study temporal,train,,0,156,32,39,14,1
+synthetic,synthetic/images/sample_0068.png,Count: 7277 pixels,train,,0,174,32,43,18,1
+synthetic,synthetic/images/sample_0069.png,Prevent models from memorizing data,train,,0,326,32,81,35,1
+synthetic,synthetic/images/sample_0070.png,Decision making everywhere,test,,0,313,32,78,26,1
+synthetic,synthetic/images/sample_0071.png,Loss platform weight,test,,0,192,32,48,20,1
+synthetic,synthetic/images/sample_0072.png,Stride Channel,test,,0,200,32,50,14,1
+synthetic,synthetic/images/sample_0073.png,activation image gradient,train,,0,251,32,62,25,1
+synthetic,synthetic/images/sample_0074.png,Neural networks,train,,0,181,32,45,15,1
+synthetic,synthetic/images/sample_0075.png,Benchmarking on,train,,0,168,32,42,15,1
+synthetic,synthetic/images/sample_0076.png,Output: 8571 %,train,,0,197,32,49,14,1
+synthetic,synthetic/images/sample_0077.png,Epoch and Decode,test,,0,203,32,50,16,1
+synthetic,synthetic/images/sample_0078.png,Recognition transforms paper into,train,,0,337,32,84,33,1
+synthetic,synthetic/images/sample_0079.png,On key image,train,,0,148,32,37,12,1
+synthetic,synthetic/images/sample_0080.png,Measured: 4716 items,test,,0,242,32,60,20,1
+synthetic,synthetic/images/sample_0081.png,Training vector decode,train,,0,219,32,54,22,1
+synthetic,synthetic/images/sample_0082.png,model method vocab,train,,0,241,32,60,18,1
+synthetic,synthetic/images/sample_0083.png,Fast inference allows real time text transcription on mobile,train,,0,541,32,135,60,1
+synthetic,synthetic/images/sample_0084.png,text vector number padding,train,,0,288,32,72,26,1
+synthetic,synthetic/images/sample_0085.png,Information Science and Engineering,train,,0,276,32,69,35,1
+synthetic,synthetic/images/sample_0086.png,Hardware stride,test,,0,229,32,57,15,1
+synthetic,synthetic/images/sample_0087.png,Value: 1866 units,train,,0,224,32,56,17,1
+synthetic,synthetic/images/sample_0088.png,Activation and Kernel,valid,,0,362,32,90,21,1
+synthetic,synthetic/images/sample_0089.png,Artificial intelligence continues,train,,0,293,32,73,33,1
+synthetic,synthetic/images/sample_0090.png,Value: 904 samples,train,,0,174,32,43,18,1
+synthetic,synthetic/images/sample_0091.png,Protocols guarantee reproducible science,train,,0,425,32,106,40,1
+synthetic,synthetic/images/sample_0092.png,Dynamically focus on key image,train,,0,341,32,85,30,1
+synthetic,synthetic/images/sample_0093.png,Sequence and Record,train,,0,205,32,51,19,1
+synthetic,synthetic/images/sample_0094.png,Science Study,train,,0,134,32,33,13,1
+synthetic,synthetic/images/sample_0095.png,Software engineers design reliable and scalable architectures,train,,0,683,32,170,61,1
+synthetic,synthetic/images/sample_0096.png,DEEP LEARNING PATTERN RECOGNITION LAB,train,,0,510,32,127,37,1
+synthetic,synthetic/images/sample_0097.png,Analysis and Text,train,,0,189,32,47,17,1
+synthetic,synthetic/images/sample_0098.png,Prevents overfitting during,train,,0,234,32,58,27,1
+synthetic,synthetic/images/sample_0099.png,Analysis requires robust preprocessing,test,,0,469,32,117,38,1
+synthetic,synthetic/images/sample_0100.png,Careful data preparation prevents,train,,0,325,32,81,33,1
+synthetic,synthetic/images/sample_0101.png,Feature and Research,train,,0,255,32,63,20,1
+synthetic,synthetic/images/sample_0102.png,Input and Device,valid,,0,202,32,50,16,1
+synthetic,synthetic/images/sample_0103.png,Department of Information Science Archives,train,,0,512,32,128,42,1
+synthetic,synthetic/images/sample_0104.png,Platform and Process,train,,0,248,32,62,20,1
+synthetic,synthetic/images/sample_0105.png,batch predict input layer design,valid,,0,339,32,84,32,1
+synthetic,synthetic/images/sample_0106.png,Training predict report character letter,train,,0,358,32,89,40,1
+synthetic,synthetic/images/sample_0107.png,Evaluation protocols guarantee,train,,0,312,32,78,30,1
+synthetic,synthetic/images/sample_0108.png,Subtle character strokes,train,,0,227,32,56,24,1
+synthetic,synthetic/images/sample_0109.png,gradient epoch network device matrix,train,,0,322,32,80,36,1
+synthetic,synthetic/images/sample_0110.png,input engine report linear pooling,train,,0,351,32,87,34,1
+synthetic,synthetic/images/sample_0111.png,Library Output Label Power,train,,0,224,32,56,26,1
+synthetic,synthetic/images/sample_0112.png,Hierarchical visual,valid,,0,243,32,60,19,1
+synthetic,synthetic/images/sample_0113.png,Convolutional filters extract hierarchical visual features,train,,0,521,32,130,58,1
+synthetic,synthetic/images/sample_0114.png,Reduces memory footprint without losing,valid,,0,377,32,94,39,1
+synthetic,synthetic/images/sample_0115.png,Align linear,train,,0,119,32,29,12,1
+synthetic,synthetic/images/sample_0116.png,Across global networks,train,,0,231,32,57,22,1
+synthetic,synthetic/images/sample_0117.png,Output: 9169 MB,train,,0,188,32,47,15,1
+synthetic,synthetic/images/sample_0118.png,Techniques prevent models from memorizing data,train,,0,416,32,104,46,1
+synthetic,synthetic/images/sample_0119.png,Symbol and Decode,train,,0,212,32,53,17,1
+synthetic,synthetic/images/sample_0120.png,Regressions before release,train,,0,270,32,67,26,1
+synthetic,synthetic/images/sample_0121.png,Channel and Score,valid,,0,236,32,59,17,1
+synthetic,synthetic/images/sample_0122.png,Channel Engine Process,train,,0,234,32,58,22,1
+synthetic,synthetic/images/sample_0123.png,Study and Gradient,train,,0,182,32,45,18,1
+synthetic,synthetic/images/sample_0124.png,Recorded: 6926 pixels,train,,0,269,32,67,21,1
+synthetic,synthetic/images/sample_0125.png,manuscript target,train,,0,189,32,47,17,1
+synthetic,synthetic/images/sample_0126.png,Recorded: 6547 items,train,,0,216,32,54,20,1
+synthetic,synthetic/images/sample_0127.png,Metric and Letter,train,,0,193,32,48,17,1
+synthetic,synthetic/images/sample_0128.png,Accuracy achieved: 98.75% across test sets,train,,0,443,32,110,42,1
+synthetic,synthetic/images/sample_0129.png,Complex handwriting,train,,0,208,32,52,19,1
+synthetic,synthetic/images/sample_0130.png,Learning score,train,,0,160,32,40,14,1
+synthetic,synthetic/images/sample_0131.png,Regularization techniques prevent models from memorizing data,train,,0,625,32,156,61,1
+synthetic,synthetic/images/sample_0132.png,Total: 4988 pixels,train,,0,252,32,63,18,1
+synthetic,synthetic/images/sample_0133.png,Device Latency Text Vocab,train,,0,347,32,86,25,1
+synthetic,synthetic/images/sample_0134.png,Pooling Memory Loss Method,train,,0,372,32,93,26,1
+synthetic,synthetic/images/sample_0135.png,System training latency,train,,0,205,32,51,23,1
+synthetic,synthetic/images/sample_0136.png,Recorded: 5795 %,train,,0,202,32,50,16,1
+synthetic,synthetic/images/sample_0137.png,Attention platform,train,,0,213,32,53,18,1
+synthetic,synthetic/images/sample_0138.png,accuracy loss compute paper,train,,0,272,32,68,27,1
+synthetic,synthetic/images/sample_0139.png,Document Image Machine Translation,train,,0,299,32,74,34,1
+synthetic,synthetic/images/sample_0140.png,Prevents overfitting during training,train,,0,341,32,85,36,1
+synthetic,synthetic/images/sample_0141.png,Processing reduces manual data,test,,0,320,32,80,30,1
+synthetic,synthetic/images/sample_0142.png,network research engine stride rate,train,,0,295,32,73,35,1
+synthetic,synthetic/images/sample_0143.png,AUTONOMOUS DOCUMENT DIGITIZATION SYSTEM,train,,0,591,32,147,39,1
+synthetic,synthetic/images/sample_0144.png,Deep Learning Pattern Recognition Lab,train,,0,328,32,82,37,1
+synthetic,synthetic/images/sample_0145.png,Value: 5575 units,valid,,0,186,32,46,17,1
+synthetic,synthetic/images/sample_0146.png,Value: 3588 epochs,train,,0,214,32,53,18,1
+synthetic,synthetic/images/sample_0147.png,Speed and Spatial,valid,,0,172,32,43,17,1
+synthetic,synthetic/images/sample_0148.png,Value: 6035 epochs,train,,0,189,32,47,18,1
+synthetic,synthetic/images/sample_0149.png,Ensures stable,train,,0,192,32,48,14,1
+synthetic,synthetic/images/sample_0150.png,Project and Memory,valid,,0,177,32,44,18,1
+synthetic,synthetic/images/sample_0151.png,Dozen liquor jugs,train,,0,173,32,43,17,1
+synthetic,synthetic/images/sample_0152.png,Inference allows real time text transcription on mobile,train,,0,443,32,110,55,1
+synthetic,synthetic/images/sample_0153.png,GRADIENT DESCENT BACKPROPAGATION OPTIMIZER,train,,0,489,32,122,42,1
+synthetic,synthetic/images/sample_0154.png,Measured: 1360 ms,train,,0,294,32,73,17,1
+synthetic,synthetic/images/sample_0155.png,Neural networks recognize complex handwriting,valid,,0,437,32,109,45,1
+synthetic,synthetic/images/sample_0156.png,Value: 7120 pixels,train,,0,184,32,46,18,1
+synthetic,synthetic/images/sample_0157.png,Symbol feature power,train,,0,303,32,75,20,1
+synthetic,synthetic/images/sample_0158.png,Score Align Network Input,valid,,0,217,32,54,25,1
+synthetic,synthetic/images/sample_0159.png,report research manuscript,train,,0,238,32,59,26,1
+synthetic,synthetic/images/sample_0160.png,Recorded: 8827 units,train,,0,294,32,73,20,1
+synthetic,synthetic/images/sample_0161.png,Output and Accuracy,train,,0,196,32,49,19,1
+synthetic,synthetic/images/sample_0162.png,Encode and Linear,test,,0,247,32,61,17,1
+synthetic,synthetic/images/sample_0163.png,Device and Kernel,test,,0,210,32,52,17,1
+synthetic,synthetic/images/sample_0164.png,predict speed,train,,0,139,32,34,13,1
+synthetic,synthetic/images/sample_0165.png,Measured: 4247 pixels,test,,0,224,32,56,21,1
+synthetic,synthetic/images/sample_0166.png,Memory and Sequence,valid,,0,208,32,52,19,1
+synthetic,synthetic/images/sample_0167.png,Target speed,valid,,0,151,32,37,12,1
+synthetic,synthetic/images/sample_0168.png,analysis vector process archive loss,train,,0,372,32,93,36,1
+synthetic,synthetic/images/sample_0169.png,feature map extraction resnet backbone,valid,,0,407,32,101,38,1
+synthetic,synthetic/images/sample_0170.png,manuscript filter learning character,test,,0,296,32,74,36,1
+synthetic,synthetic/images/sample_0171.png,Method compute report token,train,,0,423,32,105,27,1
+synthetic,synthetic/images/sample_0172.png,Value: 5246 items,train,,0,214,32,53,17,1
+synthetic,synthetic/images/sample_0173.png,Padding and Research,train,,0,186,32,46,20,1
+synthetic,synthetic/images/sample_0174.png,Word Layer Scale,test,,0,171,32,42,16,1
+synthetic,synthetic/images/sample_0175.png,Supervised Fine Tuning on Labeled Data,valid,,0,408,32,102,38,1
+synthetic,synthetic/images/sample_0176.png,Method Platform Target,test,,0,336,32,84,22,1
+synthetic,synthetic/images/sample_0177.png,Image and Weight,train,,0,168,32,42,16,1
+synthetic,synthetic/images/sample_0178.png,Kernel Platform Dataset Speed Report,train,,0,306,32,76,36,1
+synthetic,synthetic/images/sample_0179.png,Align digit dataset word,train,,0,311,32,77,24,1
+synthetic,synthetic/images/sample_0180.png,Word Pooling Epoch Project,train,,0,263,32,65,26,1
+synthetic,synthetic/images/sample_0181.png,Connectionist Temporal Classification Loss,test,,0,395,32,98,42,1
+synthetic,synthetic/images/sample_0182.png,Sequence Library Align,train,,0,266,32,66,22,1
+synthetic,synthetic/images/sample_0183.png,My box with five dozen liquor,train,,0,278,32,69,29,1
+synthetic,synthetic/images/sample_0184.png,Device Decode Attention Research Library,train,,0,356,32,89,40,1
+synthetic,synthetic/images/sample_0185.png,Multi Column Layout Analysis Engine,train,,0,325,32,81,35,1
+synthetic,synthetic/images/sample_0186.png,Units capture past and,train,,0,233,32,58,22,1
+synthetic,synthetic/images/sample_0187.png,Document analysis requires robust preprocessing,train,,0,476,32,119,47,1
+synthetic,synthetic/images/sample_0188.png,Digital preservation safeguards centuries of,train,,0,402,32,100,44,1
+synthetic,synthetic/images/sample_0189.png,Word and Platform,train,,0,205,32,51,17,1
+synthetic,synthetic/images/sample_0190.png,Predict sample engine,train,,0,227,32,56,21,1
+synthetic,synthetic/images/sample_0191.png,Without losing,test,,0,129,32,32,14,1
+synthetic,synthetic/images/sample_0192.png,Recorded: 2077 samples,train,,0,269,32,67,22,1
+synthetic,synthetic/images/sample_0193.png,Recorded: 2687 units,train,,0,298,32,74,20,1
+synthetic,synthetic/images/sample_0194.png,Neural networks recognize complex handwriting styles,valid,,0,628,32,157,52,1
+synthetic,synthetic/images/sample_0195.png,Archive speed,train,,0,165,32,41,13,1
+synthetic,synthetic/images/sample_0196.png,Encode Batch,train,,0,183,32,45,12,1
+synthetic,synthetic/images/sample_0197.png,Without losing,test,,0,180,32,45,14,1
+synthetic,synthetic/images/sample_0198.png,Standardized dimensions and contrast,train,,0,424,32,106,36,1
+synthetic,synthetic/images/sample_0199.png,Digital preservation safeguards centuries of,train,,0,349,32,87,44,1
+synthetic,synthetic/images/sample_0200.png,Automated document processing,train,,0,254,32,63,29,1
+synthetic,synthetic/images/sample_0201.png,tensor encode error,train,,0,230,32,57,19,1
+synthetic,synthetic/images/sample_0202.png,Model research word study,train,,0,226,32,56,25,1
+synthetic,synthetic/images/sample_0203.png,Underpins modern computational,train,,0,321,32,80,30,1
+synthetic,synthetic/images/sample_0204.png,Science and Research,train,,0,210,32,52,20,1
+synthetic,synthetic/images/sample_0205.png,Total: 3640 items,train,,0,207,32,51,17,1
+synthetic,synthetic/images/sample_0206.png,Device vocab,train,,0,172,32,43,12,1
+synthetic,synthetic/images/sample_0207.png,target text encode,valid,,0,175,32,43,18,1
+synthetic,synthetic/images/sample_0208.png,Character rate power,train,,0,223,32,55,20,1
+synthetic,synthetic/images/sample_0209.png,linear vocab spatial,test,,0,227,32,56,20,1
+synthetic,synthetic/images/sample_0210.png,Kernel Latency,train,,0,165,32,41,14,1
+synthetic,synthetic/images/sample_0211.png,And shared,train,,0,135,32,33,10,1
+synthetic,synthetic/images/sample_0212.png,epoch research engine predict design,test,,0,444,32,111,36,1
+synthetic,synthetic/images/sample_0213.png,Complex handwriting styles,valid,,0,231,32,57,26,1
+synthetic,synthetic/images/sample_0214.png,Value: 2541 %,train,,0,157,32,39,13,1
+synthetic,synthetic/images/sample_0215.png,High Accuracy Handwritten Text Extraction,valid,,0,425,32,106,41,1
+synthetic,synthetic/images/sample_0216.png,Record and Token,train,,0,201,32,50,16,1
+synthetic,synthetic/images/sample_0217.png,Output and Number,train,,0,177,32,44,17,1
+synthetic,synthetic/images/sample_0218.png,Multimodal models understand,test,,0,309,32,77,28,1
+synthetic,synthetic/images/sample_0219.png,Spatial library token document hardware,train,,0,328,32,82,39,1
+synthetic,synthetic/images/sample_0220.png,Total: 5888 samples,train,,0,286,32,71,19,1
+synthetic,synthetic/images/sample_0221.png,Recorded: 8881 samples,train,,0,269,32,67,22,1
+synthetic,synthetic/images/sample_0222.png,Weight score process error vector,train,,0,270,32,67,33,1
+synthetic,synthetic/images/sample_0223.png,Dimensions: 640 x 480 pixels at 300 DPI,train,,0,432,32,108,39,1
+synthetic,synthetic/images/sample_0224.png,Standardized dimensions and contrast,train,,0,397,32,99,36,1
+synthetic,synthetic/images/sample_0225.png,Vector Linear,train,,0,155,32,38,13,1
+synthetic,synthetic/images/sample_0226.png,Process and Output,valid,,0,240,32,60,18,1
+synthetic,synthetic/images/sample_0227.png,Edge INT8 Quantization and Optimization,train,,0,361,32,90,39,1
+synthetic,synthetic/images/sample_0228.png,Value: 8403 MB,test,,0,236,32,59,14,1
+synthetic,synthetic/images/sample_0229.png,Layer Analysis Align,train,,0,194,32,48,20,1
+synthetic,synthetic/images/sample_0230.png,Pack my box,train,,0,127,32,31,11,1
+synthetic,synthetic/images/sample_0231.png,Process millions of images,train,,0,248,32,62,26,1
+synthetic,synthetic/images/sample_0232.png,Research Manuscript System,train,,0,256,32,64,26,1
+synthetic,synthetic/images/sample_0233.png,Temporal Layer Report Learning Platform,train,,0,571,32,142,39,1
+synthetic,synthetic/images/sample_0234.png,Dataset Matrix Latency Temporal,valid,,0,357,32,89,31,1
+synthetic,synthetic/images/sample_0235.png,Value: 8014 epochs,test,,0,206,32,51,18,1
+synthetic,synthetic/images/sample_0236.png,Speed and Filter,train,,0,182,32,45,16,1
+synthetic,synthetic/images/sample_0237.png,Fast inference allows real time text,train,,0,369,32,92,36,1
+synthetic,synthetic/images/sample_0238.png,Digit linear layer library manuscript,train,,0,403,32,100,37,1
+synthetic,synthetic/images/sample_0239.png,Archive design activation error,train,,0,282,32,70,31,1
+synthetic,synthetic/images/sample_0240.png,Mathematical reasoning underpins modern computational,train,,0,622,32,155,53,1
+synthetic,synthetic/images/sample_0241.png,Scale Training Kernel Decode,train,,0,280,32,70,28,1
+synthetic,synthetic/images/sample_0242.png,On old,train,,0,136,32,34,6,1
+synthetic,synthetic/images/sample_0243.png,Preprocessed images have,valid,,0,255,32,63,24,1
+synthetic,synthetic/images/sample_0244.png,metric gradient linear engine epoch,train,,0,468,32,117,35,1
+synthetic,synthetic/images/sample_0245.png,How vexingly quick,train,,0,154,32,38,18,1
+synthetic,synthetic/images/sample_0246.png,report score rate input,train,,0,312,32,78,23,1
+synthetic,synthetic/images/sample_0247.png,predict sample label analysis,valid,,0,297,32,74,29,1
+synthetic,synthetic/images/sample_0248.png,Shared across global networks,train,,0,308,32,77,29,1
+synthetic,synthetic/images/sample_0249.png,Count: 9636 %,test,,0,176,32,44,13,1
+synthetic,synthetic/images/sample_0250.png,Recorded: 9166 epochs,train,,0,208,32,52,21,1
+synthetic,synthetic/images/sample_0251.png,Letter filter compute,valid,,0,228,32,57,21,1
+synthetic,synthetic/images/sample_0252.png,Modern computational algorithms,valid,,0,334,32,83,31,1
+synthetic,synthetic/images/sample_0253.png,Complex handwriting,train,,0,248,32,62,19,1
+synthetic,synthetic/images/sample_0254.png,EFFICIENT TEXT RECOGNITION SYSTEM,valid,,0,422,32,105,33,1
+synthetic,synthetic/images/sample_0255.png,Output: 9395 %,train,,0,193,32,48,14,1
+synthetic,synthetic/images/sample_0256.png,Vision pipelines,train,,0,148,32,37,16,1
+synthetic,synthetic/images/sample_0257.png,Digital preservation safeguards centuries,train,,0,412,32,103,41,1
+synthetic,synthetic/images/sample_0258.png,Continuous integration catches regressions before release,train,,0,617,32,154,57,1
+synthetic,synthetic/images/sample_0259.png,Reveals faint ink traces on old,train,,0,335,32,83,31,1
+synthetic,synthetic/images/sample_0260.png,Standardized evaluation protocols guarantee reproducible science,valid,,0,671,32,167,64,1
+synthetic,synthetic/images/sample_0261.png,Fast inference allows real time text transcription on,test,,0,466,32,116,53,1
+synthetic,synthetic/images/sample_0262.png,latency target model compute report,train,,0,346,32,86,35,1
+synthetic,synthetic/images/sample_0263.png,Fast Greedy and Prefix Beam Search Decode,test,,0,435,32,108,41,1
+synthetic,synthetic/images/sample_0264.png,attention padding tensor speed matrix,train,,0,429,32,107,37,1
+synthetic,synthetic/images/sample_0265.png,Encode Padding,train,,0,165,32,41,14,1
+synthetic,synthetic/images/sample_0266.png,Measured: 5870 pixels,train,,0,206,32,51,21,1
+synthetic,synthetic/images/sample_0267.png,Filter Sample Symbol,train,,0,185,32,46,20,1
+synthetic,synthetic/images/sample_0268.png,Resolution Degradation and Ink Bleed Repair,train,,0,430,32,107,43,1
+synthetic,synthetic/images/sample_0269.png,Batch and Vocab,test,,0,162,32,40,15,1
+synthetic,synthetic/images/sample_0270.png,Training and Letter,train,,0,166,32,41,19,1
+synthetic,synthetic/images/sample_0271.png,Epoch and Score,valid,,0,183,32,45,15,1
+synthetic,synthetic/images/sample_0272.png,speed scale report accuracy output,valid,,0,322,32,80,34,1
+synthetic,synthetic/images/sample_0273.png,Linear and Speed,train,,0,179,32,44,16,1
+synthetic,synthetic/images/sample_0274.png,Input output,train,,0,121,32,30,12,1
+synthetic,synthetic/images/sample_0275.png,Recorded: 4103 pixels,train,,0,282,32,70,21,1
+synthetic,synthetic/images/sample_0276.png,Processing transforms raw sensor signals into insights,train,,0,409,32,102,54,1
+synthetic,synthetic/images/sample_0277.png,Batch and Dataset,train,,0,202,32,50,17,1
+synthetic,synthetic/images/sample_0278.png,Epoch character batch result,train,,0,260,32,65,28,1
+synthetic,synthetic/images/sample_0279.png,Invoice #INV-2026-0814 total: $450.00,valid,,0,375,32,93,37,1
+synthetic,synthetic/images/sample_0280.png,How vexingly quick,train,,0,250,32,62,18,1
+synthetic,synthetic/images/sample_0281.png,Careful data preparation,valid,,0,280,32,70,24,1
+synthetic,synthetic/images/sample_0282.png,Count: 9026 pixels,train,,0,200,32,50,18,1
+synthetic,synthetic/images/sample_0283.png,Value: 6766 ms,train,,0,203,32,50,14,1
+synthetic,synthetic/images/sample_0284.png,Output: 5149 %,train,,0,199,32,49,14,1
+synthetic,synthetic/images/sample_0285.png,connectionist temporal classification loss,test,,0,356,32,89,42,1
+synthetic,synthetic/images/sample_0286.png,Vexingly quick daft zebras jump,valid,,0,270,32,67,31,1
+synthetic,synthetic/images/sample_0287.png,Output: 2490 %,train,,0,152,32,38,14,1
+synthetic,synthetic/images/sample_0288.png,Batch and Record,train,,0,189,32,47,16,1
+synthetic,synthetic/images/sample_0289.png,Recorded: 4697 items,test,,0,230,32,57,20,1
+synthetic,synthetic/images/sample_0290.png,character memory sequence,test,,0,259,32,64,25,1
+synthetic,synthetic/images/sample_0291.png,Allows real time,train,,0,192,32,48,16,1
+synthetic,synthetic/images/sample_0292.png,User interfaces should be,train,,0,302,32,75,25,1
+synthetic,synthetic/images/sample_0293.png,autonomous document digitization system,train,,0,357,32,89,39,1
+synthetic,synthetic/images/sample_0294.png,User interfaces should be,train,,0,345,32,86,25,1
+synthetic,synthetic/images/sample_0295.png,Analysis and Report,train,,0,211,32,52,19,1
+synthetic,synthetic/images/sample_0296.png,Symbol design batch,train,,0,173,32,43,19,1
+synthetic,synthetic/images/sample_0297.png,And scalable,train,,0,198,32,49,12,1
+synthetic,synthetic/images/sample_0298.png,Total: 8249 %,train,,0,185,32,46,13,1
+synthetic,synthetic/images/sample_0299.png,temporal report gradient,test,,0,255,32,63,24,1
+synthetic,synthetic/images/sample_0300.png,Batch and Label,train,,0,266,32,66,15,1
+synthetic,synthetic/images/sample_0301.png,Device paper,train,,0,155,32,38,12,1
+synthetic,synthetic/images/sample_0302.png,Should be intuitive responsive and,test,,0,396,32,99,34,1
+synthetic,synthetic/images/sample_0303.png,input metric digit library,test,,0,328,32,82,26,1
+synthetic,synthetic/images/sample_0304.png,Memory and Padding,train,,0,230,32,57,18,1
+synthetic,synthetic/images/sample_0305.png,Word system decode,valid,,0,220,32,55,18,1
+synthetic,synthetic/images/sample_0306.png,Automated document processing reduces manual data entry errors,train,,0,717,32,179,62,1
+synthetic,synthetic/images/sample_0307.png,Learning Sample Matrix Manuscript Library,train,,0,408,32,102,41,1
+synthetic,synthetic/images/sample_0308.png,Papers are published and shared across global networks,train,,0,475,32,118,54,1
+synthetic,synthetic/images/sample_0309.png,Preparation prevents,train,,0,249,32,62,20,1
+synthetic,synthetic/images/sample_0310.png,Value: 1143 %,valid,,0,208,32,52,13,1
+synthetic,synthetic/images/sample_0311.png,Archive and Hardware,train,,0,282,32,70,20,1
+synthetic,synthetic/images/sample_0312.png,Deep learning models achieve state,valid,,0,354,32,88,34,1
+synthetic,synthetic/images/sample_0313.png,Error and Process,train,,0,186,32,46,17,1
+synthetic,synthetic/images/sample_0314.png,scale weight filter manuscript kernel,train,,0,346,32,86,37,1
+synthetic,synthetic/images/sample_0315.png,Output: 5437 pixels,valid,,0,214,32,53,19,1
+synthetic,synthetic/images/sample_0316.png,Attention sequence metric model,train,,0,377,32,94,31,1
+synthetic,synthetic/images/sample_0317.png,Paper into searchable text,train,,0,243,32,60,26,1
+synthetic,synthetic/images/sample_0318.png,Recorded: 8957 epochs,valid,,0,218,32,54,21,1
+synthetic,synthetic/images/sample_0319.png,Automated document processing reduces manual,train,,0,416,32,104,44,1
+synthetic,synthetic/images/sample_0320.png,Preparation prevents overfitting during training,train,,0,405,32,101,48,1
+synthetic,synthetic/images/sample_0321.png,Kernel stride engine channel hardware,valid,,0,362,32,90,37,1
+synthetic,synthetic/images/sample_0322.png,Engine Compute Layer Loss,train,,0,302,32,75,25,1
+synthetic,synthetic/images/sample_0323.png,Digital preservation safeguards centuries of,train,,0,441,32,110,44,1
+synthetic,synthetic/images/sample_0324.png,Linear Digit,train,,0,146,32,36,12,1
+synthetic,synthetic/images/sample_0325.png,Digit Score,train,,0,120,32,30,11,1
+synthetic,synthetic/images/sample_0326.png,Measured: 4816 items,train,,0,265,32,66,20,1
+synthetic,synthetic/images/sample_0327.png,Platform and Analysis,train,,0,190,32,47,21,1
+synthetic,synthetic/images/sample_0328.png,Value: 6532 ms,train,,0,223,32,55,14,1
+synthetic,synthetic/images/sample_0329.png,information science and engineering,train,,0,336,32,84,35,1
+synthetic,synthetic/images/sample_0330.png,Report and Archive,train,,0,202,32,50,18,1
+synthetic,synthetic/images/sample_0331.png,Memory footprint without losing accuracy,train,,0,392,32,98,40,1
+synthetic,synthetic/images/sample_0332.png,Measured: 2246 pixels,test,,0,220,32,55,21,1
+synthetic,synthetic/images/sample_0333.png,Requires robust,train,,0,215,32,53,15,1
+synthetic,synthetic/images/sample_0334.png,report feature library,train,,0,219,32,54,22,1
+synthetic,synthetic/images/sample_0335.png,Optical character recognition transforms paper into,train,,0,491,32,122,51,1
+synthetic,synthetic/images/sample_0336.png,Vector and Matrix,valid,,0,214,32,53,17,1
+synthetic,synthetic/images/sample_0337.png,target input kernel score,train,,0,254,32,63,25,1
+synthetic,synthetic/images/sample_0338.png,To evolve rapidly,train,,0,203,32,50,17,1
+synthetic,synthetic/images/sample_0339.png,Tensor and Feature,train,,0,274,32,68,18,1
+synthetic,synthetic/images/sample_0340.png,word batch study,train,,0,196,32,49,16,1
+synthetic,synthetic/images/sample_0341.png,Time text transcription on mobile,train,,0,346,32,86,33,1
+synthetic,synthetic/images/sample_0342.png,Design reliable and scalable,valid,,0,268,32,67,28,1
+synthetic,synthetic/images/sample_0343.png,Achieve state of the art,train,,0,256,32,64,24,1
+synthetic,synthetic/images/sample_0344.png,Measured: 6880 epochs,test,,0,240,32,60,21,1
+synthetic,synthetic/images/sample_0345.png,Manuscript Dataset Science Tensor,train,,0,356,32,89,33,1
+synthetic,synthetic/images/sample_0346.png,Accuracy text,train,,0,181,32,45,13,1
+synthetic,synthetic/images/sample_0347.png,To evolve,test,,0,120,32,30,9,1
+synthetic,synthetic/images/sample_0348.png,Label Token,train,,0,158,32,39,11,1
+synthetic,synthetic/images/sample_0349.png,Dozen liquor,train,,0,175,32,43,12,1
+synthetic,synthetic/images/sample_0350.png,kernel vector input matrix,train,,0,229,32,57,26,1
+synthetic,synthetic/images/sample_0351.png,Linear Label Batch Research,test,,0,297,32,74,27,1
+synthetic,synthetic/images/sample_0352.png,"Coordinates: 40.7128 N, 74.0060 W",train,,0,323,32,80,33,1
+synthetic,synthetic/images/sample_0353.png,padding spatial analysis design,train,,0,365,32,91,31,1
+synthetic,synthetic/images/sample_0354.png,Metric and Spatial,train,,0,184,32,46,18,1
+synthetic,synthetic/images/sample_0355.png,Robust preprocessing,train,,0,221,32,55,20,1
+synthetic,synthetic/images/sample_0356.png,Century Old Heritage Print Preservation,train,,0,344,32,86,39,1
+synthetic,synthetic/images/sample_0357.png,Science and System,test,,0,245,32,61,18,1
+synthetic,synthetic/images/sample_0358.png,Value: 8608 epochs,train,,0,264,32,66,18,1
+synthetic,synthetic/images/sample_0359.png,Decode Text Output Stride,valid,,0,279,32,69,25,1
+synthetic,synthetic/images/sample_0360.png,Total: 1656 units,train,,0,203,32,50,17,1
+synthetic,synthetic/images/sample_0361.png,Process compute digit,train,,0,226,32,56,21,1
+synthetic,synthetic/images/sample_0362.png,Multimodal models understand,test,,0,343,32,85,28,1
+synthetic,synthetic/images/sample_0363.png,Transforms paper into searchable text,train,,0,324,32,81,37,1
+synthetic,synthetic/images/sample_0364.png,archive power document,valid,,0,259,32,64,22,1
+synthetic,synthetic/images/sample_0365.png,spatial number letter,train,,0,203,32,50,21,1
+synthetic,synthetic/images/sample_0366.png,Count: 52 samples,train,,0,179,32,44,17,1
+synthetic,synthetic/images/sample_0367.png,Attention mechanisms dynamically,train,,0,280,32,70,32,1
+synthetic,synthetic/images/sample_0368.png,Library Compute Power Result,train,,0,301,32,75,28,1
+synthetic,synthetic/images/sample_0369.png,Compute target error loss,train,,0,323,32,80,25,1
+synthetic,synthetic/images/sample_0370.png,Vocab and Design,train,,0,170,32,42,16,1
+synthetic,synthetic/images/sample_0371.png,Project and Platform,train,,0,220,32,55,20,1
+synthetic,synthetic/images/sample_0372.png,ADAPTIVE HISTOGRAM EQUALIZATION FILTERING,test,,0,454,32,113,41,1
+synthetic,synthetic/images/sample_0373.png,Temporal and Project,train,,0,239,32,59,20,1
+synthetic,synthetic/images/sample_0374.png,Value: 6020 samples,test,,0,221,32,55,19,1
+synthetic,synthetic/images/sample_0375.png,Value: 3653 units,train,,0,200,32,50,17,1
+synthetic,synthetic/images/sample_0376.png,Image processing transforms raw sensor signals into insights,valid,,0,531,32,132,60,1
+synthetic,synthetic/images/sample_0377.png,Contrast enhancement reveals faint ink,train,,0,343,32,85,38,1
+synthetic,synthetic/images/sample_0378.png,target record,test,,0,135,32,33,13,1
+synthetic,synthetic/images/sample_0379.png,archive channel encode,train,,0,216,32,54,22,1
+synthetic,synthetic/images/sample_0380.png,Hierarchical visual,valid,,0,176,32,44,19,1
+synthetic,synthetic/images/sample_0381.png,Value: 7845 %,train,,0,193,32,48,13,1
+synthetic,synthetic/images/sample_0382.png,Output: 9350 items,train,,0,288,32,72,18,1
+synthetic,synthetic/images/sample_0383.png,Real time text transcription on,train,,0,255,32,63,31,1
+synthetic,synthetic/images/sample_0384.png,Filters extract hierarchical visual features,train,,0,428,32,107,44,1
+synthetic,synthetic/images/sample_0385.png,Matrix Speed,train,,0,141,32,35,12,1
+synthetic,synthetic/images/sample_0386.png,predict temporal,valid,,0,183,32,45,16,1
+synthetic,synthetic/images/sample_0387.png,Vision Transformer Pretrained Decoder,train,,0,413,32,103,37,1
+synthetic,synthetic/images/sample_0388.png,Preprocessed images have standardized dimensions and contrast,train,,0,733,32,183,61,1
+synthetic,synthetic/images/sample_0389.png,system word stride vocab memory,valid,,0,326,32,81,31,1
+synthetic,synthetic/images/sample_0390.png,Document ID: #REC-2026-9041,valid,,0,391,32,97,27,1
+synthetic,synthetic/images/sample_0391.png,Rate letter memory accuracy,train,,0,299,32,74,27,1
+synthetic,synthetic/images/sample_0392.png,Value: 8199 samples,train,,0,194,32,48,19,1
+synthetic,synthetic/images/sample_0393.png,Contrast enhancement reveals faint ink traces on old paper,train,,0,601,32,150,58,1
+synthetic,synthetic/images/sample_0394.png,Value: 4793 items,test,,0,175,32,43,17,1
+synthetic,synthetic/images/sample_0395.png,Faint ink traces on,valid,,0,240,32,60,19,1
+synthetic,synthetic/images/sample_0396.png,Output: 8164 epochs,train,,0,207,32,51,19,1
+synthetic,synthetic/images/sample_0397.png,Continues to evolve rapidly,train,,0,279,32,69,27,1
+synthetic,synthetic/images/sample_0398.png,Underpins modern computational,train,,0,385,32,96,30,1
+synthetic,synthetic/images/sample_0399.png,From memorizing,train,,0,154,32,38,15,1
+synthetic,synthetic/images/sample_0400.png,sequence pooling paper attention,train,,0,443,32,110,32,1
+synthetic,synthetic/images/sample_0401.png,efficient text recognition system,valid,,0,352,32,88,33,1
+synthetic,synthetic/images/sample_0402.png,bidirectional long short term memory,train,,0,421,32,105,36,1
+synthetic,synthetic/images/sample_0403.png,Score learning,train,,0,148,32,37,14,1
+synthetic,synthetic/images/sample_0404.png,CONNECTIONIST TEMPORAL CLASSIFICATION LOSS,test,,0,671,32,167,42,1
+synthetic,synthetic/images/sample_0405.png,Recorded: 6817 units,train,,0,264,32,66,20,1
+synthetic,synthetic/images/sample_0406.png,Continuous integration catches regressions before release,train,,0,533,32,133,57,1
+synthetic,synthetic/images/sample_0407.png,Value: 9002 units,train,,0,227,32,56,17,1
+synthetic,synthetic/images/sample_0408.png,Prevent models from memorizing data,train,,0,344,32,86,35,1
+synthetic,synthetic/images/sample_0409.png,Design and Error,train,,0,154,32,38,16,1
+synthetic,synthetic/images/sample_0410.png,Reasoning underpins modern,test,,0,319,32,79,26,1
+synthetic,synthetic/images/sample_0411.png,Sample library weight,train,,0,299,32,74,21,1
+synthetic,synthetic/images/sample_0412.png,Inference allows real,train,,0,209,32,52,21,1
+synthetic,synthetic/images/sample_0413.png,Pack my box with five,train,,0,183,32,45,21,1
+synthetic,synthetic/images/sample_0414.png,Output: 9847 pixels,train,,0,168,32,42,19,1
+synthetic,synthetic/images/sample_0415.png,Paper and Input,train,,0,166,32,41,15,1
+synthetic,synthetic/images/sample_0416.png,Output: 9222 units,train,,0,205,32,51,18,1
+synthetic,synthetic/images/sample_0417.png,Quick daft zebras jump,train,,0,204,32,51,22,1
+synthetic,synthetic/images/sample_0418.png,Method Epoch Number,train,,0,236,32,59,19,1
+synthetic,synthetic/images/sample_0419.png,Ensures stable,train,,0,161,32,40,14,1
+synthetic,synthetic/images/sample_0420.png,accuracy vocab stride training predict,train,,0,461,32,115,38,1
+synthetic,synthetic/images/sample_0421.png,Output: 4845 epochs,train,,0,225,32,56,19,1
+synthetic,synthetic/images/sample_0422.png,Out test sets gives,train,,0,221,32,55,19,1
+synthetic,synthetic/images/sample_0423.png,Requires robust preprocessing steps,test,,0,308,32,77,35,1
+synthetic,synthetic/images/sample_0424.png,Bidirectional Long Short Term Memory,train,,0,320,32,80,36,1
+synthetic,synthetic/images/sample_0425.png,Measured: 9170 items,train,,0,261,32,65,20,1
+synthetic,synthetic/images/sample_0426.png,Over the lazy,test,,0,132,32,33,13,1
+synthetic,synthetic/images/sample_0427.png,Total: 6004 MB,train,,0,191,32,47,14,1
+synthetic,synthetic/images/sample_0428.png,Complex handwriting styles,valid,,0,292,32,73,26,1
+synthetic,synthetic/images/sample_0429.png,Recorded: 6301 units,train,,0,216,32,54,20,1
+synthetic,synthetic/images/sample_0430.png,Encode and Weight,train,,0,172,32,43,17,1
+synthetic,synthetic/images/sample_0431.png,Value: 6096 pixels,train,,0,159,32,39,18,1
+synthetic,synthetic/images/sample_0432.png,BAHDANAU SEQUENCE ATTENTION MECHANISM,train,,0,494,32,123,37,1
+synthetic,synthetic/images/sample_0433.png,Record sample report image,test,,0,256,32,64,26,1
+synthetic,synthetic/images/sample_0434.png,Enhancement reveals faint ink traces,train,,0,305,32,76,36,1
+synthetic,synthetic/images/sample_0435.png,Neural networks recognize complex handwriting,valid,,0,457,32,114,45,1
+synthetic,synthetic/images/sample_0436.png,On held out test sets gives honest metrics,train,,0,394,32,98,42,1
+synthetic,synthetic/images/sample_0437.png,Value: 807 epochs,test,,0,193,32,48,17,1
+synthetic,synthetic/images/sample_0438.png,Sequence and Decode,train,,0,206,32,51,19,1
+synthetic,synthetic/images/sample_0439.png,Statistical methods validate experimental findings rigorously,test,,0,498,32,124,61,1
+synthetic,synthetic/images/sample_0440.png,encode paper loss system gradient,train,,0,283,32,70,33,1
+synthetic,synthetic/images/sample_0441.png,matrix loss,train,,0,177,32,44,11,1
+synthetic,synthetic/images/sample_0442.png,Tensor Accuracy Rate,train,,0,227,32,56,20,1
+synthetic,synthetic/images/sample_0443.png,Tensor Epoch Platform Design,train,,0,425,32,106,28,1
+synthetic,synthetic/images/sample_0444.png,Reliable and scalable architectures,test,,0,428,32,107,35,1
+synthetic,synthetic/images/sample_0445.png,Digit study,valid,,0,99,32,24,11,1
+synthetic,synthetic/images/sample_0446.png,Letter layer hardware sequence speed,train,,0,332,32,83,36,1
+synthetic,synthetic/images/sample_0447.png,Error rate decreased from 0.802 to 0.035,test,,0,397,32,99,40,1
+synthetic,synthetic/images/sample_0448.png,Version 2.0 released in March 2026,train,,0,497,32,124,34,1
+synthetic,synthetic/images/sample_0449.png,Project and Loss,train,,0,167,32,41,16,1
+synthetic,synthetic/images/sample_0450.png,error label,train,,0,137,32,34,11,1
+synthetic,synthetic/images/sample_0451.png,Label matrix output rate,train,,0,266,32,66,24,1
+synthetic,synthetic/images/sample_0452.png,kernel method channel decode token,train,,0,328,32,82,34,1
+synthetic,synthetic/images/sample_0453.png,tensor layer,train,,0,121,32,30,12,1
+synthetic,synthetic/images/sample_0454.png,Interfaces should be intuitive,train,,0,305,32,76,30,1
+synthetic,synthetic/images/sample_0455.png,High resolution scanning preserves subtle character strokes,train,,0,591,32,147,59,1
+synthetic,synthetic/images/sample_0456.png,compute batch latency input study,train,,0,286,32,71,33,1
+synthetic,synthetic/images/sample_0457.png,Edge deployment brings,train,,0,235,32,58,22,1
+synthetic,synthetic/images/sample_0458.png,Reduces memory,valid,,0,177,32,44,14,1
+synthetic,synthetic/images/sample_0459.png,Measured: 2303 epochs,train,,0,307,32,76,21,1
+synthetic,synthetic/images/sample_0460.png,Dataset Label Library Predict Feature,train,,0,459,32,114,37,1
+synthetic,synthetic/images/sample_0461.png,Dataset label engine weight,train,,0,221,32,55,27,1
+synthetic,synthetic/images/sample_0462.png,Symbol and Method,test,,0,249,32,62,17,1
+synthetic,synthetic/images/sample_0463.png,epoch text word,valid,,0,170,32,42,15,1
+synthetic,synthetic/images/sample_0464.png,system text design loss,train,,0,197,32,49,23,1
+synthetic,synthetic/images/sample_0465.png,Vocab and Spatial,train,,0,184,32,46,17,1
+synthetic,synthetic/images/sample_0466.png,Requires robust preprocessing steps,test,,0,392,32,98,35,1
+synthetic,synthetic/images/sample_0467.png,weight rate temporal layer,train,,0,344,32,86,26,1
+synthetic,synthetic/images/sample_0468.png,Of black quartz,train,,0,162,32,40,15,1
+synthetic,synthetic/images/sample_0469.png,Validate experimental findings,valid,,0,254,32,63,30,1
+synthetic,synthetic/images/sample_0470.png,Tensor and Kernel,train,,0,227,32,56,17,1
+synthetic,synthetic/images/sample_0471.png,Transforms raw,train,,0,210,32,52,14,1
+synthetic,synthetic/images/sample_0472.png,kernel library decode score,train,,0,262,32,65,27,1
+synthetic,synthetic/images/sample_0473.png,Tensor Epoch Channel Label Method,train,,0,342,32,85,33,1
+synthetic,synthetic/images/sample_0474.png,Models understand both visual and textual information,train,,0,556,32,139,53,1
+synthetic,synthetic/images/sample_0475.png,Processing reduces manual data entry,train,,0,332,32,83,36,1
+synthetic,synthetic/images/sample_0476.png,Character Error Rate and Word Error Rate,train,,0,452,32,113,40,1
+synthetic,synthetic/images/sample_0477.png,Measured: 9562 epochs,train,,0,216,32,54,21,1
+synthetic,synthetic/images/sample_0478.png,Spatial Loss Feature Score,train,,0,243,32,60,26,1
+synthetic,synthetic/images/sample_0479.png,Total: 4358 epochs,train,,0,199,32,49,18,1
+synthetic,synthetic/images/sample_0480.png,Reduces memory,valid,,0,182,32,45,14,1
+synthetic,synthetic/images/sample_0481.png,metric rate,test,,0,125,32,31,11,1
+synthetic,synthetic/images/sample_0482.png,power kernel activation,valid,,0,189,32,47,23,1
+synthetic,synthetic/images/sample_0483.png,Capture past and future,test,,0,195,32,48,23,1
+synthetic,synthetic/images/sample_0484.png,Sequence accuracy stride library gradient,valid,,0,395,32,98,41,1
+synthetic,synthetic/images/sample_0485.png,Epoch and Analysis,train,,0,189,32,47,18,1
+synthetic,synthetic/images/sample_0486.png,Library feature activation spatial,train,,0,257,32,64,34,1
+synthetic,synthetic/images/sample_0487.png,Measured: 3662 units,train,,0,266,32,66,20,1
+synthetic,synthetic/images/sample_0488.png,Held out test sets gives honest,train,,0,261,32,65,31,1
+synthetic,synthetic/images/sample_0489.png,Training decode loss research attention,train,,0,378,32,94,39,1
+synthetic,synthetic/images/sample_0490.png,Process attention dataset sequence batch,valid,,0,551,32,137,40,1
+synthetic,synthetic/images/sample_0491.png,Optical character recognition transforms paper into searchable,valid,,0,445,32,111,62,1
+synthetic,synthetic/images/sample_0492.png,Library and Rate,train,,0,193,32,48,16,1
+synthetic,synthetic/images/sample_0493.png,Text transcription on,valid,,0,207,32,51,21,1
+synthetic,synthetic/images/sample_0494.png,Output: 6619 ms,train,,0,176,32,44,15,1
+synthetic,synthetic/images/sample_0495.png,Count: 1262 pixels,train,,0,152,32,38,18,1
+synthetic,synthetic/images/sample_0496.png,Epoch Document Input Attention Record,train,,0,368,32,92,37,1
+synthetic,synthetic/images/sample_0497.png,Rate letter vector output accuracy,valid,,0,331,32,82,34,1
+synthetic,synthetic/images/sample_0498.png,Enhancement reveals faint ink traces on old paper,train,,0,516,32,129,49,1
+synthetic,synthetic/images/sample_0499.png,Decode Process Activation,valid,,0,309,32,77,25,1
+synthetic,synthetic/images/sample_0500.png,weight batch,train,,0,145,32,36,12,1
+synthetic,synthetic/images/sample_0501.png,Accuracy character temporal engine,train,,0,466,32,116,34,1
+synthetic,synthetic/images/sample_0502.png,Memory pooling,train,,0,157,32,39,14,1
+synthetic,synthetic/images/sample_0503.png,Real time,valid,,0,115,32,28,9,1
+synthetic,synthetic/images/sample_0504.png,Achieve state of the art,train,,0,258,32,64,24,1
+synthetic,synthetic/images/sample_0505.png,Value: 216 pixels,train,,0,182,32,45,17,1
+synthetic,synthetic/images/sample_0506.png,Symbol gradient,train,,0,180,32,45,15,1
+synthetic,synthetic/images/sample_0507.png,Speed pooling document hardware,test,,0,382,32,95,31,1
+synthetic,synthetic/images/sample_0508.png,research digit error,train,,0,176,32,44,20,1
+synthetic,synthetic/images/sample_0509.png,linear method latency batch activation,test,,0,371,32,92,38,1
+synthetic,synthetic/images/sample_0510.png,memory letter platform,train,,0,252,32,63,22,1
+synthetic,synthetic/images/sample_0511.png,Networks recognize complex handwriting styles,train,,0,401,32,100,45,1
+synthetic,synthetic/images/sample_0512.png,Recorded: 4202 epochs,train,,0,203,32,50,21,1
+synthetic,synthetic/images/sample_0513.png,Loss Learning,train,,0,157,32,39,13,1
+synthetic,synthetic/images/sample_0514.png,Quartz judge,test,,0,174,32,43,12,1
+synthetic,synthetic/images/sample_0515.png,Benchmarking on held out test sets gives honest metrics,train,,0,635,32,158,55,1
+synthetic,synthetic/images/sample_0516.png,power letter,train,,0,143,32,35,12,1
+synthetic,synthetic/images/sample_0517.png,method word record accuracy,train,,0,287,32,71,27,1
+synthetic,synthetic/images/sample_0518.png,research number word,valid,,0,233,32,58,20,1
+synthetic,synthetic/images/sample_0519.png,Epoch Report Archive Network Layer,train,,0,336,32,84,34,1
+synthetic,synthetic/images/sample_0520.png,Models understand both visual and textual information,train,,0,598,32,149,53,1
+synthetic,synthetic/images/sample_0521.png,Software accelerates scientific,train,,0,291,32,72,31,1
+synthetic,synthetic/images/sample_0522.png,Activation and Gradient,train,,0,281,32,70,23,1
+synthetic,synthetic/images/sample_0523.png,Keeping edges,train,,0,158,32,39,13,1
+synthetic,synthetic/images/sample_0524.png,Measured: 3984 units,valid,,0,297,32,74,20,1
+synthetic,synthetic/images/sample_0525.png,Total: 6344 items,train,,0,181,32,45,17,1
+synthetic,synthetic/images/sample_0526.png,Complex handwriting styles,valid,,0,303,32,75,26,1
+synthetic,synthetic/images/sample_0527.png,Gradient Manuscript Science Library,valid,,0,364,32,91,35,1
+synthetic,synthetic/images/sample_0528.png,spatial project filter sequence,valid,,0,253,32,63,31,1
+synthetic,synthetic/images/sample_0529.png,Of black quartz judge my,train,,0,216,32,54,24,1
+synthetic,synthetic/images/sample_0530.png,Sequence to Sequence Attention Model,train,,0,294,32,73,36,1
+synthetic,synthetic/images/sample_0531.png,Matrix paper design,valid,,0,183,32,45,19,1
+synthetic,synthetic/images/sample_0532.png,Models understand both visual and,train,,0,344,32,86,33,1
+synthetic,synthetic/images/sample_0533.png,Value: 6045 items,valid,,0,259,32,64,17,1
+synthetic,synthetic/images/sample_0534.png,Latency digit engine analysis text,test,,0,314,32,78,34,1
+synthetic,synthetic/images/sample_0535.png,Paper into searchable text,train,,0,237,32,59,26,1
+synthetic,synthetic/images/sample_0536.png,Measured: 9653 ms,valid,,0,189,32,47,17,1
+synthetic,synthetic/images/sample_0537.png,Count: 474 pixels,valid,,0,212,32,53,17,1
+synthetic,synthetic/images/sample_0538.png,target compute memory,train,,0,195,32,48,21,1
+synthetic,synthetic/images/sample_0539.png,Symbol and Decode,train,,0,212,32,53,17,1
+synthetic,synthetic/images/sample_0540.png,Benchmarking on held out,train,,0,275,32,68,24,1
+synthetic,synthetic/images/sample_0541.png,Memory footprint without,test,,0,287,32,71,24,1
+synthetic,synthetic/images/sample_0542.png,Label System Engine,train,,0,211,32,52,19,1
+synthetic,synthetic/images/sample_0543.png,Understand both,valid,,0,173,32,43,15,1
+synthetic,synthetic/images/sample_0544.png,Multi Modal Document Processing Pipeline,train,,0,503,32,125,40,1
+synthetic,synthetic/images/sample_0545.png,Data entry errors,train,,0,226,32,56,17,1
+synthetic,synthetic/images/sample_0546.png,Recorded: 7180 %,train,,0,203,32,50,16,1
+synthetic,synthetic/images/sample_0547.png,Computer vision pipelines,test,,0,234,32,58,25,1
+synthetic,synthetic/images/sample_0548.png,Document analysis requires robust preprocessing steps,train,,0,474,32,118,53,1
+synthetic,synthetic/images/sample_0549.png,Sample Training Record Image,train,,0,292,32,73,28,1
+synthetic,synthetic/images/sample_0550.png,Network method,train,,0,183,32,45,14,1
+synthetic,synthetic/images/sample_0551.png,Engine token learning analysis,test,,0,289,32,72,30,1
+synthetic,synthetic/images/sample_0552.png,Software accelerates,train,,0,233,32,58,20,1
+synthetic,synthetic/images/sample_0553.png,Manuscript Training Result Spatial Predict,train,,0,560,32,140,42,1
+synthetic,synthetic/images/sample_0554.png,Statistical Data Analysis and Findings,train,,0,404,32,101,38,1
+synthetic,synthetic/images/sample_0555.png,Encode Archive,test,,0,187,32,46,14,1
+synthetic,synthetic/images/sample_0556.png,Convolutional Neural Network Architecture,train,,0,446,32,111,41,1
+synthetic,synthetic/images/sample_0557.png,Source software accelerates scientific,valid,,0,529,32,132,38,1
+synthetic,synthetic/images/sample_0558.png,scale compute pooling research character,train,,0,384,32,96,40,1
+synthetic,synthetic/images/sample_0559.png,Recorded: 8712 items,test,,0,295,32,73,20,1
+synthetic,synthetic/images/sample_0560.png,Character and Metric,train,,0,220,32,55,20,1
+synthetic,synthetic/images/sample_0561.png,Analysis requires,train,,0,152,32,38,17,1
+synthetic,synthetic/images/sample_0562.png,Library memory sequence pooling label,train,,0,338,32,84,37,1
+synthetic,synthetic/images/sample_0563.png,Method and Learning,valid,,0,186,32,46,19,1
+synthetic,synthetic/images/sample_0564.png,Epoch Linear Method,train,,0,189,32,47,19,1
+synthetic,synthetic/images/sample_0565.png,Reliable and,test,,0,155,32,38,12,1
+synthetic,synthetic/images/sample_0566.png,Training and Target,train,,0,198,32,49,19,1
+synthetic,synthetic/images/sample_0567.png,Feature letter analysis archive,train,,0,427,32,106,31,1
+synthetic,synthetic/images/sample_0568.png,Attention mechanisms dynamically focus on key image,train,,0,508,32,127,51,1
+synthetic,synthetic/images/sample_0569.png,Bidirectional recurrent units capture past,valid,,0,301,32,75,42,1
+synthetic,synthetic/images/sample_0570.png,Output: 1351 units,valid,,0,214,32,53,18,1
+synthetic,synthetic/images/sample_0571.png,Recorded: 4722 samples,valid,,0,205,32,51,22,1
+synthetic,synthetic/images/sample_0572.png,Understand both visual and textual,test,,0,415,32,103,34,1
+synthetic,synthetic/images/sample_0573.png,Sample System Process,train,,0,225,32,56,21,1
+synthetic,synthetic/images/sample_0574.png,Image processing,test,,0,194,32,48,16,1
+synthetic,synthetic/images/sample_0575.png,Predict and Epoch,train,,0,187,32,46,17,1
+synthetic,synthetic/images/sample_0576.png,Bilateral filtering removes noise while keeping edges sharp,train,,0,475,32,118,59,1
+synthetic,synthetic/images/sample_0577.png,Pooling temporal,train,,0,219,32,54,16,1
+synthetic,synthetic/images/sample_0578.png,Align dataset output analysis,valid,,0,318,32,79,29,1
+synthetic,synthetic/images/sample_0579.png,Convolutional filters,test,,0,248,32,62,21,1
+synthetic,synthetic/images/sample_0580.png,Science predict compute letter symbol,train,,0,552,32,138,37,1
+synthetic,synthetic/images/sample_0581.png,Learning loss digit number accuracy,train,,0,280,32,70,35,1
+synthetic,synthetic/images/sample_0582.png,Stride batch compute spatial predict,train,,0,431,32,107,36,1
+synthetic,synthetic/images/sample_0583.png,Digit sequence target,train,,0,216,32,54,21,1
+synthetic,synthetic/images/sample_0584.png,Recorded: 4117 samples,train,,0,253,32,63,22,1
+synthetic,synthetic/images/sample_0585.png,Activation feature stride epoch,train,,0,273,32,68,31,1
+synthetic,synthetic/images/sample_0586.png,Of the art results,train,,0,209,32,52,18,1
+synthetic,synthetic/images/sample_0587.png,Study feature,train,,0,128,32,32,13,1
+synthetic,synthetic/images/sample_0588.png,Deep learning models achieve state of the art results,train,,0,722,32,180,53,1
+synthetic,synthetic/images/sample_0589.png,Total: 9930 pixels,test,,0,196,32,49,18,1
+synthetic,synthetic/images/sample_0590.png,Raw sensor signals into insights,train,,0,305,32,76,32,1
+synthetic,synthetic/images/sample_0591.png,Kernel learning power,valid,,0,312,32,78,21,1
+synthetic,synthetic/images/sample_0592.png,Archive Channel Design Filter Decode,train,,0,371,32,92,36,1
+synthetic,synthetic/images/sample_0593.png,number attention accuracy word kernel,train,,0,333,32,83,37,1
+synthetic,synthetic/images/sample_0594.png,Output: 6808 items,train,,0,229,32,57,18,1
+synthetic,synthetic/images/sample_0595.png,Count: 2136 ms,valid,,0,235,32,58,14,1
+synthetic,synthetic/images/sample_0596.png,"Memory allocation: 128 MB RAM, 15% CPU load",train,,0,469,32,117,43,1
+synthetic,synthetic/images/sample_0597.png,Residual Highway Connections in Deep CNNs,train,,0,383,32,95,41,1
+synthetic,synthetic/images/sample_0598.png,Rate and Predict,train,,0,220,32,55,16,1
+synthetic,synthetic/images/sample_0599.png,Output: 8291 epochs,train,,0,256,32,64,19,1
+synthetic,synthetic/images/sample_0600.png,Channel Archive Study,train,,0,217,32,54,21,1
+synthetic,synthetic/images/sample_0601.png,Analysis requires robust preprocessing steps,train,,0,589,32,147,44,1
+synthetic,synthetic/images/sample_0602.png,token library platform science,train,,0,271,32,67,30,1
+synthetic,synthetic/images/sample_0603.png,Document analysis requires robust preprocessing steps,train,,0,558,32,139,53,1
+synthetic,synthetic/images/sample_0604.png,Speed and Token,valid,,0,156,32,39,15,1
+synthetic,synthetic/images/sample_0605.png,Reasoning underpins,train,,0,196,32,49,19,1
+synthetic,synthetic/images/sample_0606.png,Latency Platform,train,,0,177,32,44,16,1
+synthetic,synthetic/images/sample_0607.png,Regularization techniques prevent models from,valid,,0,472,32,118,45,1
+synthetic,synthetic/images/sample_0608.png,Result Align Temporal,train,,0,215,32,53,21,1
+synthetic,synthetic/images/sample_0609.png,word weight engine filter image,train,,0,248,32,62,31,1
+synthetic,synthetic/images/sample_0610.png,Channel and Weight,test,,0,193,32,48,18,1
+synthetic,synthetic/images/sample_0611.png,Traces on,train,,0,141,32,35,9,1
+synthetic,synthetic/images/sample_0612.png,Prevents overfitting,train,,0,200,32,50,20,1
+synthetic,synthetic/images/sample_0613.png,Count: 1289 pixels,train,,0,181,32,45,18,1
+synthetic,synthetic/images/sample_0614.png,Channel Feature Speed Word,train,,0,282,32,70,26,1
+synthetic,synthetic/images/sample_0615.png,Temporal and Batch,train,,0,222,32,55,18,1
+synthetic,synthetic/images/sample_0616.png,Maximum Margin Temporal Loss Criterion,train,,0,337,32,84,38,1
+synthetic,synthetic/images/sample_0617.png,Loss and Linear,train,,0,201,32,50,15,1
+synthetic,synthetic/images/sample_0618.png,Quantization reduces memory footprint without losing accuracy,valid,,0,581,32,145,61,1
+synthetic,synthetic/images/sample_0619.png,Vocab and Archive,test,,0,307,32,76,17,1
+synthetic,synthetic/images/sample_0620.png,Error and Project,train,,0,191,32,47,17,1
+synthetic,synthetic/images/sample_0621.png,Regularization techniques prevent models from memorizing,train,,0,590,32,147,56,1
+synthetic,synthetic/images/sample_0622.png,Report Pooling,valid,,0,137,32,34,14,1
+synthetic,synthetic/images/sample_0623.png,Recorded: 2735 %,valid,,0,208,32,52,16,1
+synthetic,synthetic/images/sample_0624.png,Measured: 4448 MB,test,,0,247,32,61,17,1
+synthetic,synthetic/images/sample_0625.png,token sample speed platform,train,,0,264,32,66,27,1
+synthetic,synthetic/images/sample_0626.png,Design model letter score digit,train,,0,281,32,70,31,1
+synthetic,synthetic/images/sample_0627.png,SimCLR Contrastive Representation Learning,train,,0,453,32,113,42,1
+synthetic,synthetic/images/sample_0628.png,Intelligence to low power chips,train,,0,287,32,71,31,1
+synthetic,synthetic/images/sample_0629.png,Paper and Weight,valid,,0,171,32,42,16,1
+synthetic,synthetic/images/sample_0630.png,Empowers evidence,train,,0,228,32,57,17,1
+synthetic,synthetic/images/sample_0631.png,Brings machine,train,,0,176,32,44,14,1
+synthetic,synthetic/images/sample_0632.png,Machine intelligence to low power chips,train,,0,484,32,121,39,1
+synthetic,synthetic/images/sample_0633.png,padding tensor,valid,,0,182,32,45,14,1
+synthetic,synthetic/images/sample_0634.png,Reliable and scalable,train,,0,242,32,60,21,1
+synthetic,synthetic/images/sample_0635.png,Engineers design reliable and,train,,0,247,32,61,29,1
+synthetic,synthetic/images/sample_0636.png,Filter and Temporal,train,,0,201,32,50,19,1
+synthetic,synthetic/images/sample_0637.png,Layer and Epoch,test,,0,171,32,42,15,1
+synthetic,synthetic/images/sample_0638.png,Manuscript and Weight,train,,0,218,32,54,21,1
+synthetic,synthetic/images/sample_0639.png,Total: 8840 %,train,,0,156,32,39,13,1
+synthetic,synthetic/images/sample_0640.png,Feature Map Extraction ResNet Backbone,valid,,0,479,32,119,38,1
+synthetic,synthetic/images/sample_0641.png,Science character predict output library,valid,,0,304,32,76,40,1
+synthetic,synthetic/images/sample_0642.png,science number speed feature dataset,train,,0,367,32,91,36,1
+synthetic,synthetic/images/sample_0643.png,Character pooling spatial layer document,train,,0,581,32,145,40,1
+synthetic,synthetic/images/sample_0644.png,Linear Letter Layer Word,train,,0,245,32,61,24,1
+synthetic,synthetic/images/sample_0645.png,Autonomous Document Digitization System,train,,0,413,32,103,39,1
+synthetic,synthetic/images/sample_0646.png,Subtle character,train,,0,185,32,46,16,1
+synthetic,synthetic/images/sample_0647.png,Reasoning underpins modern computational algorithms,train,,0,529,32,132,51,1
+synthetic,synthetic/images/sample_0648.png,Bahdanau Sequence Attention Mechanism,train,,0,392,32,98,37,1
+synthetic,synthetic/images/sample_0649.png,sample model encode document,train,,0,277,32,69,28,1
+synthetic,synthetic/images/sample_0650.png,image science document,train,,0,308,32,77,22,1
+synthetic,synthetic/images/sample_0651.png,multi modal document processing pipeline,train,,0,360,32,90,40,1
+synthetic,synthetic/images/sample_0652.png,Layer and Input,train,,0,153,32,38,15,1
+synthetic,synthetic/images/sample_0653.png,Mechanisms dynamically focus on key image,valid,,0,417,32,104,41,1
+synthetic,synthetic/images/sample_0654.png,Of black quartz,train,,0,160,32,40,15,1
+synthetic,synthetic/images/sample_0655.png,Vector Feature Vocab,train,,0,218,32,54,20,1
+synthetic,synthetic/images/sample_0656.png,Vocab Layer Report,train,,0,289,32,72,18,1
+synthetic,synthetic/images/sample_0657.png,design weight report align number,train,,0,481,32,120,33,1
+synthetic,synthetic/images/sample_0658.png,Models achieve,test,,0,187,32,46,14,1
+synthetic,synthetic/images/sample_0659.png,Careful data preparation prevents overfitting during training,test,,0,549,32,137,61,1
+synthetic,synthetic/images/sample_0660.png,record activation digit input paper,test,,0,304,32,76,35,1
+synthetic,synthetic/images/sample_0661.png,Project and Model,valid,,0,179,32,44,17,1
+synthetic,synthetic/images/sample_0662.png,Activation Result,test,,0,174,32,43,17,1
+synthetic,synthetic/images/sample_0663.png,Matrix Library Network Spatial Analysis,valid,,0,378,32,94,39,1
+synthetic,synthetic/images/sample_0664.png,Data preparation prevents overfitting during training,test,,0,444,32,111,53,1
+synthetic,synthetic/images/sample_0665.png,Linear Token,train,,0,153,32,38,12,1
+synthetic,synthetic/images/sample_0666.png,Image and Analysis,train,,0,184,32,46,18,1
+synthetic,synthetic/images/sample_0667.png,Guarantee reproducible science,train,,0,389,32,97,30,1
+synthetic,synthetic/images/sample_0668.png,compute feature science system rate,train,,0,291,32,72,35,1
+synthetic,synthetic/images/sample_0669.png,Align manuscript,train,,0,242,32,60,16,1
+synthetic,synthetic/images/sample_0670.png,Open source,train,,0,168,32,42,11,1
+synthetic,synthetic/images/sample_0671.png,Overfitting during,train,,0,190,32,47,18,1
+synthetic,synthetic/images/sample_0672.png,Filter gradient accuracy speed letter,train,,0,300,32,75,37,1
+synthetic,synthetic/images/sample_0673.png,matrix manuscript,train,,0,256,32,64,17,1
+synthetic,synthetic/images/sample_0674.png,Recorded: 6994 pixels,train,,0,188,32,47,21,1
+synthetic,synthetic/images/sample_0675.png,Gradient image symbol,train,,0,266,32,66,21,1
+synthetic,synthetic/images/sample_0676.png,Automated document processing reduces,train,,0,381,32,95,37,1
+synthetic,synthetic/images/sample_0677.png,Hardware decode,valid,,0,224,32,56,15,1
+synthetic,synthetic/images/sample_0678.png,Memory and Report,train,,0,172,32,43,17,1
+synthetic,synthetic/images/sample_0679.png,Engine and Token,train,,0,208,32,52,16,1
+synthetic,synthetic/images/sample_0680.png,deep learning pattern recognition lab,train,,0,375,32,93,37,1
+synthetic,synthetic/images/sample_0681.png,Time elapsed: 14 minutes and 32 seconds,valid,,0,384,32,96,39,1
+synthetic,synthetic/images/sample_0682.png,gradient descent backpropagation optimizer,train,,0,364,32,91,42,1
+synthetic,synthetic/images/sample_0683.png,System and Metric,train,,0,225,32,56,17,1
+synthetic,synthetic/images/sample_0684.png,Of the art,valid,,0,167,32,41,10,1
+synthetic,synthetic/images/sample_0685.png,rate decode stride,train,,0,183,32,45,18,1
+synthetic,synthetic/images/sample_0686.png,Align and Pooling,valid,,0,146,32,36,17,1
+synthetic,synthetic/images/sample_0687.png,Kernel and Stride,train,,0,187,32,46,17,1
+synthetic,synthetic/images/sample_0688.png,word device loss research sample,valid,,0,314,32,78,32,1
+synthetic,synthetic/images/sample_0689.png,Deployment brings,train,,0,203,32,50,17,1
+synthetic,synthetic/images/sample_0690.png,Reliable and scalable architectures,test,,0,381,32,95,35,1
+synthetic,synthetic/images/sample_0691.png,Text transcription,train,,0,249,32,62,18,1
+synthetic,synthetic/images/sample_0692.png,encode error dataset linear gradient,train,,0,317,32,79,36,1
+synthetic,synthetic/images/sample_0693.png,Archival Manuscript Digitization Project,train,,0,347,32,86,40,1
+synthetic,synthetic/images/sample_0694.png,Output: 7365 epochs,train,,0,224,32,56,19,1
+synthetic,synthetic/images/sample_0695.png,Token label,valid,,0,143,32,35,11,1
+synthetic,synthetic/images/sample_0696.png,Units capture past and future context,train,,0,320,32,80,37,1
+synthetic,synthetic/images/sample_0697.png,model linear,train,,0,202,32,50,12,1
+synthetic,synthetic/images/sample_0698.png,Device Image System Temporal,valid,,0,301,32,75,28,1
+synthetic,synthetic/images/sample_0699.png,Vocab and Archive,test,,0,234,32,58,17,1
+synthetic,synthetic/images/sample_0700.png,Result Platform Process Report,valid,,0,292,32,73,30,1
+synthetic,synthetic/images/sample_0701.png,Speed Batch,test,,0,141,32,35,11,1
+synthetic,synthetic/images/sample_0702.png,Processing transforms raw sensor signals,train,,0,375,32,93,40,1
+synthetic,synthetic/images/sample_0703.png,Target and Dataset,valid,,0,190,32,47,18,1
+synthetic,synthetic/images/sample_0704.png,Standard ISO 9001 quality management certified,train,,0,398,32,99,46,1
+synthetic,synthetic/images/sample_0705.png,Preserves subtle character strokes,train,,0,362,32,90,34,1
+synthetic,synthetic/images/sample_0706.png,Measured: 1214 pixels,train,,0,211,32,52,21,1
+synthetic,synthetic/images/sample_0707.png,Data science,train,,0,158,32,39,12,1
+synthetic,synthetic/images/sample_0708.png,Open source software accelerates scientific discovery,train,,0,433,32,108,53,1
+synthetic,synthetic/images/sample_0709.png,Matrix and Decode,test,,0,186,32,46,17,1
+synthetic,synthetic/images/sample_0710.png,Tensor library memory method,train,,0,257,32,64,28,1
+synthetic,synthetic/images/sample_0711.png,Design Speed Device Error,train,,0,221,32,55,25,1
+synthetic,synthetic/images/sample_0712.png,Stride Manuscript,train,,0,178,32,44,17,1
+synthetic,synthetic/images/sample_0713.png,Matrix Linear,valid,,0,142,32,35,13,1
+synthetic,synthetic/images/sample_0714.png,Sequence paper,train,,0,164,32,41,14,1
+synthetic,synthetic/images/sample_0715.png,Error document number record image,train,,0,381,32,95,34,1
+synthetic,synthetic/images/sample_0716.png,device scale science,train,,0,243,32,60,20,1
+synthetic,synthetic/images/sample_0717.png,Understand both visual,train,,0,276,32,69,22,1
+synthetic,synthetic/images/sample_0718.png,Pack my box,train,,0,120,32,30,11,1
+synthetic,synthetic/images/sample_0719.png,Millions of images,train,,0,160,32,40,18,1
+synthetic,synthetic/images/sample_0720.png,Token Temporal Scale Vector Encode,train,,0,362,32,90,34,1
+synthetic,synthetic/images/sample_0721.png,Label and Power,train,,0,255,32,63,15,1
+synthetic,synthetic/images/sample_0722.png,Result and Sequence,train,,0,224,32,56,19,1
+synthetic,synthetic/images/sample_0723.png,Digital preservation safeguards centuries of human knowledge,test,,0,602,32,150,60,1
+synthetic,synthetic/images/sample_0724.png,Be intuitive,train,,0,180,32,45,12,1
+synthetic,synthetic/images/sample_0725.png,Text and Sequence,train,,0,190,32,47,17,1
+synthetic,synthetic/images/sample_0726.png,model activation platform align system,test,,0,432,32,108,38,1
+synthetic,synthetic/images/sample_0727.png,Output and Text,train,,0,137,32,34,15,1
+synthetic,synthetic/images/sample_0728.png,Output: 1452 ms,train,,0,182,32,45,15,1
+synthetic,synthetic/images/sample_0729.png,Device spatial,train,,0,152,32,38,14,1
+synthetic,synthetic/images/sample_0730.png,Traces on old paper,train,,0,203,32,50,19,1
+synthetic,synthetic/images/sample_0731.png,Recorded: 8173 units,train,,0,237,32,59,20,1
+synthetic,synthetic/images/sample_0732.png,Dataset engine model symbol power,train,,0,403,32,100,33,1
+synthetic,synthetic/images/sample_0733.png,Sphinx of black quartz judge my vow,train,,0,324,32,81,35,1
+synthetic,synthetic/images/sample_0734.png,Recorded: 1512 epochs,valid,,0,264,32,66,21,1
+synthetic,synthetic/images/sample_0735.png,filter word speed manuscript record,valid,,0,305,32,76,35,1
+synthetic,synthetic/images/sample_0736.png,SIMCLR CONTRASTIVE REPRESENTATION LEARNING,train,,0,716,32,179,42,1
+synthetic,synthetic/images/sample_0737.png,Count: 8472 items,train,,0,178,32,44,17,1
+synthetic,synthetic/images/sample_0738.png,NMAMIT Nitte Campus Research Project,train,,0,377,32,94,36,1
+synthetic,synthetic/images/sample_0739.png,Activation predict vocab channel,train,,0,420,32,105,32,1
+synthetic,synthetic/images/sample_0740.png,Output memory batch,valid,,0,292,32,73,19,1
+synthetic,synthetic/images/sample_0741.png,padding research,test,,0,191,32,47,16,1
+synthetic,synthetic/images/sample_0742.png,Latency and Speed,train,,0,270,32,67,17,1
+synthetic,synthetic/images/sample_0743.png,Archive compute,train,,0,165,32,41,15,1
+synthetic,synthetic/images/sample_0744.png,Attention mechanisms dynamically focus on key image,train,,0,703,32,175,51,1
+synthetic,synthetic/images/sample_0745.png,Vocab method number,test,,0,275,32,68,19,1
+synthetic,synthetic/images/sample_0746.png,Weight Paper,test,,0,142,32,35,12,1
+synthetic,synthetic/images/sample_0747.png,method manuscript image padding,valid,,0,308,32,77,31,1
+synthetic,synthetic/images/sample_0748.png,Attention archive input speed dataset,train,,0,349,32,87,37,1
+synthetic,synthetic/images/sample_0749.png,Complex handwriting,train,,0,207,32,51,19,1
+synthetic,synthetic/images/sample_0750.png,Removes noise while,train,,0,245,32,61,19,1
+synthetic,synthetic/images/sample_0751.png,How vexingly quick daft zebras jump,train,,0,323,32,80,35,1
+synthetic,synthetic/images/sample_0752.png,Value: 512 pixels,test,,0,174,32,43,17,1
+synthetic,synthetic/images/sample_0753.png,Count: 2429 epochs,valid,,0,210,32,52,18,1
+synthetic,synthetic/images/sample_0754.png,To evolve,test,,0,144,32,36,9,1
+synthetic,synthetic/images/sample_0755.png,Sequence pooling,train,,0,164,32,41,16,1
+synthetic,synthetic/images/sample_0756.png,Evaluation protocols guarantee reproducible science,train,,0,497,32,124,51,1
+synthetic,synthetic/images/sample_0757.png,input loss,train,,0,117,32,29,10,1
+synthetic,synthetic/images/sample_0758.png,Time text transcription on,train,,0,291,32,72,26,1
+synthetic,synthetic/images/sample_0759.png,Input Attention Archive,train,,0,245,32,61,23,1
+synthetic,synthetic/images/sample_0760.png,compute image encode result,valid,,0,256,32,64,27,1
+synthetic,synthetic/images/sample_0761.png,Measured: 2546 epochs,test,,0,340,32,85,21,1
+synthetic,synthetic/images/sample_0762.png,Edge deployment brings machine intelligence to low power chips,train,,0,618,32,154,62,1
+synthetic,synthetic/images/sample_0763.png,Vector and Linear,train,,0,227,32,56,17,1
+synthetic,synthetic/images/sample_0764.png,word input archive training spatial,train,,0,291,32,72,35,1
+synthetic,synthetic/images/sample_0765.png,metric batch,train,,0,154,32,38,12,1
+synthetic,synthetic/images/sample_0766.png,Count: 2887 pixels,train,,0,171,32,42,18,1
+synthetic,synthetic/images/sample_0767.png,Output and Memory,test,,0,194,32,48,17,1
+synthetic,synthetic/images/sample_0768.png,Science target training pooling symbol,train,,0,349,32,87,38,1
+synthetic,synthetic/images/sample_0769.png,Vision pipelines process millions of,train,,0,491,32,122,36,1
+synthetic,synthetic/images/sample_0770.png,Data Augmentation and Noise Invariance,train,,0,345,32,86,38,1
+synthetic,synthetic/images/sample_0771.png,Measured: 825 pixels,test,,0,182,32,45,20,1
+synthetic,synthetic/images/sample_0772.png,Accuracy and Analysis,valid,,0,191,32,47,21,1
+synthetic,synthetic/images/sample_0773.png,Dimensions and contrast,test,,0,238,32,59,23,1
+synthetic,synthetic/images/sample_0774.png,Catches regressions before release,train,,0,385,32,96,34,1
+synthetic,synthetic/images/sample_0775.png,Feature and Study,train,,0,152,32,38,17,1
+synthetic,synthetic/images/sample_0776.png,Encode Rate Vocab,train,,0,237,32,59,17,1
+synthetic,synthetic/images/sample_0777.png,Output Record Project Input,valid,,0,260,32,65,27,1
+synthetic,synthetic/images/sample_0778.png,Hardware sample spatial archive kernel,test,,0,392,32,98,38,1
+synthetic,synthetic/images/sample_0779.png,Recorded: 5014 MB,test,,0,201,32,50,17,1
+synthetic,synthetic/images/sample_0780.png,linear align,train,,0,123,32,30,12,1
+synthetic,synthetic/images/sample_0781.png,Traces on old,train,,0,171,32,42,13,1
+synthetic,synthetic/images/sample_0782.png,compute decode,train,,0,169,32,42,14,1
+synthetic,synthetic/images/sample_0783.png,Letter and Network,valid,,0,188,32,47,18,1
+synthetic,synthetic/images/sample_0784.png,Recorded: 8326 samples,train,,0,218,32,54,22,1
+synthetic,synthetic/images/sample_0785.png,Result and Weight,valid,,0,193,32,48,17,1
+synthetic,synthetic/images/sample_0786.png,Pooling Align Research Token,train,,0,286,32,71,28,1
+synthetic,synthetic/images/sample_0787.png,Layer Device Vocab Rate Speed,train,,0,360,32,90,29,1
+synthetic,synthetic/images/sample_0788.png,Token error image,train,,0,180,32,45,17,1
+synthetic,synthetic/images/sample_0789.png,Total: 7282 units,train,,0,216,32,54,17,1
+synthetic,synthetic/images/sample_0790.png,Batch size 16 with learning rate 0.001,valid,,0,280,32,70,38,1
+synthetic,synthetic/images/sample_0791.png,Output: 3706 %,train,,0,181,32,45,14,1
+synthetic,synthetic/images/sample_0792.png,Science Sequence Platform,train,,0,234,32,58,25,1
+synthetic,synthetic/images/sample_0793.png,hardware analysis method number design,train,,0,371,32,92,38,1
+synthetic,synthetic/images/sample_0794.png,Reasoning underpins modern,test,,0,258,32,64,26,1
+synthetic,synthetic/images/sample_0795.png,Image Hardware Sequence Sample Library,valid,,0,431,32,107,38,1
+synthetic,synthetic/images/sample_0796.png,Activation platform kernel process epoch,test,,0,455,32,113,40,1
+synthetic,synthetic/images/sample_0797.png,Scanning preserves,train,,0,190,32,47,18,1
+synthetic,synthetic/images/sample_0798.png,User interfaces should be intuitive responsive and accessible,valid,,0,572,32,143,61,1
+synthetic,synthetic/images/sample_0799.png,Digit and Document,train,,0,162,32,40,18,1
+synthetic,synthetic/images/sample_0800.png,Temporal padding encode,train,,0,248,32,62,23,1
+synthetic,synthetic/images/sample_0801.png,Weight and Attention,valid,,0,220,32,55,20,1
+synthetic,synthetic/images/sample_0802.png,Measured: 4947 pixels,train,,0,221,32,55,21,1
+synthetic,synthetic/images/sample_0803.png,character record engine error,train,,0,296,32,74,29,1
+synthetic,synthetic/images/sample_0804.png,target loss padding science linear,valid,,0,292,32,73,34,1
+synthetic,synthetic/images/sample_0805.png,Platform rate library network,train,,0,250,32,62,29,1
+synthetic,synthetic/images/sample_0806.png,Intuitive responsive and,train,,0,233,32,58,24,1
+synthetic,synthetic/images/sample_0807.png,Kernel and Metric,train,,0,217,32,54,17,1
+synthetic,synthetic/images/sample_0808.png,FEATURE MAP EXTRACTION RESNET BACKBONE,valid,,0,400,32,100,38,1
+synthetic,synthetic/images/sample_0809.png,User interfaces,train,,0,183,32,45,15,1
+synthetic,synthetic/images/sample_0810.png,Word Layer Latency Power Spatial,train,,0,344,32,86,32,1
+synthetic,synthetic/images/sample_0811.png,Prevent models from,train,,0,244,32,61,19,1
+synthetic,synthetic/images/sample_0812.png,Guarantee reproducible,train,,0,241,32,60,22,1
+synthetic,synthetic/images/sample_0813.png,Manual data entry errors,train,,0,231,32,57,24,1
+synthetic,synthetic/images/sample_0814.png,Power and Batch,test,,0,214,32,53,15,1
+synthetic,synthetic/images/sample_0815.png,Measured: 4257 ms,train,,0,207,32,51,17,1
+synthetic,synthetic/images/sample_0816.png,Continues to evolve rapidly,train,,0,272,32,68,27,1
+synthetic,synthetic/images/sample_0817.png,Daft zebras jump,train,,0,250,32,62,16,1
+synthetic,synthetic/images/sample_0818.png,Models from,test,,0,155,32,38,11,1
+synthetic,synthetic/images/sample_0819.png,label kernel epoch,train,,0,196,32,49,18,1
+synthetic,synthetic/images/sample_0820.png,Vocab and Study,train,,0,186,32,46,15,1
+synthetic,synthetic/images/sample_0821.png,Reliable and scalable,train,,0,297,32,74,21,1
+synthetic,synthetic/images/sample_0822.png,Memory footprint,test,,0,158,32,39,16,1
+synthetic,synthetic/images/sample_0823.png,Sequence device,test,,0,184,32,46,15,1
+synthetic,synthetic/images/sample_0824.png,Output temporal,train,,0,171,32,42,15,1
+synthetic,synthetic/images/sample_0825.png,Speed Pooling Matrix Archive Feature,train,,0,342,32,85,36,1
+synthetic,synthetic/images/sample_0826.png,Statistical methods,train,,0,229,32,57,19,1
+synthetic,synthetic/images/sample_0827.png,MULTI MODAL DOCUMENT PROCESSING PIPELINE,train,,0,580,32,145,40,1
+synthetic,synthetic/images/sample_0828.png,Activation Letter,valid,,0,255,32,63,17,1
+synthetic,synthetic/images/sample_0829.png,Recognition transforms paper into searchable,valid,,0,385,32,96,44,1
+synthetic,synthetic/images/sample_0830.png,Intelligence continues,train,,0,218,32,54,22,1
+synthetic,synthetic/images/sample_0831.png,Data science empowers evidence based decision making everywhere,train,,0,632,32,158,63,1
+synthetic,synthetic/images/sample_0832.png,Vector and Method,valid,,0,228,32,57,17,1
+synthetic,synthetic/images/sample_0833.png,Platform and Stride,train,,0,241,32,60,19,1
+synthetic,synthetic/images/sample_0834.png,Temporal input system score vocab,train,,0,394,32,98,33,1
+synthetic,synthetic/images/sample_0835.png,Low power,train,,0,132,32,33,9,1
+synthetic,synthetic/images/sample_0836.png,Study Method Weight,test,,0,233,32,58,19,1
+synthetic,synthetic/images/sample_0837.png,tensor archive,valid,,0,187,32,46,14,1
+synthetic,synthetic/images/sample_0838.png,Result report manuscript label attention,train,,0,376,32,94,40,1
+synthetic,synthetic/images/sample_0839.png,Measured: 760 epochs,train,,0,185,32,46,20,1
+synthetic,synthetic/images/sample_0840.png,Count: 6616 items,train,,0,258,32,64,17,1
+synthetic,synthetic/images/sample_0841.png,Weight and Library,valid,,0,232,32,58,18,1
+synthetic,synthetic/images/sample_0842.png,Batch and Sample,test,,0,212,32,53,16,1
+synthetic,synthetic/images/sample_0843.png,Measured: 5182 %,train,,0,248,32,62,16,1
+synthetic,synthetic/images/sample_0844.png,Align token report,train,,0,192,32,48,18,1
+synthetic,synthetic/images/sample_0845.png,Process Channel Symbol,train,,0,306,32,76,22,1
+synthetic,synthetic/images/sample_0846.png,Feature and Word,train,,0,253,32,63,16,1
+synthetic,synthetic/images/sample_0847.png,Tensor Hardware Input Vocab,train,,0,319,32,79,27,1
+synthetic,synthetic/images/sample_0848.png,Across global,valid,,0,142,32,35,13,1
+synthetic,synthetic/images/sample_0849.png,Latency design weight,train,,0,189,32,47,21,1
+synthetic,synthetic/images/sample_0850.png,Scale tensor,valid,,0,139,32,34,12,1
+synthetic,synthetic/images/sample_0851.png,attention text label project feature,valid,,0,275,32,68,36,1
+synthetic,synthetic/images/sample_0852.png,Number sequence channel matrix,train,,0,341,32,85,30,1
+synthetic,synthetic/images/sample_0853.png,Measured: 2625 %,train,,0,199,32,49,16,1
+synthetic,synthetic/images/sample_0854.png,Output: 8508 epochs,train,,0,209,32,52,19,1
+synthetic,synthetic/images/sample_0855.png,manuscript training number,train,,0,283,32,70,26,1
+synthetic,synthetic/images/sample_0856.png,Count: 2502 units,test,,0,242,32,60,17,1
+synthetic,synthetic/images/sample_0857.png,Hardware and Science,train,,0,200,32,50,20,1
+synthetic,synthetic/images/sample_0858.png,Value: 9429 MB,train,,0,197,32,49,14,1
+synthetic,synthetic/images/sample_0859.png,Align and Align,train,,0,173,32,43,15,1
+synthetic,synthetic/images/sample_0860.png,Output: 8847 samples,valid,,0,206,32,51,20,1
+synthetic,synthetic/images/sample_0861.png,Matrix digit analysis target,test,,0,285,32,71,28,1
+synthetic,synthetic/images/sample_0862.png,Faint ink traces on,valid,,0,227,32,56,19,1
+synthetic,synthetic/images/sample_0863.png,result science vector,train,,0,262,32,65,21,1
+synthetic,synthetic/images/sample_0864.png,Target Pooling Stride,train,,0,302,32,75,21,1
+synthetic,synthetic/images/sample_0865.png,archive image error system,train,,0,304,32,76,26,1
+synthetic,synthetic/images/sample_0866.png,Analysis requires,train,,0,182,32,45,17,1
+synthetic,synthetic/images/sample_0867.png,record gradient report predict padding,train,,0,329,32,82,38,1
+synthetic,synthetic/images/sample_0868.png,Padding attention result,train,,0,337,32,84,24,1
+synthetic,synthetic/images/sample_0869.png,analysis library linear kernel latency,train,,0,456,32,114,38,1
+synthetic,synthetic/images/sample_0870.png,research label,train,,0,155,32,38,14,1
+synthetic,synthetic/images/sample_0871.png,Recorded: 771 pixels,train,,0,249,32,62,20,1
+synthetic,synthetic/images/sample_0872.png,Phone contact: +1 (800) 555-0199,train,,0,388,32,97,32,1
+synthetic,synthetic/images/sample_0873.png,Rate matrix word error padding,train,,0,248,32,62,30,1
+synthetic,synthetic/images/sample_0874.png,project predict output,valid,,0,187,32,46,22,1
+synthetic,synthetic/images/sample_0875.png,Help fax my,train,,0,118,32,29,11,1
+synthetic,synthetic/images/sample_0876.png,Source software accelerates,test,,0,253,32,63,27,1
+synthetic,synthetic/images/sample_0877.png,Data preparation prevents overfitting,valid,,0,322,32,80,37,1
+synthetic,synthetic/images/sample_0878.png,Research digit compute,train,,0,237,32,59,22,1
+synthetic,synthetic/images/sample_0879.png,Project attention power,train,,0,202,32,50,23,1
+synthetic,synthetic/images/sample_0880.png,Published and shared,valid,,0,317,32,79,20,1
+synthetic,synthetic/images/sample_0881.png,Mathematical Equation Notation Parser,test,,0,336,32,84,37,1
+synthetic,synthetic/images/sample_0882.png,Matrix and Feature,train,,0,236,32,59,18,1
+synthetic,synthetic/images/sample_0883.png,Catches regressions before,train,,0,323,32,80,26,1
+synthetic,synthetic/images/sample_0884.png,Character and Symbol,train,,0,220,32,55,20,1
+synthetic,synthetic/images/sample_0885.png,Digit and Letter,test,,0,168,32,42,16,1
+synthetic,synthetic/images/sample_0886.png,Optical character recognition transforms paper into searchable text,test,,0,548,32,137,67,1
+synthetic,synthetic/images/sample_0887.png,Align and Platform,train,,0,191,32,47,18,1
+synthetic,synthetic/images/sample_0888.png,And shared across global,test,,0,217,32,54,24,1
+synthetic,synthetic/images/sample_0889.png,Measured: 8498 ms,train,,0,229,32,57,17,1
+synthetic,synthetic/images/sample_0890.png,Attention research design,train,,0,288,32,72,25,1
+synthetic,synthetic/images/sample_0891.png,Test sets gives honest metrics,train,,0,288,32,72,30,1
+synthetic,synthetic/images/sample_0892.png,Open source,train,,0,140,32,35,11,1
+synthetic,synthetic/images/sample_0893.png,Value: 556 items,train,,0,222,32,55,16,1
+synthetic,synthetic/images/sample_0894.png,Total: 3780 items,test,,0,194,32,48,17,1
+synthetic,synthetic/images/sample_0895.png,Complex handwriting styles,valid,,0,248,32,62,26,1
+synthetic,synthetic/images/sample_0896.png,To low power,valid,,0,173,32,43,12,1
+synthetic,synthetic/images/sample_0897.png,metric gradient pooling network score,test,,0,346,32,86,37,1
+synthetic,synthetic/images/sample_0898.png,System Activation Weight Vector Method,train,,0,443,32,110,38,1
+synthetic,synthetic/images/sample_0899.png,Research and Research,train,,0,252,32,63,21,1
+synthetic,synthetic/images/sample_0900.png,Predict Temporal Word Vector Report,train,,0,409,32,102,35,1
+synthetic,synthetic/images/sample_0901.png,Word manuscript feature speed epoch,test,,0,410,32,102,35,1
+synthetic,synthetic/images/sample_0902.png,decode report record platform,train,,0,350,32,87,29,1
+synthetic,synthetic/images/sample_0903.png,Document and System,train,,0,212,32,53,19,1
+synthetic,synthetic/images/sample_0904.png,Continuous integration catches regressions before release,train,,0,541,32,135,57,1
+synthetic,synthetic/images/sample_0905.png,Input and Image,train,,0,180,32,45,15,1
+synthetic,synthetic/images/sample_0906.png,The quick brown fox jumps over the lazy dog,test,,0,499,32,124,43,1
+synthetic,synthetic/images/sample_0907.png,PyTorch Deep Learning Framework,train,,0,381,32,95,31,1
+synthetic,synthetic/images/sample_0908.png,Dataset and Label,train,,0,199,32,49,17,1
+synthetic,synthetic/images/sample_0909.png,Accuracy system label memory,train,,0,283,32,70,28,1
+synthetic,synthetic/images/sample_0910.png,Model and Text,train,,0,197,32,49,14,1
+synthetic,synthetic/images/sample_0911.png,Dataset Paper Analysis,train,,0,216,32,54,22,1
+synthetic,synthetic/images/sample_0912.png,Spatial matrix manuscript,train,,0,236,32,59,25,1
+synthetic,synthetic/images/sample_0913.png,Padding and Predict,train,,0,193,32,48,19,1
+synthetic,synthetic/images/sample_0914.png,Tracking code: 1Z-999-999-02-1234-5678,train,,0,383,32,95,38,1
+synthetic,synthetic/images/sample_0915.png,Decode System Tensor Attention Latency,train,,0,357,32,89,38,1
+synthetic,synthetic/images/sample_0916.png,Activation and Speed,train,,0,188,32,47,20,1
+synthetic,synthetic/images/sample_0917.png,Have standardized,train,,0,222,32,55,17,1
+synthetic,synthetic/images/sample_0918.png,project record archive error,train,,0,287,32,71,28,1
+synthetic,synthetic/images/sample_0919.png,Dataset linear,train,,0,188,32,47,14,1
+synthetic,synthetic/images/sample_0920.png,CONVOLUTIONAL NEURAL NETWORK ARCHITECTURE,train,,0,629,32,157,41,1
+synthetic,synthetic/images/sample_0921.png,Image and Training,train,,0,174,32,43,18,1
+synthetic,synthetic/images/sample_0922.png,Requires robust,train,,0,167,32,41,15,1
+synthetic,synthetic/images/sample_0923.png,Text science metric,train,,0,219,32,54,19,1
+synthetic,synthetic/images/sample_0924.png,Loss Document,train,,0,179,32,44,13,1
+synthetic,synthetic/images/sample_0925.png,Input and Epoch,train,,0,192,32,48,15,1
+synthetic,synthetic/images/sample_0926.png,Research and Token,valid,,0,267,32,66,18,1
+synthetic,synthetic/images/sample_0927.png,Software accelerates scientific discovery,train,,0,334,32,83,41,1
+synthetic,synthetic/images/sample_0928.png,Rate scheduling ensures stable,train,,0,261,32,65,30,1
+synthetic,synthetic/images/sample_0929.png,Target and Memory,train,,0,209,32,52,17,1
+synthetic,synthetic/images/sample_0930.png,Low Latency Edge Device Deployment,valid,,0,373,32,93,34,1
+synthetic,synthetic/images/sample_0931.png,Bidirectional recurrent units capture,train,,0,464,32,116,37,1
+synthetic,synthetic/images/sample_0932.png,Label Research Symbol Latency Loss,train,,0,288,32,72,34,1
+synthetic,synthetic/images/sample_0933.png,system spatial engine sample library,valid,,0,352,32,88,36,1
+synthetic,synthetic/images/sample_0934.png,Rate metric memory stride power,valid,,0,271,32,67,31,1
+synthetic,synthetic/images/sample_0935.png,High resolution,train,,0,136,32,34,15,1
+synthetic,synthetic/images/sample_0936.png,Model and Output,train,,0,186,32,46,16,1
+synthetic,synthetic/images/sample_0937.png,Filtering removes noise while,train,,0,394,32,98,29,1
+synthetic,synthetic/images/sample_0938.png,Total: 514 units,test,,0,194,32,48,16,1
+synthetic,synthetic/images/sample_0939.png,record padding,train,,0,154,32,38,14,1
+synthetic,synthetic/images/sample_0940.png,Science and Vocab,test,,0,192,32,48,17,1
+synthetic,synthetic/images/sample_0941.png,Multimodal models understand both visual and textual information,train,,0,584,32,146,64,1
+synthetic,synthetic/images/sample_0942.png,Optical Character Recognition Engine,test,,0,349,32,87,36,1
+synthetic,synthetic/images/sample_0943.png,network symbol encode character,valid,,0,289,32,72,31,1
+synthetic,synthetic/images/sample_0944.png,Key image,train,,0,107,32,26,9,1
+synthetic,synthetic/images/sample_0945.png,Bidirectional recurrent units capture past and future context,test,,0,458,32,114,61,1
+synthetic,synthetic/images/sample_0946.png,Score Attention Compute Hardware,train,,0,320,32,80,32,1
+synthetic,synthetic/images/sample_0947.png,Design and Library,test,,0,168,32,42,18,1
+synthetic,synthetic/images/sample_0948.png,Study and Batch,valid,,0,144,32,36,15,1
+synthetic,synthetic/images/sample_0949.png,Allows real time,train,,0,185,32,46,16,1
+synthetic,synthetic/images/sample_0950.png,Platform accuracy word,train,,0,204,32,51,22,1
+synthetic,synthetic/images/sample_0951.png,Design and Loss,test,,0,151,32,37,15,1
+synthetic,synthetic/images/sample_0952.png,Proper learning rate scheduling ensures stable convergence,train,,0,657,32,164,58,1
+synthetic,synthetic/images/sample_0953.png,Measured: 3806 pixels,train,,0,204,32,51,21,1
+synthetic,synthetic/images/sample_0954.png,Resolution scanning preserves subtle,train,,0,405,32,101,36,1
+synthetic,synthetic/images/sample_0955.png,Accelerates scientific discovery,train,,0,252,32,63,32,1
+synthetic,synthetic/images/sample_0956.png,dataset gradient,train,,0,192,32,48,16,1
+synthetic,synthetic/images/sample_0957.png,Low power chips,train,,0,156,32,39,15,1
+synthetic,synthetic/images/sample_0958.png,Padding Project Encode Linear Network,test,,0,352,32,88,37,1
+synthetic,synthetic/images/sample_0959.png,Based decision,train,,0,176,32,44,14,1
+synthetic,synthetic/images/sample_0960.png,Measured: 9774 samples,train,,0,234,32,58,22,1
+synthetic,synthetic/images/sample_0961.png,Natural Language Processing Word Embeddings,train,,0,468,32,117,43,1
+synthetic,synthetic/images/sample_0962.png,While keeping edges,train,,0,184,32,46,19,1
+synthetic,synthetic/images/sample_0963.png,decode vocab speed,test,,0,189,32,47,18,1
+synthetic,synthetic/images/sample_0964.png,Regularization techniques prevent models from,valid,,0,453,32,113,45,1
+synthetic,synthetic/images/sample_0965.png,How vexingly quick daft,valid,,0,281,32,70,23,1
+synthetic,synthetic/images/sample_0966.png,Prevents overfitting during,train,,0,243,32,60,27,1
+synthetic,synthetic/images/sample_0967.png,system kernel analysis,test,,0,240,32,60,22,1
+synthetic,synthetic/images/sample_0968.png,Vocab target archive scale,train,,0,206,32,51,26,1
+synthetic,synthetic/images/sample_0969.png,Symbol and Align,train,,0,148,32,37,16,1
+synthetic,synthetic/images/sample_0970.png,Stride and Feature,train,,0,205,32,51,18,1
+synthetic,synthetic/images/sample_0971.png,Count: 2460 units,train,,0,267,32,66,17,1
+synthetic,synthetic/images/sample_0972.png,paper epoch,train,,0,155,32,38,11,1
+synthetic,synthetic/images/sample_0973.png,Recorded: 8021 items,train,,0,248,32,62,20,1
+synthetic,synthetic/images/sample_0974.png,error hardware,valid,,0,170,32,42,14,1
+synthetic,synthetic/images/sample_0975.png,Vision pipelines,train,,0,181,32,45,16,1
+synthetic,synthetic/images/sample_0976.png,Latency Project,train,,0,176,32,44,15,1
+synthetic,synthetic/images/sample_0977.png,Output: 521 %,train,,0,169,32,42,13,1
+synthetic,synthetic/images/sample_0978.png,Count: 3738 epochs,train,,0,193,32,48,18,1
+synthetic,synthetic/images/sample_0979.png,Count: 6727 ms,train,,0,206,32,51,14,1
+synthetic,synthetic/images/sample_0980.png,Speed Research,train,,0,145,32,36,14,1
+synthetic,synthetic/images/sample_0981.png,Temporal and Learning,test,,0,231,32,57,21,1
+synthetic,synthetic/images/sample_0982.png,Focus on key image,train,,0,193,32,48,18,1
+synthetic,synthetic/images/sample_0983.png,Speed and Power,train,,0,190,32,47,15,1
+synthetic,synthetic/images/sample_0984.png,VISION TRANSFORMER PRETRAINED DECODER,train,,0,435,32,108,37,1
+synthetic,synthetic/images/sample_0985.png,Total: 4835 ms,test,,0,176,32,44,14,1
+synthetic,synthetic/images/sample_0986.png,Count: 4065 MB,train,,0,171,32,42,14,1
+synthetic,synthetic/images/sample_0987.png,Empowers evidence,train,,0,211,32,52,17,1
+synthetic,synthetic/images/sample_0988.png,Gradient Descent Backpropagation Optimizer,train,,0,400,32,100,42,1
+synthetic,synthetic/images/sample_0989.png,Digit Design,test,,0,141,32,35,12,1
+synthetic,synthetic/images/sample_0990.png,Catches regressions before release,train,,0,311,32,77,34,1
+synthetic,synthetic/images/sample_0991.png,Methods validate,train,,0,227,32,56,16,1
+synthetic,synthetic/images/sample_0992.png,Linear tensor,valid,,0,138,32,34,13,1
+synthetic,synthetic/images/sample_0993.png,Science temporal device system metric,test,,0,308,32,77,37,1
+synthetic,synthetic/images/sample_0994.png,Inference allows real time text transcription on mobile,train,,0,538,32,134,55,1
+synthetic,synthetic/images/sample_0995.png,My big,valid,,0,96,32,24,6,1
+synthetic,synthetic/images/sample_0996.png,Ink traces on old paper,train,,0,276,32,69,23,1
+synthetic,synthetic/images/sample_0997.png,Text and Engine,train,,0,183,32,45,15,1
+synthetic,synthetic/images/sample_0998.png,Attention mechanisms dynamically focus on key image regions,test,,0,500,32,125,59,1
+synthetic,synthetic/images/sample_0999.png,Value: 1093 MB,test,,0,184,32,46,14,1
+synthetic,synthetic/images/sample_1000.png,OPTICAL CHARACTER RECOGNITION ENGINE,test,,0,412,32,103,36,1
+synthetic,synthetic/images/sample_1001.png,"Model trained on 2,500 curated text samples",test,,0,419,32,104,43,1
+synthetic,synthetic/images/sample_1002.png,process sequence accuracy,valid,,0,316,32,79,25,1
+synthetic,synthetic/images/sample_1003.png,Preprocessed images have standardized dimensions and contrast,train,,0,615,32,153,61,1
+synthetic,synthetic/images/sample_1004.png,Token and Target,train,,0,143,32,35,16,1
+synthetic,synthetic/images/sample_1005.png,Hierarchical visual features,train,,0,289,32,72,28,1
+synthetic,synthetic/images/sample_1006.png,Image Encode,train,,0,165,32,41,12,1
+synthetic,synthetic/images/sample_1007.png,hardware tensor design,train,,0,200,32,50,22,1
+synthetic,synthetic/images/sample_1008.png,Count: 9199 samples,train,,0,185,32,46,19,1
+synthetic,synthetic/images/sample_1009.png,Raw sensor signals into insights,train,,0,279,32,69,32,1
+synthetic,synthetic/images/sample_1010.png,Of human knowledge,train,,0,233,32,58,18,1
+synthetic,synthetic/images/sample_1011.png,Research and Research,train,,0,297,32,74,21,1
+synthetic,synthetic/images/sample_1012.png,Artificial intelligence continues to evolve rapidly,train,,0,405,32,101,51,1
+synthetic,synthetic/images/sample_1013.png,Vision pipelines process millions,valid,,0,305,32,76,33,1
+synthetic,synthetic/images/sample_1014.png,Vector and Matrix,valid,,0,216,32,54,17,1
+synthetic,synthetic/images/sample_1015.png,design learning network engine device,valid,,0,333,32,83,37,1
+synthetic,synthetic/images/sample_1016.png,Loss learning stride,train,,0,171,32,42,20,1
+synthetic,synthetic/images/sample_1017.png,Science Layer Loss Spatial Vector,valid,,0,364,32,91,33,1
+synthetic,synthetic/images/sample_1018.png,Feature Vector Model Library Encode,train,,0,332,32,83,35,1
+synthetic,synthetic/images/sample_1019.png,Evaluation protocols,train,,0,211,32,52,20,1
+synthetic,synthetic/images/sample_1020.png,Rate scheduling ensures stable convergence,train,,0,409,32,102,42,1
+synthetic,synthetic/images/sample_1021.png,speed vocab learning symbol,train,,0,359,32,89,27,1
+synthetic,synthetic/images/sample_1022.png,Driven jocks help fax my big quiz,train,,0,310,32,77,33,1
+synthetic,synthetic/images/sample_1023.png,Pack my box with,train,,0,153,32,38,16,1
+synthetic,synthetic/images/sample_1024.png,Token Engine Channel Number,valid,,0,322,32,80,27,1
+synthetic,synthetic/images/sample_1025.png,Modern computer vision pipelines process millions of images,train,,0,509,32,127,59,1
+synthetic,synthetic/images/sample_1026.png,Pooling Vocab,train,,0,188,32,47,13,1
+synthetic,synthetic/images/sample_1027.png,Feature score scale,train,,0,204,32,51,19,1
+synthetic,synthetic/images/sample_1028.png,Rate study power loss archive,test,,0,322,32,80,29,1
+synthetic,synthetic/images/sample_1029.png,Document Tensor Epoch Padding,train,,0,310,32,77,29,1
+synthetic,synthetic/images/sample_1030.png,Focus on key image regions,train,,0,257,32,64,26,1
+synthetic,synthetic/images/sample_1031.png,gradient activation epoch label manuscript,train,,0,347,32,86,42,1
+synthetic,synthetic/images/sample_1032.png,Layer align,train,,0,112,32,28,11,1
+synthetic,synthetic/images/sample_1033.png,Hierarchical visual,valid,,0,204,32,51,19,1
+synthetic,synthetic/images/sample_1034.png,Output: 946 samples,train,,0,229,32,57,19,1
+synthetic,synthetic/images/sample_1035.png,Measured: 4266 items,test,,0,271,32,67,20,1
+synthetic,synthetic/images/sample_1036.png,Pooling and Padding,train,,0,229,32,57,19,1
+synthetic,synthetic/images/sample_1037.png,Power score analysis study,test,,0,239,32,59,26,1
+synthetic,synthetic/images/sample_1038.png,Hardware engine spatial,train,,0,210,32,52,23,1
+synthetic,synthetic/images/sample_1039.png,Paper attention process feature,train,,0,344,32,86,31,1
+synthetic,synthetic/images/sample_1040.png,Stride Sample Epoch Feature Archive,valid,,0,295,32,73,35,1
+synthetic,synthetic/images/sample_1041.png,Value: 6542 %,train,,0,170,32,42,13,1
+synthetic,synthetic/images/sample_1042.png,model attention process,train,,0,247,32,61,23,1
+synthetic,synthetic/images/sample_1043.png,Recorded: 8545 units,train,,0,232,32,58,20,1
+synthetic,synthetic/images/sample_1044.png,Sample number error document,train,,0,374,32,93,28,1
+synthetic,synthetic/images/sample_1045.png,With five dozen,test,,0,259,32,64,15,1
+synthetic,synthetic/images/sample_1046.png,Study and Attention,test,,0,208,32,52,19,1
+synthetic,synthetic/images/sample_1047.png,Value: 5698 %,train,,0,222,32,55,13,1
+synthetic,synthetic/images/sample_1048.png,Symbol padding number device,train,,0,271,32,67,28,1
+synthetic,synthetic/images/sample_1049.png,Engine device layer target padding,train,,0,350,32,87,34,1
+synthetic,synthetic/images/sample_1050.png,Five dozen liquor,test,,0,186,32,46,17,1
+synthetic,synthetic/images/sample_1051.png,Feature and Manuscript,train,,0,219,32,54,22,1
+synthetic,synthetic/images/sample_1052.png,Intuitive responsive,train,,0,242,32,60,20,1
+synthetic,synthetic/images/sample_1053.png,dataset score output,test,,0,202,32,50,20,1
+synthetic,synthetic/images/sample_1054.png,Evaluation protocols guarantee reproducible,train,,0,393,32,98,43,1
+synthetic,synthetic/images/sample_1055.png,Output: 2273 %,valid,,0,158,32,39,14,1
+synthetic,synthetic/images/sample_1056.png,Count: 6679 epochs,train,,0,230,32,57,18,1
+synthetic,synthetic/images/sample_1057.png,Padding Research Project Align Report,train,,0,292,32,73,37,1
+synthetic,synthetic/images/sample_1058.png,Validate experimental findings rigorously,train,,0,515,32,128,41,1
+synthetic,synthetic/images/sample_1059.png,Are published,train,,0,145,32,36,13,1
+synthetic,synthetic/images/sample_1060.png,Protocols guarantee reproducible science,train,,0,344,32,86,40,1
+synthetic,synthetic/images/sample_1061.png,Safeguards centuries of human knowledge,train,,0,332,32,83,39,1
+synthetic,synthetic/images/sample_1062.png,Align and Library,train,,0,157,32,39,17,1
+synthetic,synthetic/images/sample_1063.png,Error Vector Loss,train,,0,286,32,71,17,1
+synthetic,synthetic/images/sample_1064.png,Methods validate,train,,0,252,32,63,16,1
+synthetic,synthetic/images/sample_1065.png,Report Device,train,,0,120,32,30,13,1
+synthetic,synthetic/images/sample_1066.png,tensor result training label,train,,0,261,32,65,28,1
+synthetic,synthetic/images/sample_1067.png,Continues to evolve,valid,,0,211,32,52,19,1
+synthetic,synthetic/images/sample_1068.png,BIDIRECTIONAL LONG SHORT TERM MEMORY,train,,0,576,32,144,36,1
+synthetic,synthetic/images/sample_1069.png,Channel and Speed,train,,0,191,32,47,17,1
+synthetic,synthetic/images/sample_1070.png,Linear and Decode,train,,0,169,32,42,17,1
+synthetic,synthetic/images/sample_1071.png,Recorded: 5643 epochs,train,,0,271,32,67,21,1
+synthetic,synthetic/images/sample_1072.png,method compute stride,train,,0,232,32,58,21,1
+synthetic,synthetic/images/sample_1073.png,Vision pipelines process,train,,0,203,32,50,24,1
+synthetic,synthetic/images/sample_1074.png,Measured: 6535 pixels,train,,0,230,32,57,21,1
+synthetic,synthetic/images/sample_1075.png,Parameters: 5.27 million (INT8 quantized: 2.6 MB),train,,0,477,32,119,49,1
+synthetic,synthetic/images/sample_1076.png,How vexingly,train,,0,157,32,39,12,1
+synthetic,synthetic/images/sample_1077.png,Label system kernel filter,train,,0,260,32,65,26,1
+synthetic,synthetic/images/sample_1078.png,simclr contrastive representation learning,train,,0,348,32,87,42,1
+synthetic,synthetic/images/sample_1079.png,Layer and Latency,test,,0,229,32,57,17,1
+synthetic,synthetic/images/sample_1080.png,Computer Vision and Pattern Recognition,test,,0,429,32,107,39,1
+synthetic,synthetic/images/sample_1081.png,Measured: 9916 ms,valid,,0,214,32,53,17,1
+synthetic,synthetic/images/sample_1082.png,Output: 6391 samples,train,,0,316,32,79,20,1
+synthetic,synthetic/images/sample_1083.png,Archive and Output,train,,0,167,32,41,18,1
+synthetic,synthetic/images/sample_1084.png,Spatial and Label,train,,0,179,32,44,17,1
+synthetic,synthetic/images/sample_1085.png,Sample and Linear,train,,0,199,32,49,17,1
+synthetic,synthetic/images/sample_1086.png,archive word symbol,train,,0,209,32,52,19,1
+synthetic,synthetic/images/sample_1087.png,optical character recognition engine,test,,0,307,32,76,36,1
+synthetic,synthetic/images/sample_1088.png,device tensor spatial science scale,train,,0,333,32,83,35,1
+synthetic,synthetic/images/sample_1089.png,Of black quartz judge,train,,0,246,32,61,21,1
+synthetic,synthetic/images/sample_1090.png,User interfaces should be intuitive responsive and accessible,valid,,0,547,32,136,61,1
+synthetic,synthetic/images/sample_1091.png,Device and Token,train,,0,197,32,49,16,1
+synthetic,synthetic/images/sample_1092.png,Manuscript platform label,train,,0,303,32,75,25,1
+synthetic,synthetic/images/sample_1093.png,Total: 5217 epochs,train,,0,174,32,43,18,1
+synthetic,synthetic/images/sample_1094.png,Power and Label,train,,0,192,32,48,15,1
+synthetic,synthetic/images/sample_1095.png,Loss hardware pooling letter linear,train,,0,323,32,80,35,1
+synthetic,synthetic/images/sample_1096.png,Project label system paper vocab,train,,0,366,32,91,32,1
+synthetic,synthetic/images/sample_1097.png,Memory Layer Design,train,,0,275,32,68,19,1
+synthetic,synthetic/images/sample_1098.png,Layer and Analysis,train,,0,172,32,43,18,1
+synthetic,synthetic/images/sample_1099.png,Power batch metric,train,,0,193,32,48,18,1
+synthetic,synthetic/images/sample_1100.png,How vexingly quick daft zebras,test,,0,288,32,72,30,1
+synthetic,synthetic/images/sample_1101.png,Method and Network,train,,0,214,32,53,18,1
+synthetic,synthetic/images/sample_1102.png,Metric Gradient Research Result,valid,,0,343,32,85,31,1
+synthetic,synthetic/images/sample_1103.png,Error linear,train,,0,172,32,43,12,1
+synthetic,synthetic/images/sample_1104.png,Both visual and textual,train,,0,256,32,64,23,1
+synthetic,synthetic/images/sample_1105.png,Brown fox jumps,test,,0,160,32,40,15,1
+synthetic,synthetic/images/sample_1106.png,Report research library vector,valid,,0,271,32,67,30,1
+synthetic,synthetic/images/sample_1107.png,Catches regressions before,train,,0,250,32,62,26,1
+synthetic,synthetic/images/sample_1108.png,Study Network Platform Record Number,train,,0,394,32,98,36,1
+synthetic,synthetic/images/sample_1109.png,Document and Stride,valid,,0,190,32,47,19,1
+synthetic,synthetic/images/sample_1110.png,Accelerates scientific discovery,train,,0,397,32,99,32,1
+synthetic,synthetic/images/sample_1111.png,Mathematical reasoning underpins modern computational algorithms,test,,0,705,32,176,64,1
+synthetic,synthetic/images/sample_1112.png,Transforms raw sensor,valid,,0,272,32,68,21,1
+synthetic,synthetic/images/sample_1113.png,matrix encode,valid,,0,190,32,47,13,1
+synthetic,synthetic/images/sample_1114.png,Epoch Record Analysis Study,train,,0,244,32,61,27,1
+synthetic,synthetic/images/sample_1115.png,Power Linear,train,,0,189,32,47,12,1
+synthetic,synthetic/images/sample_1116.png,Two driven jocks help fax my big quiz,train,,0,508,32,127,37,1
+synthetic,synthetic/images/sample_1117.png,Count: 1330 samples,valid,,0,257,32,64,19,1
+synthetic,synthetic/images/sample_1118.png,Record memory latency archive decode,test,,0,348,32,87,36,1
+synthetic,synthetic/images/sample_1119.png,Dataset science weight document,train,,0,344,32,86,31,1
+synthetic,synthetic/images/sample_1120.png,character science predict text,train,,0,272,32,68,30,1
+synthetic,synthetic/images/sample_1121.png,Adaptive Histogram Equalization Filtering,test,,0,363,32,90,41,1
+synthetic,synthetic/images/sample_1122.png,Hardware and Number,train,,0,277,32,69,19,1
+synthetic,synthetic/images/sample_1123.png,Enhancement reveals faint ink traces,train,,0,475,32,118,36,1
+synthetic,synthetic/images/sample_1124.png,Resolution scanning preserves subtle character,train,,0,363,32,90,46,1
+synthetic,synthetic/images/sample_1125.png,Curved Text Line Sequence Recognition,train,,0,376,32,94,37,1
+synthetic,synthetic/images/sample_1126.png,Project Decode Sequence,valid,,0,242,32,60,23,1
+synthetic,synthetic/images/sample_1127.png,Research papers are published and shared across global networks,train,,0,601,32,150,63,1
+synthetic,synthetic/images/sample_1128.png,Efficient Text Recognition System,valid,,0,271,32,67,33,1
+synthetic,synthetic/images/sample_1129.png,Error power model memory,valid,,0,214,32,53,24,1
+synthetic,synthetic/images/sample_1130.png,Count: 2711 %,train,,0,235,32,58,13,1
+synthetic,synthetic/images/sample_1131.png,research stride error number,valid,,0,401,32,100,28,1
+synthetic,synthetic/images/sample_1132.png,Measured: 1688 pixels,train,,0,205,32,51,21,1
+synthetic,synthetic/images/sample_1133.png,Be intuitive,train,,0,139,32,34,12,1
+synthetic,synthetic/images/sample_1134.png,Tensor and Score,train,,0,180,32,45,16,1
+synthetic,synthetic/images/sample_1135.png,Speed Metric,train,,0,137,32,34,12,1
+synthetic,synthetic/images/sample_1136.png,Output scale vector,valid,,0,178,32,44,19,1
+synthetic,synthetic/images/sample_1137.png,Input Filter Method Stride,test,,0,323,32,80,26,1
+synthetic,synthetic/images/sample_1138.png,document layer,train,,0,146,32,36,14,1
+synthetic,synthetic/images/sample_1139.png,Letter Predict Rate,test,,0,238,32,59,19,1
+synthetic,synthetic/images/sample_1140.png,Study learning system report dataset,valid,,0,389,32,97,36,1
+synthetic,synthetic/images/sample_1141.png,report design spatial weight platform,valid,,0,328,32,82,37,1
+synthetic,synthetic/images/sample_1142.png,Recorded: 195 ms,test,,0,210,32,52,16,1
+synthetic,synthetic/images/sample_1143.png,Archive Hardware Study Number Loss,train,,0,312,32,78,34,1
+synthetic,synthetic/images/sample_1144.png,Allows real time,train,,0,211,32,52,16,1
+synthetic,synthetic/images/sample_1145.png,Time text transcription on mobile,train,,0,331,32,82,33,1
+synthetic,synthetic/images/sample_1146.png,Library Design Decode Latency,train,,0,342,32,85,29,1
+synthetic,synthetic/images/sample_1147.png,Machine intelligence to low power,train,,0,406,32,101,33,1
+synthetic,synthetic/images/sample_1148.png,Value: 6574 MB,train,,0,203,32,50,14,1
+synthetic,synthetic/images/sample_1149.png,Output: 5101 samples,train,,0,278,32,69,20,1
+synthetic,synthetic/images/sample_1150.png,Sequence research output,train,,0,353,32,88,24,1
+synthetic,synthetic/images/sample_1151.png,Preprocessed images have standardized,train,,0,434,32,108,37,1
+synthetic,synthetic/images/sample_1152.png,pooling power output character,valid,,0,289,32,72,30,1
+synthetic,synthetic/images/sample_1153.png,library sample research,train,,0,252,32,63,23,1
+synthetic,synthetic/images/sample_1154.png,Without losing accuracy,valid,,0,219,32,54,23,1
+synthetic,synthetic/images/sample_1155.png,Ensures stable convergence,train,,0,297,32,74,26,1
+synthetic,synthetic/images/sample_1156.png,Measured: 7551 items,train,,0,208,32,52,20,1
+synthetic,synthetic/images/sample_1157.png,Stride attention word record,test,,0,377,32,94,28,1
+synthetic,synthetic/images/sample_1158.png,Tensor and Metric,test,,0,230,32,57,17,1
+synthetic,synthetic/images/sample_1159.png,Recorded: 27 epochs,valid,,0,186,32,46,19,1
+synthetic,synthetic/images/sample_1160.png,Attention and Align,train,,0,215,32,53,19,1
+synthetic,synthetic/images/sample_1161.png,And shared across,test,,0,174,32,43,17,1
+synthetic,synthetic/images/sample_1162.png,Device Word,train,,0,158,32,39,11,1
+synthetic,synthetic/images/sample_1163.png,Archive layer character token record,test,,0,363,32,90,36,1
+synthetic,synthetic/images/sample_1164.png,Vocab Score Metric Record Feature,test,,0,358,32,89,33,1
+synthetic,synthetic/images/sample_1165.png,Record Device Dataset Weight,test,,0,319,32,79,28,1
+synthetic,synthetic/images/sample_1166.png,document epoch,test,,0,163,32,40,14,1
+synthetic,synthetic/images/sample_1167.png,Result dataset attention,train,,0,238,32,59,24,1
+synthetic,synthetic/images/sample_1168.png,Linear Power Decode Learning,valid,,0,326,32,81,28,1
+synthetic,synthetic/images/sample_1169.png,Engine Error,train,,0,136,32,34,12,1
+synthetic,synthetic/images/sample_1170.png,Archive Matrix Gradient,train,,0,300,32,75,23,1
+synthetic,synthetic/images/sample_1171.png,Linear Label Sample Image,train,,0,282,32,70,25,1
+synthetic,synthetic/images/sample_1172.png,Error padding,test,,0,139,32,34,13,1
+synthetic,synthetic/images/sample_1173.png,Spatial metric loss,train,,0,174,32,43,19,1
+synthetic,synthetic/images/sample_1174.png,Dataset speed,train,,0,187,32,46,13,1
+synthetic,synthetic/images/sample_1175.png,Token feature weight compute,valid,,0,286,32,71,28,1
+synthetic,synthetic/images/sample_1176.png,Engine and Dataset,train,,0,194,32,48,18,1
+synthetic,synthetic/images/sample_1177.png,Feature filter,train,,0,179,32,44,14,1
+synthetic,synthetic/images/sample_1178.png,Count: 6582 MB,train,,0,217,32,54,14,1
+synthetic,synthetic/images/sample_1179.png,Page 45 of 320 in technical report,train,,0,287,32,71,34,1
+synthetic,synthetic/images/sample_1180.png,Latency temporal spatial engine document,valid,,0,472,32,118,40,1
+synthetic,synthetic/images/sample_1181.png,Predict and Matrix,train,,0,210,32,52,18,1
+synthetic,synthetic/images/sample_1182.png,INFORMATION SCIENCE AND ENGINEERING,train,,0,482,32,120,35,1
+synthetic,synthetic/images/sample_1183.png,Study Padding,train,,0,136,32,34,13,1
+synthetic,synthetic/images/sample_1184.png,To evolve,test,,0,116,32,29,9,1
+synthetic,synthetic/images/sample_1185.png,Engineers design reliable and,train,,0,302,32,75,29,1
+synthetic,synthetic/images/sample_1186.png,Centuries of human,test,,0,192,32,48,18,1
+synthetic,synthetic/images/sample_1187.png,adaptive histogram equalization filtering,test,,0,473,32,118,41,1
+synthetic,synthetic/images/sample_1188.png,Empowers evidence based decision,train,,0,304,32,76,32,1
+synthetic,synthetic/images/sample_1189.png,Archive and Sample,train,,0,214,32,53,18,1
+synthetic,synthetic/images/sample_1190.png,Attention mechanisms dynamically focus on key image,train,,0,592,32,148,51,1
+synthetic,synthetic/images/sample_1191.png,Training and Paper,train,,0,197,32,49,18,1
+synthetic,synthetic/images/sample_1192.png,Binarization and Deskewing Enhancement,valid,,0,364,32,91,38,1
+synthetic,synthetic/images/sample_1193.png,Kernel Method Symbol Library,train,,0,293,32,73,28,1
+synthetic,synthetic/images/sample_1194.png,Symbol and Dataset,train,,0,211,32,52,18,1
+synthetic,synthetic/images/sample_1195.png,Rate Platform Output Report Feature,train,,0,316,32,79,35,1
+synthetic,synthetic/images/sample_1196.png,convolutional neural network architecture,train,,0,561,32,140,41,1
+synthetic,synthetic/images/sample_1197.png,Extract hierarchical visual features,train,,0,319,32,79,36,1
+synthetic,synthetic/images/sample_1198.png,Capture past and future context,train,,0,413,32,103,31,1
+synthetic,synthetic/images/sample_1199.png,Science and Report,train,,0,175,32,43,18,1

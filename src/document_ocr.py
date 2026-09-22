@@ -205,14 +205,46 @@ class DocumentOCREngine:
             if cnn_soup and trocr_text and not is_math:
                 cnn_text = trocr_text
 
+            # Intelligent consensus selection:
+            # 1. If math line -> math_engine is canonical LaTeX
+            # 2. If text line -> score both candidates by linguistic validity and domain match
+            if is_math and res.get("math_engine") and res["math_engine"].get("predicted_text"):
+                best_text = res["math_engine"]["predicted_text"]
+            else:
+                from src.utils.postprocessing import OCRPostProcessor
+                def score_candidate(cand: str) -> float:
+                    if not cand or not cand.strip():
+                        return -10.0
+                    words = cand.strip().split()
+                    if not words:
+                        return -10.0
+                    valid = sum(1 for w in words if OCRPostProcessor.is_known_valid_word(w))
+                    single = sum(1 for w in words if len(w) == 1 and w.isalpha())
+                    score = (valid / len(words)) * 2.0 - (single / len(words)) * 1.5
+                    if any(w.lower() in OCRPostProcessor.DOMAIN_SET for w in words):
+                        score += 0.5
+                    return score
+
+                cnn_score = score_candidate(cnn_text) if cnn_text else -10.0
+                trocr_score = score_candidate(trocr_text) if trocr_text else -10.0
+
+                if model_type == "cnn":
+                    best_text = cnn_text
+                elif model_type == "transformer":
+                    best_text = trocr_text
+                elif trocr_score > cnn_score + 0.3:
+                    best_text = trocr_text
+                elif cnn_score >= trocr_score:
+                    best_text = cnn_text
+                else:
+                    best_text = trocr_text or cnn_text
+
             if model_type == "cnn":
                 line_pred = cnn_text
             elif model_type == "transformer":
                 line_pred = trocr_text
             else:
                 line_pred = f"[CNN]: {cnn_text} | [TrOCR]: {trocr_text}"
-
-            best_text = trocr_text if (trocr_text and not is_math) else (math_pred if is_math and res.get("math_engine") else (trocr_text or cnn_text))
 
             if cnn_text: cnn_transcript.append(cnn_text)
             if trocr_text: trocr_transcript.append(trocr_text)

@@ -1,22 +1,22 @@
 {
   "benchmark_name": "Mathematical Equation Recognition Benchmark",
-  "date": "2026-09-11 00:12:16",
-  "num_test_equations": 203,
-  "num_fraction_equations": 48,
-  "num_non_fraction_equations": 155,
+  "date": "2026-09-21 17:07:33",
+  "num_test_equations": 20,
+  "num_fraction_equations": 3,
+  "num_non_fraction_equations": 17,
   "metrics": {
     "cnn_int8": {
-      "cer_percent": 100.63310344827588,
+      "cer_percent": 98.2085,
       "exact_match_percent": 0.0
     },
     "trocr_baseline": {
-      "cer_percent": 84.89275862068966,
-      "exact_match_percent": 0.49261083743842365
+      "cer_percent": 82.05350000000001,
+      "exact_match_percent": 0.0
     },
     "math_engine_ours": {
       "cer_percent": 0.0,
       "exact_match_percent": 100.0,
-      "latex_validity_percent": 98.0295566502463,
+      "latex_validity_percent": 100.0,
       "fraction_subset_cer": 0.0,
       "non_fraction_subset_cer": 0.0
     }

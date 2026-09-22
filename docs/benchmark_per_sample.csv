@@ -1,16 +1,51 @@
 image_path,dataset,is_math,ctc_feasible,ground_truth,cnn_prediction,cnn_cer,cnn_wer,trocr_prediction,trocr_cer,trocr_wer
-data\expanded\images\sample_0004.png,expanded,0,1,Optical Character Recognition Engine,Dial Dan dentin Ding,0.6111,1.0,Optical Character Recognition Engine,0.0,0.0
-data\expanded\images\sample_0013.png,expanded,0,1,Self Supervised Representation Learning,Mt tia rmentitin ring,0.6154,1.0,Self Supervised Representation Learning,0.0,0.0
-data\expanded\images\sample_0019.png,expanded,0,1,Adaptive Histogram Equalization Filtering,Artie Man Din Train,0.7073,1.0,Adaptive Histogram Equalization Filtering,0.0,0.0
-data\expanded\images\sample_0026.png,expanded,0,1,Low Resource Domain Adaptation Test,De en De Msen Don,0.7714,1.0,Low Resource Domain Adaptation Test,0.0,0.0
-data\expanded\images\sample_0032.png,expanded,0,1,Optical Character Recognition Engine,Dial Dote Dentin One,0.5833,1.0,Optical Character Recognition Engine,0.0,0.0
-data\expanded\images\sample_0045.png,expanded,0,1,Connectionist Temporal Classification Loss,Cotinga Point Tinting Ms,0.6905,1.0,Connectionist Temporal Classification Loss,0.0,0.0
-data\expanded\images\sample_0049.png,expanded,0,1,Ancient Text Restoration and OCR,Deer Ton Data ad n,0.6875,1.0,Ancient Text Restoration And Or,0.0938,0.4
-data\expanded\images\sample_0053.png,expanded,0,1,Ancient Text Restoration and OCR,Cunt nd Ten ant R,0.6562,1.0,Ancient Text Restoration And Or,0.0938,0.4
-data\expanded\images\sample_0059.png,expanded,0,1,Self Supervised Representation Learning,Dad Feria edition Bring,0.6154,1.0,Self Supervised Representation Learning,0.0,0.0
-data\expanded\images\sample_0060.png,expanded,0,1,Self Supervised Representation Learning,D rand Nrrtitin Grin,0.6667,1.0,Self Supervised Representation Learning,0.0,0.0
-data\expanded\images\sample_0061.png,expanded,0,1,sqrt{x^2 + y^2} <= |x| + |y|,ai^t y^t) ypx) p),0.75,1.0,SQRT(X^2 + y^2} <= [X| + LYL,0.3929,0.4286
-data\expanded\images\sample_0063.png,expanded,0,1,Low Resource Domain Adaptation Test,De Need Di sin Poe,0.7429,1.0,Low Resource Domain Adaptation Test,0.0,0.0
-data\expanded\images\sample_0068.png,expanded,0,1,Self Supervised Representation Learning,Nd Nice Dating Grin,0.7179,1.0,Self Supervised Representation Learning,0.0,0.0
-data\expanded\images\sample_0078.png,expanded,0,1,Ancient Text Restoration and OCR,Cion ad Dirtier and R,0.5938,0.8,Ancient Text Restoration And Or,0.0938,0.4
-data\expanded\images\sample_0079.png,expanded,0,1,Low Resource Domain Adaptation Test,D Nn Di Main Peg,0.7143,1.0,Low Resource Domain Adaptation Test,0.0,0.0
+data\expanded\images\sample_0004.png,expanded,0,1,Optical Character Recognition Engine,Optical Character Recognition Engine,0.0,0.0,,,
+data\expanded\images\sample_0013.png,expanded,0,1,Self Supervised Representation Learning,Self Supervised Representation Learning,0.0,0.0,,,
+data\expanded\images\sample_0019.png,expanded,0,1,Adaptive Histogram Equalization Filtering,Adaptive Histogram Equalization Filtering,0.0,0.0,,,
+data\expanded\images\sample_0026.png,expanded,0,1,Low Resource Domain Adaptation Test,Low Resource Domain Adaptation Test,0.0,0.0,,,
+data\expanded\images\sample_0032.png,expanded,0,1,Optical Character Recognition Engine,Optical Character Recognition Engine,0.0,0.0,,,
+data\expanded\images\sample_0045.png,expanded,0,1,Connectionist Temporal Classification Loss,Connectionist Temporal Classification Loss,0.0,0.0,,,
+data\expanded\images\sample_0049.png,expanded,0,1,Ancient Text Restoration and OCR,Ancient Text Restoration and OCR,0.0,0.0,,,
+data\expanded\images\sample_0053.png,expanded,0,1,Ancient Text Restoration and OCR,Ancient Text Restoration and OCR,0.0,0.0,,,
+data\expanded\images\sample_0059.png,expanded,0,1,Self Supervised Representation Learning,Self Supervised Representation Learning,0.0,0.0,,,
+data\expanded\images\sample_0060.png,expanded,0,1,Self Supervised Representation Learning,Self Supervised Representation Learning,0.0,0.0,,,
+data\expanded\images\sample_0061.png,expanded,0,1,sqrt{x^2 + y^2} <= |x| + |y|,\sqrt{x^2 + y^2} \le |x| + |y|,0.1429,0.2857,,,
+data\expanded\images\sample_0063.png,expanded,0,1,Low Resource Domain Adaptation Test,Low Resource Domain Adaptation Test,0.0,0.0,,,
+data\expanded\images\sample_0068.png,expanded,0,1,Self Supervised Representation Learning,Self Supervised Representation Learning,0.0,0.0,,,
+data\expanded\images\sample_0078.png,expanded,0,1,Ancient Text Restoration and OCR,Ancient Text Restoration and OCR,0.0,0.0,,,
+data\expanded\images\sample_0079.png,expanded,0,1,Low Resource Domain Adaptation Test,Low Resource Domain Adaptation Test,0.0,0.0,,,
+data\expanded\images\sample_0086.png,expanded,0,1,Adaptive Histogram Equalization Filtering,Adaptive Histogram Equalization Filtering,0.0,0.0,,,
+data\expanded\images\sample_0088.png,expanded,1,1,L_{CTC} = - ln P(y | x),L_{CTC} = - ln P(y | x),0.0,0.0,,,
+data\expanded\images\sample_0093.png,expanded,0,1,Optical Character Recognition Engine,Optical Character Recognition Engine,0.0,0.0,,,
+data\expanded\images\sample_0098.png,expanded,0,1,f(x) = int_0^inf e^(-x^2) dx,I(x) = int0infe^{-x^{2}} dx,0.2857,0.6,,,
+data\expanded\images\sample_0103.png,expanded,0,1,Low Resource Domain Adaptation Test,Low Resource Domain Adaptation Test,0.0,0.0,,,
+data\expanded\images\sample_0106.png,expanded,0,1,Self Supervised Representation Learning,Self Supervised Representation Learning,0.0,0.0,,,
+data\expanded\images\sample_0108.png,expanded,0,1,Ancient Text Restoration and OCR,Ancient Text Restoration and OCR,0.0,0.0,,,
+data\expanded\images\sample_0109.png,expanded,0,1,Connectionist Temporal Classification Loss,Connectionist Temporal Classification Loss,0.0,0.0,,,
+data\expanded\images\sample_0112.png,expanded,0,1,Adaptive Histogram Equalization Filtering,Adaptive Histogram Equalization Filtering,0.0,0.0,,,
+data\expanded\images\sample_0121.png,expanded,0,1,Adaptive Histogram Equalization Filtering,Adaptive Histogram Equalization Filtering,0.0,0.0,,,
+data\expanded\images\sample_0122.png,expanded,0,1,Self Supervised Representation Learning,Self Supervised Representation Learning,0.0,0.0,,,
+data\expanded\images\sample_0126.png,expanded,0,1,Low Resource Domain Adaptation Test,Low Resource Domain Adaptation Test,0.0,0.0,,,
+data\expanded\images\sample_0143.png,expanded,0,1,Adaptive Histogram Equalization Filtering,Adaptive Histogram Equalization Filtering,0.0,0.0,,,
+data\expanded\images\sample_0148.png,expanded,0,1,Low Resource Domain Adaptation Test,Low Resource Domain Adaptation Test,0.0,0.0,,,
+data\expanded\images\sample_0169.png,expanded,0,1,Optical Character Recognition Engine,Optical Character Recognition Engine,0.0,0.0,,,
+data\expanded\images\sample_0182.png,expanded,1,1,L_{CTC} = - ln P(y | x),L_{CTC} = - ln P(y | x),0.0,0.0,,,
+data\expanded\images\sample_0184.png,expanded,0,1,Ancient Text Restoration and OCR,Ancient Text Restoration and OCR,0.0,0.0,,,
+data\expanded\images\sample_0192.png,expanded,0,1,Low Resource Domain Adaptation Test,Low Resource Domain Adaptation Test,0.0,0.0,,,
+data\expanded\images\sample_0196.png,expanded,0,1,Connectionist Temporal Classification Loss,Connectionist Temporal Classification Loss,0.0,0.0,,,
+data\expanded\images\sample_0216.png,expanded,0,1,Self Supervised Representation Learning,Self Supervised Representation Learning,0.0,0.0,,,
+data\expanded\images\sample_0223.png,expanded,0,1,Adaptive Histogram Equalization Filtering,Adaptive Histogram Equalization Filtering,0.0,0.0,,,
+data\expanded\images\sample_0239.png,expanded,0,1,f(x) = int_0^inf e^(-x^2) dx,(x) = int0 \\infty e^{x^{2}} dx,0.4286,0.8,,,
+data\expanded\images\sample_0241.png,expanded,0,1,Optical Character Recognition Engine,Optical Character Recognition Engine,0.0,0.0,,,
+data\expanded\images\sample_0251.png,expanded,0,1,Optical Character Recognition Engine,Optical Character Recognition Engine,0.0,0.0,,,
+data\expanded\images\sample_0262.png,expanded,0,1,Optical Character Recognition Engine,Optical Character Recognition Engine,0.0,0.0,,,
+data\expanded\images\sample_0264.png,expanded,0,1,Low Resource Domain Adaptation Test,Low Resource Domain Adaptation Test,0.0,0.0,,,
+data\expanded\images\sample_0268.png,expanded,0,1,Ancient Text Restoration and OCR,Ancient Text Restoration and OCR,0.0,0.0,,,
+data\expanded\images\sample_0270.png,expanded,0,1,Adaptive Histogram Equalization Filtering,Adaptive Histogram Equalization Filtering,0.0,0.0,,,
+data\expanded\images\sample_0272.png,expanded,0,1,Low Resource Domain Adaptation Test,Low Resource Domain Adaptation Test,0.0,0.0,,,
+data\expanded\images\sample_0297.png,expanded,0,1,Adaptive Histogram Equalization Filtering,Adaptive Histogram Equalization Filtering,0.0,0.0,,,
+data\expanded\images\sample_0302.png,expanded,0,1,Connectionist Temporal Classification Loss,Connectionist Temporal Classification Loss,0.0,0.0,,,
+data\expanded\images\sample_0308.png,expanded,0,1,Optical Character Recognition Engine,Optical Character Recognition Engine,0.0,0.0,,,
+data\expanded\images\sample_0322.png,expanded,0,1,Low Resource Domain Adaptation Test,Low Resource Domain Adaptation Test,0.0,0.0,,,
+data\expanded\images\sample_0323.png,expanded,0,1,Connectionist Temporal Classification Loss,Connectionist Temporal Classification Loss,0.0,0.0,,,
+data\expanded\images\sample_0337.png,expanded,0,1,Optical Character Recognition Engine,Optical Character Recognition Engine,0.0,0.0,,,

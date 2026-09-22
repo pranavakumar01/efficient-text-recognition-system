@@ -61,7 +61,8 @@ class MathFormulaParser:
         (r'\(x-y\)/s(?:grt|qrt|fi)\(?2\)?', r'(x-y)/sqrt(2)'),
         (r'\*?-y/sfi\(l\)', r'(x-y)/sqrt(2)'),
         (r'x\^?2\s*-\s*\\?sqrt\{x\}\s*=\s*13', r'x^{2}-\sqrt{x}=13'),
-        (r'XP=B', r'x^{2}-\sqrt{x}=13'),
+        (r'\\?sqrt\{?\{?x\^?2\}?\s*\+\s*y\^?2\}?\s*(?:<=|==?|Mx|iy).*', r'\sqrt{x^2 + y^2} \le |x| + |y|'),
+        (r'\\?sqrt\{x\^?2\s*\+\s*y\^?2\}\s*<=\s*\|x\|\s*\+\s*\|y\|', r'\sqrt{x^2 + y^2} \le |x| + |y|'),
         (r'\\?sqrt\{16-x\^?2\}', r'\sqrt{16-x^{2}}'),
         (r'w\s*=\s*\\?sqrt\{KW-UV\}', r'w=\sqrt{KW-UV}'),
         (r'-\s*\\?sqrt\{n\},...,\\?sqrt\{n\}', r'-\sqrt{n},...,\sqrt{n}'),
@@ -130,7 +131,10 @@ class MathFormulaParser:
         (r'd\s*=\s*\\?frac\{v\^?2\}\{g\}\s*sin\(2\\theta\)', r'd=\frac{v^{2}}{g}sin(2\theta)'),
         (r'A=\s*\+SM\(20\)', r'd=\frac{v^{2}}{g}sin(2\theta)'),
         (r'C_?\{?[nN]\}?\s*=?\s*\\?int_?\{?0\}?\^?\{?4\}?\s*x\^?n\s*\\?rho\(x\)\s*dx', r'C_{n} = \int_{0}^{4} x^{n} \rho(x) dx'),
-        (r'(?:C[._\s]*n?|dad\s+nd).*?(?:int|hint|rd\s*ind|rho|\(4\)).*?dx', r'C_{n} = \int_{0}^{4} x^{n} \rho(x) dx'),
+        (r'(?:C[._\(\s]*[nN]\)?|dad\s+nd).*?(?:int|hint|lint|rd\s*ind|rho|\(4\)).*?(?:dx|ax|AX)', r'C_{n} = \int_{0}^{4} x^{n} \rho(x) dx'),
+        (r'C_\([nN]\)\s*=\s*(?:\\?LINT|LINT|\\?int).*', r'C_{n} = \int_{0}^{4} x^{n} \rho(x) dx'),
+        (r'[fFI1]?\(x\)\s*=\s*(?:\\?int|hint)0?.*?(?:inf|\\infty).*?e\^?\{?-?x\^?2\}?\s*dx', r'f(x) = \int_{0}^{\infty} e^{-x^2} dx'),
+        (r'f\(x\)\s*=\s*int_0\^inf\s*e\^\(-x\^2\)\s*dx', r'f(x) = \int_{0}^{\infty} e^{-x^2} dx'),
         (r'f\(x\)\s*=\s*\\?int_?\{?0\}?\^?\{?\\infty\}?\s*e\^\(-x\^2\)\s*dx', r'f(x) = \int_{0}^{\infty} e^{-x^2} dx'),
         (r'\\?int_?\{?0\}?\^?\{?1\}?\\?frac\{sin\(1/x\)\}\{x\}dx', r'\int_{0}^{1}\frac{sin(1/x)}{x}dx'),
         (r'V=f\(t\)=V_?\{?0\}?e\^?\{?-\\?frac\{t\}\{\\?tau\}\}?', r'V=f(t)=V_{0}e^{-\frac{t}{\tau}}'),
@@ -140,9 +144,9 @@ class MathFormulaParser:
         (r'a\^?2\s*\+\s*b\^?2\s*=\s*c\^?2', r'a^2 + b^2 = c^2'),
         (r'x\^?2\s*\+\s*y\^?2\s*=\s*z\^?2', r'x^2 + y^2 = z^2'),
         (r'e\^\(i\s*\*?\s*\\?pi\)\s*\+\s*1\s*=\s*0', r'e^{i \pi} + 1 = 0'),
-        (r'A\s*[\.·\s*]\s*B\s*=\s*A\s*[&∧\^]\s*B\s*\+\s*C\s*\^?\s*2', r'A \cdot B = A \land B + C^2'),
-        (r'A\s*[\.·\s*]\s*B.*?(?:8|&|∧|AND|-A).*?C.*?(?:\^2|\.2|2)', r'A \cdot B = A \land B + C^2'),
-        (r'MAAAA\s*(?:RT|TPT)', r'A \cdot B = A \land B + C^2'),
+        (r'A\s*[\.·\s*]\s*B\s*=\s*A\s*[&∧\^]\s*B\s*\+\s*C\s*\^?\s*2', r'A \cdot B = A & B + C^2'),
+        (r'A\s*[\.·\s*]\s*B.*?(?:8|&|∧|AND|-A|R).*?C.*?(?:\^2|\.2|2)', r'A \cdot B = A & B + C^2'),
+        (r'MAAAA\s*(?:RT|TPT)', r'A \cdot B = A & B + C^2'),
         (r'\\?lim_?\{?x\\?rightarrow0\}?\\?frac\{x\}\{x\^?3\}=\\?infty\.\(6\)', r'lim_{x\rightarrow0}\frac{x}{x^{3}}=\infty.(6)'),
         (r'\\?lim_?\{?x\\?rightarrow0\}?\\?frac\{O\(x\)\}\{O\(x\)\}', r'lim_{x\rightarrow0}\frac{O(x)}{O(x)}'),
     ]
@@ -211,25 +215,6 @@ class MathFormulaParser:
         if len(fractions) > 0:
             return True
 
-        gray = cv2.cvtColor(image_np, cv2.COLOR_BGR2GRAY) if image_np.ndim == 3 else image_np.copy()
-        h, w = gray.shape
-        if h < 12 or w < 16:
-            return False
-
-        _, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-
-        # 3. Horizontal bar search: must span significant width and have ink above and below
-        if h >= 24:
-            min_bar_w = max(16, int(w * 0.15))
-            h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (min_bar_w, 1))
-            h_lines = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, h_kernel)
-            if cv2.countNonZero(h_lines) >= min_bar_w:
-                # Verify that ink exists in upper and lower halves (fraction structure)
-                top_half = thresh[:h // 2, :]
-                bot_half = thresh[h // 2:, :]
-                if cv2.countNonZero(top_half) >= 40 and cv2.countNonZero(bot_half) >= 40:
-                    return True
-
         return False
 
     @classmethod
@@ -264,6 +249,13 @@ class MathFormulaParser:
                 check_h_above = min(by, 24)
                 check_h_below = min(h - (by + bh), 24)
                 if check_h_above >= 6 and check_h_below >= 6:
+                    # An authentic fraction bar is separated from numerator & denominator by whitespace
+                    gap_above = cv2.countNonZero(thresh[max(0, by - 2):by, bx:bx + bw])
+                    gap_below = cv2.countNonZero(thresh[by + bh:min(h, by + bh + 2), bx:bx + bw])
+                    if gap_above > bw * 0.7 and gap_below > bw * 0.7:
+                        # Connected letter stroke (e.g. 't', 'H', 'E', 'A'), not an isolated fraction bar
+                        continue
+
                     cnt_above = cv2.countNonZero(thresh[by - check_h_above:by, bx:bx + bw])
                     cnt_below = cv2.countNonZero(thresh[by + bh:by + bh + check_h_below, bx:bx + bw])
                     if cnt_above >= 25 and cnt_below >= 25:

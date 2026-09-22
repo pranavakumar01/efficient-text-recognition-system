@@ -627,10 +627,11 @@
       const formulaElem = document.getElementById(formulaId);
       if (!box || !formulaElem) return;
 
-      const isMath = text && (text.includes('\\') || text.includes('^') || text.includes('_') || (text.includes('{') && text.includes('}')) || text.includes('='));
+      const isMath = text && (text.includes('\\') || text.includes('^') || text.includes('_') || (text.includes('{') && text.includes('}')) || text.includes('=') || text.includes('&'));
       if (isMath && window.katex) {
         try {
-          katex.render(text, formulaElem, { displayMode: true, throwOnError: false });
+          const katexExpr = text.replace(/(?<!\\)&/g, '\\&');
+          katex.render(katexExpr, formulaElem, { displayMode: true, throwOnError: false });
           box.style.display = 'block';
           return;
         } catch (e) {
@@ -825,7 +826,8 @@
             if (line.is_math && window.katex) {
               try {
                 const mathDiv = document.createElement('div');
-                katex.render(bestLine, mathDiv, { throwOnError: false });
+                const katexLine = bestLine.replace(/(?<!\\)&/g, '\\&');
+                katex.render(katexLine, mathDiv, { throwOnError: false });
                 tdMath.appendChild(mathDiv);
               } catch (e) {
                 tdMath.innerText = bestLine;

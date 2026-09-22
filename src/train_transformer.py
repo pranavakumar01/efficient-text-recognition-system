@@ -52,6 +52,7 @@ Usage
 import argparse
 import csv
 import json
+import math
 import os
 import time
 
@@ -164,16 +165,10 @@ def train_transformer_model(
     os.makedirs(out_dir, exist_ok=True)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    processor = TrOCRProcessor.from_pretrained(model_name)
+    from src.train_all import load_trocr_processor_and_tokenizer, setup_trocr_model
+    processor = load_trocr_processor_and_tokenizer(model_name)
     model = VisionEncoderDecoderModel.from_pretrained(model_name).to(device)
-
-    # These must be set for the decoder to train; a missing
-    # decoder_start_token_id raises, and a missing pad id trains on padding.
-    if model.config.decoder_start_token_id is None:
-        model.config.decoder_start_token_id = processor.tokenizer.cls_token_id
-    if model.config.pad_token_id is None:
-        model.config.pad_token_id = processor.tokenizer.pad_token_id
-    model.config.eos_token_id = processor.tokenizer.sep_token_id
+    model = setup_trocr_model(model, processor)
 
     train_ds = TrOCRManifestDataset(processor, manifest, "train", include_math=include_math,
                                     max_target_length=max_target_length, max_samples=max_samples)
@@ -205,7 +200,8 @@ def train_transformer_model(
         print("    Use --model microsoft/trocr-small-printed to iterate faster.")
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01)
-    total_steps = max(1, (len(train_loader) // grad_accum) * epochs)
+    steps_per_epoch = max(1, int(math.ceil(len(train_loader) / float(grad_accum))))
+    total_steps = max(1, steps_per_epoch * epochs)
     scheduler = torch.optim.lr_scheduler.OneCycleLR(
         optimizer, max_lr=lr, total_steps=total_steps, pct_start=0.1
     )
@@ -233,7 +229,7 @@ def train_transformer_model(
             loss = out.loss / grad_accum
             loss.backward()
 
-            if step % grad_accum == 0:
+            if step % grad_accum == 0 or step == len(train_loader):
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
                 optimizer.step()
                 optimizer.zero_grad()

@@ -1,0 +1,16 @@
+model,domain,cer,wer,exact_match,fps
+cnn_fp32,overall,1.0,1.0,0.0,15.452988917125388
+cnn_fp32,historical,1.0,1.0,0.0,
+cnn_fp32,mathematical,1.0,1.0,0.0,
+cnn_fp32,handwritten,1.0,1.0,0.0,
+cnn_fp32,printed,1.0,1.0,0.0,
+cnn_int8,overall,1.0,1.0,0.0,15.763972347628457
+cnn_int8,historical,1.0,1.0,0.0,
+cnn_int8,mathematical,1.0,1.0,0.0,
+cnn_int8,handwritten,1.0,1.0,0.0,
+cnn_int8,printed,1.0,1.0,0.0,
+trocr,overall,0.5957375,0.9,0.0625,1.2709309620134364
+trocr,historical,0.695325,0.8500000000000001,0.0,
+trocr,mathematical,0.617225,1.0,0.0,
+trocr,handwritten,0.270825,0.75,0.25,
+trocr,printed,0.799575,1.0,0.0,

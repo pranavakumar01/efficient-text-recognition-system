@@ -23,3 +23,8 @@ scratch/
 data/kaggle_dataset/handwritten/
 data/kaggle_dataset/historical/
 data/kaggle_dataset/math/
+
+# Temporary & Large Model Artifacts (> 100MB blocked by GitHub)
+src/models/checkpoints/trocr_finetuned/
+src/models/checkpoints/*_smoke*.pth
+src/models/checkpoints/*_smoketest.pth

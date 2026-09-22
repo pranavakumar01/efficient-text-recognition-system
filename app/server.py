@@ -34,6 +34,17 @@ def encode_img_to_b64(img_np: np.ndarray) -> str:
     _, buffer = cv2.imencode('.png', img_np)
     return base64.b64encode(buffer).decode('utf-8')
 
+@app.on_event("startup")
+async def startup_warmup():
+    """Pre-warms CNN and Vision Transformer in memory for instant sub-second first request."""
+    print("[*] Pre-warming OCR neural models for instantaneous response (< 1s)...")
+    try:
+        dummy = np.ones((32, 128, 3), dtype=np.uint8) * 255
+        engine.run_pipeline(dummy, model_type="both")
+        print("[OK] Neural models pre-warmed and ready for fast inference.")
+    except Exception as e:
+        print(f"[!] Warmup notice: {e}")
+
 @app.get("/favicon.ico", include_in_schema=False)
 def favicon():
     return Response(status_code=204)

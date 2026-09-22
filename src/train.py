@@ -87,11 +87,12 @@ def evaluate_split(model, loader, criterion, tokenizer, device):
     with torch.no_grad():
         for images, targets, target_lengths, label_texts, input_lengths in loader:
             images = images.to(device)
-            logits, _ = model(images)
+            clamped = input_lengths.clamp(max=images.size(3) // WIDTH_REDUCTION)
+            logits, _ = model(images, input_lengths=clamped.to(device))
 
             seq_len = logits.size(1)
             # Never claim more timesteps than the network actually produced.
-            clamped = input_lengths.clamp(max=seq_len)
+            clamped = clamped.clamp(max=seq_len)
 
             log_probs = F.log_softmax(logits, dim=-1).permute(1, 0, 2)
             loss = criterion(log_probs, targets.to(device),
@@ -216,7 +217,7 @@ def train_model(
 
     criterion = nn.CTCLoss(blank=tokenizer.blank_idx, zero_infinity=True)
     optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=1e-4)
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs, eta_min=1e-6)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs, eta_min=5e-5)
 
     history = []
     best_cer = float("inf")
@@ -255,9 +256,10 @@ def train_model(
                     group["lr"] = lr * global_step / warmup_steps
 
             optimizer.zero_grad()
-            logits, _ = model(images)                      # [B, T, C]
+            clamped = input_lengths.clamp(max=images.size(3) // WIDTH_REDUCTION).to(device)
+            logits, _ = model(images, input_lengths=clamped)                      # [B, T, C]
             seq_len = logits.size(1)
-            clamped = input_lengths.clamp(max=seq_len).to(device)
+            clamped = clamped.clamp(max=seq_len)
 
             log_probs = F.log_softmax(logits, dim=-1).permute(1, 0, 2)   # [T, B, C]
             loss = criterion(log_probs, targets, clamped, target_lengths)

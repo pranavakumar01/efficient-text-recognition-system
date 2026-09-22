@@ -1,0 +1,123 @@
+{
+  "cnn": {
+    "model": "CNN_BiLSTM_Attention",
+    "best_cer": 1.4804,
+    "best_epoch": 1,
+    "checkpoint": "D:\\Major Project\\src\\models\\checkpoints\\cnn_bilstm_smoketest.pth",
+    "vocab_size": 96,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 19.1697,
+        "val_loss": 14.7148,
+        "val_cer": 1.4804,
+        "val_wer": 1.0,
+        "val_em": 0.0,
+        "per_domain": {
+          "historical": {
+            "n": 2,
+            "cer": 0.9737,
+            "wer": 1.0,
+            "em": 0.0
+          },
+          "mathematical": {
+            "n": 2,
+            "cer": 3.0,
+            "wer": 1.0,
+            "em": 0.0
+          },
+          "handwritten": {
+            "n": 2,
+            "cer": 0.9706,
+            "wer": 1.0,
+            "em": 0.0
+          },
+          "printed": {
+            "n": 2,
+            "cer": 0.9773,
+            "wer": 1.0,
+            "em": 0.0
+          }
+        },
+        "lr": 5e-05,
+        "time_sec": 2.4
+      }
+    ]
+  },
+  "transformer": {
+    "model": "Vision Transformer (TrOCR)",
+    "base_cer": 0.84875,
+    "best_cer": 0.84875,
+    "best_epoch": 1,
+    "weights_dir": "D:\\Major Project\\src\\models\\checkpoints\\trocr_finetuned",
+    "history": [
+      {
+        "epoch": 0,
+        "val_cer": 0.8488,
+        "val_wer": 1.0,
+        "val_em": 0.0,
+        "per_domain": {
+          "historical": {
+            "n": 2,
+            "cer": 0.85525,
+            "wer": 1.0,
+            "em": 0.0
+          },
+          "mathematical": {
+            "n": 2,
+            "cer": 0.97295,
+            "wer": 1.0,
+            "em": 0.0
+          },
+          "handwritten": {
+            "n": 2,
+            "cer": 0.7941,
+            "wer": 1.0,
+            "em": 0.0
+          },
+          "printed": {
+            "n": 2,
+            "cer": 0.7727,
+            "wer": 1.0,
+            "em": 0.0
+          }
+        },
+        "note": "zero-shot baseline"
+      },
+      {
+        "epoch": 1,
+        "train_loss": 10.8636,
+        "val_cer": 0.8488,
+        "val_wer": 1.0,
+        "val_em": 0.0,
+        "per_domain": {
+          "historical": {
+            "n": 2,
+            "cer": 0.8815500000000001,
+            "wer": 1.0,
+            "em": 0.0
+          },
+          "mathematical": {
+            "n": 2,
+            "cer": 0.94665,
+            "wer": 1.0,
+            "em": 0.0
+          },
+          "handwritten": {
+            "n": 2,
+            "cer": 0.7941,
+            "wer": 1.0,
+            "em": 0.0
+          },
+          "printed": {
+            "n": 2,
+            "cer": 0.7727,
+            "wer": 1.0,
+            "em": 0.0
+          }
+        },
+        "time_sec": 22.2
+      }
+    ]
+  }
+}
