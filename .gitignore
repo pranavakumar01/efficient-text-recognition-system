@@ -28,3 +28,5 @@ data/kaggle_dataset/math/
 src/models/checkpoints/trocr_finetuned/
 src/models/checkpoints/*_smoke*.pth
 src/models/checkpoints/*_smoketest.pth
+cloudflared.exe
+

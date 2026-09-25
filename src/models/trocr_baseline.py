@@ -163,29 +163,12 @@ class TrOCRBaseline:
         if float(np.median(border)) < 115:
             img_np = 255 - img_np
 
-        # 2. Aspect-Ratio Preserving Letterbox Normalization
-        # Standard line crops have wide aspect ratio (w/h > 2.5).
-        # Padding height prevents ViT from distorting characters 10-12x vertically.
-        ar = w / float(h)
-        if ar > 2.2:
-            target_h = max(h, min(int(w * 0.20), int(h * 2.2)))
-            pad_top = (target_h - h) // 2
-            pad_bottom = target_h - h - pad_top
-            pad_side = max(16, int(w * 0.04))
-            img_np = cv2.copyMakeBorder(
-                img_np, pad_top, pad_bottom, pad_side, pad_side,
-                cv2.BORDER_CONSTANT, value=[255, 255, 255]
-            )
-        elif h < 64:
-            scale = max(2, int(round(96.0 / h)))
-            scaled_w = max(16, w * scale)
-            scaled_h = max(16, h * scale)
-            img_np = cv2.resize(img_np, (scaled_w, scaled_h), interpolation=cv2.INTER_LANCZOS4)
-            pad = 16
-            img_np = cv2.copyMakeBorder(
-                img_np, pad, pad, pad, pad,
-                cv2.BORDER_CONSTANT, value=[255, 255, 255]
-            )
+        # 2. Add clean margin padding so characters never clip against edges
+        pad = 12
+        img_np = cv2.copyMakeBorder(
+            img_np, pad, pad, pad, pad,
+            cv2.BORDER_CONSTANT, value=[255, 255, 255]
+        )
 
         pil = Image.fromarray(img_np)
         return pil, img_np

@@ -44,15 +44,26 @@ class ImagePreprocessor:
     def enhance_historical(self, image: np.ndarray) -> np.ndarray:
         """
         Specialized restoration for degraded historical archival documents:
-        1. Background illumination correction (rolling ball / large median filter).
+        1. Background illumination correction.
         2. Contrast normalization to eliminate aged yellow paper tone and bleed-through.
         3. Morphological stroke reconnection for faded antique letterforms.
         """
         gray = self.grayscale(image)
-        # Background estimation via large morphological opening
-        bg_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (25, 25))
+        gray = self.normalize_polarity(gray)
+        h, w = gray.shape[:2]
+
+        # For single-line crops (h <= 64), large dilation kernels destroy character strokes.
+        # Use bilateral noise reduction and adaptive histogram equalization instead.
+        if h <= 64:
+            denoised = self.denoise(gray)
+            return self.enhance_contrast(denoised)
+
+        # For larger document pages, use adaptive background estimation
+        kw = max(7, min(25, (w // 16) | 1))
+        kh = max(7, min(25, (h // 16) | 1))
+        bg_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (kw, kh))
         background = cv2.morphologyEx(gray, cv2.MORPH_DILATE, bg_kernel)
-        background = cv2.GaussianBlur(background, (25, 25), 0)
+        background = cv2.GaussianBlur(background, (kw, kh), 0)
 
         # Difference-based background normalization
         diff = cv2.absdiff(gray, background)

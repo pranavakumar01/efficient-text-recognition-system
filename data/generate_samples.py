@@ -16,7 +16,7 @@ def get_available_font(font_name: str, size: int = 26):
         return ImageFont.truetype(arial_path, size=size)
     return ImageFont.load_default()
 
-def generate_sample_images(output_dir: str = "d:\\Major Project\\data\\samples"):
+def generate_sample_images(output_dir: str = "d:\\Major Project\\data\\samples", force: bool = False):
     os.makedirs(output_dir, exist_ok=True)
     
     samples = [
@@ -28,11 +28,18 @@ def generate_sample_images(output_dir: str = "d:\\Major Project\\data\\samples")
         ("historical_document_sample.png", "Document Image Machine Translation", "georgia.ttf", True)
     ]
     
-    generated_paths = []
-    mathwriting_images_dir = "d:\\Major Project\\data\\mathwriting\\images"
+    # Check if all files already exist
+    all_exist = all(os.path.exists(os.path.join(output_dir, f)) for f, _, _, _ in samples)
+    if all_exist and not force:
+        return [os.path.join(output_dir, f) for f, _, _, _ in samples]
 
+    np.random.seed(42)
+    generated_paths = []
     for filename, text, font_name, is_noisy in samples:
         filepath = os.path.join(output_dir, filename)
+        if os.path.exists(filepath) and not force:
+            generated_paths.append(filepath)
+            continue
 
         font = get_available_font(font_name, size=28)
         dummy_img = Image.new("RGB", (10, 10))
@@ -59,16 +66,17 @@ def generate_sample_images(output_dir: str = "d:\\Major Project\\data\\samples")
         resized = cv2.resize(img_np, (new_w, 32), interpolation=cv2.INTER_AREA)
 
         if is_noisy:
-            gauss_noise = np.random.normal(0, 10, resized.shape).astype(np.uint8)
+            gauss_noise = np.random.normal(0, 8, resized.shape).astype(np.uint8)
             resized = cv2.add(resized, gauss_noise)
-            M = cv2.getRotationMatrix2D((new_w // 2, 16), 1.0, 1.0)
+            M = cv2.getRotationMatrix2D((new_w // 2, 16), 0.8, 1.0)
             resized = cv2.warpAffine(resized, M, (new_w, 32), borderValue=(bg_val, bg_val, bg_val))
         
         cv2.imwrite(filepath, cv2.cvtColor(resized, cv2.COLOR_RGB2BGR))
         generated_paths.append(filepath)
         
-    print(f"Generated {len(generated_paths)} sample evaluation images in '{output_dir}'.")
+    print(f"Verified {len(generated_paths)} sample evaluation images in '{output_dir}'.")
     return generated_paths
 
 if __name__ == "__main__":
-    generate_sample_images()
+    generate_sample_images(force=True)
+

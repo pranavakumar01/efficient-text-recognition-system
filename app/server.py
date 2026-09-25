@@ -25,10 +25,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 engine = OCRInferenceEngine()
 doc_engine = DocumentOCREngine(inference_engine=engine)
-samples_dir = "d:\\Major Project\\data\\samples"
-generate_sample_images(samples_dir)
+samples_dir = os.path.join(BASE_DIR, "data", "samples")
+generate_sample_images(samples_dir, force=False)
 
 def encode_img_to_b64(img_np: np.ndarray) -> str:
     _, buffer = cv2.imencode('.png', img_np)
@@ -72,7 +74,7 @@ def get_sample_image(filename: str):
 
 @app.get("/api/edge_metrics")
 def get_edge_metrics():
-    summary_path = os.path.join("d:\\Major Project", "docs", "edge_benchmark_summary.json")
+    summary_path = os.path.join(BASE_DIR, "docs", "edge_benchmark_summary.json")
     if os.path.exists(summary_path):
         with open(summary_path, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -204,14 +206,14 @@ async def export_transcript(
 
 @app.get("/api/analytics")
 def get_analytics():
-    history_path = "d:\\Major Project\\src\\models\\checkpoints\\training_history.json"
+    history_path = os.path.join(BASE_DIR, "src", "models", "checkpoints", "training_history.json")
     history_data = []
     if os.path.exists(history_path):
         with open(history_path, "r", encoding="utf-8") as f:
             history_data = json.load(f)
 
     figures_b64 = {}
-    fig_dir = "d:\\Major Project\\docs\\figures"
+    fig_dir = os.path.join(BASE_DIR, "docs", "figures")
     if os.path.exists(fig_dir):
         for fig_name in ["training_curves.png", "benchmark_comparison.png"]:
             p = os.path.join(fig_dir, fig_name)
