@@ -21,8 +21,6 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 COPY . .
 
-# Hugging Face Spaces runs on port 7860, Render uses $PORT
-ENV PORT=7860
-EXPOSE 7860
+EXPOSE 8000
 
-CMD ["python", "run.py", "--server", "--port", "7860", "--host", "0.0.0.0", "--no-browser"]
+CMD ["python", "run.py", "--server", "--host", "0.0.0.0", "--no-browser"]

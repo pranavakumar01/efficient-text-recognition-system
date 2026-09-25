@@ -53,10 +53,21 @@ class OCRInferenceEngine:
         self.is_trained = False
         self.checkpoint_info = {}
 
-        self.trocr = TrOCRBaseline(
-            **({"model_name": trocr_model} if trocr_model else {}),
-            strict=strict,
-        ) if load_trocr else None
+        # Allow disabling heavy TrOCR baseline in memory-constrained environments (e.g. Render free tier 512MB)
+        env_load_trocr = os.environ.get("LOAD_TROCR", "true").lower() not in ("0", "false", "no")
+        effective_load_trocr = load_trocr and env_load_trocr
+
+        if effective_load_trocr:
+            try:
+                self.trocr = TrOCRBaseline(
+                    **({"model_name": trocr_model} if trocr_model else {}),
+                    strict=strict,
+                )
+            except Exception as exc:
+                print(f"[!] Warning: TrOCR baseline could not be loaded ({exc}). Continuing with Primary CNN model.")
+                self.trocr = None
+        else:
+            self.trocr = None
 
         self.load_easyocr = load_easyocr
         self._easy_reader = None
@@ -324,8 +335,8 @@ class OCRInferenceEngine:
     def predict_transformer(self, image_np: np.ndarray, ground_truth: str = None,
                             enable_autocorrect: bool = True, postprocess: bool = True,
                             domain: str = "auto") -> tuple:
-        if self.trocr is None:
-            raise RuntimeError("TrOCR was not loaded; construct with load_trocr=True.")
+        if self.trocr is None or not getattr(self.trocr, "loaded", False):
+            return None, {}
 
         prep_results = self.preprocessor.process(image_np)
         start_t = time.perf_counter()
@@ -492,22 +503,29 @@ class OCRInferenceEngine:
             prep_results = math_prep
 
         if model_type in ("both", "all"):
-            from concurrent.futures import ThreadPoolExecutor
-            with ThreadPoolExecutor(max_workers=2) as executor:
-                f_cnn = executor.submit(
-                    self.predict_cnn,
+            if self.trocr is not None and getattr(self.trocr, "loaded", False):
+                from concurrent.futures import ThreadPoolExecutor
+                with ThreadPoolExecutor(max_workers=2) as executor:
+                    f_cnn = executor.submit(
+                        self.predict_cnn,
+                        image_np, ground_truth, enable_autocorrect=enable_autocorrect,
+                        use_tta=use_tta, postprocess=postprocess, domain="math" if is_math else domain,
+                        is_historical=is_historical
+                    )
+                    f_trocr = executor.submit(
+                        self.predict_transformer,
+                        image_np, ground_truth, enable_autocorrect=enable_autocorrect,
+                        postprocess=postprocess, domain="math" if is_math else domain
+                    )
+                    cnn_info, cnn_prep = f_cnn.result()
+                    trans_info, trans_prep = f_trocr.result()
+                    prep_results = cnn_prep or trans_prep
+            else:
+                cnn_info, prep_results = self.predict_cnn(
                     image_np, ground_truth, enable_autocorrect=enable_autocorrect,
                     use_tta=use_tta, postprocess=postprocess, domain="math" if is_math else domain,
                     is_historical=is_historical
                 )
-                f_trocr = executor.submit(
-                    self.predict_transformer,
-                    image_np, ground_truth, enable_autocorrect=enable_autocorrect,
-                    postprocess=postprocess, domain="math" if is_math else domain
-                )
-                cnn_info, cnn_prep = f_cnn.result()
-                trans_info, trans_prep = f_trocr.result()
-                prep_results = cnn_prep or trans_prep
         elif model_type == "cnn":
             cnn_info, prep_results = self.predict_cnn(
                 image_np, ground_truth, enable_autocorrect=enable_autocorrect,

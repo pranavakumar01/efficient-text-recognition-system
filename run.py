@@ -164,9 +164,9 @@ def run_self_test():
 
         img = cv2.imread(filepath)
         res = engine.run_pipeline(img, model_type="both", domain=domain, is_historical=(domain == "historical"))
-        cnn_pred = res.get("cnn_bilstm_attention", {}).get("predicted_text", "").strip()
-        trocr_pred = res.get("transformer_baseline", {}).get("predicted_text", "").strip()
-        math_pred = res.get("math_engine", {}).get("predicted_text", "").strip() if res.get("math_engine") else ""
+        cnn_pred = (res.get("cnn_bilstm_attention") or {}).get("predicted_text", "").strip()
+        trocr_pred = (res.get("transformer_baseline") or {}).get("predicted_text", "").strip()
+        math_pred = (res.get("math_engine") or {}).get("predicted_text", "").strip()
 
         best = math_pred or cnn_pred or trocr_pred
         match = (best.lower() == expected.lower()) or (expected.lower() in best.lower())

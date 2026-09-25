@@ -42,8 +42,9 @@ async def startup_warmup():
     print("[*] Pre-warming OCR neural models for instantaneous response (< 1s)...")
     try:
         dummy = np.ones((32, 128, 3), dtype=np.uint8) * 255
-        engine.run_pipeline(dummy, model_type="both")
-        print("[OK] Neural models pre-warmed and ready for fast inference.")
+        target_model = "both" if getattr(engine, "trocr", None) is not None else "cnn"
+        engine.run_pipeline(dummy, model_type=target_model)
+        print(f"[OK] Neural model ({target_model}) pre-warmed and ready for fast inference.")
     except Exception as e:
         print(f"[!] Warmup notice: {e}")
 
