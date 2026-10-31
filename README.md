@@ -39,17 +39,18 @@ controlled comparison.
 ## Table of contents
 
 1. [What it does](#what-it-does)
-2. [Quick start](#quick-start)
-3. [Reproducing the experiment](#reproducing-the-experiment)
-4. [Results](#results)
-5. [Architecture](#architecture)
-6. [Datasets](#datasets)
-7. [Project layout](#project-layout)
-8. [Configuration](#configuration)
-9. [Testing](#testing)
-10. [Honest limitations](#honest-limitations)
-11. [Troubleshooting](#troubleshooting)
-12. [References](#references)
+2. [**Setting up on a new machine**](#setting-up-on-a-new-machine)
+3. [Using it](#using-it)
+4. [Reproducing the experiment](#reproducing-the-experiment)
+5. [Results](#results)
+6. [Architecture](#architecture)
+7. [Datasets](#datasets)
+8. [Project layout](#project-layout)
+9. [Configuration](#configuration)
+10. [Testing](#testing)
+11. [Honest limitations](#honest-limitations)
+12. [Troubleshooting](#troubleshooting)
+13. [References](#references)
 
 ---
 
@@ -79,49 +80,192 @@ presented as a result of this work.
 
 ---
 
-## Quick start
+## Setting up on a new machine
+
+### What a fresh clone contains — and what it does not
+
+The repository holds **source, configuration, documentation and 29 test
+images**. It deliberately does **not** hold:
+
+| Not in the repo | Why | How you get it |
+|---|---|---|
+| Trained models (`artifacts/checkpoints/`) | ~124 MB each, over GitHub's 100 MB file limit | Train them (step 4), or use TrOCR which downloads itself |
+| Datasets (`data/processed/`) | ~1 GB of generated images | Generate in ~2 minutes (step 4) |
+| `artifacts/ocr.db` | Your own local history | Created automatically on first run |
+| `.venv/`, `node_modules/` | Environment, not source | Steps 2a and 2b |
+
+So a fresh clone **cannot recognise anything until you either train a model or
+let it download TrOCR**. The fastest working path is in step 3.
 
 ### Requirements
 
-- Python 3.11+ (developed on 3.13.7)
-- Node.js 18+ (developed on 24.22.0)
-- Optional: an NVIDIA GPU. Everything runs on CPU, several times slower.
+| | Minimum | Developed on |
+|---|---|---|
+| Python | 3.11 | 3.13.7 |
+| Node.js | 18 | 24.22.0 |
+| Disk | ~6 GB free | — |
+| GPU | none (CPU works) | RTX 2050, 4 GB |
 
-### 1. Install
+Everything runs on CPU; training is several times slower and inference is
+roughly 10–20x slower, but nothing is GPU-only.
+
+---
+
+### 1. Clone
+
+```bash
+git clone https://github.com/pranavakumar01/efficient-text-recognition-system.git
+```
+
+```bash
+cd efficient-text-recognition-system
+```
+
+### 2a. Python environment
 
 ```bash
 python -m venv .venv
 ```
+
+Then install PyTorch — **pick the line that matches your machine**:
 
 ```bash
 .venv/Scripts/python.exe -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 ```
 
 ```bash
+.venv/Scripts/python.exe -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+```
+
+The first is the CUDA build (~2.7 GB, needs an NVIDIA GPU and driver 525+);
+the second is CPU-only and far smaller. Then the rest:
+
+```bash
 .venv/Scripts/python.exe -m pip install -r requirements.txt
 ```
 
-On Linux/macOS use `.venv/bin/python`. With no GPU, swap the torch index URL
-for `https://download.pytorch.org/whl/cpu` — it is a much smaller download.
+> **On Linux or macOS**, every `.venv/Scripts/python.exe` in this README
+> becomes `.venv/bin/python`.
 
-> **Disk note.** The CUDA wheel is ~2.7 GB and the Hugging Face cache a few
-> hundred MB more. The project points its caches at `./.cache/` automatically
-> so neither lands on your system drive.
+> **Disk note.** The CUDA wheel and the Hugging Face model cache are large.
+> The project redirects its caches into `./.cache/` automatically, so nothing
+> lands on your system drive.
 
-### 2. Generate a dataset (no download needed)
+Check it worked:
+
+```bash
+.venv/Scripts/python.exe -c "import torch; print(torch.__version__, 'CUDA:', torch.cuda.is_available())"
+```
+
+### 2b. Frontend dependencies
+
+```bash
+cd frontend && npm install && cd ..
+```
+
+### 3. Fastest path to seeing it work (no training)
+
+TrOCR downloads itself on first use, so you can extract text immediately:
+
+```bash
+.venv/Scripts/python.exe scripts/extract_text.py data/test_images/03_page_clean_01.png --model trocr_base
+```
+
+The first run downloads ~1.3 GB and takes a few minutes; afterwards it is
+cached. Use `--model trocr_handwritten` for a ~250 MB alternative that is
+slightly less accurate but much quicker to fetch.
+
+To run the web application instead, skip to step 5 — the Preprocessing Lab,
+Datasets and Training pages all work with no trained model.
+
+### 4. Train your own models (optional, reproduces the research result)
+
+First generate the dataset — this needs no download, it renders text from the
+fonts already installed on your machine:
 
 ```bash
 .venv/Scripts/python.exe scripts/make_synthetic_data.py
 ```
 
-This renders ~22,000 text-line images from the fonts already installed on your
-machine: 8,000 train / 1,000 val / 1,000 test, plus a 12,000-image unlabeled
-pool for self-supervised pretraining. Takes about two minutes.
+Then the three experiment stages:
 
-Use `--preset quick` for a ~2,900-image version that exercises the whole
-pipeline in twenty seconds.
+```bash
+.venv/Scripts/python.exe scripts/pretrain_simclr.py --config configs/experiments/simclr_pretrain.yaml
+```
 
-### 3. Try it on the bundled test images
+```bash
+.venv/Scripts/python.exe scripts/train_crnn.py --config configs/experiments/baseline_scratch.yaml
+```
+
+```bash
+.venv/Scripts/python.exe scripts/train_crnn.py --config configs/experiments/simclr_finetune.yaml
+```
+
+```bash
+.venv/Scripts/python.exe scripts/evaluate.py --all --split test
+```
+
+Measured on the development GPU (RTX 2050, 4 GB):
+
+| Step | Time |
+|---|---|
+| Generate the dataset | ~2 min |
+| SimCLR pretraining (12 epochs) | ~9 min |
+| Control arm (25 epochs) | ~4 min |
+| Treatment arm (25 epochs) | ~3 min |
+| Evaluate both | ~1 min |
+
+Expect roughly 5–10x longer on CPU. Add `--preset quick` to
+`make_synthetic_data.py` and `--epochs 3` to the training commands for a fast
+smoke test that exercises the whole pipeline without producing meaningful
+accuracy.
+
+### 5. Run the application
+
+**On Windows, double-click `START.bat`** — it launches both servers and opens
+your browser. `STOP.bat` shuts them down.
+
+Otherwise, two terminals:
+
+```bash
+.venv/Scripts/python.exe scripts/run_api.py
+```
+
+```bash
+cd frontend && npm run dev
+```
+
+Dashboard at <http://localhost:5173>, API docs at
+<http://127.0.0.1:8000/docs>. The backend takes ~30 seconds to report
+*Application startup complete* — start it before the frontend.
+
+### 6. Verify the install
+
+```bash
+.venv/Scripts/python.exe -m pytest -q
+```
+
+299 tests should pass. Tests that need a trained model skip themselves
+automatically, so this passes on a fresh clone too.
+
+### Common first-run problems
+
+| Symptom | Cause and fix |
+|---|---|
+| `No module named torch` | PyTorch not installed, or you used system `python` instead of `.venv/Scripts/python.exe` |
+| `No recognition model is available` | Expected on a fresh clone. Train one (step 4) or use `--model trocr_base` |
+| `Manifest not found` | Run `scripts/make_synthetic_data.py` first |
+| `Cannot reach the backend` | The Python server is not running — step 5 |
+| `address already in use` | A previous run is still going. `STOP.bat`, or kill whatever holds ports 8000 and 5173 |
+| TrOCR fails with a tokenizer error | `pip install protobuf` — transformers 5 needs it |
+| CUDA out of memory | Lower `train.batch_size`, or set `OCR_DEVICE=cpu` in `.env` |
+| `python` not found on Windows | Use `py -3` instead, or add Python to PATH during installation |
+
+---
+
+## Using it
+
+### Try it on the bundled test images
 
 ```bash
 .venv/Scripts/python.exe scripts/make_test_images.py
@@ -132,7 +276,7 @@ the exact text of each one, so the output can be judged rather than guessed
 at: printed lines, real photographed handwriting, full document pages at
 three capture qualities, and four deliberately hard cases.
 
-### 4. Just get the text out of an image
+### Just get the text out of an image
 
 No server or browser needed:
 
@@ -160,7 +304,7 @@ Other things it does:
 line). `trocr_base` is the most accurate on arbitrary documents but takes a
 few seconds per page and downloads ~1.3 GB the first time.
 
-### 5. Or run the full application
+### Run the full application
 
 **Easiest — double-click `START.bat`.** It opens the backend and frontend in
 their own windows, waits for the backend to finish loading, and opens your
