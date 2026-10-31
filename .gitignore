@@ -1,0 +1,47 @@
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Environment -----------------------------------------------------------
+.env
+
+# --- Caches (kept off the system drive, see README) ------------------------
+.cache/
+
+# --- Node / frontend -------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# --- Generated data & artifacts -------------------------------------------
+data/raw/
+data/processed/
+data/uploads/
+data/demo/
+artifacts/checkpoints/
+artifacts/logs/
+artifacts/reports/
+artifacts/figures/
+artifacts/*.db
+artifacts/*.db-journal
+# SQLite write-ahead log and shared-memory files: transient, and committing
+# them would publish a half-written database.
+artifacts/*.db-wal
+artifacts/*.db-shm
+*.log
+
+# --- OS --------------------------------------------------------------------
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- The synopsis stays local ----------------------------------------------
+# The project brief is kept in the working directory but deliberately not
+# published: it is the author's own submission document, not source.
+Synopsis_Major_project_Main.pdf
